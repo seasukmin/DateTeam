@@ -3,48 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JMT</title>
-    <link rel="stylesheet" href="JMT.css" />
+    <title>Toggle Div Example</title>
   </head>
   <body>
-    <header>
-      <h1>#맛집</h1>
-      <div class="header-main">
-        <ul class="header-nav">
-          <li class="nav1">
-            동구
-            <div class="cateGory1"></div>
-          </li>
-          <li class="nav2">
-            중구
-            <div class="cateGory2"></div>
-          </li>
-          <li class="nav3">
-            서구
-            <div class="cateGory3"></div>
-          </li>
-          <li class="nav4">
-            유성구
-            <div class="cateGory4"></div>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <div id="toggleButton">Toggle Div</div>
+    <div id="container"></div>
+
+    <script src="script.js"></script>
   </body>
   <script>
-    const nav1 = document.querySelector(".nav1");
-    nav1.addEventListener("click", function () {
-      nav1.insertAdjacentHTML(
-        "beforeend",
-        `
-        하하하하
-        `
-      );
-    });
+    document
+      .getElementById("toggleButton")
+      .addEventListener("click", function () {
+        const container = document.getElementById("container");
+        const existingDiv = document.getElementById("toggleDiv");
+
+        if (existingDiv) {
+          container.removeChild(existingDiv);
+        } else {
+          const newDiv = document.createElement("div");
+          newDiv.id = "toggleDiv";
+          newDiv.textContent = "This is a toggled div.";
+          newDiv.style.border = "1px solid black";
+          newDiv.style.padding = "10px";
+          newDiv.style.marginTop = "10px";
+          container.appendChild(newDiv);
+        }
+      });
   </script>
 </html>
