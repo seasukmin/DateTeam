@@ -6,3 +6,6 @@ body {
   background-color: bisque;
   height: 100vh;
 }
+.header {
+  height: 10%;
+}
