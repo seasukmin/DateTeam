@@ -7,11 +7,44 @@
     <link rel="stylesheet" href="JMT.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>#맛집</h1>
+      <div class="header-main">
+        <ul class="header-nav">
+          <li class="nav1">
+            동구
+            <div class="cateGory1"></div>
+          </li>
+          <li class="nav2">
+            중구
+            <div class="cateGory2"></div>
+          </li>
+          <li class="nav3">
+            서구
+            <div class="cateGory3"></div>
+          </li>
+          <li class="nav4">
+            유성구
+            <div class="cateGory4"></div>
+          </li>
+        </ul>
+      </div>
+    </header>
     <section></section>
     <section></section>
     <section></section>
     <section></section>
     <section></section>
   </body>
+  <script>
+    const nav1 = document.querySelector(".nav1");
+    nav1.addEventListener("click", function () {
+      nav1.insertAdjacentHTML(
+        "beforeend",
+        `
+        하하하하
+        `
+      );
+    });
+  </script>
 </html>
