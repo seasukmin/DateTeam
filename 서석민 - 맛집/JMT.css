@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Ownglyph_noocar-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+  font-family: "Ownglyph_noocar-Rg";
+  margin: 0;
+  color: #3e3e3e;
+}
+
+section {
+  margin: 150px 20px;
+}
+/* 헤더 부분 시작 */
+
+.header {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 240px;
+  margin-bottom: 100px;
+}
+.header-H1 {
+  font-size: 48px;
+  padding-left: 20px;
+}
+.header-Main {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.header-Input {
+  width: 60%;
+  height: 40px;
+  border: 1px solid black;
+  padding-left: 20px;
+  border: none;
+  background-color: wheat;
+  border-radius: 15px;
+}
+.CateGory {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+.Cate a {
+  text-decoration: none;
+  color: black;
+  font-size: 32px;
+}
+/* 헤더 부분 끝 */
+
+/* 사이드바 시작 */
+.sidebars {
+  position: fixed;
+  width: 200px;
+  height: 550px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0 15px;
+  margin-left: 10px;
+}
+.sidebar-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.sidebar-sub {
+  list-style-type: none;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.sidebar-sub a {
+  text-decoration: none;
+}
+/* 사이드바 끝 */
+
+/* 메인 부분 시작 */
+main {
+  margin: 0 200px;
+}
+.Main-title {
+  font-size: 36px;
+}
+.Main-box1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.Main-box2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.box-img {
+  border-radius: 15px;
+}
+.box-point {
+  font-size: 20px;
+  padding: 0 5px;
+}
+.box-name {
+  font-size: 30px;
+}
+/* 메인 부분 끝*/

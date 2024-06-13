@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://static.msscdn.net/musinsaUI/resources/storageFrame.html?1718162725864 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Share Frame</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 해당 파일 따로 static 리소스로 배포
+      // 경로 /musinsa/musinsaUI/resoucres/storageFrame.html
+      function messageHandler(event) {
+        if (event.origin.indexOf('musinsa.com') < 0) return;
+
+        var action = event.data.action;
+        var key = event.data.key;
+        var value = event.data.value;
+
+        if (action == 'set'){
+          try {
+            window.localStorage.setItem(key, JSON.stringify(value))
+          } catch(e) {
+            console.error(e);
+          }
+        } else if (action == 'get') {
+          try{
+            event.source.postMessage({
+              action: 'data',
+              key,
+              value: JSON.parse(window.localStorage.getItem(key))
+            }, '*');
+          }catch(e) {
+            event.source.postMessage({
+              action: 'exception',
+              key,
+              value: e
+            }, '*');
+          }
+        }
+      }
+
+      window.addEventListener("message", messageHandler, false);
+    </script>
+  
+</body></html>

@@ -1,0 +1,438 @@
+var _heathrow_prod = [];
+var _heathrow_prod_temp = [];
+
+var _heathrow = function () {
+    try {
+        var _data_length = arguments.length;
+        if (/Googlebot/gi.exec(window.navigator.userAgent) == null) {
+            if (_data_length > 0) {
+                var _data_hit_time = parseInt(Date.now().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" }).replace(/\,/gi, ""));
+                var _data_hit_date = _heathrow_getToday();
+                var _data_type = arguments[0];
+                var _data_userLanguage = navigator.language || navigator.userLanguage;
+                var _data_documentEncoding = document.characterSet;
+                var _data_3rdParty = {
+                    cid: _heathrow_getCookie("_ga") || undefined,
+                    gid: _heathrow_getCookie("_gid") || undefined,
+                    fbp: _heathrow_getCookie("_fbp") || undefined,
+                    wcs_bt: _heathrow_getCookie("wcs_bt") || undefined
+                };
+                var _data_acquisition = {
+                    "source": _heathrow_getAcquisitionSource(),
+                    "medium": _heathrow_getAcquisitionMedium(),
+                    "campaign": _heathrow_getAcquisitionCampaign(),
+                    "content": _heathrow_getAcquisitionContent(),
+                    "term": _heathrow_getAcquisitionKeyword()
+                };
+                var _data_page = {
+                    "url": document.location.href,
+                    "host": document.location.hostname,
+                    "path": document.location.pathname,
+                    "query": document.location.search,
+                    "hash": document.location.hash,
+                    "referrer": document.referrer,
+                    "title": document.title
+                };
+
+                var _data_event = {
+                    "ec": arguments[1],
+                    "ea": arguments[2],
+                    "el": arguments[3],
+                    "ev": arguments[4]
+                };
+
+                var _ds_all_data = {
+                    hitTime: _data_hit_time,
+                    hitDate: _data_hit_date,
+                    hitType: _data_type,
+                    ul: _data_userLanguage,
+                    de: _data_documentEncoding,
+                    cid: _data_3rdParty.cid,
+                    fbp: _data_3rdParty.fbp,
+                    wcs_bt: _data_3rdParty.wcs_bt,
+                    cs: _data_acquisition.source,
+                    cm: _data_acquisition.medium,
+                    cn: _data_acquisition.campaign,
+                    cc: _data_acquisition.content,
+                    ct: _data_acquisition.term,
+                    dt: _data_page.title,
+                    dl: _data_page.url,
+                    dr: _data_page.referrer,
+                    dh: _data_page.host,
+                    dp: _data_page.path,
+                    dq: _data_page.query,
+                    dha: _data_page.hash
+                };
+
+
+                switch (arguments[0]) {
+                    case "page":
+                        if (arguments[1] !== undefined) {
+                            if (arguments[1].user_id) { _ds_all_data.uid = arguments[1].user_id }
+                            if (arguments[1].customDimension) { _ds_all_data.cd = arguments[1].customDimension }
+                            if (arguments[1].ecommerce) { _ds_all_data.ecom = arguments[1].ecommerce }
+                            if (arguments[1].defaultInfo) { _ds_all_data.default = arguments[1].defaultInfo }
+                            if (arguments[1].moloco) { _ds_all_data.moloco = arguments[1].moloco }
+
+                        }
+                        chargeURL("page");
+                        break;
+                    case "event":
+
+                        if (/.*impression.*/gi.exec(_data_event.ea) != null) {
+                            _data_event.ea = "impression";
+                        }
+
+                        if (/.*click.*/gi.exec(_data_event.ea) != null) {
+                            _data_event.ea = "click";
+                        }
+
+                        _ds_all_data.ec = _data_event.ec;
+                        _ds_all_data.ea = _data_event.ea;
+                        _ds_all_data.el = _data_event.el;
+                        _ds_all_data.ev = _data_event.ev;
+
+                        var _heathrow_clk_temp;
+
+                        if (arguments[5] !== undefined) {
+                            if (arguments[5].user_id) { _ds_all_data.uid = arguments[5].user_id }
+                            if (arguments[5].customDimension) { _ds_all_data.cd = arguments[5].customDimension }
+                            if (arguments[5].ecommerce) { _ds_all_data.ecom = arguments[5].ecommerce }
+                            if (arguments[5].defaultInfo) { _ds_all_data.default = arguments[5].defaultInfo }
+                            if (arguments[5].moloco) { _ds_all_data.moloco = arguments[5].moloco }
+                        }
+
+                        if (_ds_all_data.ea == "Purchase" && _ds_all_data.ec == "Ecommerce") {
+                            _ds_all_data.ecom.purchase.actionField.ord_no = _ds_all_data.ecom.purchase.actionField.id;
+                        }
+
+                        if (_ds_all_data.ea == "impression" && _ds_all_data.ec == "Ecommerce" && typeof _ds_all_data.ecom != "undefined") {
+                            if (_heathrow_prod.length < 12) {
+                                _heathrow_prod.push(_ds_all_data.ecom.impressions.products[0]);
+                                break;
+                            } else {
+                                _heathrow_prod_temp.push(_ds_all_data.ecom.impressions.products[0]);
+                                _ds_all_data.ecom.impressions.products = _heathrow_prod;
+                            }
+                        }
+
+                        if (_ds_all_data.ea == "Move Page") {
+                            if (_heathrow_prod.length > 0) {
+                                _ds_all_data.ea = "impression";
+                                _ds_all_data.ecom.impressions.products = _heathrow_prod;
+                            } else {
+                                break;
+                            }
+                        }
+
+                        if (_ds_all_data.ea == "click" && _ds_all_data.ec == "Ecommerce" && typeof _ds_all_data.ecom != "undefined") {
+                            var click_prod_filter = _heathrow_prod.filter(function (e) {
+                                return e.id === _ds_all_data.ecom.click.products[0].id && e.name === _ds_all_data.ecom.click.products[0].name;
+                            })
+
+                            if (click_prod_filter.length == 0) {
+                                _heathrow_prod.push(_ds_all_data.ecom.click.products[0]);
+                                _heathrow_prod_temp.push(_ds_all_data.ecom.click.products[0]);
+                            }
+
+                            chargeURL("event");
+
+                            delete _ds_all_data.ecom.click;
+                            _ds_all_data.ea = "impression";
+                            _ds_all_data.ecom.impressions = {};
+                            _ds_all_data.ecom.impressions.products = [];
+                            _ds_all_data.ecom.impressions.products = _heathrow_prod;
+
+
+                        }
+                        chargeURL("event");
+                        break;
+                    default:
+                        throw ReferenceError("arguments value is not defined:67", "heathrow.js:67", 67);
+                }
+
+                function chargeURL(type) {
+                    var mimeType = "application/json";
+                    var heathrow_url = "";
+                    var heathrowSubHost = "";
+
+                    if (/\.dev\.|\.alpha\./gi.exec(document.location.hostname) != null) {
+                        heathrowSubHost = "dev.log";
+                    } else {
+                        heathrowSubHost = "log";
+                    }
+
+                    if (type === "page") {
+                        var heathrowPageHttp = new XMLHttpRequest();
+                        var heathrowApiName = "";
+
+                        if (/^\/app\/goods\/.*/gi.exec(_ds_all_data.dp) != null || /^\/brands\/.*/gi.exec(_ds_all_data.dp) != null || /^\/search\/musinsa\/integration/gi.exec(_ds_all_data.dp) != null) {
+                            heathrowApiName = "detail";
+                        } else {
+                            heathrowApiName = "component_view";
+                        }
+
+                        heathrow_url = "https://" + heathrowSubHost + ".data.musinsa.com/log/user-event/" + heathrowApiName;
+
+                        heathrowPageHttp.open('POST', heathrow_url, true);
+
+                        heathrowPageHttp.onreadystatechange = () => {
+                            if (heathrowPageHttp.readyState == 4 && heathrowPageHttp.status == 500) {
+                                throw Error("500 Internal Server Error For page_view:177", "heathrow.js:177");
+                            }
+                        }
+
+                        heathrowPageHttp.setRequestHeader('Content-Type', mimeType);
+                        heathrowPageHttp.send(JSON.stringify({ "Data": _ds_all_data, "PartitionKey": _data_hit_time }));
+
+                    } else if (type === "event") {
+                        var heathrowEventHttp = new XMLHttpRequest();
+                        var heathrowApiName = (/.*impression.*/gi.exec(_ds_all_data.ea) != null || /.*click.*/gi.exec(_ds_all_data.ea) != null) ? "imp_clk" : "cart_purchase_like";
+
+                        heathrow_url = "https://" + heathrowSubHost + ".data.musinsa.com/log/user-event/" + heathrowApiName;
+
+                        heathrowEventHttp.open('POST', heathrow_url, false);
+
+                        heathrowEventHttp.onreadystatechange = () => {
+                            if (heathrowEventHttp.status == 500) {
+                                throw Error("500 Internal Server Error For event:194", "heathrow.js:194");
+                            }
+                        }
+
+                        heathrowEventHttp.setRequestHeader('Content-Type', mimeType);
+                        heathrowEventHttp.send(JSON.stringify({ "Data": _ds_all_data, "PartitionKey": _data_hit_time }));
+
+                        if (_ds_all_data.ea == "impression" && _ds_all_data.ec == "Ecommerce" && typeof _ds_all_data.ecom != "undefined") { _heathrow_prod = _heathrow_prod_temp; _heathrow_prod_temp = []; }
+                    } else {
+                        throw ReferenceError("type value is not defined:245", "heathrow.js:245", "245");
+                    }
+                }
+            } else {
+                throw Error("arguments is not found:8");
+            }
+        }
+    } catch (e) {
+        var _data_hit_time = parseInt(Date.now().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" }).replace(/\,/gi, ""));
+
+        var errorOBj = {
+            "hitTime": new Date(_data_hit_time),
+            "type": "error_for_web_script",
+            "product": "heathrow",
+            "name": e.name,
+            "message": e.message,
+            "at": e.at,
+            "text": e.text,
+            "currentURL": document.location.href,
+            "beforeURL": document.referrer,
+            "os": "",
+            "device": window.navigator.userAgent
+        }
+
+        if (/\.dev\.|\.alpha\./gi.exec(document.location.hostname) != null) {
+            heathrowSubHost = "dev.log";
+        } else {
+            heathrowSubHost = "log";
+        }
+
+        var heathrow_error_url = "https://" + heathrowSubHost + ".data.musinsa.com/log/client-errors";
+
+        var errorHttpRq = new XMLHttpRequest();
+        errorHttpRq.open("POST", heathrow_error_url);
+        errorHttpRq.setRequestHeader('Content-Type', 'application/json');
+        errorHttpRq.send(JSON.stringify({ "Data": errorOBj, "PartitionKey": _data_hit_time }));
+    }
+}
+
+var _heathrow_getCookie = function (cookieName) {
+    var cookieValue = null;
+
+    if (document.cookie) {
+        var array = document.cookie.split((escape(cookieName) + '='));
+
+        if (array.length >= 2) {
+            var arraySub = array[1].split(';');
+
+            cookieValue = unescape(arraySub[0]);
+        }
+    }
+    return cookieValue;
+
+};
+
+var _heathrow_getUrlParams = function () {
+    var params = {};
+
+    if (arguments.length == 0) {
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function (str, key, value) {
+                params[key] = value;
+            }
+        );
+    } else if (arguments.length == 1) {
+        arguments[0].replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function (str, key, value) {
+                params[key] = value;
+            }
+        );
+    }
+
+
+    return params;
+};
+
+var _heathrow_getAcquisitionSource = function () {
+
+    var _data_search = _heathrow_getUrlParams();
+
+    if (/gclid\=/.exec(document.location.search) != null) {
+        return "google";
+    } else if (/utm_source\=/.exec(document.location.search) != null) {
+        return _data_search.utm_source;
+    } else if (/fbclid\=/.exec(document.referrer) != null) {
+        return "facebook";
+    } else if (/naver\.com/.exec(document.referrer) != null) {
+        return "naver";
+    } else if (/google\.com/.exec(document.referrer) != null) {
+        return "google";
+    } else if (/facebook\.com/.exec(document.referrer) != null) {
+        return "facebook";
+    } else if (/daum\.net/.exec(document.referrer) != null) {
+        return "kakao";
+    } else if (/kakao\.com/.exec(document.referrer) != null) {
+        return "kakao";
+    } else if (/musinsa\.com/.exec(document.referrer) != null) {
+        return null;
+    } else if (document.referrer != "") {
+        return document.referrer.split("?")[0].split(".")[document.referrer.split("?")[0].split(".").length - 2] + "." + document.referrer.split("?")[0].split(".")[document.referrer.split("?")[0].split(".").length - 1];
+    } else if (document.referrer == "") {
+        return "(direct)";
+    } else {
+        return undefined;
+    }
+};
+
+var _heathrow_getAcquisitionMedium = function () {
+
+    var _data_search = _heathrow_getUrlParams();
+
+    if (/gclid\=/.exec(document.location.search) != null) {
+        return "cpc";
+    } else if (/utm_medium\=/.exec(document.location.search) != null) {
+        return _data_search.utm_medium;
+    } else if (/fbclid\=/.exec(document.referrer) != null) {
+        return "social";
+    } else if (/naver\.com/.exec(document.referrer) != null) {
+        if (/search\.naver\.com/.exec(document.referrer) != null) {
+            return "organic";
+        } else if (/shopping\.naver\.com/.exec(document.referrer) != null) {
+            return "shopping";
+        } else {
+            return "referral";
+        }
+    } else if (/google\.com/.exec(document.referrer) != null) {
+        return "organic";
+    } else if (/facebook\.com/.exec(document.referrer) != null) {
+        return "social";
+    } else if (/daum\.net/.exec(document.referrer) != null) {
+        if (/search\.daum\.net/.exec(document.referrer) != null) {
+            return "organic";
+        } else {
+            return "referral";
+        }
+    } else if (/kakao\.com/.exec(document.referrer) != null) {
+        if (/shoppinghow\,kakao\.com/.exec(document.referrer) != null) {
+            return "shopping";
+        } else {
+            return "referral";
+        }
+    } else if (/musinsa\.com/.exec(document.referrer) != null) {
+        return null;
+    } else if (document.referrer != "") {
+        return "referral";
+    } else if (document.referrer == "") {
+        return "(none)";
+    } else {
+        return undefined;
+    }
+};
+
+var _heathrow_getAcquisitionCampaign = function () {
+
+    var _data_search = _heathrow_getUrlParams();
+
+    if (/gclid\=/.exec(document.location.search) != null) {
+        return _data_search.gclid;
+    } else if (/utm_campaign\=/.exec(document.location.search) != null) {
+        return _data_search.utm_campaign;
+    } else if (/fbclid\=/.exec(document.location.search) != null) {
+        return _data_search.fbclid;
+    } else if (/n_ad_group\=/.exec(document.location.search) != null) {
+        return _data_search.n_ad_group;
+    } else {
+        return "(not set)";
+    }
+};
+
+var _heathrow_getAcquisitionContent = function () {
+
+    var _data_search = _heathrow_getUrlParams();
+
+    if (/gclid\=/.exec(document.location.search) != null) {
+        return _data_search.gclid;
+    } else if (/utm_content\=/.exec(document.location.search) != null) {
+        return _data_search.utm_content;
+    } else if (/fbclid\=/.exec(document.location.search) != null) {
+        return _data_search.fbclid;
+    } else if (/n_ad\=/.exec(document.location.search) != null) {
+        return _data_search.n_ad;
+    } else {
+        return "(not set)";
+    }
+};
+
+var _heathrow_getAcquisitionKeyword = function () {
+
+    var _data_search = _heathrow_getUrlParams();
+    var _data_referrer_search = _heathrow_getUrlParams(document.referrer);
+
+    if (/gclid\=/.exec(document.location.search) != null) {
+        return _data_search.gclid;
+    } else if (/utm_term\=/.exec(document.location.search) != null) {
+        return _data_search.utm_term;
+    } else if (/fbclid\=/.exec(document.location.search) != null) {
+        return _data_search.fbclid;
+    } else if (/n_keyword\=/.exec(document.location.search) != null) {
+        return _data_search.n_keyword;
+    } else if (/naver\.com/.exec(document.referrer) != null) {
+        if (/search\.naver\.com/.exec(document.referrer) != null) {
+            return _data_referrer_search.query;
+        }
+    } else if (/daum\.net/.exec(document.referrer) != null) {
+        if (/search\.daum\.net/.exec(document.referrer) != null) {
+            return _data_referrer_search.q;
+        }
+    } else {
+        return "(not set)";
+    }
+};
+
+var _heathrow_getToday = function () {
+    var _ds_getToday_date = new Date();
+    var _ds_getToday_year = _ds_getToday_date.getFullYear();
+    var _ds_getToday_month = ("0" + (1 + _ds_getToday_date.getMonth())).slice(-2);
+    var _ds_getToday_day = ("0" + _ds_getToday_date.getDate()).slice(-2);
+
+    return _ds_getToday_year + _ds_getToday_month + _ds_getToday_day;
+}
+
+var _heathrow_getToday_yyyyMMddHHmmss = function () {
+    var _ds_getToday_date = new Date();
+    var _ds_getToday_year = _ds_getToday_date.getFullYear();
+    var _ds_getToday_month = ("0" + (1 + _ds_getToday_date.getMonth())).slice(-2);
+    var _ds_getToday_day = ("0" + _ds_getToday_date.getDate()).slice(-2);
+    var _ds_getToday_hour = ("0" + _ds_getToday_date.getHours()).slice(-2);
+    var _ds_getToday_min = ("0" + _ds_getToday_date.getMinutes()).slice(-2);
+    var _ds_getToday_sec = ("0" + _ds_getToday_date.getSeconds()).slice(-2);
+
+    return _ds_getToday_year + _ds_getToday_month + _ds_getToday_day + _ds_getToday_hour + _ds_getToday_min + _ds_getToday_sec;
+}
