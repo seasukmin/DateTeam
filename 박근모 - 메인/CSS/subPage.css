@@ -17,12 +17,28 @@ html {
   /* font-size: 40px; */
   font-weight: bold;
 }
+body {
+  position: relative;
+}
+.login-box {
+  margin: 0 24px;
+  padding: 8px;
+  border: 2px solid black;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+}
+.login-box > p {
+  margin: 0;
+}
 .submain-center {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 8px;
+  align-items: center;
 }
 .category-menus {
   padding: 8px 24px;
@@ -35,12 +51,66 @@ html {
   border-radius: 24px;
 }
 .category-menus li {
+  cursor: pointer;
   font-size: 24px;
   padding-right: 24px;
   border-right: 2px solid black;
+}
+.category-menus li span:hover {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  transition: 0.15s;
 }
 .category-menus > .category-img,
 .category-menus > .category-epilogue,
 .category-menus > .category-customer-service {
   border-right: 0;
+}
+.category-menus > .category-epilogue,
+.category-menus > .category-customer-service {
+  padding-left: 24px;
+}
+
+.search-box {
+  padding: 12px;
+  /* border: 2px solid black; */
+  border-radius: 24px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.search-box > .bx {
+  font-size: 32px;
+}
+.search-box > input {
+  padding-left: 24px;
+  border-radius: 24px;
+  width: 500px;
+  font-size: 24px;
+}
+.contents-container {
+  width: 100%;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contents-container section {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid black;
+  border-radius: 24px;
+}
+.contents-container .hidden {
+  /* background-color: black; */
+  display: hidden;
+}
+.notice ul li {
+  border-bottom: 2px solid black;
+  padding: 16px;
+  padding-left: 8px;
+}
+.notice ul li:hover {
+  list-style-type: circle;
+  font-weight: bold;
 }
