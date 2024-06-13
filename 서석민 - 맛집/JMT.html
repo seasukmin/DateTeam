@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="JMT.css" />
   </head>
   <body>
+    <img class="Logo" src="DaejeonLoveU.png" />
     <!-- 헤더부분 시작 -->
     <header>
       <div class="header">
@@ -17,18 +18,87 @@
             type="text"
             placeholder="원하는 맛집을 입력해주세요."
           />
-          <a class="header-Anchor" href="#">로그인</a>
+          <a class="header-Anchor" href="#">Log In</a>
+          <a class="header-Anchor" href="#">Log out</a>
         </div>
+        <!-- 카테고리 시작 -->
         <div class="CateGorys">
           <ul class="CateGory">
-            <li class="Cate"><a href="#">동구</a></li>
-            <li class="Cate"><a href="#">서구</a></li>
-            <li class="Cate"><a href="#">중구</a></li>
-            <li class="Cate"><a href="#">유성구</a></li>
+            <li class="Cate">
+              <a class="CateA" href="#">동구</a>
+              <div class="Cate-box1 hidden boxes">
+                <div class="CateS"><a class="CateSA" href="#">#기념일</a></div>
+                <div class="CateS">
+                  <a class="CateSA" href="#">#비오는 날</a>
+                </div>
+                <div class="CateS"><a class="CateSA" href="#">#가볍게</a></div>
+                <div class="CateS"><a class="CateSA" href="#">#술 한잔</a></div>
+                <div class="CateS">
+                  <a class="CateSA" href="#">#분위기 좋은</a>
+                </div>
+                <div class="CateS"><a class="CateSA" href="#">#야외</a></div>
+                <div class="CateS"><a class="CateSA" href="#">#카페</a></div>
+                <div class="CateS"><a class="CateSA" href="#">#포토존</a></div>
+              </div>
+            </li>
+            <li class="Cate">
+              <a class="CateD" href="#">서구</a>
+              <div class="Cate-box2 hidden boxes">
+                <div class="CateF"><a class="CateFA" href="#">#기념일</a></div>
+                <div class="CateF">
+                  <a class="CateFA" href="#">#비오는 날</a>
+                </div>
+                <div class="CateF"><a class="CateFA" href="#">#가볍게</a></div>
+                <div class="CateF"><a class="CateFA" href="#">#술 한잔</a></div>
+                <div class="CateF">
+                  <a class="CateFA" href="#">#분위기 좋은</a>
+                </div>
+                <div class="CateF"><a class="CateFA" href="#">#야외</a></div>
+                <div class="CateF"><a class="CateFA" href="#">#카페</a></div>
+                <div class="CateF"><a class="CateFA" href="#">#포토존</a></div>
+              </div>
+            </li>
+            <li class="Cate">
+              <a class="CateG" href="#">중구</a>
+              <div class="Cate-box3 hidden boxes">
+                <div class="CateH"><a class="CateHA" href="#">#기념일</a></div>
+                <div class="CateH">
+                  <a class="CateHA" href="#">#비오는 날</a>
+                </div>
+                <div class="CateH"><a class="CateHA" href="#">#가볍게</a></div>
+                <div class="CateH"><a class="CateHA" href="#">#술 한잔</a></div>
+                <div class="CateH">
+                  <a class="CateHA" href="#">#분위기 좋은</a>
+                </div>
+                <div class="CateH"><a class="CateHA" href="#">#야외</a></div>
+                <div class="CateH"><a class="CateHA" href="#">#카페</a></div>
+                <div class="CateH"><a class="CateHA" href="#">#포토존</a></div>
+              </div>
+            </li>
+            <li class="Cate">
+              <a class="CateJ" href="#">유성구</a>
+              <div class="Cate-box4 hidden boxes">
+                <div class="CateK"><a class="CateKA" href="#">#기념일</a></div>
+                <div class="CateK">
+                  <a class="CateKA" href="#">#비오는 날</a>
+                </div>
+                <div class="CateK"><a class="CateKA" href="#">#가볍게</a></div>
+                <div class="CateK"><a class="CateKA" href="#">#술 한잔</a></div>
+                <div class="CateK">
+                  <a class="CateKA" href="#">#분위기 좋은</a>
+                </div>
+                <div class="CateK"><a class="CateKA" href="#">#야외</a></div>
+                <div class="CateK"><a class="CateKA" href="#">#카페</a></div>
+                <div class="CateK"><a class="CateKA" href="#">#포토존</a></div>
+              </div>
+            </li>
+            <li class="CateL"><a class="CateLA" href="#">후기</a></li>
           </ul>
         </div>
+        <!-- 카테고리 끝 -->
       </div>
     </header>
+
     <!-- 헤더부분 끝 -->
     <!-- 사이드 리스트 시작 -->
     <div class="sidebars">
@@ -58,6 +128,15 @@
     </div>
     <!-- 사이드 리스트 끝 -->
     <!-- 메인부분 시작 -->
+
+    <div class="back">
+      <img class="backImg" src="brick-wall-1834784_1920.jpg" ; />
+    </div>
+    <section>
+      <div class="middle">
+        <h1 class="middleH1">대전의 맛집을 소개합니다!</h1>
+      </div>
+    </section>
     <main>
       <section>
         <div class="Main-first">
@@ -78,7 +157,17 @@
 
     <!-- 메인부분 끝 -->
   </body>
+
   <script>
+    // 로고 시작
+    const Logo = document.querySelector(".Logo");
+    Logo.addEventListener("click", function () {
+      location.href = "#";
+    });
+    // 로고 끝
+
+    // 메인 스크립트 시작
+
     const Mainbox1 = document.querySelector(".Main-box1");
     const MainboxArr1 = [
       {
@@ -166,6 +255,79 @@
          `
       );
     });
+    // 메인 스크립트 시작
+
+    // 카테고리 스크립트 시작
+    const CateA = document.querySelector(".CateA");
+    const Cateboxes = document.querySelectorAll(".boxes");
+    const Catebox1 = document.querySelector(".Cate-box1");
+    // const nextClick = CateA.parentElement.nextElementSibling;
+    CateA.addEventListener("click", function () {
+      if (Catebox1.classList.contains("hidden")) {
+        Catebox1.classList.remove("hidden");
+      } else if (!Catebox1.classList.contains("hidden")) {
+        Catebox1.classList.add("hidden");
+      }
+      Cateboxes.forEach(function (el, idx) {
+        if (idx == 1 || idx == 2 || idx == 3) {
+          el.classList.add("hidden");
+        }
+      });
+      // console.log(Cateboxes);
+    });
+    const CateD = document.querySelector(".CateD");
+
+    // const nextClick = CateD.parentElement.nextElementSibling;
+    CateD.addEventListener("click", function () {
+      const Catebox2 = document.querySelector(".Cate-box2");
+      // console.log(CateD);
+      // console.log(Catebox2);
+
+      if (Catebox2.classList.contains("hidden")) {
+        Catebox2.classList.remove("hidden");
+      } else if (!Catebox2.classList.contains("hidden")) {
+        Catebox2.classList.add("hidden");
+      }
+      const Cateboxes2 = document.querySelectorAll(".boxes");
+      // console.log(Cateboxes2);
+      Cateboxes.forEach(function (el, idx) {
+        if (idx == 0 || idx == 2 || idx == 3) {
+          el.classList.add("hidden");
+        }
+      });
+    });
+    const CateG = document.querySelector(".CateG");
+    // const nextClick = CateA.parentElement.nextElementSibling;
+    CateG.addEventListener("click", function () {
+      const Catebox3 = document.querySelector(".Cate-box3");
+      if (Catebox3.classList.contains("hidden")) {
+        Catebox3.classList.remove("hidden");
+      } else if (!Catebox3.classList.contains("hidden")) {
+        Catebox3.classList.add("hidden");
+      }
+      Cateboxes.forEach(function (el, idx) {
+        if (idx == 0 || idx == 1 || idx == 3) {
+          el.classList.add("hidden");
+        }
+      });
+    });
+    const CateJ = document.querySelector(".CateJ");
+    // const nextClick = CateA.parentElement.nextElementSibling;
+    CateJ.addEventListener("click", function () {
+      const Catebox4 = document.querySelector(".Cate-box4");
+      if (Catebox4.classList.contains("hidden")) {
+        Catebox4.classList.remove("hidden");
+      } else if (!Catebox4.classList.contains("hidden")) {
+        Catebox4.classList.add("hidden");
+      }
+      Cateboxes.forEach(function (el, idx) {
+        if (idx == 0 || idx == 1 || idx == 2) {
+          el.classList.add("hidden");
+        }
+      });
+    });
+
+    // 카테고리 스크립트 종료
 
     // 맛집별 사이트 접속
     const Mainboxes1 = Mainbox1.firstElementChild;
