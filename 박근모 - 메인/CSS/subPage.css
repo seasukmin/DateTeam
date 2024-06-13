@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+html {
+  width: 100%;
+}
+/* title */
+.header-title {
+  padding: 8px;
+  width: fit-content;
+  margin-top: 24px;
+  border: 2px solid black;
+  border-radius: 24px;
+}
+.header-title-span {
+  /* font-size: 40px; */
+  font-weight: bold;
+}
+.submain-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.category-menus {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  list-style-type: none;
+  border: 2px solid black;
+  border-radius: 24px;
+}
+.category-menus li {
+  font-size: 24px;
+  padding-right: 24px;
+  border-right: 2px solid black;
+}
+.category-menus > .category-img,
+.category-menus > .category-epilogue,
+.category-menus > .category-customer-service {
+  border-right: 0;
+}
