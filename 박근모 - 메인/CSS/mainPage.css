@@ -15,12 +15,17 @@ html {
   padding: 8px;
   width: fit-content;
   margin-top: 24px;
-  border: 2px solid black;
   border-radius: 24px;
 }
 .header-title-span {
   /* font-size: 40px; */
   font-weight: bold;
+}
+.main-center {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* category */
@@ -48,6 +53,69 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  /* gap: 8px; */
+  gap: 8px;
+}
+.long-category i {
+  padding: 8px;
+}
+.long-category i:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+}
+.bx-home-heart {
+  border-bottom: 2px solid black;
+  padding: 4px;
+}
+.bx-search {
+  border-top: 2px solid black;
+  padding: 4px;
+  margin-top: 24px;
+}
+/* .long-category > span {
+  height: 20px;
+  font-size: 24px;
+  font-weight: bold;
+} */
+body {
+  position: relative;
+}
+.QR-code {
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contents-center {
+  border: 2px solid black;
+  width: 70%;
+  border-radius: 24px;
+}
+.login-banner-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.login-box {
+  width: 200px;
+  height: 140px;
+  border: 2px solid black;
+  border-radius: 24px;
+}
+.banner-box {
+  border: 2px solid black;
+  border-radius: 24px;
+  width: 200px;
+  height: 500px;
+}
+.mainPage-footer {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 24px;
+  margin: 24px;
+}
+.webPage-icons i {
+  cursor: pointer;
+  font-size: 40px;
 }
