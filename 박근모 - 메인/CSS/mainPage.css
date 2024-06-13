@@ -22,6 +22,11 @@ html {
   /* font-size: 40px; */
   font-weight: bold;
 }
+.main-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* category */
 .categories {
@@ -50,4 +55,22 @@ html {
   align-items: center;
   justify-content: space-around;
   /* gap: 8px; */
+}
+body {
+  position: relative;
+}
+.QR-code {
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contents-center {
+  border: 2px solid black;
+  width: 70%;
+  border-radius: 24px;
+}
+.login-box {
+  width: 48px;
+  border: 2px solid black;
 }
