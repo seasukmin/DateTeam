@@ -3,32 +3,204 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toggle Div Example</title>
+    <title>JMT</title>
+    <link rel="stylesheet" href="JMT.css" />
   </head>
   <body>
-    <div id="toggleButton">Toggle Div</div>
-    <div id="container"></div>
+    <!-- 헤더부분 시작 -->
+    <header>
+      <div class="header">
+        <h1 class="header-H1">#맛집</h1>
+        <div class="header-Main">
+          <input
+            class="header-Input"
+            type="text"
+            placeholder="원하는 맛집을 입력해주세요."
+          />
+          <a class="header-Anchor" href="#">로그인</a>
+        </div>
+        <div class="CateGorys">
+          <ul class="CateGory">
+            <li class="Cate"><a href="#">동구</a></li>
+            <li class="Cate"><a href="#">서구</a></li>
+            <li class="Cate"><a href="#">중구</a></li>
+            <li class="Cate"><a href="#">유성구</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- 헤더부분 끝 -->
+    <!-- 사이드 리스트 시작 -->
+    <div class="sidebars">
+      <h2>이주의 맛집 & 카페!</h2>
+      <div class="sidebar">
+        <h4>가장 인기 있는 맛집!</h4>
+        <ul class="sidebar-subs">
+          <li class="sidebar-sub"><a href="#">1</a></li>
+          <li class="sidebar-sub"><a href="#">2</a></li>
+          <li class="sidebar-sub"><a href="#">3</a></li>
+          <li class="sidebar-sub"><a href="#">4</a></li>
+          <li class="sidebar-sub"><a href="#">5</a></li>
+          <li class="sidebar-sub"><a href="#">6</a></li>
+        </ul>
+      </div>
+      <div class="sidebar">
+        <h4>가장 인기 있는 카페!</h4>
+        <ul class="sidebar-subs">
+          <li class="sidebar-sub"><a href="#">1</a></li>
+          <li class="sidebar-sub"><a href="#">2</a></li>
+          <li class="sidebar-sub"><a href="#">3</a></li>
+          <li class="sidebar-sub"><a href="#">4</a></li>
+          <li class="sidebar-sub"><a href="#">5</a></li>
+          <li class="sidebar-sub"><a href="#">6</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 사이드 리스트 끝 -->
+    <!-- 메인부분 시작 -->
+    <main>
+      <section>
+        <div class="Main-first">
+          <div class="Main-title">#기념일 (추천)</div>
+          <div class="Main-box1"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#비오는 날 (추천)</div>
+          <div class="Main-box2"></div>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
 
-    <script src="script.js"></script>
+    <!-- 메인부분 끝 -->
   </body>
   <script>
-    document
-      .getElementById("toggleButton")
-      .addEventListener("click", function () {
-        const container = document.getElementById("container");
-        const existingDiv = document.getElementById("toggleDiv");
+    const Mainbox1 = document.querySelector(".Main-box1");
+    const MainboxArr1 = [
+      {
+        src: "test사진/300_300_20240602113650_photo1_1fbc5ba2b85f.jpg",
+        text1: "평점 4.4",
+        text2: "샹하이",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240610032536164_photo_1be52a7e9e3a.jpg",
+        text1: "평점 4.5",
+        text2: "이삭토스트",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240606071700_photo1_f498fb41a690.jpg",
+        text1: "평점 4.6",
+        text2: "미국의아침",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240612121450836_photo_GNtCRjNogBBb.jpg",
+        text1: "평점 4.7",
+        text2: "맥도날드",
+        text3: "#축하 #행복 #생일",
+      },
+    ];
+    MainboxArr1.forEach((el, idx) => {
+      Mainbox1.insertAdjacentHTML(
+        "beforeend",
+        `
+         <div class="box">
+              <img
+                class="box-img"
+                src="${el.src}"
+              />
+              <div class="box-point">${el.text1}</div>
+              <div class="box-name">${el.text2}</div>
+              <div class="box-tag">${el.text3}</div>
+            </div>
+         `
+      );
+    });
 
-        if (existingDiv) {
-          container.removeChild(existingDiv);
-        } else {
-          const newDiv = document.createElement("div");
-          newDiv.id = "toggleDiv";
-          newDiv.textContent = "This is a toggled div.";
-          newDiv.style.border = "1px solid black";
-          newDiv.style.padding = "10px";
-          newDiv.style.marginTop = "10px";
-          container.appendChild(newDiv);
-        }
-      });
+    const Mainbox2 = document.querySelector(".Main-box2");
+    const MainboxArr2 = [
+      {
+        src: "test사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+        text1: "평점 4.0",
+        text2: "여우동 ",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+        text1: "평점 4.1",
+        text2: "스타벅스",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+        text1: "평점 4.2",
+        text2: "롯데리아",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "test사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+        text1: "평점 4.3",
+        text2: "두찜",
+        text3: "#축하 #행복 #생일",
+      },
+    ];
+    MainboxArr2.forEach((el, idx) => {
+      Mainbox2.insertAdjacentHTML(
+        "beforeend",
+        `
+         <div class="box">
+              <img
+                class="box-img"
+                src="${el.src}"
+              />
+              <div class="box-point">${el.text1}</div>
+              <div class="box-name">${el.text2}</div>
+              <div class="box-tag">${el.text3}</div>
+            </div>
+         `
+      );
+    });
+
+    // 맛집별 사이트 접속
+    const Mainboxes1 = Mainbox1.firstElementChild;
+    Mainboxes1.addEventListener("click", function () {
+      location.href = "JMTList1/JMT-Re1.html";
+    });
+    const Mainboxes2 = Mainboxes1.nextElementSibling;
+    Mainboxes2.addEventListener("click", function () {
+      location.href = "JMTList1/JMT-Re2.html";
+    });
+    const Mainboxes3 = Mainboxes2.nextElementSibling;
+    Mainboxes3.addEventListener("click", function () {
+      location.href = "JMTList1/JMT-Re3.html";
+    });
+    const Mainboxes4 = Mainboxes3.nextElementSibling;
+    Mainboxes4.addEventListener("click", function () {
+      location.href = "JMTList1/JMT-Re4.html";
+    });
+
+    const Nainboxes1 = Mainbox2.firstElementChild;
+    Nainboxes1.addEventListener("click", function () {
+      alert("1");
+    });
+    const Nainboxes2 = Nainboxes1.nextElementSibling;
+    Nainboxes2.addEventListener("click", function () {
+      alert("2");
+    });
+    const Nainboxes3 = Nainboxes2.nextElementSibling;
+    Nainboxes3.addEventListener("click", function () {
+      alert("3");
+    });
+    const Nainboxes4 = Nainboxes3.nextElementSibling;
+    Nainboxes4.addEventListener("click", function () {
+      alert("4");
+    });
+    // 맛집별 사이트 접속 종료
   </script>
 </html>
