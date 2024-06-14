@@ -249,6 +249,32 @@ html {
   border: 2px solid black;
   border-radius: 24px;
   margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.footer-right,
+.footer-left {
+  flex-grow: 1;
+}
+/* .footer-left {
+  text-align: end;
+} */
+.footer-right {
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+  bottom: 8px;
+  right: 24px;
+}
+.customer-service {
+  margin: 0;
+  /* margin-bottom: 24px;
+  margin-right: 24px; */
+}
+.footer-right:hover {
+  text-decoration: underline;
 }
 .webPage-icons i {
   cursor: pointer;
