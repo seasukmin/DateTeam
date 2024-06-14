@@ -22,19 +22,42 @@ html {
   font-style: italic;
   margin-bottom: 12px;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   font-size: 30px;
 }
 .Tag-titles p {
   height: 29px;
 }
 .Tag-titles p:hover {
-  border-bottom: 2px solid rgb(255, 51, 204);
+  /* border-bottom: 2px solid rgb(255, 51, 204); */
   transform: scale(1.1);
+  transition: 0.2s;
 }
-.Tag-titles span {
+.h-Tag1p:hover {
+  border-bottom: 2px solid red;
+}
+.h-Tag2p:hover {
+  border-bottom: 2px solid purple;
+}
+.h-Tag3p:hover {
+  border-bottom: 2px solid skyblue;
+}
+.h-Tag4p:hover {
+  border-bottom: 2px solid rgb(255, 51, 204);
+}
+.h-Tag1Span {
+  color: red;
+}
+.h-Tag2Span {
+  color: purple;
+}
+.h-Tag3Span {
+  color: skyblue;
+}
+.h-Tag4Span {
   color: rgb(255, 51, 204);
 }
+
 /* title */
 .header-title {
   padding: 8px;
@@ -87,7 +110,7 @@ html {
   justify-content: center;
   gap: 8px;
   font-size: 28px;
-  padding: 8px;
+  padding: 4px;
 }
 .category-top {
   border-bottom: 2px solid black;
@@ -98,7 +121,6 @@ html {
 .category-bottom {
   border-top: 2px solid black;
 }
-
 .long-category div > i {
   padding: 6px;
   border-radius: 50px;
@@ -106,15 +128,28 @@ html {
 .long-category div > i:hover {
   cursor: pointer;
   padding: 6px;
-  background-color: rgb(255, 51, 204);
+  /* background-color: rgb(255, 51, 204); */
   border: 0;
   color: white;
   border-radius: 50%;
   transition: 0.3s;
 }
-body {
-  /* position: relative; */
+.bx-home-heart:hover,
+.bx-search:hover {
+  background-color: rgb(255, 51, 204);
 }
+.bx-restaurant:hover {
+  background-color: red;
+}
+.bxs-coffee:hover {
+  background-color: purple;
+}
+.bxs-map:hover {
+  background-color: skyblue;
+}
+/* body {
+  position: relative;
+} */
 .QR-code {
   border: 2px solid black;
   height: fit-content;

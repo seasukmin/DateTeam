@@ -1,0 +1,72 @@
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+.calendar {
+  width: 300px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 51, 204);
+  color: white;
+  padding: 10px;
+}
+.calendar-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.calendar-body {
+  padding: 10px;
+}
+.day-names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.day-names div,
+.days div {
+  width: 14%;
+  text-align: center;
+  font-weight: bold;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.days div {
+  width: 14%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.days div:hover {
+  background-color: #f0f0f0;
+  color: black;
+  transition: 0.3s;
+}
+.days .selected {
+  background-color: rgb(255, 51, 204);
+  color: white;
+  /* border-radius: 50%; */
+}
+.days .range {
+  background-color: rgb(255, 51, 204);
+  color: white;
+}

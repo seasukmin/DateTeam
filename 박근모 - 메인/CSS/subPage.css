@@ -116,3 +116,12 @@ body {
   list-style-type: circle;
   font-weight: bold;
 }
+
+.webPage-icons i {
+  cursor: pointer;
+  font-size: 40px;
+}
+.webPage-icons i:hover {
+  color: rgb(255, 51, 204);
+  transition: 0.2s;
+}
