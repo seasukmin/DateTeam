@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DongGu</title>
+    <link rel="stylesheet" href="./dongGu.css" />
+  </head>
+  <body>
+    <div>
+      <div class="title-bar">
+        <div class="title">
+          <p class="hotPlace"><span class="hashTag">#</span>핫플레이스</p>
+        </div>
+        <button class="title-btn">
+          <img src="../img/DaejeonLoveU.png" width="150px" height="50px" />
+        </button>
+      </div>
+
+      <div class="category-bar">
+        <div class="search">
+          <input class="searchInput" placeholder="키워드를 입력해주세요." />
+          <a class="login">로그인</a>
+        </div>
+        <ul class="category">
+          <li data-url="./카테고리페이지/dongGu.html">동구</li>
+          <li data-url="./카테고리페이지/seoGu.html">서구</li>
+          <li data-url="./카테고리페이지/jungGu.html">중구</li>
+          <li data-url="./카테고리페이지/YuseongGu.html">유성구</li>
+          <li data-url="./카테고리페이지/daedeokGu.html">대덕구</li>
+        </ul>
+      </div>
+
+      <div class="side-bar">
+        <div class="side-category">
+          <h1>동구</h1>
+          <ul class="side-text">
+            <li><span class="hashTag">#</span>나들이</li>
+            <li><span class="hashTag">#</span>쇼핑</li>
+            <li><span class="hashTag">#</span>실내</li>
+            <li><span class="hashTag">#</span>스포츠</li>
+            <li><span class="hashTag">#</span>축제</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-box">
+        <div class="contents-box" id="picnic">
+          <h1 class="content-name"><span class="hashTag">#</span>나들이</h1>
+        </div>
+        <div class="contents-box" id="shopping">
+          <h1 class="content-name"><span class="hashTag">#</span>쇼핑</h1>
+        </div>
+        <div class="contents-box" id="inside">
+          <h1 class="content-name"><span class="hashTag">#</span>실내</h1>
+        </div>
+        <div class="contents-box" id="sports">
+          <h1 class="content-name"><span class="hashTag">#</span>스포츠</h1>
+        </div>
+        <div class="contents-box" id="festival">
+          <h1 class="content-name"><span class="hashTag">#</span>축제</h1>
+        </div>
+      </div>
+
+      <div class="banner">
+        <p>광고입니다.</p>
+      </div>
+
+      <div class="footer">
+        <div class="info">
+          <p>2024. DW Academy</p>
+          <p>tel: 042-123-4567</p>
+          <p>Email: DWA123@gmail.com</p>
+        </div>
+        <div class="service">
+          <p>고객센터</p>
+          <p>이용약관</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const picnic = document.getElementById("picnic");
+    const picnicArr = [
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    picnicArr.forEach((info, idx) => {
+      picnic.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+
+    const shopping = document.getElementById("shopping");
+    const shoppingArr = [
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    shoppingArr.forEach((info, idx) => {
+      shopping.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+
+    const inside = document.getElementById("inside");
+    const insideArr = [
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    insideArr.forEach((info, idx) => {
+      inside.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+
+    const sports = document.getElementById("sports");
+    const sportsArr = [
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    sportsArr.forEach((info, idx) => {
+      sports.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+
+    const festival = document.getElementById("festival");
+    const festivalArr = [
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "../img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    festivalArr.forEach((info, idx) => {
+      festival.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+  </script>
+</html>

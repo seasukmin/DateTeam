@@ -9,8 +9,8 @@
   <body>
     <div>
       <div class="title-bar">
-        <div>
-          <p class="hotPlace">#핫플레이스</p>
+        <div class="title">
+          <p class="hotPlace"><span class="hashTag">#</span>핫플레이스</p>
         </div>
         <button class="title-btn">
           <img src="./img/DaejeonLoveU.png" width="150px" height="50px" />
@@ -23,100 +23,30 @@
           <a class="login">로그인</a>
         </div>
         <ul class="category">
-          <li>동구</li>
-          <li>서구</li>
-          <li>중구</li>
-          <li>유성구</li>
-          <li>대덕구</li>
+          <li data-url="./카테고리페이지/dongGu.html">동구</li>
+          <li data-url="./카테고리페이지/seoGu.html">서구</li>
+          <li data-url="./카테고리페이지/jungGu.html">중구</li>
+          <li data-url="./카테고리페이지/YuseongGu.html">유성구</li>
+          <li data-url="./카테고리페이지/daedeokGu.html">대덕구</li>
         </ul>
       </div>
 
       <div class="main">
-        <img src="./img/daedeokgu_223203784898_0.jpg" />
+        <img
+          id="mainImg"
+          src="./img/daedeokgu_223203784898_0.jpg"
+          alt="메인 이미지"
+        />
         <p class="main-text"></p>
       </div>
 
       <div class="content-box">
-        <div class="content">
-          <a>
-            <img src="./핫플/한밭수목원/main.jpg" />
-            <p class="hpName">한밭수목원</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
+        <div class="all-box" id="content">
+          <h1 class="content-name"><span class="hashTag">#</span> 명소</h1>
         </div>
-        <div class="content">
-          <a>
-            <img src="./핫플/엑스포/main.jpg" />
-            <p class="hpName">엑스포 과학공원</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/뿌리공원.jpg" />
-            <p class="hpName">뿌리공원</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/상소동.jpg" />
-            <p class="hpName">상소동산림욕장</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/대동벽화마을.jpg" />
-            <p class="hpName">대동하늘공원</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/만인산.jpg" />
-            <p class="hpName">만인산</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/대펑호.jpg" />
-            <p class="hpName">대청호</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
-        <div class="content">
-          <a>
-            <img src="./img/우암사적공원.jpg" />
-            <p class="hpName">우암사적공원</p></a
-          >
-          <p class="hpTime">
-            월-토: 09:00 ~ 21:00 (계절별 상이)<br />일: 09:00 ~ 18:00
-          </p>
-          <p class="hpInfo">입장료: 무료</p>
-        </div>
+        <h3>
+          더 많은 콘텐츠를 보시려면 키워드 검색 또는 카테고리를 눌러 확인하세요.
+        </h3>
       </div>
 
       <div class="banner">
@@ -137,18 +67,153 @@
     </div>
   </body>
   <script>
+    const contents = document.getElementById("content");
+    const contentArr = [
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "한밭수목원",
+        time: "월-토: 09:00",
+        time2: "<br>일: 09:00",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "엑스포 과학공원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "대전 오월드",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "대전시립박물관",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "으능정이거리",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "신세계백화점",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "옛터민속박물관",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "식장산 야경",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "만인산자연휴양림",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+      {
+        a: "",
+        img: "./img/상소동.jpg",
+        name: "테미공원",
+        time: "월-토: 09:00",
+        time2: "",
+        event: "입장료: 무료",
+      },
+    ];
+    contentArr.forEach((info, idx) => {
+      content.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content">
+            <a href=${info.a}>
+              <img src=${info.img} />
+              <p class="hpName">${info.name}</p></a
+            >
+            <p class="hpTime">
+              ${info.time}${info.time2}
+            </p>
+            <p class="hpInfo">${info.event}</p>
+          </div> `
+      );
+    });
+
+    function chgMainImg() {
+      const mainImgArr = [
+        "./img/메인1.jpg",
+        "./img/메인2.jpg",
+        "./img/메인3.jpg",
+        "./img/메인4.jpg",
+        "./img/메인5.jpg",
+        "./img/메인7.jpg",
+      ];
+      let mainImgIndex = 0;
+      const mainImgEl = document.getElementById("mainImg");
+
+      setInterval(() => {
+        mainImgEl.classList.add("mainImgfadeOut");
+
+        setTimeout(() => {
+          mainImgIndex = (mainImgIndex + 1) % mainImgArr.length;
+          mainImgEl.src = mainImgArr[mainImgIndex];
+          mainImgEl.classList.remove("mainImgfadeOut");
+        }, 2000);
+      }, 3500);
+    }
+    window.onload = chgMainImg;
+
     const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
     const wave = document.querySelector(".main-text");
     let textLength = 0;
-    function textWave() {
-      let txt = text[textLength++];
-      wave.innerHTML += txt;
 
-      if (textLength > text.length) {
-        wave.textContent = "";
-        textLength = 0;
+    function textWave() {
+      if (textLength < text.length) {
+        wave.innerHTML += text[textLength++];
+      } else {
+        clearInterval(intervalMainText);
+        setTimeout(() => {
+          wave.textContent = "";
+          textLength = 0;
+          intervalMainText = setInterval(textWave, 250);
+        }, 2500);
       }
     }
-    setInterval(textWave, 250);
+    intervalMainText = setInterval(textWave, 250);
+
+    document.querySelectorAll(".category li").forEach((item) => {
+      item.addEventListener("click", function () {
+        const url = this.getAttribute("data-url");
+        window.location.href = url;
+      });
+    });
   </script>
 </html>
