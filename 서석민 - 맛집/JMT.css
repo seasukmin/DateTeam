@@ -17,6 +17,7 @@ body {
   color: white;
   background-color: black;
 }
+
 #body {
   height: 100%;
   font-family: "Ownglyph_noocar-Rg";
@@ -30,7 +31,7 @@ body {
   right: 70px;
   width: 180px;
   cursor: pointer;
-  background-color: white;
+
   border-radius: 20px;
 }
 section {
@@ -73,6 +74,11 @@ section {
   border-radius: 20px;
   padding: 5px 10px;
 }
+.header-img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
 .CateGory {
   display: flex;
   justify-content: space-evenly;
@@ -89,6 +95,7 @@ section {
   font-size: 55px;
   position: relative;
   color: white;
+  cursor: pointer;
 }
 .CateSA,
 .CateFA,
@@ -108,13 +115,12 @@ section {
   justify-content: center;
   position: absolute;
   gap: 20px;
-  top: 20%;
-  left: 22%;
+  top: 30%;
   width: 300px;
-  height: 50%;
+  height: max-content;
   padding: 15px;
   font-size: 36px;
-  /* transform: translatex(-50%); */
+  transform: translatex(30%);
 }
 .Cate {
   display: flex;
@@ -139,6 +145,7 @@ section {
 }
 /* 사이드바 시작 */
 .sidebars {
+  top: 300px;
   position: fixed;
   width: 200px;
   height: 550px;
@@ -263,13 +270,44 @@ main {
 .Promise-but:hover {
   animation: pulse 0.5s;
 }
-@keyframes pulse {
+/* @keyframes pulse {
   from {
     box-shadow: 0 0 0 0 #4dbde5;
   }
   to {
     box-shadow: 0 0 0px 10px transparent;
   }
+} */
+.Top {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
-
+.TopLoop {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #3e3e3e;
+  border: 3px solid white;
+  transform: translateX(-50%);
+  position: fixed;
+  font-size: 32px;
+  left: 50%;
+  bottom: 50px;
+  width: 80px;
+  height: 80px;
+}
+.TopLoop:active {
+  animation: pulse 0.3s;
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 white;
+  }
+  to {
+    box-shadow: 0 0 0px 15px transparent;
+  }
+}
 /* 메인 부분 끝*/
