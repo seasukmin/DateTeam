@@ -10,6 +10,8 @@
     />
     <link rel="stylesheet" href="../font/font.css" />
     <link rel="stylesheet" href="../CSS/mainPage.css" />
+    <link rel="stylesheet" href="../CSS/mainPage-cotent.css" />
+    <link rel="stylesheet" href="../CSS/calendar.css" />
   </head>
   <body>
     <!-- title -->
@@ -19,10 +21,10 @@
         <img src="../img/DaejeonLoveU.png" width="320px" />
       </h1>
       <div class="Tag-titles">
-        <p><span>#</span>맛집&nbsp;</p>
-        <p><span>#</span>패션&nbsp;</p>
-        <p><span>#</span>핫플</p>
-        <p><span>#</span>이용후기</p>
+        <p class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</p>
+        <p class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</p>
+        <p class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</p>
+        <p class="h-Tag4p"><span class="h-Tag4Span">#</span>탐방후기</p>
       </div>
     </header>
     <main class="main-center">
@@ -37,7 +39,7 @@
           </div>
           <div class="category-center">
             <i class="bx bx-restaurant"></i>
-            <i class="bx bxs-t-shirt"></i>
+            <i class="bx bxs-coffee bx-flip-horizontal"></i>
             <i class="bx bxs-map"></i>
           </div>
           <div class="category-bottom"><i class="bx bx-search"></i></div>
@@ -46,17 +48,40 @@
 
       <!-- main Area -->
       <div class="contents-center">
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
-        <img src="../../img자료/페르소나 img/20women.png" alt="" />
+        <div class="calendar">
+          <div class="calendar-header">
+            <button id="prevMonth">&lt;</button>
+            <div id="currentMonthYear"></div>
+            <button id="nextMonth">&gt;</button>
+          </div>
+          <div class="calendar-body">
+            <div class="day-names">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days" id="days"></div>
+          </div>
+        </div>
+        <section class="restaurant-section">
+          <h1 class="content-title"><span class="h-Tag1Span">#</span>맛집</h1>
+        </section>
+        <section class="cafe-section">
+          <h1 class="content-title"><span class="h-Tag2Span">#</span>카페</h1>
+        </section>
+        <section class="hotplace-section">
+          <h1 class="content-title"><span class="h-Tag3Span">#</span>핫플</h1>
+        </section>
+        <section class="subscribe-banner">제휴가게 및 쿠폰</section>
+        <section class="epilogue-section">
+          <h1 class="content-title">
+            <span class="h-Tag4Span">#</span>탐방후기
+          </h1>
+        </section>
       </div>
       <div class="login-banner-boxes">
         <!-- login Box -->
@@ -86,16 +111,23 @@
     </main>
     <!-- Footer -->
     <footer class="mainPage-footer">
-      <p>2024 D.W.Academy</p>
-      <p>Tel. 010-7777-7777</p>
-      <p>대전광역시 중구 선화동</p>
-      <p>Daejeon_Love-U1004@gmail.com</p>
-      <div class="webPage-icons">
-        <i class="bx bxl-instagram-alt"></i>
-        <i class="bx bxl-facebook-circle"></i>
-        <i class="bx bxl-twitter"></i>
-        <i class="bx bxl-youtube"></i>
+      <div class="footer-right">
+        <p>2024 D.W.Academy</p>
+        <p>Tel. 010-7777-7777</p>
+        <p>대전광역시 중구 선화동</p>
+        <p>Daejeon_Love-U1004@gmail.com</p>
+        <div class="webPage-icons">
+          <i class="bx bxl-instagram-alt"></i>
+          <i class="bx bxl-facebook-circle"></i>
+          <i class="bx bxl-twitter"></i>
+          <i class="bx bxl-youtube"></i>
+        </div>
+      </div>
+      <div class="footer-left">
+        <p>고객지원센터</p>
+        <p></p>
       </div>
     </footer>
   </body>
+  <script src="../Javascript/calendar.js"></script>
 </html>
