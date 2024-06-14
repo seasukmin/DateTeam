@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="JMT.css" />
   </head>
   <body>
-    <img class="Logo" src="DaejeonLoveU.png" />
+    <img class="Logo" src="사진/Logo-white.png" width="100" height="100" />
     <!-- 헤더부분 시작 -->
     <header>
       <div class="header">
-        <h1 class="header-H1">#맛집</h1>
+        <h1 class="header-H1" id="header-H1">#맛집</h1>
         <div class="header-Main">
           <input
             class="header-Input"
@@ -25,74 +25,73 @@
         <div class="CateGorys">
           <ul class="CateGory">
             <li class="Cate">
-              <a class="CateA" href="#">동구</a>
+              <a class="CateA" id="CateA" href="#MainH1">동구</a>
               <div class="Cate-box1 hidden boxes">
-                <div class="CateS"><a class="CateSA" href="#">#기념일</a></div>
                 <div class="CateS">
-                  <a class="CateSA" href="#">#비오는 날</a>
+                  <a class="CateSA" href="#"
+                    ><span class="Red">#</span>기념일</a
+                  >
                 </div>
-                <div class="CateS"><a class="CateSA" href="#">#가볍게</a></div>
-                <div class="CateS"><a class="CateSA" href="#">#술 한잔</a></div>
+                <div class="CateS">
+                  <a class="CateSA" href="#"
+                    ><span class="Red">#</span>비오는 날</a
+                  >
+                </div>
+                <div class="CateS">
+                  <a class="CateSA" href="#"
+                    ><span class="Red">#</span>술 한잔</a
+                  >
+                </div>
                 <div class="CateS">
                   <a class="CateSA" href="#">#분위기 좋은</a>
                 </div>
                 <div class="CateS"><a class="CateSA" href="#">#야외</a></div>
-                <div class="CateS"><a class="CateSA" href="#">#카페</a></div>
-                <div class="CateS"><a class="CateSA" href="#">#포토존</a></div>
               </div>
             </li>
             <li class="Cate">
-              <a class="CateD" href="#">서구</a>
+              <a class="CateD" href="#MainH2">서구</a>
               <div class="Cate-box2 hidden boxes">
                 <div class="CateF"><a class="CateFA" href="#">#기념일</a></div>
                 <div class="CateF">
                   <a class="CateFA" href="#">#비오는 날</a>
                 </div>
-                <div class="CateF"><a class="CateFA" href="#">#가볍게</a></div>
                 <div class="CateF"><a class="CateFA" href="#">#술 한잔</a></div>
                 <div class="CateF">
                   <a class="CateFA" href="#">#분위기 좋은</a>
                 </div>
                 <div class="CateF"><a class="CateFA" href="#">#야외</a></div>
-                <div class="CateF"><a class="CateFA" href="#">#카페</a></div>
-                <div class="CateF"><a class="CateFA" href="#">#포토존</a></div>
               </div>
             </li>
             <li class="Cate">
-              <a class="CateG" href="#">중구</a>
+              <a class="CateG" href="#MainH3">중구</a>
               <div class="Cate-box3 hidden boxes">
                 <div class="CateH"><a class="CateHA" href="#">#기념일</a></div>
                 <div class="CateH">
                   <a class="CateHA" href="#">#비오는 날</a>
                 </div>
-                <div class="CateH"><a class="CateHA" href="#">#가볍게</a></div>
+
                 <div class="CateH"><a class="CateHA" href="#">#술 한잔</a></div>
                 <div class="CateH">
                   <a class="CateHA" href="#">#분위기 좋은</a>
                 </div>
                 <div class="CateH"><a class="CateHA" href="#">#야외</a></div>
-                <div class="CateH"><a class="CateHA" href="#">#카페</a></div>
-                <div class="CateH"><a class="CateHA" href="#">#포토존</a></div>
               </div>
             </li>
             <li class="Cate">
-              <a class="CateJ" href="#">유성구</a>
+              <a class="CateJ" href="#MainH4">유성구</a>
               <div class="Cate-box4 hidden boxes">
                 <div class="CateK"><a class="CateKA" href="#">#기념일</a></div>
                 <div class="CateK">
                   <a class="CateKA" href="#">#비오는 날</a>
-                </div>                                         
-                <div class="CateK"><a class="CateKA" href="#">#가볍게</a></div>
+                </div>
+
                 <div class="CateK"><a class="CateKA" href="#">#술 한잔</a></div>
                 <div class="CateK">
                   <a class="CateKA" href="#">#분위기 좋은</a>
                 </div>
                 <div class="CateK"><a class="CateKA" href="#">#야외</a></div>
-                <div class="CateK"><a class="CateKA" href="#">#카페</a></div>
-                <div class="CateK"><a class="CateKA" href="#">#포토존</a></div>
               </div>
             </li>
-            <li class="CateL"><a class="CateLA" href="#">후기</a></li>
           </ul>
         </div>
         <!-- 카테고리 끝 -->
@@ -102,27 +101,50 @@
     <!-- 헤더부분 끝 -->
     <!-- 사이드 리스트 시작 -->
     <div class="sidebars">
-      <h2>이주의 맛집 & 카페!</h2>
+      <h1>이주의 맛집!</h1>
+      <h2>가장 인기 있는 맛집!</h2>
       <div class="sidebar">
-        <h4>가장 인기 있는 맛집!</h4>
         <ul class="sidebar-subs">
-          <li class="sidebar-sub"><a href="#">1</a></li>
-          <li class="sidebar-sub"><a href="#">2</a></li>
-          <li class="sidebar-sub"><a href="#">3</a></li>
-          <li class="sidebar-sub"><a href="#">4</a></li>
-          <li class="sidebar-sub"><a href="#">5</a></li>
-          <li class="sidebar-sub"><a href="#">6</a></li>
-        </ul>
-      </div>
-      <div class="sidebar">
-        <h4>가장 인기 있는 카페!</h4>
-        <ul class="sidebar-subs">
-          <li class="sidebar-sub"><a href="#">1</a></li>
-          <li class="sidebar-sub"><a href="#">2</a></li>
-          <li class="sidebar-sub"><a href="#">3</a></li>
-          <li class="sidebar-sub"><a href="#">4</a></li>
-          <li class="sidebar-sub"><a href="#">5</a></li>
-          <li class="sidebar-sub"><a href="#">6</a></li>
+          <li class="sidebar-sub">
+            <a href="#">1. 치앙마이방콕</a>
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">2. 알텐데</a>
+            <div class="down">▼</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">3. 만보우노마년동 </a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">4. 심도 </a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">5. 칸스테이크</a>
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">6. 더리스 대청호</a>
+            <div class="down">▼</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">7. 삿뽀로 대전</a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">8. 누오보나폴리</a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">9. 홍콩구락부</a>
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#">10. 연남</a>
+            <div class="down">▼</div>
+          </li>
         </ul>
       </div>
     </div>
@@ -130,7 +152,7 @@
     <!-- 메인부분 시작 -->
 
     <div class="back">
-      <img class="backImg" src="brick-wall-1834784_1920.jpg" ; />
+      <img class="backImg" src="사진/brick-wall-1834784_1920.jpg" ; />
     </div>
     <section>
       <div class="middle">
@@ -138,9 +160,12 @@
       </div>
     </section>
     <main>
+      <!-- 동구 시작 -->
+
+      <h1 class="MainH1" id="MainH1">🅰 동구</h1>
       <section>
         <div class="Main-first">
-          <div class="Main-title">#기념일 (추천)</div>
+          <div class="Main-title">#기념일</div>
           <div class="Main-box1"></div>
         </div>
       </section>
@@ -150,15 +175,141 @@
           <div class="Main-box2"></div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#술 한잔</div>
+          <div class="Main-box3"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#분위기 좋은</div>
+          <div class="Main-box4"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#야외</div>
+          <div class="Main-box5"></div>
+        </div>
+      </section>
+      <!-- 동구 끝 -->
+      <!-- 서구 시작 -->
+      <h1 class="MainH1" id="MainH2">🅱 서구</h1>
+      <section>
+        <div class="Main-first">
+          <div class="Main-title">#기념일</div>
+          <div class="Main-box1"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#비오는 날 (추천)</div>
+          <div class="Main-box2"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#술 한잔</div>
+          <div class="Main-box3"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#분위기 좋은</div>
+          <div class="Main-box4"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#야외</div>
+          <div class="Main-box5"></div>
+        </div>
+      </section>
+      <!-- 서구 끝 -->
+      <!-- 중구 시작 -->
+      <h1 class="MainH1" id="MainH3">🆎 중구</h1>
+      <section>
+        <div class="Main-first">
+          <div class="Main-title">#기념일</div>
+          <div class="Main-box1"></div>
+        </div>
+      </section>
 
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#비오는 날 (추천)</div>
+          <div class="Main-box2"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#술 한잔</div>
+          <div class="Main-box3"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#분위기 좋은</div>
+          <div class="Main-box4"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#야외</div>
+          <div class="Main-box5"></div>
+        </div>
+      </section>
+      <!-- 중구 끝 -->
+      <!-- 유성구 시작 -->
+      <h1 class="MainH1" id="MainH4">🆑 유성구</h1>
+      <section>
+        <div class="Main-first">
+          <div class="Main-title">#기념일</div>
+          <div class="Main-box1"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#비오는 날 (추천)</div>
+          <div class="Main-box2"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#술 한잔</div>
+          <div class="Main-box3"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#분위기 좋은</div>
+          <div class="Main-box4"></div>
+        </div>
+      </section>
+      <section>
+        <div class="Main-second">
+          <div class="Main-title">#야외</div>
+          <div class="Main-box5"></div>
+        </div>
+      </section>
+      <div class="TopLoop">
+        <a class="Top" href="#header-H1">맨 위로!</a>
+      </div>
+      <div class="Promise">
+        <button class="Promise-but">예약하기!</button>
+        <button class="Promise-but">플래너+</button>
+      </div>
+      <!-- 유성구 끝 -->
+    </main>
+    <!-- 예약 시스템 시작 -->
+
+    <!-- 예약 시스템 -->
     <!-- 메인부분 끝 -->
   </body>
+  <script src="JMT.js"></script>
 
-  <script>
+  <!-- <script>
     // 로고 시작
     const Logo = document.querySelector(".Logo");
     Logo.addEventListener("click", function () {
@@ -171,28 +322,28 @@
     const Mainbox1 = document.querySelector(".Main-box1");
     const MainboxArr1 = [
       {
-        src: "test사진/300_300_20240602113650_photo1_1fbc5ba2b85f.jpg",
-        text1: "평점 4.4",
-        text2: "샹하이",
-        text3: "#축하 #행복 #생일",
+        src: "사진/300_300_20240602113650_photo1_1fbc5ba2b85f.jpg",
+        text1: "평점 4.9",
+        text2: "치앙마이방콕대전",
+        text3: "#축하 #행복 #기념일",
       },
       {
-        src: "test사진/300_300_20240610032536164_photo_1be52a7e9e3a.jpg",
+        src: "사진/300_300_20240610032536164_photo_1be52a7e9e3a.jpg",
         text1: "평점 4.5",
         text2: "이삭토스트",
-        text3: "#축하 #행복 #생일",
+        text3: "#축하 #행복 #기념일",
       },
       {
-        src: "test사진/300_300_20240606071700_photo1_f498fb41a690.jpg",
+        src: "사진/300_300_20240606071700_photo1_f498fb41a690.jpg",
         text1: "평점 4.6",
         text2: "미국의아침",
-        text3: "#축하 #행복 #생일",
+        text3: "#축하 #행복 #기념일",
       },
       {
-        src: "test사진/300_300_20240612121450836_photo_GNtCRjNogBBb.jpg",
+        src: "사진/300_300_20240612121450836_photo_GNtCRjNogBBb.jpg",
         text1: "평점 4.7",
         text2: "맥도날드",
-        text3: "#축하 #행복 #생일",
+        text3: "#축하 #행복 #기념일",
       },
     ];
     MainboxArr1.forEach((el, idx) => {
@@ -207,7 +358,9 @@
               <div class="box-point">${el.text1}</div>
               <div class="box-name">${el.text2}</div>
               <div class="box-tag">${el.text3}</div>
+             
             </div>
+           
          `
       );
     });
@@ -215,25 +368,25 @@
     const Mainbox2 = document.querySelector(".Main-box2");
     const MainboxArr2 = [
       {
-        src: "test사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+        src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
         text1: "평점 4.0",
         text2: "여우동 ",
         text3: "#축하 #행복 #생일",
       },
       {
-        src: "test사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+        src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
         text1: "평점 4.1",
         text2: "스타벅스",
         text3: "#축하 #행복 #생일",
       },
       {
-        src: "test사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+        src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
         text1: "평점 4.2",
         text2: "롯데리아",
         text3: "#축하 #행복 #생일",
       },
       {
-        src: "test사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+        src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
         text1: "평점 4.3",
         text2: "두찜",
         text3: "#축하 #행복 #생일",
@@ -251,10 +404,146 @@
               <div class="box-point">${el.text1}</div>
               <div class="box-name">${el.text2}</div>
               <div class="box-tag">${el.text3}</div>
+             
             </div>
          `
       );
     });
+    const Mainbox3 = document.querySelector(".Main-box3");
+    const MainboxArr3 = [
+      {
+        src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+        text1: "평점 4.0",
+        text2: "여우동 ",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+        text1: "평점 4.1",
+        text2: "스타벅스",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+        text1: "평점 4.2",
+        text2: "롯데리아",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+        text1: "평점 4.3",
+        text2: "두찜",
+        text3: "#축하 #행복 #생일",
+      },
+    ];
+    MainboxArr3.forEach((el, idx) => {
+      Mainbox3.insertAdjacentHTML(
+        "beforeend",
+        `
+         <div class="box">
+              <img
+                class="box-img"
+                src="${el.src}"
+              />
+              <div class="box-point">${el.text1}</div>
+              <div class="box-name">${el.text2}</div>
+              <div class="box-tag">${el.text3}</div>
+             
+            </div>
+         `
+      );
+    });
+
+    const Mainbox4 = document.querySelector(".Main-box4");
+    const MainboxArr4 = [
+      {
+        src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+        text1: "평점 4.0",
+        text2: "여우동 ",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+        text1: "평점 4.1",
+        text2: "스타벅스",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+        text1: "평점 4.2",
+        text2: "롯데리아",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+        text1: "평점 4.3",
+        text2: "두찜",
+        text3: "#축하 #행복 #생일",
+      },
+    ];
+    MainboxArr4.forEach((el, idx) => {
+      Mainbox4.insertAdjacentHTML(
+        "beforeend",
+        `
+         <div class="box">
+              <img
+                class="box-img"
+                src="${el.src}"
+              />
+              <div class="box-point">${el.text1}</div>
+              <div class="box-name">${el.text2}</div>
+              <div class="box-tag">${el.text3}</div>
+            
+            </div>
+         `
+      );
+    });
+
+    const Mainbox5 = document.querySelector(".Main-box5");
+    const MainboxArr5 = [
+      {
+        src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+        text1: "평점 4.0",
+        text2: "여우동 ",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+        text1: "평점 4.1",
+        text2: "스타벅스",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+        text1: "평점 4.2",
+        text2: "롯데리아",
+        text3: "#축하 #행복 #생일",
+      },
+      {
+        src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+        text1: "평점 4.3",
+        text2: "두찜",
+        text3: "#축하 #행복 #생일",
+      },
+    ];
+    MainboxArr5.forEach((el, idx) => {
+      Mainbox5.insertAdjacentHTML(
+        "beforeend",
+        `
+         <div class="box">
+              <img
+                class="box-img"
+                src="${el.src}"
+              />
+              <div class="box-point">${el.text1}</div>
+              <div class="box-name">${el.text2}</div>
+              <div class="box-tag">${el.text3}</div>
+           
+            </div>
+         `
+      );
+    });
+
     // 메인 스크립트 시작
 
     // 카테고리 스크립트 시작
@@ -332,7 +621,7 @@
     // 맛집별 사이트 접속
     const Mainboxes1 = Mainbox1.firstElementChild;
     Mainboxes1.addEventListener("click", function () {
-      location.href = "JMTList1/JMT-Re1.html";
+      location.href = "https://www.instagram.com/Chiangmai_bangkok/";
     });
     const Mainboxes2 = Mainboxes1.nextElementSibling;
     Mainboxes2.addEventListener("click", function () {
@@ -364,5 +653,5 @@
       alert("4");
     });
     // 맛집별 사이트 접속 종료
-  </script>
+  </script> -->
 </html>
