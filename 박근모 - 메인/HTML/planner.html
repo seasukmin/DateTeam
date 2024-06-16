@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>planList</title>
+    <link rel="stylesheet" href="../CSS/planner.css" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <h1>맛집</h1>
+      <ol>
+        <li class="rest1 JMT">광천식당</li>
+        <li class="rest2 JMT">카라멜</li>
+        <li class="rest3 JMT">손이가</li>
+        <li class="rest4 JMT">테라스키친</li>
+        <li class="rest5 JMT">해마의방</li>
+      </ol>
+    </div>
+    <div>
+      <h1>카페</h1>
+      <ol>
+        <li>오시우</li>
+        <li>성심당</li>
+        <li>델빠네</li>
+        <li>모습</li>
+        <li>윈도우로맨스</li>
+      </ol>
+    </div>
+    <div>
+      <h1>핫플</h1>
+      <ol>
+        <li>한빛탑</li>
+        <li>오월드</li>
+        <li>한밭수목원</li>
+        <li>목척교</li>
+        <li>으능정이</li>
+      </ol>
+    </div>
+    <div class="planListBox">
+      <h4>핑구님의 Planner</h4>
+      <div class="nav-planner">
+        <div>2024. 5. 5</div>
+        <i class="bx bx-sun" undefined></i>
+      </div>
+      <div class="resturantBoxes" id="resturantBoxes">
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <!-- <div class="resturantBox">
+          <input
+            type="checkbox"
+            id="foodStore1"
+            class="foodStore"
+            checked
+          /><label for="foodStore1">성심당</label>
+          <i class="bx bxs-x-square"></i>
+        </div> -->
+      </div>
+      <div class="cafeBoxes">
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBox">
+          <input
+            type="checkbox"
+            id="cafeStore1"
+            class="cafeStore"
+            checked
+          /><label for="cafeStore1">노티드</label>
+          <i class="bx bxs-x-square"></i>
+        </div>
+      </div>
+      <div class="hotPlaceBoxes">
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBox">
+          <input
+            type="checkbox"
+            id="placeStore1"
+            class="placeStore"
+            checked
+          /><label for="placeStore1">한빛탑</label>
+          <i class="bx bxs-x-square"></i>
+        </div>
+      </div>
+      <button class="shareBtn">공유하기</button>
+    </div>
+  </body>
+  <script src="../Javascript/planner.js"></script>
+</html>
