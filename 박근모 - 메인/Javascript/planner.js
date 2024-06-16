@@ -16,7 +16,7 @@ function removeDuplicates(array) {
   return [...new Set(array)];
 }
 
-function pluslist(a) {
+function pluslistFood(a) {
   a.addEventListener("click", () => {
     const newEntry = a.innerHTML;
     resturantArr.push(newEntry);
@@ -31,21 +31,22 @@ function pluslist(a) {
         `<div class="resturantBox">
           <input
             type="checkbox"
-            id="cafeStore${index}"
-            class="cafeStore"
+            id="foodStore${index}"
+            class="foodStore"
             checked
           />
-          <label for="cafeStore${index}">${e}</label>
+          <label for="foodStore${index}">${e}</label>
           <i class="bx bxs-x-square"></i>
         </div>`
       );
     });
   });
 }
-pluslist(rest1Tag);
-pluslist(rest2Tag);
-pluslist(rest3Tag);
-pluslist(rest4Tag);
+pluslistFood(rest1Tag);
+pluslistFood(rest2Tag);
+pluslistFood(rest3Tag);
+pluslistFood(rest4Tag);
+pluslistFood(rest5Tag);
 
 const cafe1Tag = document.querySelector(`.cafe1`);
 const cafe2Tag = document.querySelector(`.cafe2`);
@@ -53,11 +54,7 @@ const cafe3Tag = document.querySelector(`.cafe3`);
 const cafe4Tag = document.querySelector(`.cafe4`);
 const cafe5Tag = document.querySelector(`.cafe5`);
 
-function removeDuplicates(array) {
-  return [...new Set(array)];
-}
-
-function pluslist(a) {
+function pluslistCafe(a) {
   a.addEventListener("click", () => {
     const newEntry = a.innerHTML;
     cafeArr.push(newEntry);
@@ -83,11 +80,11 @@ function pluslist(a) {
     });
   });
 }
-pluslist(cafe1Tag);
-pluslist(cafe2Tag);
-pluslist(cafe3Tag);
-pluslist(cafe4Tag);
-pluslist(cafe5Tag);
+pluslistCafe(cafe1Tag);
+pluslistCafe(cafe2Tag);
+pluslistCafe(cafe3Tag);
+pluslistCafe(cafe4Tag);
+pluslistCafe(cafe5Tag);
 
 const place1Tag = document.querySelector(`.place1`);
 const place2Tag = document.querySelector(`.place2`);
@@ -95,11 +92,7 @@ const place3Tag = document.querySelector(`.place3`);
 const place4Tag = document.querySelector(`.place4`);
 const place5Tag = document.querySelector(`.place5`);
 
-function removeDuplicates(array) {
-  return [...new Set(array)];
-}
-
-function pluslist(a) {
+function pluslistPlace(a) {
   a.addEventListener("click", () => {
     const newEntry = a.innerHTML;
     hotPlaceArr.push(newEntry);
@@ -125,8 +118,8 @@ function pluslist(a) {
     });
   });
 }
-pluslist(place1Tag);
-pluslist(place2Tag);
-pluslist(place3Tag);
-pluslist(place4Tag);
-pluslist(place5Tag);
+pluslistPlace(place1Tag);
+pluslistPlace(place2Tag);
+pluslistPlace(place3Tag);
+pluslistPlace(place4Tag);
+pluslistPlace(place5Tag);
