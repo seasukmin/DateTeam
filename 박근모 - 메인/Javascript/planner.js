@@ -1,7 +1,32 @@
+import {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+} from "../Javascript/DLU_firebase.js";
+
+const planListBox = document.getElementById("planListBox");
+
+async function plannerTitle() {
+  const data = await getDatas("customer");
+  data.forEach((doc) => {
+    console.log(doc.id);
+    // const info = doc.data();
+    // let { addr, age, email, gender, tel } = doc.data();
+    planListBox.insertAdjacentHTML(
+      "afterbegin",
+      `<h4>${doc.id}님의 Planner</h4>`
+    );
+  });
+}
+console.log(plannerTitle());
+
 const resturantTag = document.getElementById("resturantBoxes");
 const cafeTag = document.getElementById("cafeBoxes");
 const hotPlaceTag = document.getElementById("hotPlaceBoxes");
 // const resturantArr = ["광천식당", "카라멜", "손이가", "테라스키친", "해마의방"];
+// const resturantArr = [];
 const resturantArr = [];
 const cafeArr = [];
 const hotPlaceArr = [];

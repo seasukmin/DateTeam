@@ -304,3 +304,7 @@ Nainboxes4.addEventListener("click", function () {
   alert("4");
 });
 // 맛집별 사이트 접속 종료
+const Top = document.querySelector(".TopLoop");
+Top.addEventListener("click", function () {
+  location.href = "#header-H2";
+});
