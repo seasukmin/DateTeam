@@ -161,11 +161,29 @@ section {
   color: red;
 }
 /* 헤더 부분 끝 */
+.back {
+  display: flex;
+  justify-content: center;
+}
 .backImg {
   z-index: -1;
-  width: 100%;
-  height: 1000px;
+  width: 80%;
+  height: 800px;
   margin: 0;
+}
+#backImg {
+  transition: change opacity 2s linear 2s;
+
+  /* animation-timing-function: linear; */
+}
+
+@keyframes change {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 /* 사이드바 시작 */
 .sidebars {

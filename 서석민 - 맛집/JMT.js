@@ -5,6 +5,31 @@ Logo.addEventListener("click", function () {
 });
 // 로고 끝
 
+// 메인 사진 시작
+let number2 = 0;
+function changeImage() {
+  let backArr = [
+    "카페1.jpg",
+    "카페2.jpg",
+    "카페3.jpg",
+    "카페4.jpg",
+    "카페5.jpg",
+  ];
+  let randNum = changeImage2(backArr.length);
+  document.querySelector("#backImg").src = `사진/${backArr[randNum]}`;
+  function changeImage2(length) {
+    while (true) {
+      const number = parseInt(Math.random() * length);
+      if (number !== number2) {
+        number2 = number;
+        return number;
+      }
+    }
+  }
+}
+setInterval(changeImage, 5000);
+// 메인 사진 끝
+
 // 메인 스크립트 시작
 
 const Mainbox1 = document.querySelector(".Main-box1");
@@ -352,6 +377,7 @@ Nainboxes4.addEventListener("click", function () {
   alert("4");
 });
 // 맛집별 사이트 접속 종료
+
 // Top 버튼
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
