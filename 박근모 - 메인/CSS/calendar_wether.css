@@ -70,3 +70,69 @@
   background-color: rgb(255, 51, 204);
   color: white;
 }
+
+/* wather */
+.wether-box {
+  flex-grow: 1;
+  padding: 8px 12px;
+  margin-left: 6px;
+  padding-top: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wether-title {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: rgb(255, 51, 204);
+  border-radius: 10px;
+  margin: 8px 0;
+  padding: 4px;
+  color: white;
+  text-align: center;
+}
+
+.wether-week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.wether-item {
+  font-size: 16px;
+  margin: 0 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wether-item > p {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.wether-item > i {
+  margin: 24px 0;
+}
+.wether-item > .wether-am,
+.wether-item > .wether-pm {
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  height: fit-content;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+.air-condition {
+  margin: 16px 0;
+  font-size: 16px;
+}
+.air-condition > span {
+  font-size: 20px;
+  font-weight: bold;
+}

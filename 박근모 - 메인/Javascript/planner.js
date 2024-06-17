@@ -29,17 +29,18 @@ function pluslistFood(a) {
       resturantTag.insertAdjacentHTML(
         "beforeend",
         `<div class="resturantBox">
-          <input
-            type="checkbox"
-            id="foodStore${index}"
-            class="foodStore"
-            checked
-          />
-          <label for="foodStore${index}">${e}</label>
-          <i class="bx bxs-x-square"></i>
+        <input
+        type="checkbox"
+        id="foodStore${index}"
+        class="foodStore"
+        checked
+        />
+        <label for="foodStore${index}">${e}</label>
+        <i class='bx bx-x' ></i>
         </div>`
       );
     });
+    console.log(resturantArr);
   });
 }
 pluslistFood(rest1Tag);
@@ -60,7 +61,6 @@ function pluslistCafe(a) {
     cafeArr.push(newEntry);
     const uniqueArr = removeDuplicates(cafeArr);
 
-    // Clear existing content before adding new elements
     cafeTag.innerHTML = "";
 
     uniqueArr.forEach((e, index) => {
@@ -74,7 +74,7 @@ function pluslistCafe(a) {
             checked
           />
           <label for="cafeStore${index}">${e}</label>
-          <i class="bx bxs-x-square"></i>
+          <i class='bx bx-x' ></i>
         </div>`
       );
     });
@@ -98,7 +98,6 @@ function pluslistPlace(a) {
     hotPlaceArr.push(newEntry);
     const uniqueArr = removeDuplicates(hotPlaceArr);
 
-    // Clear existing content before adding new elements
     hotPlaceTag.innerHTML = "";
 
     uniqueArr.forEach((e, index) => {
@@ -112,7 +111,7 @@ function pluslistPlace(a) {
             checked
           />
           <label for="placeStore${index}">${e}</label>
-          <i class="bx bxs-x-square"></i>
+          <i class='bx bx-x' ></i>
         </div>`
       );
     });
@@ -123,3 +122,8 @@ pluslistPlace(place2Tag);
 pluslistPlace(place3Tag);
 pluslistPlace(place4Tag);
 pluslistPlace(place5Tag);
+
+const cancelBtn = document.querySelectorAll(`.bxs-x-square`);
+console.log(cancelBtn);
+
+cancelBtn.addEventListener("click", () => {});
