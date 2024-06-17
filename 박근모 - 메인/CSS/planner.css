@@ -65,6 +65,7 @@
   padding-left: 8px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 input[type="checkbox"] {
   accent-color: black;
@@ -79,14 +80,18 @@ input[type="checkbox"] {
   accent-color: skyblue;
 }
 
-.bxs-x-square {
+.bx-x {
   color: rgba(125, 125, 125, 0.5);
+  font-size: 16px;
+  margin: 0 4px;
 }
-.bxs-x-square:hover {
+.bx-x:hover {
   color: black;
   transition: 0.2s;
+  background-color: rgba(125, 125, 125, 0.5);
+  border-radius: 50%;
 }
-.resturantBox {
+/* .resturantBox {
   position: relative;
 }
 .resturantBox > i {
@@ -106,7 +111,7 @@ input[type="checkbox"] {
 .hotPlaceBox > i {
   position: absolute;
   right: 8px;
-}
+} */
 .shareBtn {
   font-weight: bold;
   margin-top: 8px;
