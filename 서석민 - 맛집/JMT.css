@@ -203,6 +203,7 @@ section {
   text-decoration: none;
   padding: 0 10px;
   justify-content: space-between;
+  cursor: pointer;
 }
 .side-bar {
   width: 230px;
@@ -244,9 +245,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 135.66px;
 }
 .middleH1 {
   font-size: 48px;
+  letter-spacing: 20px;
 }
 /* 미들부분(사진) 끝*/
 /* 메인 부분 시작 */
@@ -294,10 +297,10 @@ main {
 }
 .backImgG {
   transition: 0.3s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 .backImgG:hover {
-  transform: scale(1);
+  transform: scale(0.95);
 }
 
 .back-inner {
@@ -328,6 +331,13 @@ main {
 }
 .box-img {
   border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  transform: scale(1);
+}
+.box-img:hover {
+  transform: scale(1.05);
+  transition: linear 0.3s;
 }
 .box-point {
   font-size: 20px;
@@ -345,6 +355,9 @@ main {
   margin-right: 50px;
 }
 .Promise-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
   border: 5px solid #3e3e3e;
@@ -370,8 +383,9 @@ main {
 } */
 .Top {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 20px;
+  font-weight: 700;
 }
 .TopLoop {
   padding: 10px;
@@ -379,8 +393,8 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #3e3e3e;
-  border: 3px solid white;
+  background-color: white;
+  border: 3px solid #3e3e3e;
   transform: translateX(-50%);
   position: fixed;
   font-size: 32px;
@@ -399,7 +413,7 @@ main {
 }
 @keyframes pulse {
   from {
-    box-shadow: 0 0 0 0 white;
+    box-shadow: 0 0 0 0 black;
   }
   to {
     box-shadow: 0 0 0px 15px transparent;
@@ -418,4 +432,12 @@ main {
 }
 .Mainchart img {
   border-radius: 20px;
+}
+.input-thing {
+  border: 1px solid #3e3e3e;
+  width: 700px;
+  height: 700px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
 }

@@ -35,27 +35,27 @@ setInterval(changeImage, 3000);
 const Mainbox1 = document.querySelector(".Main-box1");
 const MainboxArr1 = [
   {
-    src: "사진/300_300_20240602113650_photo1_1fbc5ba2b85f.jpg",
+    src: "사진/MainPhoto/삿뽀로 대전.jpg",
     text1: "평점 4.9",
-    text2: "치앙마이방콕대전",
+    text2: "삿뽀로 대전",
     text3: "#축하 #행복 #기념일",
   },
   {
-    src: "사진/300_300_20240610032536164_photo_1be52a7e9e3a.jpg",
+    src: "사진/MainPhoto/칸스테이크.jpg",
     text1: "평점 4.5",
-    text2: "이삭토스트",
+    text2: "칸스테이크",
     text3: "#축하 #행복 #기념일",
   },
   {
-    src: "사진/300_300_20240606071700_photo1_f498fb41a690.jpg",
+    src: "사진/MainPhoto/누오보나폴리 대전.png",
     text1: "평점 4.6",
-    text2: "미국의아침",
+    text2: "누오보나폴리 대전",
     text3: "#축하 #행복 #기념일",
   },
   {
-    src: "사진/300_300_20240612121450836_photo_GNtCRjNogBBb.jpg",
+    src: "사진/MainPhoto/더리스 대청호.jpg",
     text1: "평점 4.7",
-    text2: "맥도날드",
+    text2: "더 리스 대청호",
     text3: "#축하 #행복 #기념일",
   },
 ];
@@ -81,27 +81,27 @@ MainboxArr1.forEach((el, idx) => {
 const Mainbox2 = document.querySelector(".Main-box2");
 const MainboxArr2 = [
   {
-    src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+    src: "사진/MainPhoto/통일면옥.jpg",
     text1: "평점 4.0",
-    text2: "여우동 ",
+    text2: "통일면옥",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+    src: "사진/MainPhoto/칠전팔기 대전.jpg",
     text1: "평점 4.1",
-    text2: "스타벅스",
+    text2: "칠전팔기 대전",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+    src: "사진/MainPhoto/신가네 파전.jpg",
     text1: "평점 4.2",
-    text2: "롯데리아",
+    text2: "신가네파전",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+    src: "사진/MainPhoto/그 옛날풍경 궁동.jpg",
     text1: "평점 4.3",
-    text2: "두찜",
+    text2: "그 옛날풍경 궁동",
     text3: "#축하 #행복 #생일",
   },
 ];
@@ -125,25 +125,25 @@ MainboxArr2.forEach((el, idx) => {
 const Mainbox3 = document.querySelector(".Main-box3");
 const MainboxArr3 = [
   {
-    src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+    src: "사진/MainPhoto/300_300_20240401081902_photo1_90f4f6f544db.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+    src: "사진/MainPhoto/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+    src: "사진/MainPhoto/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+    src: "사진/MainPhoto/300_300_20240507113952_photo1_f99035d5f160.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "#축하 #행복 #생일",
@@ -170,25 +170,25 @@ MainboxArr3.forEach((el, idx) => {
 const Mainbox4 = document.querySelector(".Main-box4");
 const MainboxArr4 = [
   {
-    src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+    src: "사진/MainPhoto/300_300_20240401081902_photo1_90f4f6f544db.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+    src: "사진/MainPhoto/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+    src: "사진/MainPhoto/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+    src: "사진/MainPhoto/300_300_20240507113952_photo1_f99035d5f160.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "#축하 #행복 #생일",
@@ -215,25 +215,25 @@ MainboxArr4.forEach((el, idx) => {
 const Mainbox5 = document.querySelector(".Main-box5");
 const MainboxArr5 = [
   {
-    src: "사진/300_300_20240401081902_photo1_90f4f6f544db.jpg",
+    src: "사진/MainPhoto/300_300_20240401081902_photo1_90f4f6f544db.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
+    src: "사진/MainPhoto/300_300_20240421123507_photo1_b33d20f05cd7.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
+    src: "사진/MainPhoto/300_300_20240424124048_photo1_Z2Cb5MTTmQS0.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "#축하 #행복 #생일",
   },
   {
-    src: "사진/300_300_20240507113952_photo1_f99035d5f160.jpg",
+    src: "사진/MainPhoto/300_300_20240507113952_photo1_f99035d5f160.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "#축하 #행복 #생일",
@@ -256,7 +256,23 @@ MainboxArr5.forEach((el, idx) => {
          `
   );
 });
+const text = "대전의 맛집을 소개합니다! ";
+const middleH1 = document.getElementById("middleH1");
 
+let index = 0;
+
+function displayNextCharacter() {
+  if (index < text.length) {
+    middleH1.innerText += text[index];
+    index++;
+  } else {
+    index = 0;
+    middleH1.innerText = ""; // 기존 텍스트를 지우고 다시 시작
+  }
+  setTimeout(displayNextCharacter, 300); // 0.5초 간격으로 다음 문자 출력
+}
+
+displayNextCharacter();
 // 메인 스크립트 시작
 
 // 맛집별 사이트 접속
@@ -296,7 +312,20 @@ Nainboxes4.addEventListener("click", function () {
 // 맛집별 사이트 접속 종료
 
 // Top 버튼
-// const Top = document.querySelector(".TopLoop");
-// Top.addEventListener("click", function () {
-//   location.href = "#header-H1";
-// });
+const Top = document.querySelector(".TopLoop");
+Top.addEventListener("click", function () {
+  location.href = "#header-H1";
+});
+
+const Promise = document.querySelector("Promise-but");
+let child;
+function openPopup() {
+  child = window.open(
+    "../240510/2_numberguess.html",
+    "_blank",
+    "width=1000,height=500, left=500, top=0,"
+  );
+  // location=no ==> 주소입력창 없어짐
+  // resizable=no ==> 팝업창의 크기를 조절할 수 없음
+  // toolbar=no ==> 도구모음이 없어짐
+}
