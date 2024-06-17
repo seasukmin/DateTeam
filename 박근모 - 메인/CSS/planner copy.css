@@ -2,7 +2,6 @@
   box-sizing: border-box;
   word-break: keep-all;
   font-family: Ownglyph_noocar-Rg;
-  font-size: 24px;
 }
 .planListBox {
   width: fit-content;
@@ -17,30 +16,48 @@
   flex-direction: column;
   gap: 4px;
 }
-.planListBox > h4 {
+.title-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.title-items > h4 {
   margin: 6px;
 }
 .nav-planner {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
+  margin: 0 12px;
+}
+.nav-mid {
+  color: rgb(100, 100, 100);
+  font: 8px;
 }
 .planListBoxes div {
   padding: 12px 0;
 }
 
+.h-Tag1p,
+.h-Tag2p,
+.h-Tag3p {
+  font-size: 18px;
+  height: 20px;
+  font-weight: bold;
+}
 .h-Tag1p:hover {
+  width: fit-content;
   border-bottom: 2px solid red;
 }
 .h-Tag2p:hover {
+  width: fit-content;
   border-bottom: 2px solid purple;
 }
 .h-Tag3p:hover {
+  width: fit-content;
   border-bottom: 2px solid skyblue;
-}
-.h-Tag4p:hover {
-  border-bottom: 2px solid rgb(255, 51, 204);
 }
 .h-Tag1Span {
   color: red;
@@ -55,6 +72,15 @@
   color: rgb(255, 51, 204);
 }
 
+#returantBoxes,
+#cafeBoxes,
+#hotPlaceBoxes {
+  font-size: 18px;
+}
+/* .cafeBoxes,
+.hotPlaceBoxes {
+  padding-top: 10px;
+} */
 .resturantBox,
 .cafeBox,
 .hotPlaceBox {
