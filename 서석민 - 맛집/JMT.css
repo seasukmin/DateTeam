@@ -14,15 +14,15 @@ body {
   height: 100%;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 #body {
   height: 100%;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
-  color: white;
+  color: black;
 }
 span {
   color: rgb(158, 50, 0, 100%);
@@ -48,7 +48,7 @@ section {
   flex-direction: column;
   margin: 0 240px;
   margin-bottom: 100px;
-  color: white;
+  color: black;
 }
 
 .backGround::before {
@@ -93,7 +93,7 @@ section {
 .header-Anchor {
   text-decoration: none;
   font-size: 24px;
-  color: white;
+  color: black;
   border: 1px solid white;
   border-radius: 20px;
   padding: 5px 10px;
@@ -118,7 +118,6 @@ section {
   color: black;
   font-size: 55px;
   position: relative;
-  color: white;
   cursor: pointer;
 }
 .CateSA,
@@ -127,7 +126,7 @@ section {
 .CateKA,
 .CateLA {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .Cate-box1,
@@ -161,40 +160,18 @@ section {
   color: red;
 }
 /* 헤더 부분 끝 */
-.back {
-  display: flex;
-  justify-content: center;
-}
-.backImg {
-  z-index: -1;
-  width: 80%;
-  height: 800px;
-  margin: 0;
-}
-#backImg {
-  transition: change opacity 2s linear 2s;
 
-  /* animation-timing-function: linear; */
-}
-
-@keyframes change {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
 /* 사이드바 시작 */
 .sidebars {
   top: 300px;
   position: fixed;
-  width: 200px;
+  width: 230px;
   height: 550px;
-  border: 1px solid white;
-  border-radius: 15px;
-  margin-left: 10px;
-  backdrop-filter: blur(5px);
+  border: 2px solid black;
+  border-radius: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(20px);
+  background-color: rgb(187, 236, 255, 40%);
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -216,7 +193,7 @@ section {
 .sidebar-sub {
   list-style-type: none;
   margin: 0;
-  border: 1px solid white;
+  border: 2px solid black;
   border-radius: 15px;
   padding: 0 5px;
   height: 30px;
@@ -227,6 +204,29 @@ section {
   padding: 0 10px;
   justify-content: space-between;
 }
+.side-bar {
+  width: 230px;
+  padding: 10px 20px;
+  border: 2px solid skyblue;
+  border-radius: 30px;
+  margin-left: 80px;
+  position: fixed;
+  top: 310px;
+}
+.side-text {
+  list-style-type: none;
+  font-size: 30px;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+.side-text li {
+  padding: 5px 0 10px 0;
+}
+.side-category h1 {
+  padding-left: 5px;
+  font-size: 40px;
+}
+
 .up {
   color: red;
 }
@@ -235,7 +235,7 @@ section {
 }
 .sidebar-sub a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 24px;
 }
 /* 사이드바 끝 */
@@ -251,7 +251,7 @@ section {
 /* 미들부분(사진) 끝*/
 /* 메인 부분 시작 */
 main {
-  margin: 0 200px;
+  margin: 0 350px;
 }
 .MainH1 {
   font-size: 60px;
@@ -272,7 +272,55 @@ main {
   width: 100%;
   cursor: pointer;
 }
+.Hot {
+  color: red;
+}
+.back {
+  display: flex;
 
+  gap: 20px;
+}
+.backImg {
+  z-index: -1;
+  width: 500px;
+  height: 820px;
+  margin: 0;
+  border-radius: 20px;
+}
+.backImgG {
+  height: 400px;
+  width: 370px;
+  border-radius: 20px;
+}
+.backImgG {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+.backImgG:hover {
+  transform: scale(1);
+}
+
+.back-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 400px;
+  margin-right: 100px;
+  gap: 20px;
+}
+#backImg {
+  transition: change opacity 2s linear 2s;
+
+  /* animation-timing-function: linear; */
+}
+
+@keyframes change {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 .box {
   display: flex;
   flex-direction: column;
@@ -358,3 +406,16 @@ main {
   }
 }
 /* 메인 부분 끝*/
+/* 카테고리 CSS */
+.Mainchart {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.Mainchart img {
+  border-radius: 20px;
+}
