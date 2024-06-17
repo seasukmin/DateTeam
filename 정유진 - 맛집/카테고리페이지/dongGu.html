@@ -23,11 +23,11 @@
           <a class="login">로그인</a>
         </div>
         <ul class="category">
-          <li data-url="./카테고리페이지/dongGu.html">동구</li>
-          <li data-url="./카테고리페이지/seoGu.html">서구</li>
-          <li data-url="./카테고리페이지/jungGu.html">중구</li>
-          <li data-url="./카테고리페이지/YuseongGu.html">유성구</li>
-          <li data-url="./카테고리페이지/daedeokGu.html">대덕구</li>
+          <li data-url="../카테고리페이지/dongGu.html">동구</li>
+          <li data-url="../카테고리페이지/seoGu.html">서구</li>
+          <li data-url="../카테고리페이지/jungGu.html">중구</li>
+          <li data-url="../카테고리페이지/YuseongGu.html">유성구</li>
+          <li data-url="../카테고리페이지/daedeokGu.html">대덕구</li>
         </ul>
       </div>
 
@@ -50,31 +50,41 @@
           <span class="rank">1위</span><img src="../img/꿈돌이.jpg" />
         </div>
         <div class="rank-content">
-          <span class="rank">1위</span><img src="../img/꿈돌이.jpg" />
+          <span class="rank">2위</span><img src="../img/꿈돌이.jpg" />
         </div>
         <div class="rank-content">
-          <span class="rank">1위</span><img src="../img/꿈돌이.jpg" />
+          <span class="rank">3위</span><img src="../img/꿈돌이.jpg" />
         </div>
         <div class="rank-content">
-          <span class="rank">1위</span><img src="../img/꿈돌이.jpg" />
+          <span class="rank">4위</span><img src="../img/꿈돌이.jpg" />
         </div>
       </div>
 
       <div class="content-box">
         <div class="contents-box" id="picnic">
-          <h1 class="content-name"><span class="hashTag">#</span>나들이</h1>
+          <h1 class="content-name" id="one">
+            <span class="hashTag">#</span>나들이
+          </h1>
         </div>
         <div class="contents-box" id="shopping">
-          <h1 class="content-name"><span class="hashTag">#</span>쇼핑</h1>
+          <h1 class="content-name" id="two">
+            <span class="hashTag">#</span>쇼핑
+          </h1>
         </div>
         <div class="contents-box" id="inside">
-          <h1 class="content-name"><span class="hashTag">#</span>실내</h1>
+          <h1 class="content-name" id="three">
+            <span class="hashTag">#</span>실내
+          </h1>
         </div>
         <div class="contents-box" id="sports">
-          <h1 class="content-name"><span class="hashTag">#</span>스포츠</h1>
+          <h1 class="content-name" id="four">
+            <span class="hashTag">#</span>스포츠
+          </h1>
         </div>
         <div class="contents-box" id="festival">
-          <h1 class="content-name"><span class="hashTag">#</span>축제</h1>
+          <h1 class="content-name" id="five">
+            <span class="hashTag">#</span>축제
+          </h1>
         </div>
       </div>
 
@@ -159,7 +169,7 @@
       picnic.insertAdjacentHTML(
         "beforeend",
 
-        ` <div class="content">
+        ` <div class="content ${info.num}">
             <a href=${info.a}>
               <img src=${info.img} />
               <p class="hpName">${info.name}</p></a
@@ -211,7 +221,7 @@
       shopping.insertAdjacentHTML(
         "beforeend",
 
-        ` <div class="content">
+        ` <div class="content ${info.num}">
             <a href=${info.a}>
               <img src=${info.img} />
               <p class="hpName">${info.name}</p></a
@@ -268,40 +278,81 @@
       );
     });
 
+    // const sports = document.getElementById("sports");
+    // const sportsArr = [
+    //   {
+
+    //     img: "../img/동구체육관.jpg",
+    //     name: "동구국민체육센터",
+    //     time: "월-토: 09:00",
+    //     time2: "<br>일: 09:00",
+    //     event: "#수영 #배드민턴 #탁구",
+    //     local: "동구",
+    //   },
+    //   {
+    //     img: "../img/킹스타.jfif",
+    //     name: "킹스타볼링센터",
+    //     time: "월-토: 09:00",
+    //     time2: "<br>일: 09:00",
+    //     event: "#볼링",
+    //     local: "동구",
+    //   },
+    // ];
+    // sportsArr.forEach((info, idx) => {
+    //   sports.insertAdjacentHTML(
+    //     "beforeend",
+
+    //     ` <div class="content">
+    //           <img src=${info.img} />
+    //           <p class="hpName">${info.name}</p>
+    //         <p class="hpTime">
+    //           ${info.time}${info.time2}
+    //         </p>
+    //         <p class="hpInfo">${info.event}</p>
+    //       </div> `
+    //   );
+    // });
     const sports = document.getElementById("sports");
     const sportsArr = [
       {
-        a: "",
         img: "../img/동구체육관.jpg",
         name: "동구국민체육센터",
         time: "월-토: 09:00",
         time2: "<br>일: 09:00",
         event: "#수영 #배드민턴 #탁구",
+        local: "동구",
       },
       {
-        a: "",
         img: "../img/킹스타.jfif",
         name: "킹스타볼링센터",
         time: "월-토: 09:00",
         time2: "<br>일: 09:00",
         event: "#볼링",
+        local: "동구",
       },
     ];
+
     sportsArr.forEach((info, idx) => {
       sports.insertAdjacentHTML(
         "beforeend",
 
-        ` <div class="content">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
+        ` <div class="content" data-idx="${idx}">
+          <img src=${info.img} class="sports-img" />
+          <p class="hpName">${info.name}</p>
+          <p class="hpTime">
+            ${info.time}${info.time2}
+          </p>
+          <p class="hpInfo">${info.event}</p>
+        </div> `
       );
+    });
+
+    document.querySelectorAll(".sports-img").forEach((img, idx) => {
+      img.addEventListener("click", () => {
+        const clickedItem = sportsArr[idx];
+        const newArray = [{ name: clickedItem.name, local: clickedItem.local }];
+        console.log(newArray);
+      });
     });
 
     const festival = document.getElementById("festival");
@@ -354,6 +405,36 @@
             <p class="hpInfo">${info.event}</p>
           </div> `
       );
+    });
+
+    const Maintitle = document.querySelectorAll(".side-text li");
+    console.log(Maintitle);
+    Maintitle.forEach(function (el, idx) {
+      console.log(el);
+      el.addEventListener("click", function () {
+        if (idx == 0) {
+          location.href = "#one";
+        }
+        if (idx == 1) {
+          location.href = "#two";
+        }
+        if (idx == 2) {
+          location.href = "#three";
+        }
+        if (idx == 3) {
+          location.href = "#four";
+        }
+        if (idx == 4) {
+          location.href = "#five";
+        }
+      });
+    });
+
+    document.querySelectorAll(".category li").forEach((item) => {
+      item.addEventListener("click", function () {
+        const url = this.getAttribute("data-url");
+        window.location.href = url;
+      });
     });
   </script>
 </html>
