@@ -8,7 +8,7 @@ import {
 
 const planListBox = document.getElementById("planListBox");
 
-async function plannerTitle() {
+async function plannerTitleName() {
   const data = await getDatas("customer");
   data.forEach((doc) => {
     console.log(doc.id);
@@ -20,7 +20,24 @@ async function plannerTitle() {
     );
   });
 }
-console.log(plannerTitle());
+// console.log(plannerTitleName());
+plannerTitleName();
+
+const navPlanner = document.getElementById("nav-planner");
+
+async function plannerTitleDate() {
+  const data = await getDatas("date");
+  data.forEach((doc) => {
+    const info = doc.data();
+    // let { firstDay, firstMonth, firstYear, lastDay, lastMonth, lastYear } = doc.data();
+    navPlanner.insertAdjacentHTML(
+      "afterbegin",
+      `<div>${info.firstYear}. ${info.firstMonth}. ${info.firstDay}</div>`
+    );
+  });
+}
+plannerTitleDate();
+// console.log(plannerTitleName());
 
 const resturantTag = document.getElementById("resturantBoxes");
 const cafeTag = document.getElementById("cafeBoxes");
