@@ -13,11 +13,12 @@
 body {
   background-color: white;
   height: 100%;
+  width: 100%;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
   color: #3e3e3e;
-  width: 100%;
 }
+
 .title-bar {
   display: flex;
   justify-content: space-between;
@@ -91,8 +92,8 @@ body {
   border-radius: 30px;
   margin-left: 100px;
   position: fixed;
-  top: 310px;
-  left: -20px;
+  top: 300px;
+  left: 0px;
 }
 .side-text {
   list-style-type: none;
@@ -110,16 +111,21 @@ body {
   cursor: pointer;
 }
 
-.rank-box {
-  margin: 0px 50px 200px 180px;
-  padding: 5px;
+.rank-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+.rank-box {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   position: relative;
+  margin-left: 20px;
+  margin-bottom: 100px;
 }
+
 .rank {
   font-weight: 800;
   font-size: 24px;
@@ -154,6 +160,32 @@ body {
   border-radius: 30px;
   box-shadow: 1px 1px 5px 1px gray;
 }
+.content {
+  position: relative;
+}
+
+.plusIc,
+.plusIc1 {
+  width: 280px;
+  height: 280px;
+  color: rgba(255, 255, 255, 0);
+  font-size: 90px;
+  font-weight: 800;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plusIc:hover,
+.plusIc1:hover {
+  color: white;
+  transition: 0.1s;
+  background-color: #3e3e3e27;
+}
+
 .content a {
   cursor: pointer;
   text-decoration: none;
