@@ -99,12 +99,12 @@ async function selectDate(year, month, day, dayCell) {
   }
 
   const dateInfo = {
-    firstYear: startDate.getFullYear(),
-    firstMonth: startDate.getMonth() + 1,
-    firstDay: startDate.getDate(),
-    lastYear: endDate.getFullYear(),
-    lastMonth: endDate.getMonth() + 1,
-    lastDay: endDate.getDate(),
+    firstYear1: startDate.getFullYear(),
+    firstMonth1: startDate.getMonth() + 1,
+    firstDay1: startDate.getDate(),
+    lastYear2: endDate.getFullYear(),
+    lastMonth2: endDate.getMonth() + 1,
+    lastDay2: endDate.getDate(),
   };
   const result = await addDatas("date", dateInfo, `유지민`);
 }

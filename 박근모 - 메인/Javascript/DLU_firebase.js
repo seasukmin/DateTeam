@@ -9,6 +9,8 @@ import {
   deleteDoc,
   getDoc,
   updateDoc,
+  where,
+  query,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -29,6 +31,18 @@ async function getDatas(collectionName) {
   const snapshot = await getDocs(collect);
 
   return snapshot;
+}
+
+// query(where()) -> 다른 컬렉션에 객체값을 연결시켜주는 조건!
+async function getUserPlans(collectionName, date, userId) {
+  const collect = await collection(db, collectionName);
+  const q = await query(
+    collect,
+    where("userId", "==", userId),
+    where("date", "==", date)
+  );
+  const querySnapshot = await getDocs(q);
+  return querySnapshot;
 }
 
 async function addDatas(collectionName, dataObj, userName) {
@@ -67,4 +81,4 @@ async function updateDatas(collectionName, docId, updateInfoObj) {
   updateDoc(docRef, updateInfoObj);
 }
 
-export { db, getDatas, addDatas, deleteDatas, updateDatas };
+export { db, getDatas, addDatas, deleteDatas, updateDatas, getUserPlans };

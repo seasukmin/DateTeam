@@ -29,10 +29,10 @@
 .planListBoxes div {
   padding: 12px 0;
 }
-.firstDay {
+/* .firstDay {
 }
 .lastDay {
-}
+} */
 .h-Tag1p:hover {
   border-bottom: 2px solid red;
 }
