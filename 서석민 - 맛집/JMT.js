@@ -276,20 +276,32 @@ displayNextCharacter();
 
 const Search = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
-const header = document.querySelector(".header");
+const result = document.querySelector(".result");
 const SearchArr = [
-  { text: "칸스테이크" },
   { text: "삿뽀로 대전" },
+  { text: "칸스테이크" },
   { text: "누오보나폴리 대전" },
   { text: "더 리스 대청호" },
 ];
-
 function SearchButton() {
   SearchArr.forEach(function (el, idx) {
     if (el.text == headerInput.value) {
-      const div = document.createElement("div");
-      div.classList.add("Search-bar");
-      header.append(div);
+      result.insertAdjacentHTML(
+        "beforeend",
+        `
+           <div class="box">
+                <img
+                  class="box-img"
+                  src="${MainboxArr1[idx].src}"
+                />
+                <div class="box-point">${MainboxArr1[idx].text1}</div>
+                <div class="box-name">${MainboxArr1[idx].text2}</div>
+                <div class="box-tag">${MainboxArr1[idx].text3}</div>
+               
+              </div>
+             
+           `
+      );
       // div.classList.remove("Search-bar");
     }
   });
