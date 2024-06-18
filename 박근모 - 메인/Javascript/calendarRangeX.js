@@ -33,6 +33,7 @@ function renderCalendar() {
 
   for (let i = 1; i <= lastDate; i++) {
     const dayCell = document.createElement("div");
+    dayCell.classList.add("dayItem");
     dayCell.innerText = i;
     dayCell.addEventListener("click", () => {
       const selected = document.querySelector(".days .selected");
@@ -42,6 +43,12 @@ function renderCalendar() {
       dayCell.classList.add("selected");
       const selectedDiv = document.querySelector(".selected");
       day1Tag.innerHTML = `${year}.${month}.${selectedDiv.innerHTML} (${weekArr[week]})`;
+    });
+    const dayTag = document.querySelectorAll(".dayItem");
+    dayTag.forEach((e) => {
+      e.addEventListener("click", () => {
+        calendarTag.classList.add("hidden");
+      });
     });
     daysContainer.appendChild(dayCell);
   }

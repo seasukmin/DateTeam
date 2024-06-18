@@ -38,3 +38,20 @@ console.log(getcutomerInfo());
 //   });
 // }
 // console.log(getcutomerGender());
+const JMTtag = document.getElementById("h-JMT");
+const cafetag = document.getElementById("h-cafe");
+const hotPlacetag = document.getElementById("h-hotPlace");
+const epiloguetag = document.getElementById("h-epilogue");
+
+JMTtag.addEventListener("click", (e) => {
+  location.href = "#hTag-JMT";
+});
+cafetag.addEventListener("click", (e) => {
+  location.href = "#hTag-cafe";
+});
+hotPlacetag.addEventListener("click", (e) => {
+  location.href = "#hTag-hotPlace";
+});
+epiloguetag.addEventListener("click", (e) => {
+  location.href = "#hTag-epilogue";
+});
