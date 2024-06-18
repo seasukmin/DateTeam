@@ -8,7 +8,13 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 let number2 = 0;
 function changeImage() {
-  let backArr = ["카페1.jpg", "카페2.jpg", "카페3.jpg", "카페4.jpg"];
+  let backArr = [
+    "카페1.jpg",
+    "카페2.jpg",
+    "카페3.jpg",
+    "카페4.jpg",
+    "카페5.jpg",
+  ];
   let randNum = changeImage2(backArr.length);
   document.querySelector("#backImg").src = `../사진/${backArr[randNum]}`;
   function changeImage2(length) {
@@ -276,6 +282,12 @@ const SearchArr = [
   { text: "어글리딜리셔스 동구 #기념일" },
   { text: "어반 더 쉐프 동구 #기념일" },
   { text: "지안 동구 #기념일" },
+  { text: "구름식당 동구 #분위기 좋은" },
+  { text: "명월본가수라상 동구 #분위기 좋은" },
+  { text: "파운드 동구 #분위기 좋은" },
+  { text: "힐링 동구 #분위기 좋은" },
+  { text: "대전옥 동구 #분위기 좋은" },
+  { text: "오씨칼국수 동구 #분위기 좋은" },
 ];
 const SearcherArr = [
   {
@@ -291,58 +303,58 @@ const SearcherArr = [
     text3: "#기념일",
   },
   {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    src: "../사진객체/어반 더 쉐프(동구 용전동 68-21).jpg",
+    text1: "평점: 4.7",
+    text2: "어반 더 쉐프",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/지안(대전광역시 동구 효동 126-3.jpg",
+    text1: "평점: 4.1",
+    text2: "지안",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/구름식당( 동구 대동 201-23).jpg",
+    text1: "평점: 4.9",
+    text2: "구름식당",
+    text3: "#분위기 좋은",
+  },
+  {
+    src: "../사진객체/명월본가수라상(동구 계족로 184-23)",
+    text1: "평점: 4.9",
+    text2: "명월본가수라상",
+    text3: "#분위기 좋은",
+  },
+  {
+    src: "../사진객체/파운드( 동구 중앙동 수향길 25).jpg",
+    text1: "평점: 4.9",
+    text2: "파운드",
+    text3: "#분위기 좋은",
+  },
+  {
+    src: "../사진객체/힐링 (동구 가오동 신기로 123-28).jpg",
+    text1: "평점: 4.9",
+    text2: "힐링",
+    text3: "#분위기 좋은",
+  },
+  {
+    src: "../사진객체/대전옥( 동구 대동천우안4길 74).jpg",
     text1: "평점: 4.9",
     text2: "신도칼국수",
     text3: "#기념일",
   },
   {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    src: "../사진객체/오씨칼국수( 동구 옛신탄진로 13).jpg",
     text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
-    text3: "#기념일",
-  },
-  {
-    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
-    text1: "평점: 4.9",
-    text2: "신도칼국수",
+    text2: "오씨칼국수",
     text3: "#기념일",
   },
 ];
-function SearchButton() {
+function SearchButton(e) {
   result.innerHTML = "";
   SearchArr.forEach(function (el, idx) {
-    if (el.text.includes(headerInput.value)) {
+    if (el.text.includes(headerInput.value) && e.code == "Enter") {
       result.insertAdjacentHTML(
         "beforeend",
         `
@@ -359,12 +371,12 @@ function SearchButton() {
              
            `
       );
-
       // div.classList.remove("Search-bar");
     }
   });
 }
 
+headerInput.addEventListener("keypress", SearchButton);
 // 메인 스크립트 시작
 
 // 맛집별 사이트 접속
