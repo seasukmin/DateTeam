@@ -17,8 +17,6 @@ async function getcutomerInfo() {
     const info = doc.data();
     // console.log(info.age);
     let { addr, age, email, gender, tel } = doc.data();
-    console.log(age);
-    console.log(gender);
   });
 }
 console.log(getcutomerInfo());

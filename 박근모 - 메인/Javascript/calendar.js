@@ -1,8 +1,17 @@
+import {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+} from "../Javascript/DLU_firebase.js";
 const currentMonthYear = document.getElementById("currentMonthYear");
 const daysContainer = document.getElementById("days");
 let currentDate = new Date();
 let startDate = null;
 let endDate = null;
+// const year1 = currentDate.getFullYear();
+// const month1 = currentDate.getMonth();
 
 function renderCalendar() {
   const year = currentDate.getFullYear();
@@ -22,6 +31,7 @@ function renderCalendar() {
 
   for (let i = 1; i <= lastDate; i++) {
     const dayCell = document.createElement("div");
+    dayCell.classList.add("day");
     dayCell.innerText = i;
     dayCell.addEventListener("click", () =>
       selectDate(year, month, i, dayCell)
@@ -34,9 +44,43 @@ function renderCalendar() {
     }
     daysContainer.appendChild(dayCell);
   }
+  // const dayTag = document.querySelectorAll(".day");
+  // dayTag.forEach((e) => {
+  //   e.addEventListener("click", (el) => {
+  //     const daySelector = document.querySelector(".selected");
+  //     const dayRanger = document.querySelectorAll(".range");
+  //     const daySelectorVal = daySelector.innerHTML;
+  //     dayRanger.forEach(async function (er) {
+  //       const dayRangerVal = er.innerHTML;
+  //       console.log(dayRangerVal);
+  //       // console.log(dayRangerVal);
+  //       if (daySelectorVal > dayRangerVal) {
+  //         const dateInfo = {
+  //           firstYear: year,
+  //           firstMonth: month,
+  //           firstDay: daySelectorVal,
+  //           lastYear: year,
+  //           lastMonth: month + 1,
+  //           lastDay: dayRangerVal,
+  //         };
+  //         const result = await addDatas("date", dateInfo, `유지민`);
+  //       } else {
+  //         const dateInfo = {
+  //           firstYear: year,
+  //           firstMonth: month + 1,
+  //           firstDay: daySelectorVal,
+  //           lastYear: year,
+  //           lastMonth: month + 1,
+  //           lastDay: dayRangerVal,
+  //         };
+  //         const result = await addDatas("date", dateInfo, `유지민`);
+  //       }
+  //     });
+  //   });
+  // });
 }
 
-function selectDate(year, month, day, dayCell) {
+async function selectDate(year, month, day, dayCell) {
   const selectedDate = new Date(year, month, day);
 
   if (!startDate || (startDate && endDate)) {
@@ -44,6 +88,7 @@ function selectDate(year, month, day, dayCell) {
     endDate = null;
     clearSelections();
     dayCell.classList.add("selected");
+    // console.log(selectedDate);
   } else if (selectedDate < startDate) {
     startDate = selectedDate;
     clearSelections();
@@ -52,6 +97,16 @@ function selectDate(year, month, day, dayCell) {
     endDate = selectedDate;
     highlightRange();
   }
+
+  const dateInfo = {
+    firstYear: startDate.getFullYear(),
+    firstMonth: startDate.getMonth() + 1,
+    firstDay: startDate.getDate(),
+    lastYear: endDate.getFullYear(),
+    lastMonth: endDate.getMonth() + 1,
+    lastDay: endDate.getDate(),
+  };
+  const result = await addDatas("date", dateInfo, `유지민`);
 }
 
 function clearSelections() {
@@ -109,3 +164,38 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+// const dayTag = document.querySelectorAll(".day");
+// dayTag.forEach((e) => {
+//   e.addEventListener("click", (el) => {
+//     const daySelector = document.querySelector(".selected");
+//     const dayRanger = document.querySelectorAll(".range");
+//     const daySelectorVal = daySelector.innerHTML;
+//     dayRanger.forEach(async function (er) {
+//       const dayRangerVal = er.innerHTML;
+//       console.log(dayRangerVal);
+//       // console.log(dayRangerVal);
+//       if (daySelectorVal > dayRangerVal) {
+//         const dateInfo = {
+//           firstYear: year,
+//           firstMonth: month,
+//           firstDay: daySelectorVal,
+//           lastYear: year,
+//           lastMonth: month + 1,
+//           lastDay: dayRangerVal,
+//         };
+//         const result = await addDatas("date", dateInfo, `유지민`);
+//       } else {
+//         const dateInfo = {
+//           firstYear: year,
+//           firstMonth: month + 1,
+//           firstDay: daySelectorVal,
+//           lastYear: year,
+//           lastMonth: month + 1,
+//           lastDay: dayRangerVal,
+//         };
+//         const result = await addDatas("date", dateInfo, `유지민`);
+//       }
+//     });
+//   });
+// });
