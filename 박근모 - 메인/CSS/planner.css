@@ -2,7 +2,6 @@
   box-sizing: border-box;
   word-break: keep-all;
   font-family: Ownglyph_noocar-Rg;
-  font-size: 24px;
 }
 .planListBox {
   width: fit-content;
@@ -18,16 +17,33 @@
   gap: 4px;
 }
 .planListBox > h4 {
+  font-size: 20px;
   margin: 6px;
+}
+.planListBoxes div {
+  padding: 12px 0;
 }
 .nav-planner {
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
 }
-.planListBoxes div {
-  padding: 12px 0;
+.day1 {
+  font-size: 24px;
+  font-weight: normal;
+  padding-right: 28px;
+}
+.day1:hover {
+  font-weight: bold;
+}
+.bx-chevron-left:hover,
+.bx-chevron-right:hover {
+  font-weight: bold;
+  transform: scale(1.2);
+  transition: 0.1s;
 }
 /* .firstDay {
 }
@@ -58,9 +74,17 @@
   color: rgb(255, 51, 204);
 }
 
+.h-Tag1p,
+.h-Tag2p,
+.h-Tag3p {
+  height: 28px;
+  width: fit-content;
+  font-size: 24px;
+}
 .resturantBox,
 .cafeBox,
 .hotPlaceBox {
+  font-size: 20px;
   padding-left: 8px;
   display: flex;
   align-items: center;
@@ -78,7 +102,6 @@ input[type="checkbox"] {
 .placeStore[type="checkbox"] {
   accent-color: skyblue;
 }
-
 .bx-x {
   color: rgba(125, 125, 125, 0.5);
   font-size: 16px;

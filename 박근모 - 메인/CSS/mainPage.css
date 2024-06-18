@@ -6,6 +6,9 @@
 html {
   width: 100%;
 }
+body {
+  background-color: snow;
+}
 .mainPage-header {
   width: 100%;
   height: 200px;

@@ -8,26 +8,26 @@ import {
 } from "../Javascript/DLU_firebase.js";
 
 const planListBox = document.getElementById("planListBox");
-const navPlannerBox = document.getElementById("nav-planner");
+// const navPlannerBox = document.getElementById("nav-planner");
 
 async function plannerTitleName() {
   const planSnapshot = await getUserPlans("plan", "2024-06-18", "asdqwe1");
   planSnapshot.forEach((doc) => {
-    console.log(doc.data());
+    // console.log(doc.data());
   });
   const data = await getDatas("plan");
   data.forEach((doc) => {
-    console.log(doc.data());
+    // console.log(doc.data());
     // const info = doc.data();
     // let { addr, age, email, gender, tel } = doc.data();
     planListBox.insertAdjacentHTML(
       "afterbegin",
       `<h4>${doc.data().userId}님의 Planner</h4>`
     );
-    navPlannerBox.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="day1`">${}</div>`
-    );
+    // navPlannerBox.insertAdjacentHTML(
+    //   "afterbegin",
+    //   `<div class="day1">${doc.data().date}</div>`
+    // );
   });
 }
 // console.log(plannerTitleName());
@@ -48,6 +48,16 @@ plannerTitleName();
 // }
 // plannerTitleDate();
 // console.log(plannerTitleName());
+
+const cancelBtn = document.querySelectorAll(`.bx-x`);
+console.log(cancelBtn);
+
+cancelBtn.forEach((e) => {
+  console.log(e);
+  e.addEventListener("click", (el) => {
+    el.target.parentElement.remove();
+  });
+});
 
 const resturantTag = document.getElementById("resturantBoxes");
 const cafeTag = document.getElementById("cafeBoxes");
@@ -92,7 +102,6 @@ function pluslistFood(a) {
         </div>`
       );
     });
-    console.log(resturantArr);
   });
 }
 pluslistFood(rest1Tag);
@@ -175,7 +184,13 @@ pluslistPlace(place3Tag);
 pluslistPlace(place4Tag);
 pluslistPlace(place5Tag);
 
-const cancelBtn = document.querySelectorAll(`.bxs-x-square`);
-console.log(cancelBtn);
+// const cancelBtn = document.querySelectorAll(`.bx-x`);
+// console.log(cancelBtn);
 
-// cancelBtn.addEventListener("click", () => {});
+// cancelBtn.forEach((e) => {
+//   console.log(e);
+//   e.addEventListener("click", (el) => {
+//     console.log(el.target.parentElement);
+//     el.target.parentElement.remove();
+//   });
+// });

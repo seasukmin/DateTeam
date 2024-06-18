@@ -1,8 +1,17 @@
+.calendar-area {
+  position: absolute;
+  right: 0;
+  bottom: 320px;
+}
+
 .calendar {
-  width: 150px;
+  width: 180px;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+.calendar-area > .hidden {
+  display: none;
 }
 .calendar-header {
   font-size: 18px;
