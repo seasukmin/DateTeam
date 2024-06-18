@@ -86,11 +86,12 @@ body {
 }
 
 .side-bar {
-  width: 220px;
-  padding: 10px 30px;
+  width: 160px;
+  padding: 10px 10px;
   border: 2px solid skyblue;
+  background-color: skyblue;
   border-radius: 30px;
-  margin-left: 100px;
+  margin-left: 80px;
   position: fixed;
   top: 300px;
   left: 0px;
@@ -98,14 +99,31 @@ body {
 .side-text {
   list-style-type: none;
   font-size: 30px;
-  margin: 30px 0;
+  margin: 10px 0;
+  padding: 10px;
+  padding-left: 0;
 }
 .side-text li {
-  padding: 5px 0 10px 0;
+  width: 130px;
+  padding: 3px;
+  border: 2px solid skyblue;
+  background-color: white;
+  border-radius: 40px;
+  margin: 3px 0;
 }
 .side-category h1 {
-  padding-left: 20px;
+  margin: 15px;
+  padding-left: 5px;
   font-size: 42px;
+}
+.side-button {
+  width: 80px;
+  margin: 40px 0 5px 26px;
+  border: none;
+  font-family: "Ownglyph_noocar-Rg";
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: white;
 }
 .side-text:hover {
   cursor: pointer;
@@ -122,7 +140,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   position: relative;
-  margin-left: 20px;
+  margin-left: 18px;
   margin-bottom: 100px;
 }
 
@@ -141,9 +159,8 @@ body {
 }
 .rank-box h1 {
   position: absolute;
-  top: -110px;
-  /* left: 200px; */
-  font-size: 35px;
+  top: -140px;
+  font-size: 50px;
 }
 
 .content-box {
@@ -164,8 +181,11 @@ body {
   position: relative;
 }
 
-.plusIc,
-.plusIc1 {
+.plusIc1,
+.plusIc2,
+.plusIc3,
+.plusIc4,
+.plusIc5 {
   width: 280px;
   height: 280px;
   color: rgba(255, 255, 255, 0);
@@ -177,11 +197,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30px;
 }
 
-.plusIc:hover,
-.plusIc1:hover {
-  color: white;
+.plusIc1:hover,
+.plusIc2:hover,
+.plusIc3:hover,
+.plusIc4:hover,
+.plusIc5:hover {
+  color: #b6b6b6;
   transition: 0.1s;
   background-color: #3e3e3e27;
 }

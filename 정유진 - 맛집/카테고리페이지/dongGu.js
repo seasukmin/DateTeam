@@ -123,16 +123,15 @@ shoppingArr.forEach((info, idx) => {
   shopping.insertAdjacentHTML(
     "beforeend",
 
-    ` <div class="content ${info.num}">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
+    ` <div class="content" data-idx="${idx}">
+        <img src=${info.img} />
+        <div class="plusIc2"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${info.name}</p>
+          <p class="hpTime">
+            ${info.time}${info.time2}
+          </p>
+          <p class="hpInfo">${info.event}</p>
+        </div> `
   );
 });
 
@@ -170,16 +169,15 @@ insideArr.forEach((info, idx) => {
   inside.insertAdjacentHTML(
     "beforeend",
 
-    ` <div class="content">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
+    ` <div class="content" data-idx="${idx}">
+        <img src=${info.img} />
+        <div class="plusIc3"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${info.name}</p>
+          <p class="hpTime">
+            ${info.time}${info.time2}
+          </p>
+          <p class="hpInfo">${info.event}</p>
+        </div> `
   );
 });
 
@@ -243,7 +241,7 @@ sportsArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} class="sports-img" />
-        <div class="plusIc"><i class='bx bx-plus' ></i></div>
+        <div class="plusIc4"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -296,16 +294,15 @@ festivalArr.forEach((info, idx) => {
   festival.insertAdjacentHTML(
     "beforeend",
 
-    ` <div class="content">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
+    ` <div class="content" data-idx="${idx}">
+        <img src=${info.img} />
+        <div class="plusIc5"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${info.name}</p>
+          <p class="hpTime">
+            ${info.time}${info.time2}
+          </p>
+          <p class="hpInfo">${info.event}</p>
+        </div> `
   );
 });
 
@@ -365,7 +362,7 @@ document.querySelectorAll(".plusIc3").forEach((img, idx) => {
   });
 });
 
-document.querySelectorAll(".piusIc4").forEach((img, idx) => {
+document.querySelectorAll(".plusIc4").forEach((img, idx) => {
   img.addEventListener("click", () => {
     const sportsItem = sportsArr[idx];
     const sportsArray = [{ name: sportsItem.name, local: sportsItem.local }];
@@ -373,7 +370,7 @@ document.querySelectorAll(".piusIc4").forEach((img, idx) => {
   });
 });
 
-document.querySelectorAll(".piusIc5").forEach((img, idx) => {
+document.querySelectorAll(".plusIc5").forEach((img, idx) => {
   img.addEventListener("click", () => {
     const festivalItem = festivalArr[idx];
     const festivalArray = [
