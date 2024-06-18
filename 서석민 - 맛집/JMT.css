@@ -46,9 +46,10 @@ section {
   height: 10%;
   display: flex;
   flex-direction: column;
-  margin: 0 240px;
+  margin: 0 350px;
   margin-bottom: 100px;
   color: black;
+  position: relative;
 }
 
 .backGround::before {
@@ -103,6 +104,17 @@ section {
   z-index: -1;
   opacity: 0.3;
 }
+.Search {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.Search-bar {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
 .CateGory {
   display: flex;
   justify-content: space-evenly;
@@ -154,6 +166,10 @@ section {
   width: 150px;
   height: 100px;
   text-align: center;
+}
+.result {
+  display: flex;
+  gap: 24px;
 }
 .hidden {
   display: none;
@@ -258,6 +274,7 @@ main {
 }
 .MainH1 {
   font-size: 60px;
+  bottom: 0;
 }
 .Main-title {
   font-size: 36px;

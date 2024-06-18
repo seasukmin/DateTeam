@@ -10,7 +10,7 @@
     <img class="Logo" src="사진/DaejeonLoveU.png" width="100" height="100" />
     <!-- 헤더부분 시작 -->
     <header>
-      <div class="header">
+      <div class="header bar">
         <h1 class="header-H1" id="header-H1">#맛집</h1>
         <div class="header-Main">
           <input
@@ -18,8 +18,13 @@
             type="text"
             placeholder="원하는 맛집을 입력해주세요."
           />
-          <a class="header-Anchor" href="#">Log In</a>
-          <a class="header-Anchor" href="#">Log out</a>
+          <button class="Search" onclick="SearchButton()">
+            <img
+              src="사진/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </button>
         </div>
         <!-- 카테고리 시작 -->
         <div class="CateGorys">
@@ -39,6 +44,7 @@
           </ul>
         </div>
         <!-- 카테고리 끝 -->
+        <div class="result"></div>
       </div>
     </header>
 
@@ -117,7 +123,7 @@
 
       <!-- 동구 시작 -->
 
-      <h1 class="MainH1">🅰 추천</h1>
+      <h1 class="MainH1 scroll-position" id="scrollPosition">🅰 추천</h1>
       <section>
         <div class="Main-first">
           <div class="Main-title">#기념일</div>
@@ -156,17 +162,13 @@
         <a class="Top">맨 위로!</a>
       </div>
       <!-- 동구 끝 -->
-      <div class="">
+      <div class="hidden">
         <div class="input-thing">
-        <input type="text" placeholder="예약자"></input>
-        <input type="text" placeholder="전화번호"></input>
-      </div>
-
+          <input type="text" placeholder="예약자" />
+          <input type="text" placeholder="전화번호" />
+        </div>
       </div>
     </main>
-    <!-- 예약 시스템 시작 -->
-   
-    <!-- 예약 시스템 -->
     <!-- 메인부분 끝 -->
   </body>
   <script src="JMT.js"></script>
