@@ -3,97 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JMT</title>
+    <title>카페</title>
     <link rel="stylesheet" href="JMT.css" />
   </head>
-  <body id="body">
-    <img class="Logo" src="사진/DaejeonLoveU.png" />
+  <body>
+    <img class="Logo" src="사진/DaejeonLoveU.png" width="100" height="100" />
     <!-- 헤더부분 시작 -->
-    <header class="backGround">
-      <!-- <img class="header-img" src="사진/카페1.jpg" /> -->
+    <header>
       <div class="header">
-        <h1 class="header-H1" id="header-H1"><span>#</span>카페</h1>
+        <h1 class="header-H1" id="header-H1">#카페</h1>
         <div class="header-Main">
           <input
             class="header-Input"
             type="text"
             placeholder="원하는 맛집을 입력해주세요."
           />
-          <a class="header-Anchor" href="#">Log In</a>
-          <a class="header-Anchor" href="#">Log out</a>
+          <a class="header-Anchor" href="#">
+            <img
+              src="사진/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </a>
+          <!-- <a class="header-Anchor" href="#">☕</a> -->
         </div>
         <!-- 카테고리 시작 -->
         <div class="CateGorys">
           <ul class="CateGory">
             <li class="Cate">
-              <a class="CateA" id="CateA" href="#MainH1">동구</a>
-              <div class="Cate-box1 hidden boxes">
-                <div class="CateS">
-                  <a class="CateSA" href="#"><span>#</span>기념일</a>
-                </div>
-                <div class="CateS">
-                  <a class="CateSA" href="#"><span>#</span>비오는 날</a>
-                </div>
-                <div class="CateS">
-                  <a class="CateSA" href="#"><span>#</span>술 한잔</a>
-                </div>
-                <div class="CateS">
-                  <a class="CateSA" href="#"><span>#</span>분위기 좋은</a>
-                </div>
-                <div class="CateS">
-                  <a class="CateSA" href="#"><span>#</span>야외</a>
-                </div>
-              </div>
+              <a class="CateA" id="CateA" href="Category/동구.html">동구</a>
             </li>
             <li class="Cate">
-              <a class="CateD" href="#MainH2">서구</a>
-              <div class="Cate-box2 hidden boxes">
-                <div class="CateF">
-                  <a class="CateFA" href="#"><span>#</span>기념일</a>
-                </div>
-                <div class="CateF">
-                  <a class="CateFA" href="#"><span>#</span>비오는 날</a>
-                </div>
-                <div class="CateF">
-                  <a class="CateFA" href="#"><span>#</span>술 한잔</a>
-                </div>
-                <div class="CateF">
-                  <a class="CateFA" href="#"><span>#</span>분위기 좋은</a>
-                </div>
-                <div class="CateF">
-                  <a class="CateFA" href="#"><span>#</span>야외</a>
-                </div>
-              </div>
+              <a class="CateD" href="Category/서구.html">서구</a>
             </li>
             <li class="Cate">
-              <a class="CateG" href="#MainH3">중구</a>
-              <div class="Cate-box3 hidden boxes">
-                <div class="CateH"><a class="CateHA" href="#">#기념일</a></div>
-                <div class="CateH">
-                  <a class="CateHA" href="#">#비오는 날</a>
-                </div>
-
-                <div class="CateH"><a class="CateHA" href="#">#술 한잔</a></div>
-                <div class="CateH">
-                  <a class="CateHA" href="#">#분위기 좋은</a>
-                </div>
-                <div class="CateH"><a class="CateHA" href="#">#야외</a></div>
-              </div>
+              <a class="CateG" href="Category/중구.html">중구</a>
             </li>
             <li class="Cate">
-              <a class="CateJ" href="#MainH4">유성구</a>
-              <div class="Cate-box4 hidden boxes">
-                <div class="CateK"><a class="CateKA" href="#">#기념일</a></div>
-                <div class="CateK">
-                  <a class="CateKA" href="#">#비오는 날</a>
-                </div>
-
-                <div class="CateK"><a class="CateKA" href="#">#술 한잔</a></div>
-                <div class="CateK">
-                  <a class="CateKA" href="#">#분위기 좋은</a>
-                </div>
-                <div class="CateK"><a class="CateKA" href="#">#야외</a></div>
-              </div>
+              <a class="CateJ" href="Category/유성구.html">유성구</a>
             </li>
           </ul>
         </div>
@@ -104,8 +51,8 @@
     <!-- 헤더부분 끝 -->
     <!-- 사이드 리스트 시작 -->
     <div class="sidebars">
-      <h1>이주의 맛집!</h1>
-      <h2>가장 인기 있는 맛집!</h2>
+      <h1>이주의 카페!</h1>
+      <h2>가장 인기 있는 카페!</h2>
       <div class="sidebar">
         <ul class="sidebar-subs">
           <li class="sidebar-sub">
@@ -153,19 +100,30 @@
     </div>
     <!-- 사이드 리스트 끝 -->
     <!-- 메인부분 시작 -->
-
-    <div class="back">
-      <img class="backImg" src="사진/카페2.jpg" ; />
-    </div>
-    <section>
-      <div class="middle">
-        <h1 class="middleH1">대전의 맛집을 소개합니다!</h1>
-      </div>
-    </section>
     <main>
+      <h1>데이트 코스로 가장<span class="Hot">Hot</span>한 카페!</h1>
+      <div class="back">
+        <img
+          class="backImg"
+          id="backImg"
+          src="사진/brick-wall-1834784_1920.jpg"
+        />
+        <div class="back-inner">
+          <img class="backImgG" src="사진/카페1.jpg" />
+          <img class="backImgG" src="사진/카페2.jpg" />
+          <img class="backImgG" src="사진/카페3.jpg" />
+          <img class="backImgG" src="사진/카페4.jpg" />
+        </div>
+      </div>
+      <section>
+        <div class="middle">
+          <h1 class="middleH1" id="middleH1"></h1>
+        </div>
+      </section>
+
       <!-- 동구 시작 -->
 
-      <h1 class="MainH1" id="MainH1">🅰 동구</h1>
+      <h1 class="MainH1">🅰 추천</h1>
       <section>
         <div class="Main-first">
           <div class="Main-title">#기념일</div>
@@ -196,119 +154,25 @@
           <div class="Main-box5"></div>
         </div>
       </section>
-      <!-- 동구 끝 -->
-      <!-- 서구 시작 -->
-      <h1 class="MainH1" id="MainH2">🅱 서구</h1>
-      <section>
-        <div class="Main-first">
-          <div class="Main-title">#기념일</div>
-          <div class="Main-box1"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#비오는 날 (추천)</div>
-          <div class="Main-box2"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#술 한잔</div>
-          <div class="Main-box3"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#분위기 좋은</div>
-          <div class="Main-box4"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#야외</div>
-          <div class="Main-box5"></div>
-        </div>
-      </section>
-      <!-- 서구 끝 -->
-      <!-- 중구 시작 -->
-      <h1 class="MainH1" id="MainH3">🆎 중구</h1>
-      <section>
-        <div class="Main-first">
-          <div class="Main-title">#기념일</div>
-          <div class="Main-box1"></div>
-        </div>
-      </section>
-
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#비오는 날 (추천)</div>
-          <div class="Main-box2"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#술 한잔</div>
-          <div class="Main-box3"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#분위기 좋은</div>
-          <div class="Main-box4"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#야외</div>
-          <div class="Main-box5"></div>
-        </div>
-      </section>
-      <!-- 중구 끝 -->
-      <!-- 유성구 시작 -->
-      <h1 class="MainH1" id="MainH4">🆑 유성구</h1>
-      <section>
-        <div class="Main-first">
-          <div class="Main-title">#기념일</div>
-          <div class="Main-box1"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#비오는 날 (추천)</div>
-          <div class="Main-box2"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#술 한잔</div>
-          <div class="Main-box3"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#분위기 좋은</div>
-          <div class="Main-box4"></div>
-        </div>
-      </section>
-      <section>
-        <div class="Main-second">
-          <div class="Main-title">#야외</div>
-          <div class="Main-box5"></div>
-        </div>
-      </section>
-      <div class="TopLoop">
-        <a class="Top" href="#header-H1">맨 위로!</a>
-      </div>
       <div class="Promise">
-        <button class="Promise-but">예약하기!</button>
-        <button class="Promise-but">플래너+</button>
+        <a class="Promise-but">예약하기!</a>
+        <a class="Promise-but">플래너+</a>
       </div>
-      <!-- 유성구 끝 -->
+      <div class="TopLoop">
+        <a class="Top">맨 위로!</a>
+      </div>
+      <!-- 동구 끝 -->
+      <div class="hidden">
+        <div class="input-thing">
+          <input type="text" placeholder="예약자" />
+          <input type="text" placeholder="전화번호" />
+        </div>
+      </div>
     </main>
     <!-- 예약 시스템 시작 -->
 
     <!-- 예약 시스템 -->
     <!-- 메인부분 끝 -->
   </body>
-  <script src="JMT.js"></script>
+  <script src="Cafe.js"></script>
 </html>

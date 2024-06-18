@@ -256,7 +256,7 @@ MainboxArr5.forEach((el, idx) => {
          `
   );
 });
-const text = "대전의 맛집을 소개합니다! ";
+const text = "대전의 카페를 소개합니다! ";
 const middleH1 = document.getElementById("middleH1");
 
 let index = 0;
@@ -273,27 +273,6 @@ function displayNextCharacter() {
 }
 
 displayNextCharacter();
-
-const Search = document.querySelector(".Search");
-const headerInput = document.querySelector(".header-Input");
-const header = document.querySelector(".header");
-const SearchArr = [
-  { text: "칸스테이크" },
-  { text: "삿뽀로 대전" },
-  { text: "누오보나폴리 대전" },
-  { text: "더 리스 대청호" },
-];
-
-function SearchButton() {
-  SearchArr.forEach(function (el, idx) {
-    if (el.text == headerInput.value) {
-      const div = document.createElement("div");
-      div.classList.add("Search-bar");
-      header.append(div);
-      // div.classList.remove("Search-bar");
-    }
-  });
-}
 
 // 메인 스크립트 시작
 
@@ -352,20 +331,3 @@ function openPopup() {
   // resizable=no ==> 팝업창의 크기를 조절할 수 없음
   // toolbar=no ==> 도구모음이 없어짐
 }
-const body = document.querySelector("body");
-const MainH1 = document.querySelector(".MainH1");
-const bodyHeight = body.getBoundingClientRect();
-const MainH1Height = MainH1.getBoundingClientRect();
-function updateScrollPosition() {
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  console.log("Scroll Position: " + scrollPosition);
-
-  if (scrollPosition > 1000) {
-    MainH1.style.transform = "translateY(-100px)";
-    MainH1.style.transition = "0.5s linear";
-  }
-}
-
-window.addEventListener("scroll", updateScrollPosition);
-
-// body.addEventListener('wheel', function(){
