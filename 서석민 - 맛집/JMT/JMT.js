@@ -277,6 +277,68 @@ const SearchArr = [
   { text: "어반 더 쉐프 동구 #기념일" },
   { text: "지안 동구 #기념일" },
 ];
+const SearcherArr = [
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/어글리딜리셔스(동구 대동 357-1).jpg",
+    text1: "평점: 4.5",
+    text2: "어글리딜리셔스",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+  {
+    src: "../사진객체/신도칼국수(동구 대전로825번길 11).jpg",
+    text1: "평점: 4.9",
+    text2: "신도칼국수",
+    text3: "#기념일",
+  },
+];
 function SearchButton() {
   result.innerHTML = "";
   SearchArr.forEach(function (el, idx) {
@@ -287,11 +349,11 @@ function SearchButton() {
            <div class="box">
                 <img
                   class="box-img"
-                  src="${MainboxArr1[idx].src}"
+                  src="${SearcherArr[idx].src}"
                 />
-                <div class="box-point">${MainboxArr1[idx].text1}</div>
-                <div class="box-name">${MainboxArr1[idx].text2}</div>
-                <div class="box-tag">${MainboxArr1[idx].text3}</div>
+                <div class="box-point">${SearcherArr[idx].text1}</div>
+                <div class="box-name">${SearcherArr[idx].text2}</div>
+                <div class="box-tag">${SearcherArr[idx].text3}</div>
                
               </div>
              
