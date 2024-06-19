@@ -84,7 +84,7 @@
   margin-left: 6px;
   padding-top: 0;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -102,6 +102,7 @@
 }
 
 .wether-week {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;

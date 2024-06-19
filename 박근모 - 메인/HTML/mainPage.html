@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="../font/font.css" />
     <link rel="stylesheet" href="../CSS/mainPage.css" />
-    <link rel="stylesheet" href="../CSS/mainPage-cotent.css" />
+    <link rel="stylesheet" href="../CSS/mainPage-content.css" />
     <link rel="stylesheet" href="../CSS/calendar_wether.css" />
   </head>
   <body>
@@ -18,7 +18,11 @@
     <header class="mainPage-header">
       <h1 class="header-title">
         <!-- <span class="header-title-span">데이트</span>가 어렵다면 ~~! -->
-        <img src="../img/DaejeonLoveU.png" width="320px" />
+        <img
+          src="../img/DaejeonLoveU.png"
+          width="320px"
+          class="mainPage-logo"
+        />
       </h1>
       <div class="Tag-titles">
         <p class="h-Tag1p" id="h-JMT">
@@ -217,7 +221,7 @@
       <div class="login-banner-boxes">
         <!-- login Box -->
         <aside class="login-box">
-          <div class="logIn-ID">
+          <!-- <div class="logIn-ID">
             <i class="bx bx-user"></i> : <input type="text" class="logIn" />
           </div>
           <div class="logIn-PW">
@@ -228,7 +232,9 @@
             <button class="logInBtn">로그인</button>
             /
             <button class="signUpBtn">회원가입</button>
-          </div>
+          </div> -->
+          <button class="signIn">로그인</button>
+          <button class="signUp">회원가입</button>
         </aside>
         <!-- Advertisment Box -->
         <!-- <aside class="banner-box">
@@ -255,7 +261,7 @@
         </div>
       </div>
       <div class="footer-right">
-        <p class="customer-service">고객지원센터</p>
+        <a class="customer-service" href="../HTML/subPage.html">고객지원센터</a>
         <span>/</span>
         <p class="customer-service">이용약관</p>
         <p></p>

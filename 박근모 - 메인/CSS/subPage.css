@@ -2,6 +2,7 @@
   box-sizing: border-box;
   word-break: keep-all;
   font-family: Ownglyph_noocar-Rg;
+  scroll-behavior: smooth;
 }
 html {
   width: 100%;
@@ -101,7 +102,7 @@ body {
 .contents-container section {
   width: 100%;
   padding: 16px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 24px;
 }
 .contents-container .hidden {
@@ -117,6 +118,50 @@ body {
   font-weight: bold;
 }
 
+.webPage-icons i {
+  cursor: pointer;
+  font-size: 40px;
+}
+.webPage-icons i:hover {
+  color: rgb(255, 51, 204);
+  transition: 0.2s;
+}
+.submainPage-footer {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 24px;
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.footer-right,
+.footer-left {
+  flex-grow: 1;
+}
+/* .footer-left {
+  text-align: end;
+} */
+.footer-right {
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+  bottom: 8px;
+  right: 24px;
+  display: flex;
+  gap: 4px;
+}
+.customer-service {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  /* margin-bottom: 24px;
+  margin-right: 24px; */
+}
+.customer-service:hover {
+  text-decoration: underline;
+}
 .webPage-icons i {
   cursor: pointer;
   font-size: 40px;

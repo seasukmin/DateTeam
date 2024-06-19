@@ -2,6 +2,7 @@
   box-sizing: border-box;
   word-break: keep-all;
   font-family: Ownglyph_noocar-Rg;
+  scroll-behavior: smooth;
 }
 html {
   width: 100%;
@@ -20,6 +21,9 @@ body {
   position: fixed;
   top: 0;
 }
+.mainPage-logo {
+  cursor: pointer;
+}
 .Tag-titles {
   font-weight: bold;
   font-style: italic;
@@ -37,15 +41,19 @@ body {
   transition: 0.2s;
 }
 .h-Tag1p:hover {
+  cursor: pointer;
   border-bottom: 2px solid red;
 }
 .h-Tag2p:hover {
+  cursor: pointer;
   border-bottom: 2px solid purple;
 }
 .h-Tag3p:hover {
+  cursor: pointer;
   border-bottom: 2px solid skyblue;
 }
 .h-Tag4p:hover {
+  cursor: pointer;
   border-bottom: 2px solid rgb(255, 51, 204);
 }
 .h-Tag1Span {
@@ -105,6 +113,7 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .category-top,
 .category-center,
@@ -166,18 +175,15 @@ body {
 }
 /* main */
 .contents-center {
-  /* border-top: 2px solid black;
-  border-bottom: 2px solid black; */
   width: 70%;
   margin: 0 24px;
   overflow: auto;
-  /* border-radius: 24px; */
 }
 .calender-wether {
   display: flex;
 }
 
-.login-banner-boxes {
+/* .login-banner-boxes {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -197,7 +203,6 @@ body {
 }
 .logIn-ID,
 .logIn-PW {
-  /* border: 1px solid black; */
   font-size: 20px;
   padding: 4px;
   cursor: pointer;
@@ -238,8 +243,42 @@ body {
 .logInBtn:hover,
 .signUpBtn:hover {
   border-bottom: 1px solid rgb(255, 51, 204);
-}
+} */
 
+.login-box {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  border-radius: 24px;
+  padding: 16px;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.signIn {
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 24px;
+  background-color: rgb(255, 51, 204);
+  color: white;
+}
+.signIn:hover {
+  background-color: rgb(255, 0, 191);
+  color: white;
+}
+.signUp {
+  text-align: end;
+  border: 0;
+  padding-top: 6px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.signUp:active,
+.signUp:hover {
+  color: rgb(255, 51, 204);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0);
+}
 /* .banner-box {
   overflow: hidden;
   display: flex;
@@ -281,6 +320,8 @@ body {
   gap: 4px;
 }
 .customer-service {
+  text-decoration: none;
+  color: black;
   margin: 0;
   /* margin-bottom: 24px;
   margin-right: 24px; */

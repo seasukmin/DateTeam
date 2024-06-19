@@ -194,3 +194,24 @@ pluslistPlace(place5Tag);
 //     el.target.parentElement.remove();
 //   });
 // });
+
+const changeSize = document.querySelector(".chageSize");
+const plannerBoxTag = document.querySelector(".plannerBox");
+const sizeBtn = document.querySelector(".changeSizeBtn");
+const sizeDownBtn = document.querySelector(".bx-chevrons-down");
+console.log(sizeDownBtn);
+
+sizeBtn.addEventListener("click", () => {
+  const sizeUpBtn = document.querySelector(".bx-chevrons-up");
+  sizeDownBtn.classList.toggle("bx-chevrons-down");
+  sizeDownBtn.classList.toggle("bx-chevrons-up");
+  if (sizeUpBtn == null) {
+    plannerBoxTag.classList.add("small");
+  } else if (sizeUpBtn != null) {
+    plannerBoxTag.classList.remove("small");
+  }
+});
+// sizeBtn.addEventListener("click", () => {
+//   plannerBoxTag.classList.remove("small");
+//   sizeUpBtn.addEventListener("click", () => {});
+// });
