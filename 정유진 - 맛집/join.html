@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./join.css" />
   <body>
     <button class="logo">
-      <img src="./img/DaejeonLoveU.png" width="200px" height="80px" />
+      <img src="./img/DaejeonLoveU.png" width="250px" />
     </button>
     <div class="container">
       <h2># 회원가입</h2>
@@ -53,23 +53,20 @@
           />
         </div>
         <div class="form-box">
-          <label for="gender" id="label">성별</label>
+          <label>닉네임</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-box">
+          <label for="gender">성별</label>
           <label
-            ><input
-              type="radio"
-              name="gender"
-              value="male"
-              required
-              class="gender"
-            />
+            ><input type="radio" name="gender" value="male" required />
             남성</label
           >
           <label
-            ><input type="radio" name="gender" value="female" class="gender" />
-            여성</label
+            ><input type="radio" name="gender" value="female" /> 여성</label
           >
         </div>
-        <button type="submit">가입하기</button>
+        <button type="submit">Join</button>
       </form>
     </div>
   </body>

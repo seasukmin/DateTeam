@@ -23,7 +23,7 @@ body {
   border: none;
   background-color: transparent;
   position: fixed;
-  top: 15px;
+  top: 10px;
   right: 30px;
   cursor: pointer;
 }
@@ -33,6 +33,8 @@ body {
   text-align: center;
   background-color: #fff;
   border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   padding: 50px;
   gap: 20px;
 }
@@ -43,26 +45,25 @@ body {
 }
 
 .form-box {
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 label {
   width: 100px;
   text-align: center;
-}
-#label {
-  width: 100px;
-  text-align: center;
+  color: #555;
 }
 
 input {
   width: 300px;
   padding: 8px;
   margin: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 button {
@@ -73,10 +74,7 @@ button {
   border: none;
   border-radius: 20px;
   background-color: hotpink;
+  color: white;
   font-family: "Ownglyph_noocar-Rg";
-}
-
-.gender {
-  width: 80px;
-  display: block;
+  border-radius: 4px;
 }
