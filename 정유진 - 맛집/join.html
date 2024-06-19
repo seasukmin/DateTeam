@@ -56,17 +56,20 @@
           <label>닉네임</label>
           <input type="text" id="name" name="name" required />
         </div>
-        <div class="form-box">
+        <div class="form-box genderRadio">
           <label for="gender">성별</label>
-          <label
-            ><input type="radio" name="gender" value="male" required />
-            남성</label
-          >
-          <label
-            ><input type="radio" name="gender" value="female" /> 여성</label
-          >
+          <div class="genderBox">
+            <div class="maleBox">
+              <input type="radio" name="gender" value="male" required />
+              <label> 남성</label>
+            </div>
+            <div class="femaleBox">
+              <input type="radio" name="gender" value="female" />
+              <label> 여성</label>
+            </div>
+          </div>
         </div>
-        <button type="submit">Join</button>
+        <button type="submit" class="joinBtn">Join</button>
       </form>
     </div>
   </body>

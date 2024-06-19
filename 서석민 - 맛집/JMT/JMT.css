@@ -15,7 +15,7 @@ body {
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
   color: black;
-  background-color: white;
+  background-color: snow;
 }
 
 #body {
@@ -32,8 +32,9 @@ span {
   position: fixed;
   top: 50px;
   right: 70px;
-  width: 180px;
+  width: 250px;
   cursor: pointer;
+  z-index: 1;
 
   border-radius: 20px;
 }
@@ -142,6 +143,27 @@ section {
   position: relative;
   cursor: pointer;
 }
+.CateA:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3 linear;
+}
+.CateD:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3 linear;
+}
+.CateG:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3 linear;
+}
+.CateJ:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3 linear;
+}
+.CateL:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3 linear;
+}
+
 .CateSA,
 .CateFA,
 .CateHA,
@@ -176,6 +198,22 @@ section {
   width: 150px;
   height: 100px;
   text-align: center;
+}
+.Cate-subs {
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+  padding-top: 5px;
+  gap: 10px;
+}
+
+.Cate-sub {
+  text-decoration: none;
+  color: black;
+}
+.Cate-sub:hover {
+  color: rgb(158, 50, 0, 100%);
+  transition: 0.3s linear;
 }
 .result {
   display: flex;
@@ -297,8 +335,8 @@ main {
 .Main-box4,
 .Main-box5 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
   align-items: center;
   justify-items: center;
   width: 100%;
@@ -311,6 +349,22 @@ main {
   display: flex;
 
   gap: 20px;
+}
+.box-h1 {
+  margin: 0;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: -30px;
+  font-size: 20px;
+}
+.box-h2 {
+  margin: 0;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: 400px;
+  font-size: 20px;
 }
 .backImg {
   z-index: -1;
@@ -338,6 +392,7 @@ main {
   width: 400px;
   margin-right: 100px;
   gap: 20px;
+  position: relative;
 }
 #backImg {
   transition: change opacity 2s linear 2s;
@@ -360,8 +415,8 @@ main {
 }
 .box-img {
   border-radius: 15px;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   transform: scale(1);
 }
 .box-img:hover {

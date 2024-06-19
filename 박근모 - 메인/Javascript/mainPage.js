@@ -51,7 +51,7 @@ signInBtn.addEventListener("click", (e) => {
   location.href = "../HTML/LogInPage.html";
 });
 signUpBtn.addEventListener("click", (e) => {
-  location.href = "../HTML/LogInPage.html";
+  location.href = "../HTML/join.html";
 });
 
 const JMTtag = document.getElementById("h-JMT");
