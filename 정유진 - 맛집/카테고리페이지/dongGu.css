@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: snow;
   height: 100%;
   width: 100%;
   font-family: "Ownglyph_noocar-Rg";
@@ -32,12 +32,13 @@ body {
 .hashTag {
   color: skyblue;
 }
+
 .title-btn {
   border: none;
   background-color: transparent;
   position: fixed;
   top: 15px;
-  right: 20px;
+  right: 15px;
   cursor: pointer;
 }
 
@@ -75,7 +76,7 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
@@ -86,44 +87,43 @@ body {
 }
 
 .side-bar {
-  width: 160px;
-  padding: 10px 10px;
+  padding: 10px 15px 10px 15px;
   border: 2px solid skyblue;
   background-color: skyblue;
-  border-radius: 30px;
-  margin-left: 80px;
+  border-radius: 25px;
   position: fixed;
-  top: 300px;
-  left: 0px;
+  top: 270px;
+  left: 80px;
 }
 .side-text {
   list-style-type: none;
-  font-size: 30px;
+  font-size: 26px;
   margin: 10px 0;
   padding: 10px;
   padding-left: 0;
 }
 .side-text li {
-  width: 130px;
-  padding: 3px;
-  border: 2px solid skyblue;
+  width: 120px;
+  padding: 4px 7px;
   background-color: white;
-  border-radius: 40px;
-  margin: 3px 0;
+  border-radius: 15px;
+  margin: 10px 0;
 }
 .side-category h1 {
-  margin: 15px;
+  margin: 10px;
+  color: #3e3e3e;
   padding-left: 5px;
   font-size: 42px;
 }
-.side-button {
+.sideBtn {
   width: 80px;
-  margin: 40px 0 5px 26px;
+  margin: 40px 0 5px 23px;
   border: none;
   font-family: "Ownglyph_noocar-Rg";
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 30px;
   background-color: white;
+  padding: 4px;
 }
 .side-text:hover {
   cursor: pointer;
@@ -133,34 +133,59 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .rank-box {
-  width: 60%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
   gap: 20px;
   position: relative;
-  margin-left: 18px;
-  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-bottom: 80px;
 }
 
 .rank {
   font-weight: 800;
   font-size: 24px;
   position: absolute;
-  top: -25px;
-  /* left: ; */
+  top: -30px;
 }
 .rank-box img {
-  width: 300px;
-  height: 250px;
+  width: 18rem;
+  height: 16rem;
   border-radius: 30px;
   box-shadow: 1px 1px 5px 1px gray;
 }
 .rank-box h1 {
   position: absolute;
   top: -140px;
-  font-size: 50px;
+  left: 40%;
+  font-size: 38px;
+}
+.rank-box h1 {
+  animation-name: moveText;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
 }
 
 .content-box {
@@ -247,13 +272,27 @@ body {
   padding-top: 50px;
 }
 
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.topBtn {
+  border: none;
+  padding: 20px;
+  border-radius: 50%;
+  font-family: "Ownglyph_noocar-Rg";
+  font-size: 16px;
+}
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: antiquewhite; */
-  height: 150px;
-  margin-top: 80px;
+  background-color: antiquewhite;
+  height: 120px;
+  /* margin-top: 80px; */
 }
 
 .footer {
