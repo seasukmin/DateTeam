@@ -43,71 +43,78 @@
         <li class="place5">으능정이</li>
       </ol>
     </div>
-    <div class="calendar-area">
-      <div class="calendar hidden">
-        <div class="calendar-header">
-          <button id="prevMonth">&lt;</button>
-          <div id="currentMonthYear"></div>
-          <button id="nextMonth">&gt;</button>
-        </div>
-        <div class="calendar-body">
-          <div class="day-names">
-            <div>S</div>
-            <div>M</div>
-            <div>Tu</div>
-            <div>W</div>
-            <div>Th</div>
-            <div>F</div>
-            <div>Sa</div>
+    <!-- <div class="plannerBox small"> -->
+    <div class="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar hidden">
+          <div class="calendar-header">
+            <button id="prevMonth">&lt;</button>
+            <div id="currentMonthYear"></div>
+            <button id="nextMonth">&gt;</button>
           </div>
-          <div class="days" id="days"></div>
+          <div class="calendar-body">
+            <div class="day-names">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days" id="days"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="planListBox" id="planListBox">
-      <!-- <h4>핑구님의 Planner</h4> -->
-      <div class="nav-planner" id="nav-planner">
-        <div class="day1"></div>
-        <i class="bx bx-sun" undefined></i>
+      <div class="planListBox" id="planListBox">
+        <!-- <h4>핑구님의 Planner</h4> -->
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes">
+          <!-- <div class="resturantBox">
+            <input
+              type="checkbox"
+              id="foodStore1"
+              class="foodStore"
+              checked
+            /><label for="foodStore1">성심당</label>
+            <i class='bx bx-x' ></i>
+          </div> -->
+        </div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes">
+          <!-- <div class="cafeBox">
+            <input
+              type="checkbox"
+              id="cafeStore1"
+              class="cafeStore"
+              checked
+            /><label for="cafeStore1">노티드</label>
+            <i class="bx bx-x"></i>
+          </div> -->
+        </div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes">
+          <!-- <div class="hotPlaceBox">
+            <input
+              type="checkbox"
+              id="placeStore1"
+              class="placeStore"
+              checked
+            /><label for="placeStore1">한빛탑</label>
+            <i class='bx bx-x' ></i>
+          </div> -->
+        </div>
+        <button class="shareBtn">공유하기</button>
       </div>
-      <div class="nav-planner"></div>
-      <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
-      <div class="resturantBoxes" id="resturantBoxes">
-        <!-- <div class="resturantBox">
-          <input
-            type="checkbox"
-            id="foodStore1"
-            class="foodStore"
-            checked
-          /><label for="foodStore1">성심당</label>
-          <i class='bx bx-x' ></i>
-        </div> -->
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+        <!-- <i class="bx bx-chevrons-up"></i> -->
       </div>
-      <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
-      <div class="cafeBoxes" id="cafeBoxes">
-        <!-- <div class="cafeBox">
-          <input
-            type="checkbox"
-            id="cafeStore1"
-            class="cafeStore"
-            checked
-          /><label for="cafeStore1">노티드</label>
-          <i class="bx bx-x"></i>
-        </div> -->
-      </div>
-      <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
-      <div class="hotPlaceBoxes" id="hotPlaceBoxes">
-        <!-- <div class="hotPlaceBox">
-          <input
-            type="checkbox"
-            id="placeStore1"
-            class="placeStore"
-            checked
-          /><label for="placeStore1">한빛탑</label>
-          <i class='bx bx-x' ></i>
-        </div> -->
-      </div>
-      <button class="shareBtn">공유하기</button>
     </div>
   </body>
   <script src="../Javascript/calendarRangeX.js" type="module"></script>
