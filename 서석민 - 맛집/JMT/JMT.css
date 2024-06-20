@@ -52,7 +52,9 @@ section {
   color: #3e3e3e;
   position: relative;
 }
-
+.head {
+  height: 270px;
+}
 .backGround::before {
   content: "";
   position: absolute;
@@ -358,6 +360,7 @@ main {
 .Main-img {
   width: 300px;
   height: 300px;
+  box-shadow: 1px 1px 5px 1px gray;
 }
 .MainH1 {
   font-size: 60px;
@@ -378,6 +381,24 @@ main {
   justify-items: center;
   width: max-content;
   cursor: pointer;
+}
+.Mainchart-inner1,
+.Mainchart-inner2,
+.Mainchart-inner3,
+.Mainchart-inner4 {
+  cursor: pointer;
+}
+.Mainchart-inner1:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner2:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner3:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner4:hover {
+  transform: scale(1.05);
 }
 .Hot {
   color: red;
@@ -553,6 +574,7 @@ main {
   width: 100%;
   cursor: pointer;
 }
+
 .Mainchart img {
   border-radius: 20px;
 }
