@@ -199,6 +199,8 @@ const changeSize = document.querySelector(".chageSize");
 const plannerBoxTag = document.querySelector(".plannerBox");
 const sizeBtn = document.querySelector(".changeSizeBtn");
 const sizeDownBtn = document.querySelector(".bx-chevrons-down");
+
+const calendarTag = document.querySelector(".calendar");
 console.log(sizeDownBtn);
 
 sizeBtn.addEventListener("click", () => {
@@ -207,6 +209,8 @@ sizeBtn.addEventListener("click", () => {
   sizeDownBtn.classList.toggle("bx-chevrons-up");
   if (sizeUpBtn == null) {
     plannerBoxTag.classList.add("small");
+
+    calendarTag.classList.add("hidden");
   } else if (sizeUpBtn != null) {
     plannerBoxTag.classList.remove("small");
   }
