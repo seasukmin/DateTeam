@@ -329,12 +329,16 @@ Maintitle.forEach(function (el, idx) {
   });
 });
 
+//
+
 document.querySelectorAll(".category li").forEach((item) => {
   item.addEventListener("click", function () {
     const url = this.getAttribute("data-url");
     window.location.href = url;
   });
 });
+
+// 사진 hover 하면 + 버튼 나타나게
 
 document.querySelectorAll(".plusIc1").forEach((img, idx) => {
   img.addEventListener("click", () => {
@@ -379,3 +383,15 @@ document.querySelectorAll(".plusIc5").forEach((img, idx) => {
     console.log(festivalArray);
   });
 });
+
+// 맨 위로 이동
+const Top = document.querySelector(".topBtn");
+Top.addEventListener("click", function () {
+  location.href = "#toploop";
+});
+const Top2 = document.querySelector(".sideBtn");
+Top2.addEventListener("click", function () {
+  location.href = "#toploop";
+});
+
+// 카테고리 페이지로 이동
