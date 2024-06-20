@@ -43,7 +43,7 @@
     </header>
     <main class="main-center">
       <!-- category -->
-      <aside class="categories">
+      <aside class="categories" id="categories">
         <!-- <div class="short-category">
           <i class="bx bx-list-ul"></i>
         </div> -->
@@ -251,14 +251,14 @@
     <!-- planner -->
     <div class="plannerBox">
       <div class="calendar-area">
-        <div class="calendar hidden">
-          <div class="calendar-header">
-            <button id="prevMonth">&lt;</button>
-            <div id="currentMonthYear"></div>
-            <button id="nextMonth">&gt;</button>
+        <div class="calendar-planner hidden">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
           </div>
-          <div class="calendar-body">
-            <div class="day-names">
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
               <div>S</div>
               <div>M</div>
               <div>Tu</div>
@@ -267,7 +267,7 @@
               <div>F</div>
               <div>Sa</div>
             </div>
-            <div class="days" id="days"></div>
+            <div class="days-planner" id="days-planner"></div>
           </div>
         </div>
       </div>
@@ -313,6 +313,6 @@
   </body>
   <script src="../Javascript/mainPage.js" type="module"></script>
   <script src="../Javascript/calendar.js" type="module"></script>
-  <script src="../Javascript/planner.js" type="module"></script>
+  <script src="../Javascript/planner-mainPage.js" type="module"></script>
   <script src="../Javascript/calendarRangeX.js" type="module"></script>
 </html>

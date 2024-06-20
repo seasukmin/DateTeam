@@ -5,19 +5,18 @@ import {
   deleteDatas,
   updateDatas,
 } from "./DLU_firebase.js";
-const currentMonthYear = document.getElementById("currentMonthYear");
-const daysContainer = document.getElementById("days");
+const currentMonthYear = document.getElementById("currentMonthYear-planner");
+const daysContainer = document.getElementById("days-planner");
 const navPlannerBox = document.getElementById("nav-planner");
 const day1Tag = document.querySelector(".day1");
-const calendarTag = document.querySelector(".calendar");
-// let currentDate = new Date();
-let currentDate = new Date("2024/06/20");
+const calendarTag = document.querySelector(".calendar-planner");
+let currentDatePlan = new Date();
 
 function renderCalendar() {
-  const year = currentDate.getFullYear();
-  const month = currentDate.getMonth();
-  const day = currentDate.getDate();
-  const week = currentDate.getDay();
+  const year = currentDatePlan.getFullYear();
+  const month = currentDatePlan.getMonth();
+  const day = currentDatePlan.getDate();
+  const week = currentDatePlan.getDay();
   const weekArr = ["일", "월", "화", "수", "목", "금", "토"];
   // const weekArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   currentMonthYear.innerText = `${year}년 ${month + 1}월`;
@@ -38,7 +37,7 @@ function renderCalendar() {
     dayCell.classList.add("dayItem");
     dayCell.innerText = i;
     dayCell.addEventListener("click", (e) => {
-      const selected = document.querySelector(".days .selected");
+      const selected = document.querySelector(".days-planner .selected");
       if (selected) {
         selected.classList.remove("selected");
       }
@@ -65,16 +64,13 @@ function renderCalendar() {
 day1Tag.addEventListener("click", () => {
   calendarTag.classList.toggle("hidden");
 });
-// navPlannerBox.insertAdjacentHTML(
-//   "afterbegin"`<div class="day1">${year}.${month}.${day}(${weekArr[week]})</div>`
-// );
-document.getElementById("prevMonth").addEventListener("click", () => {
-  currentDate.setMonth(currentDate.getMonth() - 1);
+document.getElementById("prevMonth-planner").addEventListener("click", () => {
+  currentDatePlan.setMonth(currentDatePlan.getMonth() - 1);
   renderCalendar();
 });
 
-document.getElementById("nextMonth").addEventListener("click", () => {
-  currentDate.setMonth(currentDate.getMonth() + 1);
+document.getElementById("nextMonth-planner").addEventListener("click", () => {
+  currentDatePlan.setMonth(currentDatePlan.getMonth() + 1);
   renderCalendar();
 });
 
