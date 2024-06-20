@@ -62,7 +62,7 @@ joinBtn.addEventListener("click", () => {
     alert("비밀번호는 8자 이상이어야 합니다.");
     return false;
   }
-  if (passwordInputVal.length > 240619) {
+  if (passwordInputVal.length > 6) {
     alert("생년월일을 잘못 입력하셨습니다.");
     return false;
   }
