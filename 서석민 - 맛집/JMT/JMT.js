@@ -18,71 +18,142 @@ const dataObj = {
       src: "../photo/1.jpg",
       text1: "4.9",
       text2: "신도칼국수",
-      text3: "동구 대전로 925번길 11",
-      text4: "#기념일",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+      text5: " #기념일",
     },
     {
       src: "../photo/2.jpg",
-      text1: "4.5",
-      text2: "어글리딜리셔스",
-      text3: "동구 대동 357-1",
-      text4: "#기념일",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/3.jpg",
-      text1: "4.7",
-      text2: "어반 더 쉐프",
-      text3: "동구 용전동 68-21",
-      text4: "#기념일",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/4.jpg",
-      text1: "4.1",
-      text2: "지안",
-      text3: "동구 효동 126-3",
-      text4: "#기념일",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/5.jpg",
       text1: "4.9",
-      text2: "구름식당",
-      text3: "동구 대동 201-23",
-      text4: "#분위기 좋은",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/6.jpg",
       text1: "4.9",
-      text2: "명월본가수라상",
-      text3: "동구 계족로 184-23",
-      text4: "#분위기 좋은",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/7.jpg",
       text1: "4.9",
-      text2: "파운드",
-      text3: "동구 중앙동 수향길 25",
-      text4: "#분위기 좋은",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/8.jpg",
       text1: "4.9",
-      text2: "힐링",
-      text3: "동구 가오동 신기로 123-28",
-      text4: "#분위기 좋은",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
-      src: "../photo/2.jpg",
-      text1: "4.5",
-      text2: "어글리딜리셔스",
-      text3: "동구 대동 357-1",
-      text4: "#기념일",
+      src: "../photo/9.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
     {
       src: "../photo/10.jpg",
       text1: "4.9",
-      text2: "오씨칼국수",
-      text3: "동구 옛신탄진로 13",
-      text4: "#비오는 날",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/11.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/12.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/13.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/14.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/15.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/16.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/17.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/18.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/19.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    },
+    {
+      src: "../photo/20.jpg",
+      text1: "4.9",
+      text2: "신도칼국수",
+      text3: " addr. 동구 대전로 925번길 11",
+      text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
     },
   ],
 };
@@ -133,43 +204,81 @@ const MainboxArr1 = [
     src: "../photo/1.jpg",
     text1: "4.9",
     text2: "신도칼국수",
-    text3: "동구 대전로 925번길 11",
-    text4: "#기념일",
+    text3: " addr. 동구 대전로 925번길 11",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: " #기념일",
   },
   {
     src: "../photo/2.jpg",
     text1: "4.5",
     text2: "어글리딜리셔스",
     text3: "동구 대동 357-1",
-    text4: "#기념일",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
   },
   {
     src: "../photo/2.jpg",
     text1: "4.5",
     text2: "어글리딜리셔스",
     text3: "동구 대동 357-1",
-    text4: "#기념일",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
   },
   {
     src: "../photo/6.jpg",
     text1: "4.9",
     text2: "명월본가수라상",
     text3: "동구 계족로 184-23",
-    text4: "#분위기 좋은",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#분위기 좋은",
   },
   {
     src: "../photo/8.jpg",
     text1: "4.9",
     text2: "힐링",
     text3: "동구 가오동 신기로 123-28",
-    text4: "#분위기 좋은",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#분위기 좋은",
   },
   {
     src: "../photo/4.jpg",
     text1: "4.1",
     text2: "지안",
     text3: "동구 효동 126-3",
-    text4: "#기념일",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
+  },
+  {
+    src: "../photo/4.jpg",
+    text1: "4.1",
+    text2: "지안",
+    text3: "동구 효동 126-3",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
+  },
+  {
+    src: "../photo/4.jpg",
+    text1: "4.1",
+    text2: "지안",
+    text3: "동구 효동 126-3",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
+  },
+  {
+    src: "../photo/4.jpg",
+    text1: "4.1",
+    text2: "지안",
+    text3: "동구 효동 126-3",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
+  },
+  {
+    src: "../photo/4.jpg",
+    text1: "4.1",
+    text2: "지안",
+    text3: "동구 효동 126-3",
+    text4: " On. 08:00 ~ 21:00 N. 043-3030-3031",
+    text5: "#기념일",
   },
 ];
 MainboxArr1.forEach((el, idx) => {
@@ -177,7 +286,7 @@ MainboxArr1.forEach((el, idx) => {
     "beforeend",
     `
     <div class="box">
-    <h1 class="box-h3"><span>#</span>Top${idx + 5}</h1>
+    <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
               <img
                 class="box-img"
                 src="${el.src}"
@@ -186,188 +295,13 @@ MainboxArr1.forEach((el, idx) => {
               <div class="box-name">${el.text2}</div>
               <div class="box-tag">${el.text3}</div>
               <div class="box-tag">${el.text4}</div>
+              <div class="box-tag">${el.text5}</div>
             </div>
 
          `
   );
 });
 
-// const Mainbox2 = document.querySelector(".Main-box2");
-// const MainboxArr2 = [
-//   {
-//     src: "../맛집/비오는 날/동구/대전옥( 동구 대동천우안4길 74).jpg",
-//     text1: "평점 4.0",
-//     text2: "대전옥",
-//     text3: "#비오는 날",
-//   },
-//   {
-//     src: "../맛집/비오는 날/서구/대선칼국수( 서구 둔산중로40번길 28).jpg",
-//     text1: "평점 4.1",
-//     text2: "대선칼국수",
-//     text3: "#비오는 날",
-//   },
-//   {
-//     src: "../맛집/비오는 날/유성구/어느날(유성구 원신흥남로11번길 12 어느날 4 1층).jpg",
-//     text1: "평점 4.2",
-//     text2: "어느 날",
-//     text3: "#비오는 날",
-//   },
-//   {
-//     src: "../맛집/비오는 날/중구/미소본가 스마일칼국수(중구 보문로230번길 82).jpg",
-//     text1: "평점 4.3",
-//     text2: "미소본가 스마일 칼국수",
-//     text3: "#비오는 날",
-//   },
-// ];
-// MainboxArr2.forEach((el, idx) => {
-//   Mainbox2.insertAdjacentHTML(
-//     "beforeend",
-//     `
-//          <div class="box">
-//               <img
-//                 class="box-img"
-//                 src="${el.src}"
-//               />
-//               <div class="box-point">${el.text1}</div>
-//               <div class="box-name">${el.text2}</div>
-//               <div class="box-tag">${el.text3}</div>
-//             </div>
-//          `
-//   );
-// });
-// const Mainbox3 = document.querySelector(".Main-box3");
-// const MainboxArr3 = [
-//   {
-//     src: "../맛집/술한잔/동구/더바틀( 동구 용운동 277-7).jpg",
-//     text1: "평점 4.0",
-//     text2: "더바틀 ",
-//     text3: "#술 한잔",
-//   },
-//   {
-//     src: "../맛집/술한잔/서구/느린하루( 서구 둔산2동 1103).jpg",
-//     text1: "평점 4.1",
-//     text2: "스타벅스",
-//     text3: "#술 한잔",
-//   },
-//   {
-//     src: "../맛집/술한잔/유성구/라스트춘선( 유성구 봉명동 온천북로33번길 35-17).jpg",
-//     text1: "평점 4.2",
-//     text2: "롯데리아",
-//     text3: "#술 한잔",
-//   },
-//   {
-//     src: "../맛집/술한잔/중구/달빛한옥(중구 선화동 405-11).jpg",
-//     text1: "평점 4.3",
-//     text2: "두찜",
-//     text3: "#술 한잔",
-//   },
-// ];
-// MainboxArr3.forEach((el, idx) => {
-//   Mainbox3.insertAdjacentHTML(
-//     "beforeend",
-//     `
-//          <div class="box">
-//               <img
-//                 class="box-img"
-//                 src="${el.src}"
-//               />
-//               <div class="box-point">${el.text1}</div>
-//               <div class="box-name">${el.text2}</div>
-//               <div class="box-tag">${el.text3}</div>
-//             </div>
-//          `
-//   );
-// });
-
-// const Mainbox4 = document.querySelector(".Main-box4");
-// const MainboxArr4 = [
-//   {
-//     src: "../맛집/분위기 좋은/동구/구름식당( 동구 대동 201-23).jpg",
-//     text1: "평점 4.0",
-//     text2: "구름식당",
-//     text3: "#분위기 좋은",
-//   },
-//   {
-//     src: "../맛집/분위기 좋은/서구/메떼레( 서구 탄방동 766).jpg",
-//     text1: "평점 4.1",
-//     text2: "메떼레",
-//     text3: "#분위기 좋은",
-//   },
-//   {
-//     src: "../맛집/분위기 좋은/유성구/마르디( 유성구 원신흥동 392-1).jpg",
-//     text1: "평점 4.2",
-//     text2: "마르디",
-//     text3: "#분위기 좋은",
-//   },
-//   {
-//     src: "../맛집/분위기 좋은/중구/도프차일드키친( 중구 대흥동 대흥로121번길 30-3).jpg",
-//     text1: "평점 4.3",
-//     text2: "도프차일드키친",
-//     text3: "#분위기 좋은",
-//   },
-// ];
-// MainboxArr4.forEach((el, idx) => {
-//   Mainbox4.insertAdjacentHTML(
-//     "beforeend",
-//     `
-//          <div class="box">
-//               <img
-//                 class="box-img"
-//                 src="${el.src}"
-//               />
-//               <div class="box-point">${el.text1}</div>
-//               <div class="box-name">${el.text2}</div>
-//               <div class="box-tag">${el.text3}</div>
-
-//             </div>
-//          `
-//   );
-// });
-
-// const Mainbox5 = document.querySelector(".Main-box5");
-// const MainboxArr5 = [
-//   {
-//     src: "../맛집/야외/동구/귀빈참치(동구 용운로147번길 123).jpg",
-//     text1: "평점 4.0",
-//     text2: "여우동 ",
-//     text3: "#축하 #행복 #생일",
-//   },
-//   {
-//     src: "../맛집/야외/서구/기적소리(서구 벌곡로 161).jpg",
-//     text1: "평점 4.1",
-//     text2: "스타벅스",
-//     text3: "#축하 #행복 #생일",
-//   },
-//   {
-//     src: "../맛집/야외/유성구/더그릴(유성구 갑동 327 19번지).jpg",
-//     text1: "평점 4.2",
-//     text2: "롯데리아",
-//     text3: "#축하 #행복 #생일",
-//   },
-//   {
-//     src: "../맛집/야외/중구/고기는야외빨(중구 대사동 번지 1층 210-5).jpg",
-//     text1: "평점 4.3",
-//     text2: "두찜",
-//     text3: "#축하 #행복 #생일",
-//   },
-// ];
-// MainboxArr5.forEach((el, idx) => {
-//   Mainbox5.insertAdjacentHTML(
-//     "beforeend",
-//     `
-//          <div class="box">
-//               <img
-//                 class="box-img"
-//                 src="${el.src}"
-//               />
-//               <div class="box-point">${el.text1}</div>
-//               <div class="box-name">${el.text2}</div>
-//               <div class="box-tag">${el.text3}</div>
-
-//             </div>
-//          `
-//   );
-// });
 const text = "가장 Hot한 맛집들!";
 const middleH1 = document.getElementById("middleH1");
 
@@ -426,10 +360,11 @@ function addSearch(e) {
                         class="box-img"
                         src="${infolist[idx].src}"
                       />
-                      <div class="box-point">"평점: ${infolist[idx].text1}"</div>
+                      <div class="box-point">평점: ${infolist[idx].text1}</div>
                       <div class="box-name">${infolist[idx].text2}</div>
                       <div class="box-tag">${infolist[idx].text3}</div>
                       <div class="box-tag">${infolist[idx].text4}</div>
+                      <div class="box-tag">${infolist[idx].text5}</div>
                     </div>
         
                `
