@@ -322,6 +322,7 @@ section {
 main {
   margin: 0 350px;
 }
+
 .MainH1 {
   font-size: 60px;
   bottom: 0;
@@ -335,7 +336,7 @@ main {
   gap: 5px;
   align-items: center;
   justify-items: center;
-  width: 100%;
+  width: max-content;
   cursor: pointer;
 }
 .Hot {
@@ -408,6 +409,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin: 5px;
 }
 .box-img {
   border-radius: 15px;
@@ -520,4 +522,28 @@ main {
   position: fixed;
   top: 10%;
   left: 50%;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  height: 150px;
+  margin-top: 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: wheat;
+}
+.info {
+  margin-left: 50px;
+}
+.service {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
