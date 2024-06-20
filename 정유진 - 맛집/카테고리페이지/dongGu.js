@@ -393,10 +393,20 @@ Top2.addEventListener("click", function () {
   location.href = "#toploop";
 });
 
-// 검색
-
 // 로고 누르면 (홈)으로 이동
 const mainBtn = document.querySelector(".title-btn");
 mainBtn.addEventListener("click", function () {
   location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
 });
+
+// 검색
+const search = document.querySelector(".search");
+const searchInput = document.querySelector(".serachInput");
+const andiv = document.querySelector(".searchAn");
+const searchArr = [
+  { category: "picnic", data: picnicArr },
+  { category: "shopping", data: shoppingArr },
+  { category: "inside", data: insideArr },
+  { category: "sports", data: sportsArr },
+  { category: "festival", data: festivalArr },
+];
