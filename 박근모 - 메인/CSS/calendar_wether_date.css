@@ -4,8 +4,7 @@
   bottom: 120px;
 } */
 
-/* .calendar { */
-.calendar {
+.calendar-planner {
   width: 180px;
   border: 2px solid rgba(128, 128, 128, 0.5);
   border-right: 0;
@@ -16,8 +15,7 @@
 .calendar-area > .hidden {
   display: none;
 }
-/* .calendar-header { */
-.calendar-header {
+.calendar-header-planner {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -28,33 +26,31 @@
   color: black;
   padding: 6px;
 }
-/* .calendar-header button { */
-.calendar-header button {
+.calendar-header-planner button {
   background: none;
   border: none;
   color: black;
   font-size: 16px;
   cursor: pointer;
 }
-/* .calendar-body { */
-.calendar-body {
+.calendar-body-planner {
   padding: 5px;
 }
-.day-names {
+.day-names-planner {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
-.day-names div,
-.days div {
+.day-names-planner div,
+.days-planner div {
   width: 14%;
   text-align: center;
 }
-.days {
+.days-planner {
   display: flex;
   flex-wrap: wrap;
 }
-.days div {
+.days-planner div {
   width: 14%;
   height: 20px;
   display: flex;
@@ -62,18 +58,18 @@
   align-items: center;
   cursor: pointer;
 }
-.days div:hover {
+.days-planner div:hover {
   background-color: #f0f0f0;
   color: black;
   transition: 0.3s;
 }
-.days .selected {
+.days-planner .selected {
   /* background-color: rgb(255, 51, 204); */
   background-color: gray;
   color: white;
   /* border-radius: 50%; */
 }
-.days .range {
+.days-planner .range {
   /* background-color: rgb(255, 51, 204); */
   background-color: gray;
   color: white;
