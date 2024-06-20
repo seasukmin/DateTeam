@@ -62,6 +62,7 @@ body {
   border: none;
   background-color: skyblue;
   border-radius: 15px;
+  font-size: 16px;
 }
 .search img {
   margin-left: 10px;
@@ -246,7 +247,7 @@ body {
 .plusIc3:hover,
 .plusIc4:hover,
 .plusIc5:hover {
-  color: #b6b6b6;
+  color: #cccccc;
   transition: 0.1s;
   background-color: #3e3e3e27;
 }

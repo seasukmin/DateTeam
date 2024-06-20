@@ -70,7 +70,7 @@ picnicArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
-        <div class="plusIc1"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc1"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -125,7 +125,7 @@ shoppingArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
-        <div class="plusIc2"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc2"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -171,7 +171,7 @@ insideArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
-        <div class="plusIc3"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc3"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -241,7 +241,7 @@ sportsArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} class="sports-img" />
-        <div class="plusIc4"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc4"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -296,7 +296,7 @@ festivalArr.forEach((info, idx) => {
 
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
-        <div class="plusIc5"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc5"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.name}</p>
           <p class="hpTime">
             ${info.time}${info.time2}
@@ -399,14 +399,20 @@ mainBtn.addEventListener("click", function () {
   location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
 });
 
+// 핫플레이스 누르면 핫플메인으로 이동
+const hotPlace = document.querySelector(".hotPlace");
+hotPlace.addEventListener("click", function () {
+  location.href = "../hotPlace.html";
+});
+
 // 검색
-const search = document.querySelector(".search");
-const searchInput = document.querySelector(".serachInput");
-const andiv = document.querySelector(".searchAn");
-const searchArr = [
-  { category: "picnic", data: picnicArr },
-  { category: "shopping", data: shoppingArr },
-  { category: "inside", data: insideArr },
-  { category: "sports", data: sportsArr },
-  { category: "festival", data: festivalArr },
-];
+// const search = document.querySelector(".search");
+// const searchInput = document.querySelector(".serachInput");
+// const andiv = document.querySelector(".searchAn");
+// const searchArr = [
+//   { category: "picnic", data: picnicArr },
+//   { category: "shopping", data: shoppingArr },
+//   { category: "inside", data: insideArr },
+//   { category: "sports", data: sportsArr },
+//   { category: "festival", data: festivalArr },
+// ];
