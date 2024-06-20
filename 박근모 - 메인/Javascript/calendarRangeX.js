@@ -10,7 +10,8 @@ const daysContainer = document.getElementById("days");
 const navPlannerBox = document.getElementById("nav-planner");
 const day1Tag = document.querySelector(".day1");
 const calendarTag = document.querySelector(".calendar");
-let currentDate = new Date();
+// let currentDate = new Date();
+let currentDate = new Date("2024/06/20");
 
 function renderCalendar() {
   const year = currentDate.getFullYear();
