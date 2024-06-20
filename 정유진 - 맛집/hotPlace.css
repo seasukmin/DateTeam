@@ -74,8 +74,8 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
 }
@@ -121,6 +121,11 @@ body {
   border-radius: 30px;
   box-shadow: 1px 1px 5px 1px gray;
 }
+.content img:hover {
+  transform: scale(1.05);
+  /* transform-origin: 100%; */
+  transition: 0.8s;
+}
 .content a {
   cursor: pointer;
   text-decoration: none;
@@ -154,7 +159,7 @@ body {
   font-size: 40px;
   position: absolute;
   top: -85px;
-  left: -30px;
+  left: 0px;
 }
 
 .banner {
