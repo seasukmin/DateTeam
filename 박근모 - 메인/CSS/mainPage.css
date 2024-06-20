@@ -20,6 +20,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
 }
 .mainPage-logo {
   cursor: pointer;
@@ -33,6 +34,8 @@ body {
   font-size: 30px;
 }
 .Tag-titles p {
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 29px;
 }
 .Tag-titles p:hover {
@@ -42,7 +45,7 @@ body {
 }
 .h-Tag1p:hover {
   cursor: pointer;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #ffa600;
 }
 .h-Tag2p:hover {
   cursor: pointer;
@@ -57,7 +60,7 @@ body {
   border-bottom: 2px solid rgb(255, 51, 204);
 }
 .h-Tag1Span {
-  color: red;
+  color: #ffa600;
 }
 .h-Tag2Span {
   color: purple;
@@ -82,19 +85,22 @@ body {
   font-weight: bold;
 }
 .main-center {
-  margin-top: 220px;
+  padding-top: 220px;
+  margin-right: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 8px;
 }
 
 /* category */
+body {
+  position: relative;
+}
 .categories {
   display: flex;
-  position: fixed;
-  top: 200px;
+  position: absolute;
+  top: 0;
   left: 1%;
-  /* left: 48px; */
 }
 .short-category {
   border: 2px solid black;
@@ -153,7 +159,7 @@ body {
   background-color: rgb(255, 51, 204);
 }
 .bx-restaurant:hover {
-  background-color: red;
+  background-color: #ffa600;
 }
 .bxs-coffee:hover {
   background-color: purple;
@@ -165,13 +171,25 @@ body {
   position: relative;
 } */
 .QR-code {
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
   height: fit-content;
   width: fit-content;
-  padding: 8px;
+  padding: 8px 16px;
   position: fixed;
   top: 24px;
   right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.QR-code:hover {
+  box-shadow: 0 4px 8px rgba(255, 51, 204, 0.4);
+  border: 1px solid rgba(255, 51, 204, 0.4);
+  font-weight: bold;
+  transform: scale(1.1);
 }
 /* main */
 .contents-center {
@@ -183,68 +201,6 @@ body {
   display: flex;
 }
 
-/* .login-banner-boxes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.login-box {
-  font-size: 24px;
-  width: 200px;
-  height: fit-content;
-  padding: 8px;
-  border: 2px solid black;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.logIn-ID,
-.logIn-PW {
-  font-size: 20px;
-  padding: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.logIn-ID input,
-.logIn-PW input {
-  border: 0;
-  height: 20px;
-  width: 60%;
-  padding-left: 6px;
-  border-bottom: 1px solid black;
-}
-.banner-box {
-  border: 2px solid black;
-  width: 200px;
-  height: 500px;
-}
-.signIn-signUp {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-}
-.logInBtn,
-.signUpBtn {
-  font-size: 20px;
-  border: 0;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-  border: 1px solid white;
-}
-.logInBtn:active,
-.signUpBtn:active,
-.logInBtn:hover,
-.signUpBtn:hover {
-  border-bottom: 1px solid rgb(255, 51, 204);
-} */
-
 .login-box {
   display: flex;
   flex-direction: column;
@@ -255,9 +211,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .signIn {
-  width: 120px;
+  width: 140px;
   height: 35px;
-  font-size: 16px;
+  font-size: 20px;
   border: 0;
   border-radius: 24px;
   background-color: rgb(255, 51, 204);
@@ -269,6 +225,7 @@ body {
 }
 .signUp {
   text-align: end;
+  font-size: 16px;
   border: 0;
   padding-top: 6px;
   background-color: rgba(255, 255, 255, 0);
