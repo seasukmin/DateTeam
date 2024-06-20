@@ -306,6 +306,7 @@ festivalArr.forEach((info, idx) => {
   );
 });
 
+// 사이드바 누르면 위치로
 const Maintitle = document.querySelectorAll(".side-text li");
 console.log(Maintitle);
 Maintitle.forEach(function (el, idx) {

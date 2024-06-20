@@ -22,10 +22,11 @@ body {
   justify-content: space-between;
 }
 .hotPlace {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 900;
   font-style: italic;
-  margin-left: 150px;
+  margin-left: 200px;
+  cursor: pointer;
 }
 .hashTag {
   color: skyblue;
