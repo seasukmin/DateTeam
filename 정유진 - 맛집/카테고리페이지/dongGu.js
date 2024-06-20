@@ -330,8 +330,7 @@ Maintitle.forEach(function (el, idx) {
   });
 });
 
-//
-
+// 카테고리 페이지로 이동
 document.querySelectorAll(".category li").forEach((item) => {
   item.addEventListener("click", function () {
     const url = this.getAttribute("data-url");
@@ -340,7 +339,6 @@ document.querySelectorAll(".category li").forEach((item) => {
 });
 
 // 사진 hover 하면 + 버튼 나타나게
-
 document.querySelectorAll(".plusIc1").forEach((img, idx) => {
   img.addEventListener("click", () => {
     const picnicItem = picnicArr[idx];
@@ -395,4 +393,10 @@ Top2.addEventListener("click", function () {
   location.href = "#toploop";
 });
 
-// 카테고리 페이지로 이동
+// 검색
+
+// 로고 누르면 (홈)으로 이동
+const mainBtn = document.querySelector(".title-btn");
+mainBtn.addEventListener("click", function () {
+  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
+});
