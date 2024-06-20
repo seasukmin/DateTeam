@@ -17,7 +17,8 @@ function renderCalendar() {
   const month = currentDate.getMonth();
   const day = currentDate.getDate();
   const week = currentDate.getDay();
-  const weekArr = ["Sun.", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const weekArr = ["일", "월", "화", "수", "목", "금", "토"];
+  // const weekArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   currentMonthYear.innerText = `${year}년 ${month + 1}월`;
   day1Tag.innerHTML = `${year}.${month + 1}.${day} (${weekArr[week]})`;
 
@@ -35,15 +36,19 @@ function renderCalendar() {
     const dayCell = document.createElement("div");
     dayCell.classList.add("dayItem");
     dayCell.innerText = i;
-    dayCell.addEventListener("click", () => {
+    dayCell.addEventListener("click", (e) => {
       const selected = document.querySelector(".days .selected");
       if (selected) {
         selected.classList.remove("selected");
       }
       dayCell.classList.add("selected");
       const selectedDiv = document.querySelector(".selected");
+      let selectedDate = new Date(
+        `${year}/${month + 1}/${selectedDiv.innerHTML}`
+      );
+      const selectedWeek = selectedDate.getDay();
       day1Tag.innerHTML = `${year}.${month + 1}.${selectedDiv.innerHTML} (${
-        weekArr[week]
+        weekArr[selectedWeek]
       })`;
     });
     const dayTag = document.querySelectorAll(".dayItem");
