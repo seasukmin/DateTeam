@@ -33,7 +33,7 @@ header.addEventListener("click", function () {
 const Mainbox1 = document.querySelector(".Main-box1");
 const MainboxArr1 = [
   {
-    src: "../photo/1.jpg",
+    src: "../photo/21.jpg",
     text1: "평점 4.9",
     text2: "지안",
     text3: "동구 대전도 925번길 11",
@@ -42,7 +42,7 @@ const MainboxArr1 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/2.jpg",
+    src: "../photo/22.jpg",
     text1: "평점 4.5",
     text2: "어글리딜리셔스",
     text3: "동구 대전도 925번길 11",
@@ -51,7 +51,7 @@ const MainboxArr1 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/3.jpg",
+    src: "../photo/23.jpg",
     text1: "평점 4.6",
     text2: "어반 더 쉐프",
     text3: "동구 대전도 925번길 11",
@@ -60,7 +60,7 @@ const MainboxArr1 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/4.jpg",
+    src: "../photo/24.jpg",
     text1: "평점 4.7",
     text2: "신도칼국수",
     text3: "동구 대전도 925번길 11",
@@ -94,7 +94,7 @@ MainboxArr1.forEach((el, idx) => {
 const Mainbox2 = document.querySelector(".Main-box2");
 const MainboxArr2 = [
   {
-    src: "../photo/5.jpg",
+    src: "../photo/25.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "동구 대전도 925번길 11",
@@ -103,7 +103,7 @@ const MainboxArr2 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/6.jpg",
+    src: "../photo/26.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "동구 대전도 925번길 11",
@@ -112,7 +112,7 @@ const MainboxArr2 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/7.jpg",
+    src: "../photo/27.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "동구 대전도 925번길 11",
@@ -121,7 +121,7 @@ const MainboxArr2 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/8.jpg",
+    src: "../photo/28.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "동구 대전도 925번길 11",
@@ -153,7 +153,7 @@ MainboxArr2.forEach((el, idx) => {
 const Mainbox3 = document.querySelector(".Main-box3");
 const MainboxArr3 = [
   {
-    src: "../photo/9.jpg",
+    src: "../photo/29.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "동구 대전도 925번길 11",
@@ -162,7 +162,7 @@ const MainboxArr3 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/10.jpg",
+    src: "../photo/30.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "동구 대전도 925번길 11",
@@ -171,7 +171,7 @@ const MainboxArr3 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/11.jpg",
+    src: "../photo/31.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "동구 대전도 925번길 11",
@@ -180,7 +180,7 @@ const MainboxArr3 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/12.jpg",
+    src: "../photo/32.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "동구 대전도 925번길 11",
@@ -213,7 +213,7 @@ MainboxArr3.forEach((el, idx) => {
 const Mainbox4 = document.querySelector(".Main-box4");
 const MainboxArr4 = [
   {
-    src: "../photo/13.jpg",
+    src: "../photo/33.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "동구 대전도 925번길 11",
@@ -222,7 +222,7 @@ const MainboxArr4 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/14.jpg",
+    src: "../photo/34.jpg",
     text1: "평점 4.1",
     text2: "스타벅스",
     text3: "동구 대전도 925번길 11",
@@ -231,7 +231,7 @@ const MainboxArr4 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/15.jpg",
+    src: "../photo/35.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "동구 대전도 925번길 11",
@@ -240,7 +240,7 @@ const MainboxArr4 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/16.jpg",
+    src: "../photo/36.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "동구 대전도 925번길 11",
@@ -273,7 +273,7 @@ MainboxArr4.forEach((el, idx) => {
 const Mainbox5 = document.querySelector(".Main-box5");
 const MainboxArr5 = [
   {
-    src: "../photo/17.jpg",
+    src: "../photo/37.jpg",
     text1: "평점 4.0",
     text2: "여우동 ",
     text3: "동구 대전도 925번길 11",
@@ -282,7 +282,7 @@ const MainboxArr5 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/18.jpg",
+    src: "../photo/38.jpg",
     text1: "4.0",
     text2: "스타벅스",
     text3: "동구 대전도 925번길 11",
@@ -291,7 +291,7 @@ const MainboxArr5 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/19.jpg",
+    src: "../photo/39.jpg",
     text1: "평점 4.2",
     text2: "롯데리아",
     text3: "동구 대전도 925번길 11",
@@ -300,7 +300,7 @@ const MainboxArr5 = [
     text6: "#기념일",
   },
   {
-    src: "../photo/20.jpg",
+    src: "../photo/40.jpg",
     text1: "평점 4.3",
     text2: "두찜",
     text3: "동구 대전도 925번길 11",
@@ -570,7 +570,6 @@ const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H2";
 });
-
 const Mainchart1 = document.querySelector(".Mainchart-inner1");
 Mainchart1.lastElementChild.addEventListener("click", function () {
   alert("1");

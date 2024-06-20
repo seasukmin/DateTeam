@@ -20,7 +20,7 @@ Logo.addEventListener("click", function () {
 // 헤더 시작
 const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
-  location.href = "../JMT/JMT.html";
+  location.href = "../Cafe/Cafe.html";
 });
 // 헤더 끝
 
@@ -569,21 +569,4 @@ Eainboxes4.addEventListener("click", function () {
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H2";
-});
-
-const Mainchart1 = document.querySelector(".Mainchart-inner1");
-Mainchart1.lastElementChild.addEventListener("click", function () {
-  alert("1");
-});
-const Mainchart2 = document.querySelector(".Mainchart-inner2");
-Mainchart2.lastElementChild.addEventListener("click", function () {
-  alert("2");
-});
-const Mainchart3 = document.querySelector(".Mainchart-inner3");
-Mainchart3.lastElementChild.addEventListener("click", function () {
-  alert("3");
-});
-const Mainchart4 = document.querySelector(".Mainchart-inner4");
-Mainchart4.lastElementChild.addEventListener("click", function () {
-  alert("4");
 });

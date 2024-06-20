@@ -5,13 +5,13 @@ import {
   addDatas,
   deleteDatas,
   updateDatas,
-} from "./DLU_firebase.js";
+} from "../JMT/DLU_firebase.js";
 // const jmtTag = document.querySelector(".h-Tag1Span");
 // const cafeTag = document.querySelector(".h-Tag2Span");
 // const placeTag = document.querySelector(".h-Tag3Span");
 // const epliogueTag = document.querySelector(".h-Tag4Span");
 
-const userName = "Hotstore";
+const userName = "Cafe";
 const dataObj = {
   list: [
     {
@@ -737,7 +737,7 @@ const dataObj = {
 };
 
 function addstoreInfo() {
-  addDatas("store", dataObj, userName);
+  addDatas("Cafe", dataObj, userName);
 }
 
 // 예시로 함수 호출
@@ -1032,7 +1032,6 @@ function addSearch(e) {
       );
     }
   });
-  headerInput.value = "";
 }
 Searches.addEventListener("click", addSearch);
 headerInput.addEventListener("keypress", addSearch);

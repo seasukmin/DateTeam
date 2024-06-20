@@ -11,15 +11,28 @@
     <!-- 헤더부분 시작 -->
     <header>
       <div class="header">
-        <h1 class="header-H1" id="header-H2">#맛집</h1>
+        <h1 class="header-H1" id="header-H2"><span>#</span>맛집</h1>
         <div class="header-Main">
           <input
             class="header-Input"
             type="text"
             placeholder="원하는 맛집을 입력해주세요."
           />
-          <a class="header-Anchor" href="#">Log In</a>
-          <a class="header-Anchor" href="#">Log out</a>
+          <div class="Search">
+            <img
+              src="../사진/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </div>
+          <button class="clear">초기화</button>
+        </div>
+        <div class="Cate-subs">
+          <a class="Cate-sub" href="#"><span>#</span>기념일</a>
+          <a class="Cate-sub" href="#"><span>#</span>분위기 좋은</a>
+          <a class="Cate-sub" href="#"><span>#</span>비오는 날</a>
+          <a class="Cate-sub" href="#"><span>#</span>술 한잔</a>
+          <a class="Cate-sub" href="#"><span>#</span>야외</a>
         </div>
         <!-- 카테고리 시작 -->
         <div class="CateGorys">
@@ -39,6 +52,7 @@
           </ul>
         </div>
         <!-- 카테고리 끝 -->
+        <div class="result"></div>
       </div>
     </header>
 
@@ -60,33 +74,21 @@
     <main>
       <section>
         <div class="Mainchart">
-          <div>
+          <div class="Mainchart-inner1">
             <h1>1등</h1>
-            <img
-              class="Main-img"
-              src="../사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg"
-            />
+            <img class="Main-img" src="../photo/71.jpg" />
           </div>
-          <div>
+          <div class="Mainchart-inner2">
             <h1>2등</h1>
-            <img
-              class="Main-img"
-              src="../사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg"
-            />
+            <img class="Main-img" src="../photo/72.jpg" />
           </div>
-          <div>
+          <div class="Mainchart-inner3">
             <h1>3등</h1>
-            <img
-              class="Main-img"
-              src="../사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg"
-            />
+            <img class="Main-img" src="../photo/73.jpg" />
           </div>
-          <div>
+          <div class="Mainchart-inner4">
             <h1>4등</h1>
-            <img
-              class="Main-img"
-              src="../사진/300_300_20240421123507_photo1_b33d20f05cd7.jpg"
-            />
+            <img class="Main-img" src="../photo/74.jpg" />
           </div>
         </div>
       </section>
@@ -95,31 +97,31 @@
       <h1 class="MainH1" id="MainH1">🅰 유성구</h1>
       <section>
         <div class="Main-first">
-          <div class="Main-title" id="one">#기념일</div>
+          <div class="Main-title" id="one"><span>#</span>기념일</div>
           <div class="Main-box1"></div>
         </div>
       </section>
       <section>
         <div class="Main-second">
-          <div class="Main-title" id="two">#비오는 날 (추천)</div>
+          <div class="Main-title" id="two"><span>#</span>비오는 날 (추천)</div>
           <div class="Main-box2"></div>
         </div>
       </section>
       <section>
         <div class="Main-second">
-          <div class="Main-title" id="three">#술 한잔</div>
+          <div class="Main-title" id="three"><span>#</span>술 한잔</div>
           <div class="Main-box3"></div>
         </div>
       </section>
       <section>
         <div class="Main-second">
-          <div class="Main-title" id="four">#분위기 좋은</div>
+          <div class="Main-title" id="four"><span>#</span>분위기 좋은</div>
           <div class="Main-box4"></div>
         </div>
       </section>
       <section>
         <div class="Main-second">
-          <div class="Main-title" id="five">#야외</div>
+          <div class="Main-title" id="five"><span>#</span>야외</div>
           <div class="Main-box5"></div>
         </div>
       </section>
@@ -132,14 +134,25 @@
       </div>
       <!-- 동구 끝 -->
     </main>
-    <!-- 예약 시스템 시작 -->
+    <div class="banner">
+      <p>광고입니다.</p>
+    </div>
 
-    <!-- 예약 시스템 -->
-    <!-- 메인부분 끝 -->
+    <div class="footer">
+      <div class="info">
+        <p>2024. DW Academy</p>
+        <p>tel: 042-123-4567</p>
+        <p>Email: DWA123@gmail.com</p>
+      </div>
+      <div class="service">
+        <p>고객센터</p>
+        <p>이용약관</p>
+      </div>
+    </div>
   </body>
   <!-- <script src="../JMT.js"></script> -->
-  <script src="동구.js"></script>
-
+  <script src="유성구.js" type="module"></script>
+  <script src="../JMT/DLU_firebase.js" type="module"></script>
   <!-- 
   <script>
     // 로고 시작

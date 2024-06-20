@@ -25,7 +25,7 @@ body {
   color: #3e3e3e;
 }
 span {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   margin: 5px;
 }
 .Logo {
@@ -144,23 +144,23 @@ section {
   cursor: pointer;
 }
 .CateA:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   transition: 0.3 linear;
 }
 .CateD:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   transition: 0.3 linear;
 }
 .CateG:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   transition: 0.3 linear;
 }
 .CateJ:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   transition: 0.3 linear;
 }
 .CateL:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
   transition: 0.3 linear;
 }
 
@@ -317,7 +317,7 @@ section {
 }
 .side-text li:hover {
   transform: scale(1.05);
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
 }
 .side-category h1 {
   padding-left: 5px;
@@ -336,7 +336,7 @@ section {
   font-size: 24px;
 }
 .sidebar-sub a:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: purple;
 }
 /* 사이드바 끝 */
 /* 미들부분(사진)시작 */
