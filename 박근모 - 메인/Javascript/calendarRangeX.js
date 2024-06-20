@@ -42,7 +42,9 @@ function renderCalendar() {
       }
       dayCell.classList.add("selected");
       const selectedDiv = document.querySelector(".selected");
-      day1Tag.innerHTML = `${year}.${month}.${selectedDiv.innerHTML} (${weekArr[week]})`;
+      day1Tag.innerHTML = `${year}.${month + 1}.${selectedDiv.innerHTML} (${
+        weekArr[week]
+      })`;
     });
     const dayTag = document.querySelectorAll(".dayItem");
     dayTag.forEach((e) => {
