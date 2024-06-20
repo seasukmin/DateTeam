@@ -19,7 +19,7 @@ function renderCalendar() {
   const week = currentDate.getDay();
   const weekArr = ["Sun.", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   currentMonthYear.innerText = `${year}년 ${month + 1}월`;
-  day1Tag.innerHTML = `${year}.${month}.${day} (${weekArr[week]})`;
+  day1Tag.innerHTML = `${year}.${month + 1}.${day} (${weekArr[week]})`;
 
   const firstDay = new Date(year, month, 1).getDay();
   const lastDate = new Date(year, month + 1, 0).getDate();

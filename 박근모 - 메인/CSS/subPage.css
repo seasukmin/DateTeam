@@ -27,6 +27,7 @@ body {
   margin: 0 24px;
   padding: 8px;
   border: 2px solid black;
+  border-radius: 24px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -71,7 +72,7 @@ body {
 .category-menus li span:hover {
   display: inline-block;
   border-bottom: 2px solid black;
-  transition: 0.15s;
+  transition: 0.1s;
 }
 .category-menus > .category-img,
 .category-menus > .category-epilogue,
@@ -99,8 +100,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.contents-container section > h2 {
+  text-align: center;
+  font-size: 32px;
+}
 .contents-container section {
-  width: 100%;
+  width: 85%;
   padding: 16px;
   /* border: 2px solid black; */
   border-radius: 24px;
@@ -139,6 +144,21 @@ body {
 .footer-right,
 .footer-left {
   flex-grow: 1;
+}
+.banner-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-box > p {
+  height: 80px;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .footer-left {
   text-align: end;
