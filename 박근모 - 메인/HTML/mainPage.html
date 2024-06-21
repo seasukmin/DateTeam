@@ -246,25 +246,36 @@
       <div class="login-banner-boxes">
         <!-- login Box -->
         <aside class="login-box">
-          <!-- <div class="logIn-ID">
-            <i class="bx bx-user"></i> : <input type="text" class="logIn" />
+          <label for="nicknameInfo">
+            <input type="text" id="nicknameInfo" placeholder="Nick Name ~" />
+          </label>
+          <label for="ageInfo"></label>
+          <select id="ageInfo">
+            <option value="">나이를 선택해주세요</option>
+          </select>
+          <div class="form-box genderInfo" id="genderInfo">
+            <label for="gender" id="gender"></label>
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              id="male"
+              checked="checked"
+              required
+            />
+            <label for="male"> 남성</label>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female"> 여성</label>
           </div>
-          <div class="logIn-PW">
-            <i class="bx bx-lock-open-alt"></i> :
-            <input type="text" class="logOut" />
-          </div>
-          <div class="signIn-signUp">
-            <button class="logInBtn">로그인</button>
-            /
-            <button class="signUpBtn">회원가입</button>
-          </div> -->
-          <button class="signIn">로그인</button>
-          <button class="signUp">회원가입</button>
+          <button class="addPlanner">+ Planner</button>
         </aside>
-        <!-- Advertisment Box -->
-        <!-- <aside class="banner-box">
-          <img src="../img/cat wallpaper1.jpg" alt="" />
-        </aside> -->
+        <div class="loginBox2 hidden" id="loginBox2">
+          <div class="welcome-message hidden" id="welcomeMessage"></div>
+          <button class="return-button hidden" id="returnButton">
+            돌아가기
+          </button>
+        </div>
+
         <!-- App / QR Code -->
         <aside class="QR-code">
           <p>앱으로 보기!</p>

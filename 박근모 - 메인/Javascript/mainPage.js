@@ -43,16 +43,56 @@ console.log(getcutomerInfo());
 //   });
 // }
 // console.log(getcutomerGender());
+const ageSelect = document.getElementById("ageInfo");
+for (let i = 1; i <= 100; i++) {
+  const option = document.createElement("option");
+  option.value = i;
+  option.innerText = i;
+  ageSelect.appendChild(option);
+}
 
-const signInBtn = document.querySelector(".signIn");
-const signUpBtn = document.querySelector(".signUp");
+document
+  .querySelector(".addPlanner")
+  .addEventListener("click", async function () {
+    const nickname = document.getElementById("nicknameInfo").value;
+    const userage = document.getElementById("ageInfo").value;
+    const genderElements = document.getElementsByName("gender");
+    let genderValue;
 
-signInBtn.addEventListener("click", (e) => {
-  location.href = "../HTML/LogInPage.html";
-});
-signUpBtn.addEventListener("click", (e) => {
-  location.href = "../HTML/join.html";
-});
+    for (const genderElement of genderElements) {
+      if (genderElement.checked) {
+        genderValue = genderElement.value;
+        console.log(genderValue);
+        break;
+      }
+    }
+    const loginBox2 = document.getElementById("loginBox2");
+    const welcomeMessage = document.getElementById("welcomeMessage");
+    const customerInfo = {
+      userId: nickname,
+      age: userage,
+      gender: genderValue,
+    };
+    if (nickname) {
+      welcomeMessage.innerText = `${nickname}님 환영합니다.`;
+      const datas = await addDatas("customer", customerInfo, nickname);
+      loginBox2.classList.remove("hidden");
+      welcomeMessage.classList.remove("hidden");
+      document.querySelector(".login-box").classList.add("hidden");
+    } else {
+      alert("닉네임을 입력해주세요.");
+    }
+  });
+document
+  .getElementById("returnButton")
+  .addEventListener("click", async function () {
+    const nickname = document.getElementById("nicknameInfo").value;
+    const deleteresult = await deleteDatas("customer", nickname);
+    document.querySelector(".login-box").classList.remove("hidden");
+    document.getElementById("loginBox2").classList.add("hidden");
+    document.getElementById("welcomeMessage").classList.add("hidden");
+    this.classList.add("hidden");
+  });
 
 const JMTtag = document.getElementById("h-JMT");
 const cafetag = document.getElementById("h-cafe");
