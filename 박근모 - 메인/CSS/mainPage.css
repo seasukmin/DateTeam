@@ -11,6 +11,10 @@ html {
 body {
   background-color: snow;
 }
+.hidden {
+  display: none;
+}
+
 .mainPage-header {
   width: 100%;
   /* height: 200px; */
@@ -193,6 +197,7 @@ body {
   font-weight: bold;
   transform: scale(1.1);
 }
+
 .plannListBox {
   position: fixed;
   top: 300px;
@@ -205,9 +210,75 @@ body {
 .calender-wether {
   display: flex;
 }
+.login-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 16px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.alogin-box,
+.aloginBox2 {
+  font-size: 18px;
+  /* border: 2px solid black; */
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.login-btn {
+  width: 170px;
+  margin-top: 24px;
+  font-size: 18px;
+  background-color: #ff33cc;
+  border: 0;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: rgb(255, 44, 150);
+  color: snow;
+}
+.signIn,
+.nonsignIn {
+  width: 180px;
+  /* width: 140px; */
+  height: 35px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 24px;
+  background-color: rgb(255, 51, 204);
+  color: white;
+}
+.signIn:hover,
+.nonsignIn:hover {
+  background-color: rgb(255, 0, 191);
+  color: white;
+}
+.signUp {
+  text-align: end;
+  font-size: 16px;
+  border: 0;
+  padding-top: 6px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.signUp:active,
+.signUp:hover {
+  color: rgb(255, 51, 204);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0);
+}
 
-.login-box,
-.loginBox2 {
+.blogin-box,
+.bloginBox2 {
   display: flex;
   font-size: 18px;
   flex-direction: column;
@@ -224,12 +295,34 @@ body {
   align-items: center;
   gap: 12px;
 }
+.welcome-message {
+  font-size: 1.5em;
+  color: #333;
+  /* margin-top: 20px; */
+  text-align: center;
+}
+.return-button {
+  margin-top: 12px;
+  font-size: 18px;
+  background-color: #ff33cc;
+  border: 0;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.return-button:hover {
+  background-color: rgb(255, 44, 150);
+  color: snow;
+}
+.hiddenALogin {
+  display: none;
+}
+.hiddenBLogin {
+  display: none;
+}
 
-/* input[type="number"]::-webkit-inner-spin-button {
-  appearance: none;
-} */
-
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   border: 0;
   border-bottom: 2px solid black;
   font-size: 18px;
@@ -263,7 +356,7 @@ input[type="radio"]:checked + label {
   border-radius: 24px;
   cursor: pointer;
 }
-.return-button:hover,
+
 .addPlanner:hover {
   background-color: rgb(255, 44, 150);
   color: snow;
@@ -271,25 +364,6 @@ input[type="radio"]:checked + label {
 
 .hidden {
   display: none;
-}
-.welcome-message {
-  font-size: 1.5em;
-  color: #333;
-  /* margin-top: 20px; */
-  text-align: center;
-}
-.return-button {
-  display: block;
-  cursor: pointer;
-  width: 120px;
-  margin: 0;
-  margin-top: 4px;
-  font-size: 16px;
-  background-color: #ff33cc;
-  border: 0;
-  color: white;
-  border-radius: 24px;
-  cursor: pointer;
 }
 
 .mainPage-footer {
