@@ -235,7 +235,8 @@ body {
 }
 .login-btn {
   width: 170px;
-  margin-top: 24px;
+  height: 35px;
+  margin-top: 16px;
   font-size: 18px;
   background-color: #ff33cc;
   border: 0;
