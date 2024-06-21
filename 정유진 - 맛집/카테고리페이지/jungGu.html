@@ -3,44 +3,194 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jungGu</title>
-    <link rel="stylesheet" href="./dongGu.css" />
+    <title>JungGu</title>
+    <link rel="stylesheet" href="./category.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/DateTeam/박근모 - 메인/CSS/calendar_wether_date.css"
+    />
+    <link rel="stylesheet" href="/DateTeam/박근모 - 메인/CSS/planner.css" />
   </head>
   <body>
-    <div>
+    <div class="container">
       <div class="title-bar">
-        <div class="title">
-          <p class="hotPlace">#핫플레이스</p>
+        <div class="title" id="toploop">
+          <p class="hotPlace"><span class="hashTag">#</span>핫플레이스</p>
         </div>
         <button class="title-btn">
-          <img src="../img/DaejeonLoveU.png" width="150px" height="50px" />
+          <img src="../img/DaejeonLoveU.png" width="200px" />
         </button>
       </div>
 
       <div class="category-bar">
         <div class="search">
           <input class="searchInput" placeholder="키워드를 입력해주세요." />
+          <button class="searchBtn">
+            <img
+              src="../img/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </button>
           <a class="login">로그인</a>
         </div>
         <ul class="category">
-          <li data-url="./카테고리페이지/dongGu.html">동구</li>
-          <li data-url="./카테고리페이지/seoGu.html">서구</li>
-          <li data-url="./카테고리페이지/jungGu.html">중구</li>
-          <li data-url="./카테고리페이지/YuseongGu.html">유성구</li>
-          <!-- <li data-url="./카테고리페이지/daedeokGu.html">대덕구</li> -->
+          <li data-url="../카테고리페이지/dongGu.html">동구</li>
+          <li data-url="../카테고리페이지/seoGu.html">서구</li>
+          <li data-url="../카테고리페이지/jungGu.html">중구</li>
+          <li data-url="../카테고리페이지/YuseongGu.html">유성구</li>
+          <!-- <li data-url="../카테고리페이지/daedeokGu.html">대덕구</li> -->
         </ul>
+        <div id="searchBox"></div>
       </div>
-      <br />
-      <br />
-      <br />
-      <div class="content-box">
-        <div class="all-box" id="content">
-          <h1 class="content-name">전체</h1>
+
+      <div class="side-bar">
+        <div class="side-category">
+          <h1>중구</h1>
+          <ul class="side-text">
+            <li><span class="hashTag">#</span> 나들이</li>
+            <li><span class="hashTag">#</span> 쇼핑</li>
+            <li><span class="hashTag">#</span> 실내</li>
+            <li><span class="hashTag">#</span> 스포츠</li>
+            <li><span class="hashTag">#</span> 축제</li>
+          </ul>
+          <button class="sideBtn">맨 위로</button>
         </div>
+      </div>
+
+      <div class="content-box">
+        <div class="rank-container">
+          <div class="rank-box">
+            <h1>오늘의 <span class="hashTag">동구</span> 핫플 !!</h1>
+            <div class="rank-content">
+              <span class="rank">1위</span
+              ><img src="../img/소제동.jpeg" id="rankImg" />
+              <h2>소제동 거리</h2>
+            </div>
+            <div class="rank-content">
+              <span class="rank">2위</span><img src="../img/트래블라운지.jpg" />
+              <h2>트래블라운지</h2>
+            </div>
+            <div class="rank-content">
+              <span class="rank">3위</span><img src="../img/복합터미널.jpg" />
+              <h2>복합터미널</h2>
+            </div>
+            <div class="rank-content">
+              <span class="rank">4위</span><img src="../img/식장산.jpg" />
+              <h2>식장산 야경</h2>
+            </div>
+          </div>
+        </div>
+        <div class="contents-box" id="picnic">
+          <h1 class="content-name" id="one">
+            <span class="hashTag">#</span> 나들이
+          </h1>
+        </div>
+        <div class="contents-box" id="shopping">
+          <h1 class="content-name" id="two">
+            <span class="hashTag">#</span> 쇼핑
+          </h1>
+        </div>
+        <div class="contents-box" id="inside">
+          <h1 class="content-name" id="three">
+            <span class="hashTag">#</span> 실내
+          </h1>
+        </div>
+        <div class="contents-box" id="sports">
+          <h1 class="content-name" id="four">
+            <span class="hashTag">#</span> 스포츠
+          </h1>
+        </div>
+        <div class="contents-box" id="festival">
+          <h1 class="content-name" id="five">
+            <span class="hashTag">#</span> 축제
+          </h1>
+        </div>
+      </div>
+
+      <div class="top">
+        <button class="topBtn">맨 위로</button>
       </div>
 
       <div class="banner">
         <p>광고입니다.</p>
+      </div>
+
+      <div class="plannerBox">
+        <div class="calendar-area">
+          <div class="calendar-planner hidden">
+            <div class="calendar-header-planner">
+              <button id="prevMonth-planner">&lt;</button>
+              <div id="currentMonthYear-planner"></div>
+              <button id="nextMonth-planner">&gt;</button>
+            </div>
+            <div class="calendar-body-planner">
+              <div class="day-names-planner">
+                <div>S</div>
+                <div>M</div>
+                <div>Tu</div>
+                <div>W</div>
+                <div>Th</div>
+                <div>F</div>
+                <div>Sa</div>
+              </div>
+              <div class="days-planner" id="days-planner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="planListBox" id="planListBox">
+          <!-- <h4>핑구님의 Planner</h4> -->
+          <div class="nav-planner" id="nav-planner">
+            <div class="day1"></div>
+            <i class="bx bx-sun" undefined></i>
+          </div>
+          <div class="nav-planner"></div>
+          <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+          <div class="resturantBoxes" id="resturantBoxes">
+            <!-- <div class="resturantBox">
+            <input
+              type="checkbox"
+              id="foodStore1"
+              class="foodStore"
+              checked
+            /><label for="foodStore1">성심당</label>
+            <i class='bx bx-x' ></i>
+          </div> -->
+          </div>
+          <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+          <div class="cafeBoxes" id="cafeBoxes">
+            <!-- <div class="cafeBox">
+            <input
+              type="checkbox"
+              id="cafeStore1"
+              class="cafeStore"
+              checked
+            /><label for="cafeStore1">노티드</label>
+            <i class="bx bx-x"></i>
+          </div> -->
+          </div>
+          <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+          <div class="hotPlaceBoxes" id="hotPlaceBoxes">
+            <!-- <div class="hotPlaceBox">
+            <input
+              type="checkbox"
+              id="placeStore1"
+              class="placeStore"
+              checked
+            /><label for="placeStore1">한빛탑</label>
+            <i class='bx bx-x' ></i>
+          </div> -->
+          </div>
+          <button class="shareBtn">공유하기</button>
+        </div>
+        <div class="changeSize">
+          <i class="changeSizeBtn bx bx-chevrons-down"></i>
+          <!-- <i class="bx bx-chevrons-up"></i> -->
+        </div>
       </div>
 
       <div class="footer">
@@ -56,49 +206,14 @@
       </div>
     </div>
   </body>
-  <script>
-    const contents = document.getElementById("content");
-    const contentArr = [
-      {
-        a: "",
-        img: "../img/상소동.jpg",
-        name: "한밭수목원",
-        time: "월-토: 09:00",
-        time2: "<br>일: 09:00",
-        event: "입장료: 무료",
-      },
-      {
-        a: "",
-        img: "../img/상소동.jpg",
-        name: "한밭수목원",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "입장료: 무료",
-      },
-      {
-        a: "",
-        img: "../img/상소동.jpg",
-        name: "한밭수목원",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "입장료: 무료",
-      },
-    ];
-    contentArr.forEach((info, idx) => {
-      contents.insertAdjacentHTML(
-        "beforeend",
-
-        ` <div class="content">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
-      );
-    });
-  </script>
+  <script src="./jungGu.js"></script>
+  <script
+    src="/DateTeam/박근모 - 메인/Javascript/calendarRangeX.js"
+    type="module"
+  ></script>
+  <script
+    src="/DateTeam/박근모 - 메인/Javascript/planner-mainPage.js"
+    type="module"
+  ></script>
+  <!-- <script src="../javascript/search.js" type="module"></script> -->
 </html>

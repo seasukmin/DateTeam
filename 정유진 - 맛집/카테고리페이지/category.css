@@ -8,6 +8,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,7 +65,9 @@ body {
   border-radius: 15px;
   font-size: 16px;
 }
-.search img {
+.searchBtn {
+  border: none;
+  background-color: transparent;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -120,14 +123,13 @@ body {
   font-size: 42px;
 }
 .sideBtn {
-  width: 80px;
-  margin: 40px 0 5px 23px;
+  width: 60px;
+  margin: 40px 0 5px 25%;
   border: none;
-  font-family: "Ownglyph_noocar-Rg";
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 30px;
   background-color: white;
-  padding: 4px;
+  padding: 4px 2px 0 2px;
   cursor: pointer;
 }
 .side-text:hover {
@@ -222,6 +224,7 @@ body {
   position: relative;
 }
 
+.plusIc,
 .plusIc1,
 .plusIc2,
 .plusIc3,
@@ -260,17 +263,20 @@ body {
 .hpName {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 12px 10px 9px;
+  display: flex;
+  justify-content: space-between;
 }
 .hpTime {
   margin: 0;
   font-size: 18px;
+  margin: 0 9px;
 }
 .hpInfo {
   margin: 0;
-  margin-bottom: 30px;
   font-size: 15px;
+  margin-bottom: 30px;
+  margin: 3px 0 30px 10px;
 }
 .contents-box {
   display: flex;
@@ -287,6 +293,10 @@ body {
   top: -130px;
   left: 5px;
   padding-top: 50px;
+}
+#aIcon {
+  font-size: 24px;
+  color: #464646;
 }
 
 .top {
