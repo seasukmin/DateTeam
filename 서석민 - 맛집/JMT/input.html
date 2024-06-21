@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>파이어베이스 리마인드</title>
-    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
-    <script src="./firebase.js"></script>
   </head>
   <style>
     * {
@@ -49,6 +46,7 @@
           <button id="updateBtn" class="active">회원정보수정</button>
           <button id="saveUpdateBtn" class="noneActive">수정정보저장</button>
           <button id="deleteBtn">회원정보삭제</button>
+          <button id="addFieldBtn">제발</button>
         </div>
         <table border="1">
           <tr>
@@ -62,44 +60,70 @@
       </div>
       <div class="form-container">
         <div class="form-item">
-          <div class="form-label"><span>이름</span></div>
+          <div class="form-label"><span>평점</span></div>
+          <div class="form-input"><input type="text" name="point" /></div>
+        </div>
+        <div class="form-item">
+          <div class="form-label"><span>가게이름</span></div>
           <div class="form-input"><input type="text" name="name" /></div>
         </div>
         <div class="form-item">
-          <div class="form-label"><span>나이</span></div>
-          <div class="form-input"><input type="text" name="age" /></div>
+          <div class="form-label"><span>주소</span></div>
+          <div class="form-input"><input type="text" name="addr" /></div>
         </div>
         <div class="form-item">
-          <div class="form-label"><span>성별</span></div>
-          <div class="form-input"><input type="text" name="gender" /></div>
-        </div>
-        <div class="form-item">
-          <div class="form-label"><span>이메일</span></div>
-          <div class="form-input"><input type="text" name="email" /></div>
+          <div class="form-label"><span>운영시간</span></div>
+          <div class="form-input"><input type="text" name="time" /></div>
         </div>
         <div class="form-item">
           <div class="form-label"><span>전화번호</span></div>
-          <div class="form-input"><input type="text" name="tel" /></div>
+          <div class="form-input"><input type="text" name="number" /></div>
         </div>
-      </div>
+        <div class="form-item">
+          <div class="form-label"><span>카테고리</span></div>
+          <div class="form-input"><input type="text" name="category" /></div>
+        </div>
+        <div class="form-item">
+          <div class="form-label"><span>연령대</span></div>
+          <div class="form-input"><input type="text" name="age" /></div>
+        </div>
     </div>
   </body>
+  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+  <script src="./input.js"></script>
+  <!-- <script src="JMT.js" type="module"></script> -->
   <script>
+    // 로고 시작
+    // let infolist;
+    // async function getDatasadd() {
+    //   const datas = await getDatas("store");
+    //   datas.forEach((doc, idx) => {
+    //     const info = doc.data();
+    //     infolist = info.list;
+    //     console.log(info);
+    //   });
+    // }
+    // getDatasadd();
     let updateTarget;
     async function getMembers() {
-      const querySnapshot = await getDatas("member");
+      const querySnapshot = await getDatas("store");
+      console.log(querySnapshot);
       const tableTag = document.querySelector("table");
       querySnapshot.forEach((doc) => {
-        const { name, age, tel, gender, email } = doc.data();
+        const { point, name, addr, time, number,category,age } = doc.data();
+        console.log(doc);
         tableTag.insertAdjacentHTML(
           "beforeend",
           `
-            <tr data-id=${doc.id}> 
-                <td class="name">${name}</td>
-                <td class="gender">${gender}</td>
-                <td class="age">${age}</td>
-                <td class="email">${email}</td>
-                <td class="tel">${tel}</td>
+            <tr data-id=${doc.id}>
+                <td class="name">${point}</td>
+                <td class="gender">${name}</td>
+                <td class="age">${addr}</td>
+                <td class="email">${time}</td>
+                <td class="tel">${number}</td>
+                <td class="tel">${category}</td>
+                <td class="tel">${age}</td>
             </tr>
         `
         );
@@ -120,34 +144,91 @@
     });
 
     // 신규 회원 정보 저장
-    const saveBtn = document.getElementById("saveBtn");
-    saveBtn.addEventListener("click", async function () {
-      if (updateTarget) {
-        alert("회원정보 수정중에는 저장할 수 없습니다.");
-        return false;
-      }
-      const inputs = document.querySelectorAll(".form-container input");
-      const inputsArr = Array.from(inputs);
-      // const addObj = inputsArr.reduce((acc, cur) => ({...acc, [cur.name]: cur.value}), {})
-      const addObj = {};
-      inputsArr.forEach((input) => {
-        addObj[input.name] = input.value;
+    document.addEventListener("DOMContentLoaded", function () {
+      const saveBtn = document.getElementById("saveBtn");
+
+      saveBtn.addEventListener("click", async function (event) {
+        event.preventDefault(); // 기본 동작 방지
+
+        if (updateTarget) {
+          alert("회원정보 수정중에는 저장할 수 없습니다.");
+          return false;
+        }
+
+        const inputs = document.querySelectorAll(".form-container input");
+        const inputsArr = Array.from(inputs);
+
+        const addObj = {};
+        inputsArr.forEach((input) => {
+          addObj[input.name] = input.value;
+        });
+
+
+        const docId = "storeArr"; 
+        const fieldName = "members";
+        const newObj = addObj; 
+
+        // 특정 문서에 배열 필드로 추가
+        const updatedDoc = await addFieldToArrayInDocument(
+          "store",
+          docId,
+          fieldName,
+          newObj
+        );
+
+        const{ point, name, addr, time, number,category,age }= addObj;
+
+        // 테이블에 새로운 행 추가
+        const newRow = `
+        <tr data-id=${docId}>
+                <td class="name">${point}</td>
+                <td class="gender">${name}</td>
+                <td class="age">${addr}</td>
+                <td class="email">${time}</td>
+                <td class="tel">${number}</td>
+                <td class="tel">${category}</td>
+                <td class="tel">${age}</td>
+            </tr>
+    `;
+        tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
+
+        // 입력 필드 초기화
+        inputsArr.forEach((input) => {
+          input.value = "";
+        });
       });
-      const result = await addDatas("member", addObj);
-      const { name, gender, age, email, tel } = addObj;
-      tableTag.firstElementChild.insertAdjacentHTML(
-        "afterend",
-        `
-        <tr data-id=${result.id}>
-            <td class="name">${name}</td>
-            <td class="gender">${gender}</td>
-            <td class="age">${age}</td>
-            <td class="email">${email}</td>
-            <td class="tel">${tel}</td>
-        </tr>
-      `
-      );
     });
+
+    // // 신규 회원 정보 저장
+    // const saveBtn = document.getElementById("saveBtn");
+    // saveBtn.addEventListener("click", async function () {
+    //   if (updateTarget) {
+    //     alert("회원정보 수정중에는 저장할 수 없습니다.");
+    //     return false;
+    //   }
+    //   const inputs = document.querySelectorAll(".form-container input");
+    //   const inputsArr = Array.from(inputs);
+    //   // const addObj = inputsArr.reduce((acc, cur) => ({...acc, [cur.name]: cur.value}), {})
+    //   const addObj = {};
+    //   inputsArr.forEach((input) => {
+    //     addObj[input.name] = input.value;
+    //   });
+    //   //   const userName = Hotstore2;
+    //   const result = await addDatas("store", addObj);
+    //   const { name, gender, age, email, tel } = addObj;
+    //   tableTag.firstElementChild.insertAdjacentHTML(
+    //     "afterend",
+    //     `
+    //     <tr data-id=${result.id}>
+    //         <td class="name">${name}</td>
+    //         <td class="gender">${gender}</td>
+    //         <td class="age">${age}</td>
+    //         <td class="email">${email}</td>
+    //         <td class="tel">${tel}</td>
+    //     </tr>
+    //   `
+    //   );
+    // });
 
     // 회원 정보 삭제(다중 삭제 가능)
     const deleteBtn = document.getElementById("deleteBtn");
@@ -156,7 +237,7 @@
       selectedTrs.forEach(async (tr) => {
         const docId = tr.getAttribute("data-id");
         console.log(docId);
-        const result = await deleteDatas("member", docId);
+        const result = await deleteDatas("store", docId);
         if (result) {
           tr.remove();
         } else {
@@ -212,7 +293,7 @@
       selectedTr.innerHTML = newTdStr;
 
       const docId = selectedTr.getAttribute("data-id");
-      updateDatas("member", docId, updateObj);
+      updateDatas("store", docId, updateObj);
       updateTarget = undefined;
     });
   </script>
