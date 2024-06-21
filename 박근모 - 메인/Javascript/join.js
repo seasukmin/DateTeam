@@ -38,7 +38,7 @@ console.log(
   nicknameInput,
   genderInput
 );
-console.log(genderInput.);
+console.log(genderInput);
 
 const joinBtn = document.querySelector(".joinBtn");
 joinBtn.addEventListener("click", () => {
