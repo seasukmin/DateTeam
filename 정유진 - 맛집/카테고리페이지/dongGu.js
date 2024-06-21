@@ -1,7 +1,7 @@
 const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
-    a: "",
+    a: "https://map.naver.com/p/entry/place/413568990?lng=127.4720818&lat=36.2332871&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh",
     img: "../img/상소동.jpg",
     title: "상소동 산림욕장",
     text: "대전 동구 산내로 714",
@@ -72,7 +72,7 @@ picnicArr.forEach((info, idx) => {
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc1"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.title}
-          <a id="aIcon" href=${info.a}>
+          <a id="aIcon" href=${info.a} target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
           </a></p>
           <p class="hpTime">
@@ -131,7 +131,7 @@ shoppingArr.forEach((info, idx) => {
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc2"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.title}
-          <a id="aIcon" href=${info.a}>
+          <a id="aIcon" href=${info.a} target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
           </a></p>
           <p class="hpTime">
@@ -181,7 +181,7 @@ insideArr.forEach((info, idx) => {
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc3"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.title}
-          <a id="aIcon" href=${info.a}>
+          <a id="aIcon" href=${info.a} target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
            </a></p>
           <p class="hpTime">
@@ -257,7 +257,7 @@ sportsArr.forEach((info, idx) => {
         <img src=${info.img} class="sports-img" />
         <div title="planner에 추가하기" class="plusIc4"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.title}
-          <a id="aIcon" href=${info.a}>
+          <a id="aIcon" href=${info.a} target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
           </a></p>
           <p class="hpTime">
@@ -316,7 +316,7 @@ festivalArr.forEach((info, idx) => {
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc5"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${info.title}
-          <a id="aIcon" href=${info.a}>
+          <a id="aIcon" href=${info.a} target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
          </a></p>
           <p class="hpTime">

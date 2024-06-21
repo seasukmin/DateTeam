@@ -62,7 +62,10 @@ picnicArr.forEach((info, idx) => {
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc1"><i class='bx bx-plus' ></i></div>
-          <p class="hpName">${info.title}</p>
+          <p class="hpName">${info.title}
+           <a id="aIcon" href=${info.a}>
+          <i class='bx bx-right-arrow-circle' ></i>
+         </a></p>
           <p class="hpTime">
             ${info.text}${info.text2}
           </p>
@@ -117,7 +120,10 @@ shoppingArr.forEach((info, idx) => {
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc2"><i class='bx bx-plus' ></i></div>
-          <p class="hpName">${info.title}</p>
+          <p class="hpName">${info.title}
+           <a id="aIcon" href=${info.a}>
+          <i class='bx bx-right-arrow-circle' ></i>
+         </a></p>
           <p class="hpTime">
             ${info.text}${info.text2}
           </p>
@@ -163,7 +169,10 @@ insideArr.forEach((info, idx) => {
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc3"><i class='bx bx-plus' ></i></div>
-          <p class="hpName">${info.title}</p>
+          <p class="hpName">${info.title}
+           <a id="aIcon" href=${info.a}>
+          <i class='bx bx-right-arrow-circle' ></i>
+         </a></p>
           <p class="hpTime">
             ${info.text}${info.text2}
           </p>
@@ -199,7 +208,10 @@ sportsArr.forEach((info, idx) => {
     ` <div class="content" data-idx="${idx}">
         <img src=${info.img} class="sports-img" />
         <div title="planner에 추가하기" class="plusIc4"><i class='bx bx-plus' ></i></div>
-          <p class="hpName">${info.title}</p>
+          <p class="hpName">${info.title}
+           <a id="aIcon" href=${info.a}>
+          <i class='bx bx-right-arrow-circle' ></i>
+         </a></p>
           <p class="hpTime">
             ${info.text}${info.text2}
           </p>
@@ -245,7 +257,10 @@ festivalArr.forEach((info, idx) => {
     ` <div class="content" data-idx=${idx}>
         <img src=${info.img} />
         <div title="planner에 추가하기" class="plusIc5"><i class='bx bx-plus' ></i></div>
-          <p class="hpName">${info.title}</p>
+          <p class="hpName">${info.title}
+           <a id="aIcon" href=${info.a}>
+          <i class='bx bx-right-arrow-circle' ></i>
+         </a></p>
           <p class="hpTime">
             ${info.text}${info.text2}
           </p>
