@@ -61,9 +61,9 @@
       <div class="form-container">
         <div class="form-item">
           <div class="form-label"><span>평점</span></div>
-          <div class="form-input"><input type="text" name="point" /></div>
+          <div class="form-input"><input type="text" name="input" /></div>
         </div>
-        <div class="form-item">
+        <!-- <div class="form-item">
           <div class="form-label"><span>가게이름</span></div>
           <div class="form-input"><input type="text" name="name" /></div>
         </div>
@@ -86,7 +86,7 @@
         <div class="form-item">
           <div class="form-label"><span>연령대</span></div>
           <div class="form-input"><input type="text" name="age" /></div>
-        </div>
+        </div> -->
     </div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
@@ -118,12 +118,12 @@
           `
             <tr data-id=${doc.id}>
                 <td class="name">${point}</td>
-                <td class="gender">${name}</td>
-                <td class="age">${addr}</td>
-                <td class="email">${time}</td>
+                 <td class="gender">${name}</td>
+                 <td class="age">${addr}</td>
+                 <td class="email">${time}</td>
                 <td class="tel">${number}</td>
-                <td class="tel">${category}</td>
-                <td class="tel">${age}</td>
+                 <td class="tel">${category}</td>
+                 <td class="tel">${age}</td>
             </tr>
         `
         );
@@ -143,6 +143,62 @@
       }
     });
 
+    // // 신규 회원 정보 저장
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const saveBtn = document.getElementById("saveBtn");
+
+    //   saveBtn.addEventListener("click", async function (event) {
+    //     event.preventDefault(); // 기본 동작 방지
+
+    //     if (updateTarget) {
+    //       alert("회원정보 수정중에는 저장할 수 없습니다.");
+    //       return false;
+    //     }
+
+    //     const inputs = document.querySelectorAll(".form-container input");
+    //     const inputsArr = Array.from(inputs);
+
+    //     const addObj = {};
+    //     inputsArr.forEach((input) => {
+    //       addObj[input.name] = input.value;
+    //     });
+
+
+    //     const docId = "storeArr"; 
+    //     const fieldName = "members";
+    //     const newObj = addObj; 
+
+    //     // 특정 문서에 배열 필드로 추가
+    //     const updatedDoc = await addFieldToArrayInDocument(
+    //       "store",
+    //       docId,
+    //       fieldName,
+    //       newObj
+    //     );
+
+    //     const{ point, name, addr, time, number,category,age }= addObj;
+
+    //     // 테이블에 새로운 행 추가
+    //     const newRow = `
+    //     <tr data-id=${docId}>
+    //             <td class="name">${point}</td>
+    //             <td class="gender">${name}</td>
+    //             <td class="age">${addr}</td>
+    //             <td class="email">${time}</td>
+    //             <td class="tel">${number}</td>
+    //             <td class="tel">${category}</td>
+    //             <td class="tel">${age}</td>
+    //         </tr>
+    // `;
+    //     tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
+
+    //     // 입력 필드 초기화
+    //     inputsArr.forEach((input) => {
+    //       input.value = "";
+    //     });
+    //   });
+    // });
+    
     // 신규 회원 정보 저장
     document.addEventListener("DOMContentLoaded", function () {
       const saveBtn = document.getElementById("saveBtn");
@@ -164,8 +220,8 @@
         });
 
 
-        const docId = "storeArr"; 
-        const fieldName = "members";
+        const docId = "inputArr"; 
+        const fieldName = "input";
         const newObj = addObj; 
 
         // 특정 문서에 배열 필드로 추가
@@ -176,18 +232,12 @@
           newObj
         );
 
-        const{ point, name, addr, time, number,category,age }= addObj;
+        const{input}= addObj;
 
         // 테이블에 새로운 행 추가
         const newRow = `
         <tr data-id=${docId}>
-                <td class="name">${point}</td>
-                <td class="gender">${name}</td>
-                <td class="age">${addr}</td>
-                <td class="email">${time}</td>
-                <td class="tel">${number}</td>
-                <td class="tel">${category}</td>
-                <td class="tel">${age}</td>
+                <td class="name">${input}</td>
             </tr>
     `;
         tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
