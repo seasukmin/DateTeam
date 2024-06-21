@@ -356,128 +356,60 @@ Maintitle.forEach(function (el, idx) {
 });
 // 카테고리 스크립트 종료
 // 검색창 시작
-const Search = document.querySelector(".Search");
-const headerInput = document.querySelector(".header-Input");
-const result = document.querySelector(".result");
-const SearchArr = [
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "윤가네만두 동구 #비오는 날에" },
-  { text: "적덕식당 동구 #비오는 날에" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "더 바틀 동구 #술 한잔" },
-  { text: "심야식당 동구 #술 한잔" },
-  { text: "오늘 와인한잔 동구 #술 한잔" },
-  { text: "전기줄위의참새 동구 #술 한잔" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-];
 
 const datas = await getDatas("store");
 let infolist;
+let infoinput;
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  infolist = info.list;
+  infolist = info.members;
+  infoinput = info.input;
 });
 const Searches = document.querySelector(".Search");
-function addSearch(e) {
+const headerInput = document.querySelector(".header-Input");
+const result = document.querySelector(".result");
+function inputArr(e) {
   result.innerHTML = "";
-  let elnum;
-  SearchArr.forEach(function (el, idx) {
-    elnum = el;
-    if (el.text.includes(headerInput.value) && e.code == "Enter") {
+  const inputValue = headerInput.value;
+  if (inputValue === "") return;
+  infolist.forEach(function (el, idx) {
+    if (
+      el.addr.includes(inputValue) ||
+      el.category.includes(inputValue) ||
+      el.name.includes(inputValue) ||
+      el.number.includes(inputValue) ||
+      el.point.includes(inputValue) ||
+      (el.time.includes(inputValue) && e.code == "Enter")
+    ) {
       result.insertAdjacentHTML(
         "beforeend",
         `
-                 <div class="box">
-                      <img
-                        class="box-img"
-                        src="${infolist[idx].src}"
-                      />
-                      <div class="box-point"><span>평점:</span> ${infolist[idx].text1}</div>
-                      <div class="box-name">${infolist[idx].text2}</div>
-                      <div class="box-tag"><span>addr:</span>${infolist[idx].text3}</div>
-                      <div class="box-tag"><span>On.</span>${infolist[idx].text4}</div>
-                      <div class="box-tag"><span>N.</span>${infolist[idx].text5}</div>
-                      <div class="box-tag"><span>#</span>${infolist[idx].text6}</div>
-                    </div>
-        
-               `
+                     <div class="box">
+                          <img
+                            class="box-img"
+                            src="../Photo/${idx + 1}.jpg"
+                          />
+                          <div class="box-point"><span>평점:</span>
+                          ${el.point}</div>
+                          <div class="box-name">${el.name}</div>
+                          <div class="box-tag"><span>addr:</span>${
+                            el.addr
+                          }</div>
+                          <div class="box-tag"><span>On.</span>${el.time}</div>
+                          <div class="box-tag"><span>N.</span>${el.number}</div>
+                          <div class="box-tag"><span>#</span>${
+                            el.category
+                          }</div>
+                        </div>
+                   `
       );
     }
   });
+
+  headerInput.value = "";
 }
-Searches.addEventListener("click", addSearch);
-headerInput.addEventListener("keypress", addSearch);
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);
 // 검색창 종료
 // 맛집별 사이트 접속
 const Mainboxes1 = Mainbox1.firstElementChild;
