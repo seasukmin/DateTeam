@@ -46,14 +46,13 @@ async function getUserPlans(collectionName, date, userId) {
 }
 
 async function addDatas(collectionName, dataObj, userName) {
-  //   문서 ID 수동
-
   try {
+    //   문서 ID 수동
     // const saveDoc = doc(db, 컬렉션명, 문서ID)
-    const saveDoc = await doc(db, collectionName, userName);
     // console.log(`doc() 결과 : ${saveDoc}`);
-    const saveResult = await setDoc(saveDoc, dataObj);
     // console.log(`setDoc() 결과 : ${saveResult}`);
+    const saveDoc = await doc(db, collectionName, userName);
+    const saveResult = await setDoc(saveDoc, dataObj);
 
     // 문서 ID 자동
     // const collect = await collection(db, collectionName);

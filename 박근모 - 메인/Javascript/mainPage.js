@@ -43,16 +43,91 @@ console.log(getcutomerInfo());
 //   });
 // }
 // console.log(getcutomerGender());
-
+const ageSelect = document.getElementById("ageInfo");
+for (let i = 1; i <= 100; i++) {
+  const option = document.createElement("option");
+  option.value = i;
+  option.innerText = i;
+  ageSelect.appendChild(option);
+}
+// 회원 로그인/ 회원가입
+const loginBox = document.querySelector(".login-box");
 const signInBtn = document.querySelector(".signIn");
 const signUpBtn = document.querySelector(".signUp");
+const nonsignInBtn = document.querySelector(".nonsignIn");
+const aloginBox = document.querySelector(".alogin-box");
+const bloginBox = document.querySelector(".blogin-box");
+const returnBtn = document.getElementById("returnButton");
 
-signInBtn.addEventListener("click", (e) => {
-  location.href = "../HTML/LogInPage.html";
-});
+// signInBtn.addEventListener("click", (e) => {
+//   location.href = "../HTML/LogInPage.html";
+// });
 signUpBtn.addEventListener("click", (e) => {
   location.href = "../HTML/join.html";
 });
+// 회원 로그인
+signInBtn.addEventListener("click", () => {
+  aloginBox.classList.toggle("hiddenALogin");
+  if (bloginBox.classList.contains("hiddenBLogin") !== true) {
+    bloginBox.classList.add("hiddenBLogin");
+  }
+});
+
+// 비회원 로그인
+
+nonsignInBtn.addEventListener("click", () => {
+  bloginBox.classList.toggle("hiddenBLogin");
+  if (aloginBox.classList.contains("hiddenALogin") !== true) {
+    aloginBox.classList.add("hiddenALogin");
+  }
+});
+
+document
+  .querySelector(".addPlanner")
+  .addEventListener("click", async function () {
+    const nickname = document.getElementById("nicknameInfo").value;
+    const userage = document.getElementById("ageInfo").value;
+    const genderElements = document.getElementsByName("gender");
+    let genderValue;
+
+    for (const genderElement of genderElements) {
+      if (genderElement.checked) {
+        genderValue = genderElement.value;
+        console.log(genderValue);
+        break;
+      }
+    }
+    const loginBox2 = document.getElementById("bloginBox2");
+    const welcomeMessage = document.getElementById("welcomeMessage");
+    const customerInfo = {
+      userId: nickname,
+      age: userage,
+      gender: genderValue,
+    };
+    if (nickname) {
+      const datas = await addDatas("semiCustomer", customerInfo, nickname);
+      welcomeMessage.innerText = `${nickname}님 환영합니다.`;
+      loginBox2.classList.remove("hidden");
+      welcomeMessage.classList.remove("hidden");
+      document.querySelector(".blogin-box").classList.add("hidden");
+      document.getElementById("plannerBox").classList.remove("hiddenBox");
+      loginBox.classList.add("hidden");
+    } else {
+      alert("닉네임을 입력해주세요.");
+    }
+  });
+document
+  .getElementById("returnButton")
+  .addEventListener("click", async function () {
+    const nickname = document.getElementById("nicknameInfo").value;
+    const deleteresult = await deleteDatas("semiCustomer", nickname);
+    loginBox.classList.remove("hidden");
+    document.querySelector(".blogin-box").classList.remove("hidden");
+    document.getElementById("bloginBox2").classList.add("hidden");
+    document.getElementById("welcomeMessage").classList.add("hidden");
+    document.getElementById("plannerBox").classList.add("hiddenBox");
+    this.classList.add("hidden");
+  });
 
 const JMTtag = document.getElementById("h-JMT");
 const cafetag = document.getElementById("h-cafe");

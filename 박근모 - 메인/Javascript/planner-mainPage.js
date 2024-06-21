@@ -10,44 +10,31 @@ import {
 const planListBox = document.getElementById("planListBox");
 // const navPlannerBox = document.getElementById("nav-planner");
 
+// async function plannerTitleName() {
+//   const data = await getDatas("customer");
+//   data.forEach((doc) => {
+//     // if(doc.data(.))//문서와 userId 연결
+//     planListBox.insertAdjacentHTML(
+//       "afterbegin",
+//       `<h4>${doc.data().userId}님의 Planner</h4>`
+//     );
+//   });
+// }
 async function plannerTitleName() {
-  const planSnapshot = await getUserPlans("plan", "2024-06-18", "asdqwe1");
+  const planSnapshot = await getUserPlans("customer", "2024-06-18", "asdqwe1");
   planSnapshot.forEach((doc) => {
     // console.log(doc.data());
   });
-  const data = await getDatas("plan");
+  const data = await getDatas("customer");
   data.forEach((doc) => {
-    // console.log(doc.data());
-    // const info = doc.data();
-    // let { addr, age, email, gender, tel } = doc.data();
+    // if(doc.data(.))//문서와 userId 연결
     planListBox.insertAdjacentHTML(
       "afterbegin",
       `<h4>${doc.data().userId}님의 Planner</h4>`
     );
-    // navPlannerBox.insertAdjacentHTML(
-    //   "afterbegin",
-    //   `<div class="day1">${doc.data().date}</div>`
-    // );
   });
 }
-// console.log(plannerTitleName());
 plannerTitleName();
-
-// const navPlanner = document.getElementById("nav-planner");
-
-// async function plannerTitleDate() {
-//   const data = await getDatas("date");
-//   data.forEach((doc) => {
-//     const info = doc.data();
-//     // let { firstDay, firstMonth, firstYear, lastDay, lastMonth, lastYear } = doc.data();
-//     navPlanner.insertAdjacentHTML(
-//       "afterbegin",
-//       `<div>${info.firstYear}. ${info.firstMonth}. ${info.firstDay}</div>`
-//     );
-//   });
-// }
-// plannerTitleDate();
-// console.log(plannerTitleName());
 
 const cancelBtn = document.querySelectorAll(`.bx-x`);
 console.log(cancelBtn);

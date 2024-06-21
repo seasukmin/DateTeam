@@ -9,11 +9,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="../CSS/planner.css" />
     <link rel="stylesheet" href="../CSS/mainPage.css" />
     <link rel="stylesheet" href="../CSS/mainPage-content.css" />
     <link rel="stylesheet" href="../CSS/calendar_wether.css" />
     <link rel="stylesheet" href="../CSS/calendar_wether_date.css" />
-    <link rel="stylesheet" href="../CSS/planner.css" />
   </head>
   <body>
     <!-- title -->
@@ -245,26 +245,76 @@
       </div>
       <div class="login-banner-boxes">
         <!-- login Box -->
+        <!--처음 로그인 화면 -->
         <aside class="login-box">
-          <!-- <div class="logIn-ID">
-            <i class="bx bx-user"></i> : <input type="text" class="logIn" />
-          </div>
-          <div class="logIn-PW">
-            <i class="bx bx-lock-open-alt"></i> :
-            <input type="text" class="logOut" />
-          </div>
-          <div class="signIn-signUp">
-            <button class="logInBtn">로그인</button>
-            /
-            <button class="signUpBtn">회원가입</button>
-          </div> -->
           <button class="signIn">로그인</button>
+          <button class="nonsignIn">비회원 로그인</button>
           <button class="signUp">회원가입</button>
         </aside>
-        <!-- Advertisment Box -->
-        <!-- <aside class="banner-box">
-          <img src="../img/cat wallpaper1.jpg" alt="" />
-        </aside> -->
+
+        <!--회원 로그인 작은화면 -->
+        <aside class="alogin-box hiddenALogin">
+          <div class="login-container">
+            <form action="login" method="POST" id="loginForm">
+              <div class="input-group">
+                <label for="email" class="IdLabel"></label>
+                <input
+                  type="text"
+                  id="text"
+                  name="text"
+                  placeholder="ID"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="password" class="PwLabel"></label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <button type="submit" class="login-btn">Login</button>
+              <div class="signUpBox">
+                <a href="../HTML/join.html" class="signUp-btn">회원가입</a>
+              </div>
+            </form>
+          </div>
+        </aside>
+        <!-- </div> -->
+
+        <!--비회원 로그인 작은화면 -->
+        <aside class="blogin-box hiddenBLogin">
+          <label for="nicknameInfo">
+            <input type="text" id="nicknameInfo" placeholder="Nick Name ~" />
+          </label>
+          <label for="ageInfo"></label>
+          <select id="ageInfo">
+            <option value="">나이를 선택해주세요</option>
+          </select>
+          <div class="form-box genderInfo" id="genderInfo">
+            <label for="gender" id="gender"></label>
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              id="male"
+              checked="checked"
+              required
+            />
+            <label for="male"> 남성</label>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female"> 여성</label>
+          </div>
+          <button class="addPlanner">+ Planner</button>
+        </aside>
+        <div class="bloginBox2 hidden" id="bloginBox2">
+          <div class="welcome-message hidden" id="welcomeMessage"></div>
+          <button class="return-button" id="returnButton">돌아가기</button>
+        </div>
+
         <!-- App / QR Code -->
         <aside class="QR-code">
           <p>앱으로 보기!</p>
@@ -272,7 +322,7 @@
       </div>
     </main>
     <!-- planner -->
-    <div class="plannerBox">
+    <div class="plannerBox hiddenBox" id="plannerBox">
       <div class="calendar-area">
         <div class="calendar-planner hidden">
           <div class="calendar-header-planner">
@@ -313,8 +363,8 @@
       </div>
     </div>
   </body>
+  <script src="../Javascript/planner-mainPage.js" type="module"></script>
   <script src="../Javascript/mainPage.js" type="module"></script>
   <script src="../Javascript/calendar.js" type="module"></script>
-  <script src="../Javascript/planner-mainPage.js" type="module"></script>
   <script src="../Javascript/calendarRangeX.js" type="module"></script>
 </html>
