@@ -3,76 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Radio Buttons</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Get Gender Value</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .welcome-message {
+        font-size: 1.5em;
+        color: #333;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .return-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .radio-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .custom-radio {
-      display: none;
-    }
-
-    .radio-label {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      position: relative;
-      padding-left: 30px;
-      margin: 0;
-    }
-
-    .radio-label::before {
-      content: "";
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #007bff;
-      border-radius: 50%;
-      position: absolute;
-      left: 0;
-      transition: background-color 0.3s ease;
-    }
-
-    .custom-radio:checked + .radio-label::before {
-      background-color: #007bff;
-    }
-
-    .radio-label::after {
-      content: "";
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background-color: white;
-      border-radius: 50%;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    .custom-radio:checked + .radio-label::after {
-      background-color: #fff;
-    }
-  </style>
   <body>
-    <div class="radio-group">
-      <input type="radio" id="radio1" name="radio" class="custom-radio" />
-      <label for="radio1" class="radio-label">Option 1</label>
+    <aside class="login-box">
+      <label for="nicknameInfo">
+        <input type="text" id="nicknameInfo" placeholder="Nick Name ~" />
+      </label>
+      <label for="ageInfo"></label>
+      <select id="ageInfo">
+        <option value="">나이를 선택해주세요</option>
+        <!-- 나이 선택 옵션 추가 -->
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+      </select>
+      <div class="form-box genderInfo" id="genderInfo">
+        <label id="genderLabel">성별:</label>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          id="male"
+          checked="checked"
+          required
+        />
+        <label for="male"> 남성</label>
+        <input type="radio" name="gender" value="female" id="female" />
+        <label for="female"> 여성</label>
+      </div>
+      <button class="addPlanner">+ Planner</button>
+    </aside>
 
-      <input type="radio" id="radio2" name="radio" class="custom-radio" />
-      <label for="radio2" class="radio-label">Option 2</label>
+    <div class="welcome-message hidden" id="welcomeMessage"></div>
+    <button class="return-button hidden" id="returnButton">돌아가기</button>
 
-      <input type="radio" id="radio3" name="radio" class="custom-radio" />
-      <label for="radio3" class="radio-label">Option 3</label>
-    </div>
+    <script>
+      document
+        .querySelector(".addPlanner")
+        .addEventListener("click", function () {
+          const nickname = document.getElementById("nicknameInfo").value;
+          const welcomeMessage = document.getElementById("welcomeMessage");
+          const returnButton = document.getElementById("returnButton");
+
+          // Gender 값 가져오기
+          const genderElements = document.getElementsByName("gender");
+          let genderValue;
+          for (const genderElement of genderElements) {
+            if (genderElement.checked) {
+              genderValue = genderElement.value;
+              break;
+            }
+          }
+
+          if (nickname) {
+            welcomeMessage.innerText = `${nickname}님 환영합니다. 성별: ${genderValue}`;
+            welcomeMessage.classList.remove("hidden");
+            document.querySelector(".login-box").classList.add("hidden");
+            returnButton.classList.remove("hidden");
+          } else {
+            alert("닉네임을 입력해주세요.");
+          }
+        });
+
+      document
+        .getElementById("returnButton")
+        .addEventListener("click", function () {
+          document.querySelector(".login-box").classList.remove("hidden");
+          document.getElementById("welcomeMessage").classList.add("hidden");
+          this.classList.add("hidden");
+        });
+    </script>
   </body>
 </html>
