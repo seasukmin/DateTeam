@@ -290,6 +290,22 @@ section {
 .sidebar-sub:hover {
   transform: scale(1.05);
 }
+.sideinnerN {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerN:hover {
+  color: rgb(158, 50, 0, 100%);
+}
+.sideinnerT {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerT:hover {
+  color: rgb(158, 50, 0, 100%);
+}
 .side-bar {
   width: 200px;
   padding: 10px 20px;
