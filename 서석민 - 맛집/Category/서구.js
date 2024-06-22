@@ -31,44 +31,7 @@ header.addEventListener("click", function () {
 // 메인 포토 체인지 시작
 
 const Mainbox1 = document.querySelector(".Main-box1");
-const MainboxArr1 = [
-  {
-    src: "../photo/21.jpg",
-    text1: "평점 4.9",
-    text2: "지안",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/22.jpg",
-    text1: "평점 4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/23.jpg",
-    text1: "평점 4.6",
-    text2: "어반 더 쉐프",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/24.jpg",
-    text1: "평점 4.7",
-    text2: "신도칼국수",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
+
 MainboxArr1.forEach((el, idx) => {
   Mainbox1.insertAdjacentHTML(
     "beforeend",
@@ -92,44 +55,7 @@ MainboxArr1.forEach((el, idx) => {
 });
 
 const Mainbox2 = document.querySelector(".Main-box2");
-const MainboxArr2 = [
-  {
-    src: "../photo/25.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/26.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/27.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/28.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
+
 MainboxArr2.forEach((el, idx) => {
   Mainbox2.insertAdjacentHTML(
     "beforeend",
@@ -151,44 +77,7 @@ MainboxArr2.forEach((el, idx) => {
   );
 });
 const Mainbox3 = document.querySelector(".Main-box3");
-const MainboxArr3 = [
-  {
-    src: "../photo/29.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/30.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/31.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/32.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
+
 MainboxArr3.forEach((el, idx) => {
   Mainbox3.insertAdjacentHTML(
     "beforeend",
@@ -211,44 +100,7 @@ MainboxArr3.forEach((el, idx) => {
 });
 
 const Mainbox4 = document.querySelector(".Main-box4");
-const MainboxArr4 = [
-  {
-    src: "../photo/33.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/34.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/35.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/36.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
+
 MainboxArr4.forEach((el, idx) => {
   Mainbox4.insertAdjacentHTML(
     "beforeend",
@@ -271,44 +123,7 @@ MainboxArr4.forEach((el, idx) => {
 });
 
 const Mainbox5 = document.querySelector(".Main-box5");
-const MainboxArr5 = [
-  {
-    src: "../photo/37.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/38.jpg",
-    text1: "4.0",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/39.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/40.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
+
 MainboxArr5.forEach((el, idx) => {
   Mainbox5.insertAdjacentHTML(
     "beforeend",

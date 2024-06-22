@@ -78,6 +78,10 @@ section {
 .header-H1 {
   font-size: 70px;
   padding-left: 20px;
+  cursor: pointer;
+}
+.clear {
+  cursor: pointer;
 }
 #header-H2 {
   cursor: pointer;

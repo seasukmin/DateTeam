@@ -23,10 +23,10 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../사진/카페1.jpg",
-    "../사진/카페2.jpg",
-    "../사진/카페3.jpg",
-    "../사진/카페4.jpg",
+    "../Photo/48.jpg",
+    "../Photo/51.jpg",
+    "../Photo/55.jpg",
+    "../Photo/60.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");
@@ -374,10 +374,15 @@ const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H1";
 });
+//
+const headerH1 = document.querySelector("#header-H1");
+headerH1.addEventListener("click", function () {
+  location.reload();
+});
 // clear(초기화) 버튼
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", function () {
-  window.reload();
+  location.reload();
 });
 
 const Promise = document.querySelector("Promise-but");
