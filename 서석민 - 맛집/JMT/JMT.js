@@ -129,8 +129,11 @@ const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
 const result = document.querySelector(".result");
 function inputArr(e) {
+  console.log(this);
   result.innerHTML = "";
-  const inputValue = headerInput.value;
+  let inputValue = headerInput.value;
+  inputValue = inputValue.replaceAll(" ", "&nbsp;");
+  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
   if (inputValue === "") return;
   infolist.forEach(function (el, idx) {
     if (
@@ -168,6 +171,15 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  if (box) {
+    const idx = box.getAttribute("data-idx");
+    const selectedItem = infolist[idx];
+    console.log(box);
+    // 필요한 다른 작업 수행 가능
+  }
+});
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 
@@ -275,7 +287,7 @@ const bodyHeight = body.getBoundingClientRect();
 const MainH1Height = MainH1.getBoundingClientRect();
 function updateScrollPosition() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  console.log("Scroll Position: " + scrollPosition);
+  // console.log("Scroll Position: " + scrollPosition);
 
   if (scrollPosition > 1000) {
     MainH1.style.transform = "translateY(-100px)";
