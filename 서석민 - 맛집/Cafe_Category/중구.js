@@ -98,7 +98,7 @@ function inputArr(e) {
                      <div class="box">
                           <img
                             class="box-img"
-                            src="../Photo/${idx + 1}.jpg"
+                            src="../Photo_Cafe/${idx + 1}.jpg"
                           />
                           <div class="box-point"><span>평점:</span>
                           ${el.point}</div>
