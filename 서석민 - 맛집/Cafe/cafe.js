@@ -23,10 +23,10 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../Photo/48.jpg",
-    "../Photo/51.jpg",
-    "../Photo/55.jpg",
-    "../Photo/60.jpg",
+    "../Photo_Cafe/10.jpg",
+    "../Photo_Cafe/13.jpg",
+    "../Photo_Cafe/17.jpg",
+    "../Photo_Cafe/22.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");
@@ -44,7 +44,7 @@ function chgMainImg() {
 window.onload = chgMainImg;
 // 메인 사진 끝
 
-const text = "가장 Hot한 맛집들!";
+const text = "가장 Hot한 카페들!";
 const middleH1 = document.getElementById("middleH1");
 
 let index = 0;

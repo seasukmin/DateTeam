@@ -20,7 +20,7 @@ Logo.addEventListener("click", function () {
 // 헤더 시작
 const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
-  location.href = "../JMT/JMT.html";
+  location.href = "../Cafe/Cafe.html";
 });
 // 헤더 끝
 
@@ -59,14 +59,21 @@ Maintitle.forEach(function (el, idx) {
 
 // 검색창 시작
 const datas = await getDatas("store");
-let infolist;
-let infoinput;
+console.log("datas:", datas);
+
+let infoinput = [];
+let infolist = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  infolist = info.members;
-  infoinput = info.input;
+  console.log("info:", info);
+  if (info && info.input) {
+    infolist = info.members;
+    infoinput = infoinput.concat(info.input);
+  }
 });
-const infolist20 = infolist.slice(0, 20);
+console.log("Merged infoinput:", infoinput);
+
+const infolist20 = infoinput.slice(0, 9);
 console.log(infolist20);
 
 const Searches = document.querySelector(".Search");
@@ -76,7 +83,7 @@ function inputArr(e) {
   result.innerHTML = "";
   const inputValue = headerInput.value;
   if (inputValue === "") return;
-  infolist.forEach(function (el, idx) {
+  infoinput.forEach(function (el, idx) {
     if (
       el.addr.includes(inputValue) ||
       el.category.includes(inputValue) ||
@@ -118,7 +125,7 @@ headerInput.addEventListener("keypress", inputArr);
 
 // 메인 시작
 console.log(infolist);
-const infolistSlice1 = infolist.slice(0, 4);
+const infolistSlice1 = infoinput.slice(0, 3);
 const Mainbox1 = document.querySelector(".Main-box1");
 infolistSlice1.forEach((el, idx) => {
   Mainbox1.insertAdjacentHTML(
@@ -127,7 +134,7 @@ infolistSlice1.forEach((el, idx) => {
      <div class="box">
           <img
             class="box-img"
-            src="../Photo/${idx + 1}.jpg"
+            src="../Photo_Cafe/${idx + 1}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>
@@ -142,7 +149,7 @@ infolistSlice1.forEach((el, idx) => {
   );
 });
 const Mainbox2 = document.querySelector(".Main-box2");
-const infolistSlice2 = infolist.slice(4, 8);
+const infolistSlice2 = infoinput.slice(3, 6);
 infolistSlice2.forEach((el, idx) => {
   Mainbox2.insertAdjacentHTML(
     "beforeend",
@@ -150,7 +157,7 @@ infolistSlice2.forEach((el, idx) => {
   <div class="box">
           <img
             class="box-img"
-            src="../Photo/${idx + 5}.jpg"
+            src="../Photo_Cafe/${idx + 4}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>
@@ -164,7 +171,7 @@ infolistSlice2.forEach((el, idx) => {
   );
 });
 const Mainbox3 = document.querySelector(".Main-box3");
-const infolistSlice3 = infolist.slice(8, 12);
+const infolistSlice3 = infoinput.slice(6, 9);
 infolistSlice3.forEach((el, idx) => {
   Mainbox3.insertAdjacentHTML(
     "beforeend",
@@ -172,7 +179,7 @@ infolistSlice3.forEach((el, idx) => {
   <div class="box">
           <img
             class="box-img"
-            src="../Photo/${idx + 9}.jpg"
+            src="../Photo_Cafe/${idx + 7}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>
@@ -186,51 +193,6 @@ infolistSlice3.forEach((el, idx) => {
   );
 });
 
-const Mainbox4 = document.querySelector(".Main-box4");
-const infolistSlice4 = infolist.slice(12, 16);
-infolistSlice4.forEach((el, idx) => {
-  Mainbox4.insertAdjacentHTML(
-    "beforeend",
-    `
-   <div class="box">
-          <img
-            class="box-img"
-            src="../Photo/${idx + 13}.jpg"
-          />
-          <div class="box-point"><span>평점:</span> ${el.point}</div>
-          <div class="box-name">${el.name}</div>
-          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
-          <div class="box-tag"><span>On.</span> ${el.time}</div>
-          <div class="box-tag"><span>N.</span>${el.number}</div>
-          <div class="box-tag"><span>#</span>${el.category}</div>
-
-        </div>
-     `
-  );
-});
-
-const Mainbox5 = document.querySelector(".Main-box5");
-const infolistSlice5 = infolist.slice(16, 20);
-infolistSlice5.forEach((el, idx) => {
-  Mainbox5.insertAdjacentHTML(
-    "beforeend",
-    `
-  <div class="box">
-          <img
-            class="box-img"
-            src="../Photo/${idx + 17}.jpg"
-          />
-          <div class="box-point"><span>평점:</span> ${el.point}</div>
-          <div class="box-name">${el.name}</div>
-          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
-          <div class="box-tag"><span>On.</span> ${el.time}</div>
-          <div class="box-tag"><span>N.</span>${el.number}</div>
-          <div class="box-tag"><span>#</span>${el.category}</div>
-
-        </div>
-     `
-  );
-});
 // 메인 종료
 
 // 맛집별 사이트 접속
@@ -247,10 +209,7 @@ const Mainboxes3 = Mainboxes2.nextElementSibling;
 Mainboxes3.addEventListener("click", function () {
   alert("3");
 });
-const Mainboxes4 = Mainboxes3.nextElementSibling;
-Mainboxes4.addEventListener("click", function () {
-  alert("4");
-});
+
 //
 const Nainboxes1 = Mainbox2.firstElementChild;
 Nainboxes1.addEventListener("click", function () {
@@ -264,11 +223,7 @@ const Nainboxes3 = Nainboxes2.nextElementSibling;
 Nainboxes3.addEventListener("click", function () {
   alert("3");
 });
-const Nainboxes4 = Nainboxes3.nextElementSibling;
-Nainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
+
 const Qainboxes1 = Mainbox3.firstElementChild;
 Qainboxes1.addEventListener("click", function () {
   alert("1");
@@ -281,44 +236,9 @@ const Qainboxes3 = Qainboxes2.nextElementSibling;
 Qainboxes3.addEventListener("click", function () {
   alert("3");
 });
-const Qainboxes4 = Qainboxes3.nextElementSibling;
-Qainboxes4.addEventListener("click", function () {
-  alert("4");
-});
+
 //
-const Wainboxes1 = Mainbox4.firstElementChild;
-Wainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Wainboxes2 = Wainboxes1.nextElementSibling;
-Wainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Wainboxes3 = Wainboxes2.nextElementSibling;
-Wainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Wainboxes4 = Wainboxes3.nextElementSibling;
-Wainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
-const Eainboxes1 = Mainbox5.firstElementChild;
-Eainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Eainboxes2 = Eainboxes1.nextElementSibling;
-Eainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Eainboxes3 = Eainboxes2.nextElementSibling;
-Eainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Eainboxes4 = Eainboxes3.nextElementSibling;
-Eainboxes4.addEventListener("click", function () {
-  alert("4");
-});
+
 // 맛집별 사이트 접속 종료
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
