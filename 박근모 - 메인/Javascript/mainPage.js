@@ -140,6 +140,7 @@ JMTtag.addEventListener("click", (e) => {
 });
 cafetag.addEventListener("click", (e) => {
   location.href = "#hTag-cafe";
+  // scroll.href = "#hTag-cafe";
 });
 hotPlacetag.addEventListener("click", (e) => {
   location.href = "#hTag-hotPlace";

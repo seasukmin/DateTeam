@@ -145,8 +145,9 @@ document
     };
     // 여기에 추가 작업을 수행할 수 있습니다. 예: 서버로 데이터 전송
     const datas = await addDatas("customer", data, nickName);
+    location.href = "../Javascript/mainPage.js";
 
     alert(`${name}님, 회원가입이 완료되었습니다!`);
     // 예시: 성공 메시지를 표시하고 폼 초기화
-    document.getElementById("joinForm").reset();
+    // document.getElementById("joinForm").reset();
   });
