@@ -20,316 +20,9 @@ Logo.addEventListener("click", function () {
 // 헤더 시작
 const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
-  location.href = "../Cafe/Cafe.html";
+  location.href = "../JMT/JMT.html";
 });
 // 헤더 끝
-
-// 메인 스크립트 시작
-
-// 메인 포토 체인지 시작
-
-// 메인 포토 체인지 시작
-
-const Mainbox1 = document.querySelector(".Main-box1");
-const MainboxArr1 = [
-  {
-    src: "../photo/21.jpg",
-    text1: "평점 4.9",
-    text2: "지안",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/22.jpg",
-    text1: "평점 4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/23.jpg",
-    text1: "평점 4.6",
-    text2: "어반 더 쉐프",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/24.jpg",
-    text1: "평점 4.7",
-    text2: "신도칼국수",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
-MainboxArr1.forEach((el, idx) => {
-  Mainbox1.insertAdjacentHTML(
-    "beforeend",
-    `
-     <div class="box">
-          <img
-            class="box-img"
-            src="${el.src}"
-          />
-          <div class="box-point">${el.text1}</div>
-          <div class="box-name">${el.text2}</div>
-          <div class="box-tag">${el.text3}</div>
-          <div class="box-tag">${el.text4}</div>
-          <div class="box-tag">${el.text5}</div>
-          <div class="box-tag">${el.text6}</div>
-
-        </div>
-
-     `
-  );
-});
-
-const Mainbox2 = document.querySelector(".Main-box2");
-const MainboxArr2 = [
-  {
-    src: "../photo/25.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/26.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/27.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/28.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
-MainboxArr2.forEach((el, idx) => {
-  Mainbox2.insertAdjacentHTML(
-    "beforeend",
-    `
-     <div class="box">
-          <img
-            class="box-img"
-            src="${el.src}"
-          />
-          <div class="box-point">${el.text1}</div>
-          <div class="box-name">${el.text2}</div>
-          <div class="box-tag">${el.text3}</div>
-          <div class="box-tag">${el.text4}</div>
-          <div class="box-tag">${el.text5}</div>
-          <div class="box-tag">${el.text6}</div>
-
-        </div>
-     `
-  );
-});
-const Mainbox3 = document.querySelector(".Main-box3");
-const MainboxArr3 = [
-  {
-    src: "../photo/29.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/30.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/31.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/32.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
-MainboxArr3.forEach((el, idx) => {
-  Mainbox3.insertAdjacentHTML(
-    "beforeend",
-    `
-     <div class="box">
-          <img
-            class="box-img"
-            src="${el.src}"
-          />
-          <div class="box-point">${el.text1}</div>
-          <div class="box-name">${el.text2}</div>
-          <div class="box-tag">${el.text3}</div>
-          <div class="box-tag">${el.text4}</div>
-          <div class="box-tag">${el.text5}</div>
-          <div class="box-tag">${el.text6}</div>
-
-        </div>
-     `
-  );
-});
-
-const Mainbox4 = document.querySelector(".Main-box4");
-const MainboxArr4 = [
-  {
-    src: "../photo/33.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/34.jpg",
-    text1: "평점 4.1",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/35.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/36.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
-MainboxArr4.forEach((el, idx) => {
-  Mainbox4.insertAdjacentHTML(
-    "beforeend",
-    `
-     <div class="box">
-          <img
-            class="box-img"
-            src="${el.src}"
-          />
-          <div class="box-point">${el.text1}</div>
-          <div class="box-name">${el.text2}</div>
-          <div class="box-tag">${el.text3}</div>
-          <div class="box-tag">${el.text4}</div>
-          <div class="box-tag">${el.text5}</div>
-          <div class="box-tag">${el.text6}</div>
-
-        </div>
-     `
-  );
-});
-
-const Mainbox5 = document.querySelector(".Main-box5");
-const MainboxArr5 = [
-  {
-    src: "../photo/37.jpg",
-    text1: "평점 4.0",
-    text2: "여우동 ",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/38.jpg",
-    text1: "4.0",
-    text2: "스타벅스",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/39.jpg",
-    text1: "평점 4.2",
-    text2: "롯데리아",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-  {
-    src: "../photo/40.jpg",
-    text1: "평점 4.3",
-    text2: "두찜",
-    text3: "동구 대전도 925번길 11",
-    text4: "08:00 ~21:00",
-    text5: "043-3030-3031",
-    text6: "#기념일",
-  },
-];
-MainboxArr5.forEach((el, idx) => {
-  Mainbox5.insertAdjacentHTML(
-    "beforeend",
-    `
-     <div class="box">
-          <img
-            class="box-img"
-            src="${el.src}"
-          />
-          <div class="box-point">${el.text1}</div>
-          <div class="box-name">${el.text2}</div>
-          <div class="box-tag">${el.text3}</div>
-          <div class="box-tag">${el.text4}</div>
-          <div class="box-tag">${el.text5}</div>
-          <div class="box-tag">${el.text6}</div>
-        </div>
-     `
-  );
-});
-
-// 메인 스크립트 시작
 
 // 카테고리 스크립트 시작
 const Maintitle = document.querySelectorAll(".side-text li");
@@ -356,129 +49,181 @@ Maintitle.forEach(function (el, idx) {
 });
 // 카테고리 스크립트 종료
 // 검색창 시작
-const Search = document.querySelector(".Search");
-const headerInput = document.querySelector(".header-Input");
-const result = document.querySelector(".result");
-const SearchArr = [
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "윤가네만두 동구 #비오는 날에" },
-  { text: "적덕식당 동구 #비오는 날에" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "더 바틀 동구 #술 한잔" },
-  { text: "심야식당 동구 #술 한잔" },
-  { text: "오늘 와인한잔 동구 #술 한잔" },
-  { text: "전기줄위의참새 동구 #술 한잔" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-];
-
+// 매드포갈릭 이태리국시 칸스테이크 기적소리 22 23 26 37
 const datas = await getDatas("store");
 let infolist;
+let infoinput;
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  infolist = info.list;
+  infolist = info.members;
+  infoinput = info.input;
 });
+const infolist40 = infolist.slice(20, 40);
+console.log(infolist40);
 const Searches = document.querySelector(".Search");
-function addSearch(e) {
+const headerInput = document.querySelector(".header-Input");
+const result = document.querySelector(".result");
+function inputArr(e) {
   result.innerHTML = "";
-  let elnum;
-  SearchArr.forEach(function (el, idx) {
-    elnum = el;
-    if (el.text.includes(headerInput.value) && e.code == "Enter") {
+  const inputValue = headerInput.value;
+  if (inputValue === "") return;
+  infolist.forEach(function (el, idx) {
+    if (
+      el.addr.includes(inputValue) ||
+      el.category.includes(inputValue) ||
+      el.name.includes(inputValue) ||
+      el.number.includes(inputValue) ||
+      el.point.includes(inputValue) ||
+      (el.time.includes(inputValue) && e.code == "Enter")
+    ) {
       result.insertAdjacentHTML(
         "beforeend",
         `
-                 <div class="box">
-                      <img
-                        class="box-img"
-                        src="${infolist[idx].src}"
-                      />
-                      <div class="box-point"><span>평점:</span> ${infolist[idx].text1}</div>
-                      <div class="box-name">${infolist[idx].text2}</div>
-                      <div class="box-tag"><span>addr:</span>${infolist[idx].text3}</div>
-                      <div class="box-tag"><span>On.</span>${infolist[idx].text4}</div>
-                      <div class="box-tag"><span>N.</span>${infolist[idx].text5}</div>
-                      <div class="box-tag"><span>#</span>${infolist[idx].text6}</div>
-                    </div>
-        
-               `
+                     <div class="box">
+                          <img
+                            class="box-img"
+                            src="../Photo/${idx + 1}.jpg"
+                          />
+                          <div class="box-point"><span>평점:</span>
+                          ${el.point}</div>
+                          <div class="box-name">${el.name}</div>
+                          <div class="box-tag"><span>addr:</span>${
+                            el.addr
+                          }</div>
+                          <div class="box-tag"><span>On.</span>${el.time}</div>
+                          <div class="box-tag"><span>N.</span>${el.number}</div>
+                          <div class="box-tag"><span>#</span>${
+                            el.category
+                          }</div>
+                        </div>
+                   `
       );
     }
   });
+
+  headerInput.value = "";
 }
-Searches.addEventListener("click", addSearch);
-headerInput.addEventListener("keypress", addSearch);
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);
 // 검색창 종료
+
+// 메인 시작
+const Mainbox1 = document.querySelector(".Main-box1");
+const infolistSlice1 = infolist.slice(20, 24);
+infolistSlice1.forEach((el, idx) => {
+  Mainbox1.insertAdjacentHTML(
+    "beforeend",
+    `
+  <div class="box">
+          <img
+            class="box-img"
+            src="../Photo/${idx + 21}.jpg"
+          />
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span> ${el.time}</div>
+          <div class="box-tag"><span>N.</span>${el.number}</div>
+          <div class="box-tag"><span>#</span>${el.category}</div>
+
+        </div>
+
+     `
+  );
+});
+
+const Mainbox2 = document.querySelector(".Main-box2");
+const infolistSlice2 = infolist.slice(24, 28);
+infolistSlice2.forEach((el, idx) => {
+  Mainbox2.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="box">
+          <img
+            class="box-img"
+            src="../Photo/${idx + 25}.jpg"
+          />
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span> ${el.time}</div>
+          <div class="box-tag"><span>N.</span>${el.number}</div>
+          <div class="box-tag"><span>#</span>${el.category}</div>
+
+        </div>
+     `
+  );
+});
+const Mainbox3 = document.querySelector(".Main-box3");
+const infolistSlice3 = infolist.slice(28, 32);
+infolistSlice3.forEach((el, idx) => {
+  Mainbox3.insertAdjacentHTML(
+    "beforeend",
+    `
+   <div class="box">
+          <img
+            class="box-img"
+            src="../Photo/${idx + 29}.jpg"
+          />
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span> ${el.time}</div>
+          <div class="box-tag"><span>N.</span>${el.number}</div>
+          <div class="box-tag"><span>#</span>${el.category}</div>
+
+        </div>
+     `
+  );
+});
+
+const Mainbox4 = document.querySelector(".Main-box4");
+const infolistSlice4 = infolist.slice(32, 36);
+infolistSlice4.forEach((el, idx) => {
+  Mainbox4.insertAdjacentHTML(
+    "beforeend",
+    `
+   <div class="box">
+          <img
+            class="box-img"
+            src="../Photo/${idx + 33}.jpg"
+          />
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span> ${el.time}</div>
+          <div class="box-tag"><span>N.</span>${el.number}</div>
+          <div class="box-tag"><span>#</span>${el.category}</div>
+
+        </div>
+     `
+  );
+});
+
+const Mainbox5 = document.querySelector(".Main-box5");
+const infolistSlice5 = infolist.slice(36, 40);
+infolistSlice5.forEach((el, idx) => {
+  Mainbox5.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="box">
+          <img
+            class="box-img"
+            src="../Photo/${idx + 37}.jpg"
+          />
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span> ${el.time}</div>
+          <div class="box-tag"><span>N.</span>${el.number}</div>
+          <div class="box-tag"><span>#</span>${el.category}</div>
+
+        </div>
+     `
+  );
+});
+// 메인 끝
+
 // 맛집별 사이트 접속
 const Mainboxes1 = Mainbox1.firstElementChild;
 Mainboxes1.addEventListener("click", function () {
@@ -569,4 +314,20 @@ Eainboxes4.addEventListener("click", function () {
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H2";
+});
+const Mainchart1 = document.querySelector(".Mainchart-inner1");
+Mainchart1.lastElementChild.addEventListener("click", function () {
+  alert("1");
+});
+const Mainchart2 = document.querySelector(".Mainchart-inner2");
+Mainchart2.lastElementChild.addEventListener("click", function () {
+  alert("2");
+});
+const Mainchart3 = document.querySelector(".Mainchart-inner3");
+Mainchart3.lastElementChild.addEventListener("click", function () {
+  alert("3");
+});
+const Mainchart4 = document.querySelector(".Mainchart-inner4");
+Mainchart4.lastElementChild.addEventListener("click", function () {
+  alert("4");
 });

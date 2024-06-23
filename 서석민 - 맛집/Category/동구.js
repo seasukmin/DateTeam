@@ -66,6 +66,9 @@ datas.forEach((doc, idx) => {
   infolist = info.members;
   infoinput = info.input;
 });
+const infolist20 = infolist.slice(0, 20);
+console.log(infolist20);
+
 const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
 const result = document.querySelector(".result");

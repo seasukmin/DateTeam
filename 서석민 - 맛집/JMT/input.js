@@ -16,6 +16,17 @@ async function getDatas(collectionName) {
   return querySnapshot;
 }
 
+// 특정 문서에서 데이터를 가져오는 함수
+async function getDocument(collectionName, docId) {
+  const docRef = db.collection(collectionName).doc(docId);
+  const doc = await docRef.get();
+  if (!doc.exists) {
+    console.log("No such document!");
+    return null;
+  } else {
+    return doc.data();
+  }
+}
 async function addDatas(collectionName, addObj) {
   const result = await db.collection(collectionName).add(addObj);
   return result;
@@ -35,13 +46,40 @@ async function addFieldToArrayInDocument(
 
   return docRef.get();
 }
+async function updateArrayInDocument(
+  collectionName,
+  docId,
+  fieldName,
+  updatedArray
+) {
+  const docRef = db.collection(collectionName).doc(docId);
+
+  // 전체 배열을 업데이트
+  await docRef.update({
+    [fieldName]: updatedArray,
+  });
+
+  return docRef.get();
+}
+
 async function deleteDatas(collectionName, docId) {
-  try {
-    await db.collection(collectionName).doc(docId).delete();
-    return true;
-  } catch (error) {
-    return false;
-  }
+  const docRef = db.collection(collectionName).doc(docId);
+  await docRef.delete();
+  return true;
+}
+
+// Firestore 문서의 배열 필드를 업데이트하는 함수
+async function updateArrayInDocument(
+  collectionName,
+  docId,
+  fieldName,
+  updatedArray
+) {
+  const docRef = db.collection(collectionName).doc(docId);
+  await docRef.update({
+    [fieldName]: updatedArray,
+  });
+  return docRef.get();
 }
 // async function deleteFieldToArrayInDocument(
 //   collectionName,
@@ -58,6 +96,7 @@ async function deleteDatas(collectionName, docId) {
 
 //   return docRef.get();
 // }
+
 async function updateDatas(collectionName, docId, updateObj) {
   await db.collection(collectionName).doc(docId).update(updateObj);
 }
