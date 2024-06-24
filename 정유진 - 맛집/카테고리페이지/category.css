@@ -100,7 +100,7 @@ body {
   border-radius: 25px;
   position: fixed;
   top: 280px;
-  left: 80px;
+  left: 60px;
 }
 .side-text {
   list-style-type: none;
@@ -315,20 +315,30 @@ body {
 }
 
 .banner {
+  width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
   height: 120px;
-  /* margin-top: 80px; */
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.footer {
+.footerBox {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  width: 1400px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 200px;
   background-color: rgb(178, 230, 250);
+  border-radius: 10px;
 }
 .info {
   margin-left: 50px;

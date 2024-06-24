@@ -428,13 +428,3 @@ hotPlace.addEventListener("click", function () {
 });
 
 // 검색
-// const search = document.querySelector(".search");
-// const searchInput = document.querySelector(".serachInput");
-// const andiv = document.querySelector(".searchAn");
-// const searchArr = [
-//   { category: "picnic", data: picnicArr },
-//   { category: "shopping", data: shoppingArr },
-//   { category: "inside", data: insideArr },
-//   { category: "sports", data: sportsArr },
-//   { category: "festival", data: festivalArr },
-// ];
