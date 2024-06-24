@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sharePage</title>
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="../CSS/sharePage.css" />
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+      integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init("YOUR_JAVASCRIPT_KEY"); // Replace with your JavaScript key
+    </script>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <h1>Planner 공유하기!</h1>
     </header>
     <main>
@@ -15,8 +25,26 @@
       <div class="share-restaurant"></div>
       <div class="share-cafe"></div>
       <div class="share-hotplace"></div>
-    </main>
-    <button>사진저장</button>
-    <button>카톡공유하기</button>
+    </main>-->
+    <div class="planListBox captureArea" id="planListBox">
+      <h4>짱구님의 Planner</h4>
+      <div class="nav-planner" id="nav-planner">
+        <div class="day1"></div>
+        <i class="bx bx-sun" undefined></i>
+      </div>
+      <div class="nav-planner"></div>
+      <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+      <div class="resturantBoxes" id="resturantBoxes"></div>
+      <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+      <div class="cafeBoxes" id="cafeBoxes"></div>
+      <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+      <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+    </div>
+    <button class="capture-Btn" id="capture-Btn">사진저장</button>
+    <button class="KT-Share-Btn" id="KT-Share-Btn">카톡공유하기</button>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+  <!-- <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+
+  <script src="../Javascript/sharePage.js"></script>
 </html>
