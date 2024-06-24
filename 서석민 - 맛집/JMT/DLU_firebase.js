@@ -11,6 +11,7 @@ import {
   updateDoc,
   where,
   query,
+  arrayUnion,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -66,6 +67,23 @@ async function addDatas(collectionName, dataObj, userName) {
   }
 }
 
+async function addFieldToArrayInDocument(
+  collectionName,
+  docId,
+  fieldName,
+  newObj
+) {
+  try {
+    const docRef = doc(db, collectionName, docId);
+    await updateDoc(docRef, {
+      [fieldName]: arrayUnion(newObj),
+    });
+    console.log("Document successfully updated!");
+  } catch (error) {
+    console.error("Error updating document: ", error);
+  }
+}
+
 async function deleteDatas(collectionName, docId) {
   const docRef = await doc(db, collectionName, docId);
   // deleteDoc(삭제할 문서);
@@ -81,4 +99,12 @@ async function updateDatas(collectionName, docId, updateInfoObj) {
   updateDoc(docRef, updateInfoObj);
 }
 
-export { db, getDatas, addDatas, deleteDatas, updateDatas, getUserPlans };
+export {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+  getUserPlans,
+  addFieldToArrayInDocument,
+};

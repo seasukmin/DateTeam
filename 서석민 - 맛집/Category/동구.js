@@ -239,6 +239,117 @@ infolistSlice5.forEach((el, idx) => {
      `
   );
 });
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  console.log(box);
+});
+
+let nameChild1;
+let addrChild1;
+const resturantBoxes1 = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild1 = box.firstElementChild.nextElementSibling.nextElementSibling;
+    addrChild1 =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    const nameText = nameChild1.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild1.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+    console.log(nameChild1);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
+let nameChild2;
+let addrChild2;
+const resturantBoxes2 = document.querySelector(".resturantBoxes");
+Mainbox2.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild2 = box.firstElementChild.nextElementSibling.nextElementSibling;
+    addrChild2 =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    const nameText = nameChild2.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild2.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+    console.log(nameChild2);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
+let nameChild3;
+let addrChild3;
+const resturantBoxes3 = document.querySelector(".resturantBoxes");
+Mainbox3.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild3 = box.firstElementChild.nextElementSibling.nextElementSibling;
+    addrChild3 =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    const nameText = nameChild3.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild3.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+    console.log(nameChild3);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
+
+let nameChild4;
+let addrChild4;
+const resturantBoxes4 = document.querySelector(".resturantBoxes");
+Mainbox4.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild4 = box.firstElementChild.nextElementSibling.nextElementSibling;
+    addrChild4 =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    const nameText = nameChild4.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild4.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+    console.log(nameChild4);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
+let nameChild5;
+let addrChild5;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox5.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild5 = box.firstElementChild.nextElementSibling.nextElementSibling;
+    addrChild5 =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    const nameText = nameChild5.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild5.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+    console.log(nameChild5);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
 // 메인 종료
 
 // 맛집별 사이트 접속
