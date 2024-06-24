@@ -1,3 +1,11 @@
+import {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+} from "../javascript/DLU_firebase.js";
+
 const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
@@ -302,6 +310,7 @@ document.querySelectorAll(".category li").forEach((item) => {
 });
 
 // 사진 hover 하면 + 버튼 나타나게
+
 document.querySelectorAll(".plusIc1").forEach((img, idx) => {
   img.addEventListener("click", () => {
     const picnicItem = picnicArr[idx];
@@ -369,6 +378,14 @@ hotPlace.addEventListener("click", function () {
 });
 
 // 검색
+const datas = await getDatas("hotPlace");
+let infolist;
+datas.forEach((doc, idx) => {
+  const info = doc.data();
+  infolist = info.list;
+});
+console.log(infolist);
+
 const searchBtn = document.querySelector(".searchBtn");
 const searchInput = document.querySelector(".searchInput");
 const searchBox = document.querySelector("#searchBox");
@@ -385,39 +402,33 @@ function placeArr(e) {
       el.title.includes(inputValue) ||
       el.text.includes(inputValue) ||
       el.text2.includes(inputValue) ||
-      el.event.includes(inputValue) ||
-      el.point.includes(inputValue) ||
-      (el.time.includes(inputValue) && e.code == "Enter")
+      // el.event.includes(inputValue) ||
+      // el.point.includes(inputValue) ||
+      (el.event.includes(inputValue) && e.code == "Enter")
     ) {
-      result.insertAdjacentHTML(
+      searchBox.insertAdjacentHTML(
         "beforeend",
-        `
-                     <div class="box">
-                          <img
-                            class="box-img"
-                            src="../Photo/${idx + 1}.jpg"
-                          />
-                          <div class="box-point"><span>평점:</span>
-                          ${el.point}</div>
-                          <div class="box-name">${el.name}</div>
-                          <div class="box-tag"><span>addr:</span>${
-                            el.addr
-                          }</div>
-                          <div class="box-tag"><span>On.</span>${el.time}</div>
-                          <div class="box-tag"><span>N.</span>${el.number}</div>
-                          <div class="box-tag"><span>#</span>${
-                            el.category
-                          }</div>
-                        </div>
-                   `
+
+        ` <div class="content" data-idx="${idx}">
+        <img src=..${el.img} />
+        <div title="planner에 추가하기" class="plusIc1"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${el.title}
+          <a id="aIcon" target="_blank">
+          <i class='bx bx-right-arrow-circle' ></i>
+          </a></p>
+          <p class="hpTime">
+            ${el.text}<br>${el.text2} 
+          </p>
+          <p class="hpInfo">${el.event}</p>
+          
+        </div> `
       );
     }
   });
-
-  headerInput.value = "";
+  searchInput.value = "";
 }
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
+searchBox.addEventListener("click", (e) => {
+  const box = e.target.closest(".content");
   if (box) {
     const idx = box.getAttribute("data-idx");
     const selectedItem = infolist[idx];
@@ -425,5 +436,5 @@ result.addEventListener("click", (e) => {
     // 필요한 다른 작업 수행 가능
   }
 });
-Searches.addEventListener("click", inputArr);
-headerInput.addEventListener("keypress", inputArr);
+searchBtn.addEventListener("click", placeArr);
+searchInput.addEventListener("keypress", placeArr);

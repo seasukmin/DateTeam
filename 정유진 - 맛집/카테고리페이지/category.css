@@ -94,6 +94,15 @@ body {
   color: rgb(103, 183, 214);
 }
 
+#searchBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 215px;
+}
+
 .side-bar {
   padding: 10px 15px;
   background-color: skyblue;
