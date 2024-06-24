@@ -68,18 +68,21 @@ async function deleteDatas(collectionName, docId) {
   return true;
 }
 
-// Firestore 문서의 배열 필드를 업데이트하는 함수
-async function updateArrayInDocument(
+async function addFieldToArrayInDocument(
   collectionName,
   docId,
   fieldName,
-  updatedArray
+  newObj
 ) {
-  const docRef = db.collection(collectionName).doc(docId);
-  await docRef.update({
-    [fieldName]: updatedArray,
-  });
-  return docRef.get();
+  try {
+    const docRef = doc(db, collectionName, docId);
+    await updateDoc(docRef, {
+      [fieldName]: arrayUnion(newObj),
+    });
+    console.log("Document successfully updated!");
+  } catch (error) {
+    console.error("Error updating document: ", error);
+  }
 }
 // async function deleteFieldToArrayInDocument(
 //   collectionName,

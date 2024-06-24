@@ -5,6 +5,7 @@ import {
   addDatas,
   deleteDatas,
   updateDatas,
+  addFieldToArrayInDocument,
 } from "./DLU_firebase.js";
 // const jmtTag = document.querySelector(".h-Tag1Span");
 // const cafeTag = document.querySelector(".h-Tag2Span");
@@ -27,6 +28,7 @@ function chgMainImg() {
     "../title/2.jpg",
     "../title/3.jpg",
     "../title/4.jpg",
+    "../title/5.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");
@@ -171,86 +173,160 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
-  if (box) {
-    const idx = box.getAttribute("data-idx");
-    const selectedItem = infolist[idx];
-    console.log(box);
-    // 필요한 다른 작업 수행 가능
-  }
-});
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 
-const Mainboxes1 = Mainbox1.firstElementChild;
-Mainboxes1.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  console.log(box);
 });
-const Mainboxes2 = Mainboxes1.nextElementSibling;
-Mainboxes2.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("2");
+// if (box) {
+//   const idx = box.getAttribute("data-idx");
+//   const selectedItem = infolist[idx];
+// }
+let updateTarget;
+let nameChild;
+let addrChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+
+const datasPlan = await getDatas("plan");
+let planlist;
+datasPlan.forEach((doc, idx) => {
+  const info = doc.data();
+  planlist = info;
+  console.log(planlist.list);
 });
-const Mainboxes3 = Mainboxes2.nextElementSibling;
-Mainboxes3.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("3");
+
+Mainbox1.addEventListener("click", async function (e) {
+  if (updateTarget) {
+    alert("회원정보 수정중에는 저장할 수 없습니다.");
+    return false;
+  }
+  function removeDuplicates(array) {
+    return [...new Set(array)];
+  }
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+    console.log(nameChild);
+  }
+
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const memberInfoArr = [];
+  const memberInfo = { name: nameText, age: addrText };
+  memberInfoArr.push(memberInfo);
+  console.log(memberInfoArr);
+  removeDuplicates(memberInfo);
+  const result = await addDatas("plan", memberInfo, "planArr");
+  const resturantArr = [];
+  function pluslistFood(a) {
+    const newEntry = a;
+    resturantArr.push(newEntry);
+    const uniqueArr = removeDuplicates(resturantArr);
+    // resturantTag.innerHTML = "";
+
+    // Clear existing content before adding new elements
+  }
+  pluslistFood(memberInfo);
 });
-const Mainboxes4 = Mainboxes3.nextElementSibling;
-Mainboxes4.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("4");
-});
-const Mainboxes5 = Mainboxes4.nextElementSibling;
-Mainboxes5.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("5");
-});
-const Mainboxes6 = Mainboxes5.nextElementSibling;
-Mainboxes6.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("6");
-});
-const Mainboxes7 = Mainboxes6.nextElementSibling;
-Mainboxes7.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("7");
-});
-const Mainboxes8 = Mainboxes7.nextElementSibling;
-Mainboxes8.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("8");
-});
-const Mainboxes9 = Mainboxes8.nextElementSibling;
-Mainboxes9.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("9");
-});
-const Mainboxes10 = Mainboxes9.nextElementSibling;
-Mainboxes10.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("10");
-});
+
+// e.preventDefault();
+// const Mainboxes1 = Mainbox1.firstElementChild;
+// const box = e.target.closest(".box");
+// if (box) {
+//   nameChild =
+//     box.firstElementChild.nextElementSibling.nextElementSibling
+//       .nextElementSibling;
+//   addrChild =
+//     box.firstElementChild.nextElementSibling.nextElementSibling
+//       .nextElementSibling.nextElementSibling;
+
+//   resturantBoxes.insertAdjacentHTML(
+//     "beforeend",
+//     `<div>✔ ${nameText} : ${addrText}</div>`
+//   );
+// }
+
+// resturantBoxes.("nameChild, addrChild");
+
+// if (box) {
+//   const idx = box.getAttribute("data-idx");
+//   const selectedItem = infolistSliceArr1[idx];
+// }
+
+// Mainboxes1.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+// });
+// const Mainboxes2 = Mainboxes1.nextElementSibling;
+// Mainboxes2.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("2");
+// });
+// const Mainboxes3 = Mainboxes2.nextElementSibling;
+// Mainboxes3.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("3");
+// });
+// const Mainboxes4 = Mainboxes3.nextElementSibling;
+// Mainboxes4.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("4");
+// });
+// const Mainboxes5 = Mainboxes4.nextElementSibling;
+// Mainboxes5.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("5");
+// });
+// const Mainboxes6 = Mainboxes5.nextElementSibling;
+// Mainboxes6.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("6");
+// });
+// const Mainboxes7 = Mainboxes6.nextElementSibling;
+// Mainboxes7.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("7");
+// });
+// const Mainboxes8 = Mainboxes7.nextElementSibling;
+// Mainboxes8.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("8");
+// });
+// const Mainboxes9 = Mainboxes8.nextElementSibling;
+// Mainboxes9.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("9");
+// });
+// const Mainboxes10 = Mainboxes9.nextElementSibling;
+// Mainboxes10.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("10");
+// });
 
 // 맛집별 사이트 접속 종료
 // 메인 상단 사이트 접속 시작
-const backinner1 = document.querySelector(".backinner1");
-backinner1.lastElementChild.addEventListener("click", function () {
-  alert("1");
-});
-const backinner2 = document.querySelector(".backinner2");
-backinner2.lastElementChild.addEventListener("click", function () {
-  alert("2");
-});
-const backinner3 = document.querySelector(".backinner3");
-backinner3.lastElementChild.addEventListener("click", function () {
-  alert("3");
-});
-const backinner4 = document.querySelector(".backinner4");
-backinner4.lastElementChild.addEventListener("click", function () {
-  alert("4");
-});
+// const backinner1 = document.querySelector(".backinner1");
+// backinner1.lastElementChild.addEventListener("click", function () {
+//   alert("1");
+// });
+// const backinner2 = document.querySelector(".backinner2");
+// backinner2.lastElementChild.addEventListener("click", function () {
+//   alert("2");
+// });
+// const backinner3 = document.querySelector(".backinner3");
+// backinner3.lastElementChild.addEventListener("click", function () {
+//   alert("3");
+// });
+// const backinner4 = document.querySelector(".backinner4");
+// backinner4.lastElementChild.addEventListener("click", function () {
+//   alert("4");
+// });
 
 // 메인 상단 사이트 접속 종료
 // Top 버튼

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Capture Example</title>
+  </head>
+  <body>
+    <div
+      id="captureArea"
+      style="width: 500px; height: 300px; background: lightblue; padding: 20px"
+    >
+      <h1>Hello World</h1>
+      <p>This is an example of capturing an HTML element.</p>
+    </div>
+    <button id="captureButton">Capture and Download</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script>
+      document
+        .getElementById("captureButton")
+        .addEventListener("click", function () {
+          html2canvas(document.getElementById("captureArea")).then(function (
+            canvas
+          ) {
+            // Convert the canvas to a data URL
+            const dataURL = canvas.toDataURL("image/png");
+
+            // Create a link element
+            const link = document.createElement("a");
+            link.href = dataURL;
+            link.download = "capture.png";
+
+            // Programmatically click the link to trigger the download
+            link.click();
+          });
+        });
+    </script>
+  </body>
+</html>
