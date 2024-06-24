@@ -172,17 +172,40 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
-  if (box) {
-    const idx = box.getAttribute("data-idx");
-    const selectedItem = infolist[idx];
-    console.log(box);
-    // 필요한 다른 작업 수행 가능
-  }
-});
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
+
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  console.log(box);
+  // if (box) {
+  //   const idx = box.getAttribute("data-idx");
+  //   const selectedItem = infolist[idx];
+  // }
+});
+let nameChild;
+let addrChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+    console.log(nameChild);
+  }
+
+  // resturantBoxes.("nameChild, addrChild");
+});
+
+// if (box) {
+//   const idx = box.getAttribute("data-idx");
+//   const selectedItem = infolistSliceArr1[idx];
+// }
 
 // const Mainboxes1 = Mainbox1.firstElementChild;
 // Mainboxes1.addEventListener("click", function () {
