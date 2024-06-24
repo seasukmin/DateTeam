@@ -159,7 +159,7 @@ body {
   justify-content: flex-start;
   align-content: center;
   gap: 20px;
-  margin: 0px 100px 0 150px;
+  margin: 0px 90px 0 130px;
   position: relative;
 }
 .rank-content h2 {
@@ -216,7 +216,7 @@ body {
 }
 
 .content-box {
-  margin: 0 150px;
+  margin: 0 140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -254,6 +254,7 @@ body {
   cursor: pointer;
 }
 
+.plusIc:hover,
 .plusIc1:hover,
 .plusIc2:hover,
 .plusIc3:hover,
@@ -299,29 +300,47 @@ body {
 .content-name {
   font-size: 40px;
   position: absolute;
-  top: -112px;
+  top: -140px;
   left: 5px;
-  margin-top: 60px;
-  margin-bottom: 0;
+  padding-top: 50px;
 }
 #aIcon {
   font-size: 24px;
   color: #464646;
 }
 
-.top {
+.topBtn {
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-}
-.topBtn {
-  border: none;
-  padding: 20px;
   border-radius: 50%;
-  font-family: "Ownglyph_noocar-Rg";
-  font-size: 16px;
+  background-color: white;
+  border: 3px solid #3e3e3e;
+  transform: translateX(-50%);
+  position: fixed;
+  font-size: 20px;
+  left: 50%;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+  transition: 0.3s;
   cursor: pointer;
+}
+.topBtn:hover {
+  opacity: 1;
+}
+.topBtn:active {
+  animation: pulse 0.3s;
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 black;
+  }
+  to {
+    box-shadow: 0 0 0px 15px transparent;
+  }
 }
 
 .footerBox {

@@ -411,7 +411,7 @@ function placeArr(e) {
 
         ` <div class="content" data-idx="${idx}">
         <img src=..${el.img} />
-        <div title="planner에 추가하기" class="plusIc1"><i class='bx bx-plus' ></i></div>
+        <div title="planner에 추가하기" class="plusIc"><i class='bx bx-plus' ></i></div>
           <p class="hpName">${el.title}
           <a id="aIcon" target="_blank">
           <i class='bx bx-right-arrow-circle' ></i>
