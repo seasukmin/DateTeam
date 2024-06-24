@@ -285,7 +285,6 @@ const bodyHeight = body.getBoundingClientRect();
 const MainH1Height = MainH1.getBoundingClientRect();
 function updateScrollPosition() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  console.log("Scroll Position: " + scrollPosition);
 
   if (scrollPosition > 1000) {
     MainH1.style.transform = "translateY(-100px)";
