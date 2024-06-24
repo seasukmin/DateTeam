@@ -75,7 +75,9 @@ section {
   z-index: -1; /* 배경으로 보내기 */
   /* background-image: linear-gradient(, rgba(1, 1, 1, 5%)); */
 }
-
+.addrChild {
+  text-overflow: ellipsis;
+}
 .header-H1 {
   font-size: 70px;
   padding-left: 20px;

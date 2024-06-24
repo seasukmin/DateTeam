@@ -185,6 +185,8 @@ result.addEventListener("click", (e) => {
 });
 let nameChild;
 let addrChild;
+let nameChildinner;
+let addrChildinner;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 Mainbox1.addEventListener("click", function (e) {
   e.preventDefault();
@@ -196,7 +198,15 @@ Mainbox1.addEventListener("click", function (e) {
     addrChild =
       box.firstElementChild.nextElementSibling.nextElementSibling
         .nextElementSibling.nextElementSibling;
-    console.log(nameChild);
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div>
+          ${nameChild.innerHTML}
+          <span class="addrChild">${addrChild.innerHTML}</span>
+      </div>
+          `
+    );
   }
 
   // resturantBoxes.("nameChild, addrChild");
