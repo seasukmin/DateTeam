@@ -290,9 +290,10 @@ body {
 .content-name {
   font-size: 40px;
   position: absolute;
-  top: -130px;
+  top: -112px;
   left: 5px;
-  padding-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 0;
 }
 #aIcon {
   font-size: 24px;
@@ -314,8 +315,14 @@ body {
   cursor: pointer;
 }
 
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .banner {
-  width: 1200px;
+  width: 68%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,16 +332,10 @@ body {
   margin-bottom: 20px;
 }
 
-.footerBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .footer {
-  width: 1400px;
+  width: 74%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 200px;
   background-color: rgb(178, 230, 250);
