@@ -5,6 +5,7 @@ import {
   addDatas,
   deleteDatas,
   updateDatas,
+  addFieldToArrayInDocument,
 } from "./DLU_firebase.js";
 // const jmtTag = document.querySelector(".h-Tag1Span");
 // const cafeTag = document.querySelector(".h-Tag2Span");
@@ -70,6 +71,13 @@ datas.forEach((doc, idx) => {
   const info = doc.data();
   infolist = info.members;
   infoinput = info.input;
+});
+
+const datasPlan = await getDatas("plan");
+let planlist;
+datasPlan.forEach((doc, idx) => {
+  const info = doc.data();
+  planlist = info;
 });
 
 let infolistArr = infolist.map(function (el) {
@@ -178,18 +186,23 @@ headerInput.addEventListener("keypress", inputArr);
 result.addEventListener("click", (e) => {
   const box = e.target.closest(".box");
   console.log(box);
-  // if (box) {
-  //   const idx = box.getAttribute("data-idx");
-  //   const selectedItem = infolist[idx];
-  // }
 });
+// if (box) {
+//   const idx = box.getAttribute("data-idx");
+//   const selectedItem = infolist[idx];
+// }
+let updateTarget;
 let nameChild;
 let addrChild;
-let nameChildinner;
-let addrChildinner;
 const resturantBoxes = document.querySelector(".resturantBoxes");
-Mainbox1.addEventListener("click", function (e) {
-  e.preventDefault();
+Mainbox1;
+
+Mainbox1.addEventListener("click", async function (e) {
+  if (updateTarget) {
+    alert("회원정보 수정중에는 저장할 수 없습니다.");
+    return false;
+  }
+
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -198,26 +211,63 @@ Mainbox1.addEventListener("click", function (e) {
     addrChild =
       box.firstElementChild.nextElementSibling.nextElementSibling
         .nextElementSibling.nextElementSibling;
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `
-      <div>
-          ${nameChild.innerHTML}
-          <span class="addrChild">${addrChild.innerHTML}</span>
-      </div>
-          `
-    );
   }
 
-  // resturantBoxes.("nameChild, addrChild");
+  const addObj = {
+    name: nameChild ? nameChild.textContent : null,
+    address: addrChild ? addrChild.textContent : null,
+  };
+
+  const docId = "placeArr";
+  const fieldName = "list";
+  const newObj = addObj;
+
+  try {
+    const updatedDoc = await addFieldToArrayInDocument(
+      "hotPlace",
+      docId,
+      fieldName,
+      newObj
+    );
+    console.log("Document updated successfully:", updatedDoc);
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+
+  {
+    list: [{ name: "", address: "" }];
+  }
+
+  const { name, address } = addObj;
+  console.log("Name:", name, "Address:", address);
 });
+// e.preventDefault();
+// const Mainboxes1 = Mainbox1.firstElementChild;
+// const box = e.target.closest(".box");
+// if (box) {
+//   nameChild =
+//     box.firstElementChild.nextElementSibling.nextElementSibling
+//       .nextElementSibling;
+//   addrChild =
+//     box.firstElementChild.nextElementSibling.nextElementSibling
+//       .nextElementSibling.nextElementSibling;
+
+//   const nameText = nameChild.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+//   const addrText = addrChild.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+
+//   resturantBoxes.insertAdjacentHTML(
+//     "beforeend",
+//     `<div>✔ ${nameText} : ${addrText}</div>`
+//   );
+// }
+
+// resturantBoxes.("nameChild, addrChild");
 
 // if (box) {
 //   const idx = box.getAttribute("data-idx");
 //   const selectedItem = infolistSliceArr1[idx];
 // }
 
-// const Mainboxes1 = Mainbox1.firstElementChild;
 // Mainboxes1.addEventListener("click", function () {
 //   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
 // });

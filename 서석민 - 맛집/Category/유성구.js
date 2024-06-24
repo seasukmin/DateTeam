@@ -234,6 +234,36 @@ infolistSlice5.forEach((el, idx) => {
      `
   );
 });
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  console.log(box);
+});
+
+let nameChild;
+let addrChild;
+let nameChildinner;
+let addrChildinner;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  e.preventDefault();
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+
+    const nameText = nameChild.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+    const addrText = addrChild.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+
+    resturantBoxes.insertAdjacentHTML(
+      "beforeend",
+      `<div>✔ ${nameText} : ${addrText}</div>`
+    );
+  }
+});
 // 메인 끝
 
 // 맛집별 사이트 접속
