@@ -84,8 +84,8 @@ async function addFieldToArrayInDocument(
   }
 }
 
-async function deleteDatas(collectionName, docId) {
-  const docRef = await doc(db, collectionName, docId);
+async function deleteDatas(collectionName, docId, filedname) {
+  const docRef = await doc(db, collectionName, docId, filedname);
   // deleteDoc(삭제할 문서);
   await deleteDoc(docRef);
 }

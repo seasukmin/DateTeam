@@ -226,8 +226,22 @@ Mainbox1.addEventListener("click", async function (e) {
   planArr.push(memberInfo);
   const result = await addDatas("plan", { planArr }, "planArr");
 
+  const newmemberInfo = {
+    Date: 12,
+    cafe: ["1", nameText, addrText, "2"],
+    userId: 13,
+    ddd: 30,
+  };
+  planArr.push(newmemberInfo);
+  updateDatas("plan", "planArr", { newmemberInfo });
+});
 
-  // Firestore 문서에 배열 필드 생성 및 객체 추가하기
+const shareBtn = document.querySelector(".shareBtn");
+async function shareBtnclick() {
+  const result1 = await deleteDatas("plan", "planArr");
+}
+shareBtn.addEventListener("click", shareBtnclick);
+// Firestore 문서에 배열 필드 생성 및 객체 추가하기
 
 // Firestore 문서에 배열 필드 생성 및 객체 추가하기
 
