@@ -73,13 +73,6 @@ datas.forEach((doc, idx) => {
   infoinput = info.input;
 });
 
-const datasPlan = await getDatas("plan");
-let planlist;
-datasPlan.forEach((doc, idx) => {
-  const info = doc.data();
-  planlist = info;
-});
-
 let infolistArr = infolist.map(function (el) {
   return `${el.name},${el.point}`;
 });
@@ -195,14 +188,23 @@ let updateTarget;
 let nameChild;
 let addrChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
-Mainbox1;
+
+const datasPlan = await getDatas("plan");
+let planlist;
+datasPlan.forEach((doc, idx) => {
+  const info = doc.data();
+  planlist = info;
+  console.log(planlist.list);
+});
 
 Mainbox1.addEventListener("click", async function (e) {
   if (updateTarget) {
     alert("회원정보 수정중에는 저장할 수 없습니다.");
     return false;
   }
-
+  function removeDuplicates(array) {
+    return [...new Set(array)];
+  }
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -211,36 +213,29 @@ Mainbox1.addEventListener("click", async function (e) {
     addrChild =
       box.firstElementChild.nextElementSibling.nextElementSibling
         .nextElementSibling.nextElementSibling;
+    console.log(nameChild);
   }
 
-  const addObj = {
-    name: nameChild ? nameChild.textContent : null,
-    address: addrChild ? addrChild.textContent : null,
-  };
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const memberInfoArr = [];
+  const memberInfo = { name: nameText, age: addrText };
+  memberInfoArr.push(memberInfo);
+  console.log(memberInfoArr);
+  removeDuplicates(memberInfo);
+  const result = await addDatas("plan", memberInfo, "planArr");
+  const resturantArr = [];
+  function pluslistFood(a) {
+    const newEntry = a;
+    resturantArr.push(newEntry);
+    const uniqueArr = removeDuplicates(resturantArr);
+    // resturantTag.innerHTML = "";
 
-  const docId = "placeArr";
-  const fieldName = "list";
-  const newObj = addObj;
-
-  try {
-    const updatedDoc = await addFieldToArrayInDocument(
-      "hotPlace",
-      docId,
-      fieldName,
-      newObj
-    );
-    console.log("Document updated successfully:", updatedDoc);
-  } catch (error) {
-    console.error("Error updating document:", error);
+    // Clear existing content before adding new elements
   }
-
-  {
-    list: [{ name: "", address: "" }];
-  }
-
-  const { name, address } = addObj;
-  console.log("Name:", name, "Address:", address);
+  pluslistFood(memberInfo);
 });
+
 // e.preventDefault();
 // const Mainboxes1 = Mainbox1.firstElementChild;
 // const box = e.target.closest(".box");
@@ -251,9 +246,6 @@ Mainbox1.addEventListener("click", async function (e) {
 //   addrChild =
 //     box.firstElementChild.nextElementSibling.nextElementSibling
 //       .nextElementSibling.nextElementSibling;
-
-//   const nameText = nameChild.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-//   const addrText = addrChild.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
 
 //   resturantBoxes.insertAdjacentHTML(
 //     "beforeend",
