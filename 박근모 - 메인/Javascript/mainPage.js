@@ -24,7 +24,7 @@ async function getcutomerInfo() {
     let { addr, age, email, gender, tel } = doc.data();
   });
 }
-console.log(getcutomerInfo());
+getcutomerInfo();
 
 // async function getcutomerAge() {
 //   const datas = await getDatas("customer");

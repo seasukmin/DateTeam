@@ -51,3 +51,17 @@ sizeBtn.addEventListener("click", () => {
 //   plannerBoxTag.classList.remove("small");
 //   sizeUpBtn.addEventListener("click", () => {});
 // });
+
+const shareBtn = document.querySelector(".shareBtn");
+shareBtn.addEventListener("click", () => {
+  child = widnow.open(
+    "../HTML/sharePage.html",
+    "_blank",
+    "width=1000, height=500, top=0, left=0",
+    (location = no),
+    (menubar = no),
+    (toolbar = no),
+    (scrollbars = no),
+    (resizable = no)
+  );
+});
