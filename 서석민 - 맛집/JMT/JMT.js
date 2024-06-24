@@ -23,10 +23,10 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../사진/카페1.jpg",
-    "../사진/카페2.jpg",
-    "../사진/카페3.jpg",
-    "../사진/카페4.jpg",
+    "../Photo/48.jpg",
+    "../Photo/51.jpg",
+    "../Photo/55.jpg",
+    "../Photo/60.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");
@@ -43,123 +43,6 @@ function chgMainImg() {
 }
 window.onload = chgMainImg;
 // 메인 사진 끝
-
-// 메인 스크립트 시작
-
-const Mainbox1 = document.querySelector(".Main-box1");
-const MainboxArr1 = [
-  {
-    src: "../photo/1.jpg",
-    text1: "4.9",
-    text2: "신도칼국수",
-    text3: "동구 대전로 925번길 11",
-    text4: "08:00 ~ 21:00 ",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/2.jpg",
-    text1: "4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대동 357-1",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/3.jpg",
-    text1: "4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대동 357-1",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/4.jpg",
-    text1: "4.9",
-    text2: "명월본가수라상",
-    text3: "동구 계족로 184-23",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/5.jpg",
-    text1: "4.9",
-    text2: "힐링",
-    text3: "동구 가오동 신기로 123-28",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/6.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/7.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/8.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/9.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/10.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-];
-MainboxArr1.forEach((el, idx) => {
-  Mainbox1.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="box">
-    <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
-              <img
-                class="box-img"
-                src="${el.src}"
-              />
-              <div class="box-point"><span>평점:</span> ${el.text1}</div>
-              <div class="box-name">${el.text2}</div>
-              <div class="box-tag"><span>addr:</span> ${el.text3}</div>
-              <div class="box-tag"><span>On.</span>${el.text4}</div>
-              <div class="box-tag"><span>N. </span>${el.text5}</div>
-              <div class="box-tag"><span>#</span>${el.text6}</div>
-            </div>
-
-         `
-  );
-});
 
 const text = "가장 Hot한 맛집들!";
 const middleH1 = document.getElementById("middleH1");
@@ -187,22 +70,70 @@ datas.forEach((doc, idx) => {
   infolist = info.members;
   infoinput = info.input;
 });
-infolist.sort(function (a, b) {
-  return a[1] - b[1];
-});
 
-console.log(infolist);
-infolist.map(function (el) {
-  return el.point;
-  console.log(el.point);
+let infolistArr = infolist.map(function (el) {
+  return `${el.name},${el.point}`;
+});
+let infolistArrsort = infolistArr.sort(function (a, b) {
+  let pointA = a.split(",")[1];
+  let pointB = b.split(",")[1];
+  return pointA - pointB;
+});
+const sidebarA = document.querySelectorAll(".sidebar-sub");
+const infolistSliceArr = infolistArrsort.slice(70, 80);
+sidebarA.forEach(function (el, idx) {
+  if (idx < infolistSliceArr.length) {
+    let infolistEnd = infolistSliceArr[idx].split(",")[0];
+    el.insertAdjacentHTML(
+      "afterbegin",
+      `<a href="#" class="sidebarA"><span class="sideinnerN">${
+        idx + 1
+      }. </span>  <span class="sideinnerT">${infolistEnd}</span></a>`
+    );
+  }
+});
+let infolistArr1 = infolist.map(function (el) {
+  return el;
+});
+let infolistArrsort1 = infolistArr1.sort(function (a, b) {
+  let pointC = a.point;
+  let pointD = b.point;
+  return pointC - pointD;
+});
+const infolistSliceArr1 = infolistArrsort1.slice(70, 80);
+console.log(infolistSliceArr1);
+const Mainbox1 = document.querySelector(".Main-box1");
+infolistSliceArr1.forEach(function (el, idx) {
+  Mainbox1.insertAdjacentHTML(
+    "beforeend",
+    `
+  <div class="box">
+  <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
+            <img
+              class="box-img"
+              src="../Photo/${el.src}"
+            />
+            <div class="box-point"><span>평점:</span> ${el.point}</div>
+            <div class="box-name">${el.name}</div>
+            <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+            <div class="box-tag"><span>On.</span>${el.time}</div>
+            <div class="box-tag"><span>N. </span>${el.number}</div>
+            <div class="box-tag"><span>#</span>${el.category}</div>
+          </div>
+
+       `
+  );
 });
 
 const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
 const result = document.querySelector(".result");
 function inputArr(e) {
+  console.log(this);
   result.innerHTML = "";
-  const inputValue = headerInput.value;
+  let inputValue = headerInput.value;
+  inputValue = inputValue.replaceAll(" ", "&nbsp;");
+  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
   if (inputValue === "") return;
   infolist.forEach(function (el, idx) {
     if (
@@ -240,6 +171,15 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  if (box) {
+    const idx = box.getAttribute("data-idx");
+    const selectedItem = infolist[idx];
+    console.log(box);
+    // 필요한 다른 작업 수행 가능
+  }
+});
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 
@@ -318,6 +258,16 @@ const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H1";
 });
+//
+const headerH1 = document.querySelector("#header-H1");
+headerH1.addEventListener("click", function () {
+  location.reload();
+});
+// clear(초기화) 버튼
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", function () {
+  location.reload();
+});
 
 const Promise = document.querySelector("Promise-but");
 let child;
@@ -337,7 +287,7 @@ const bodyHeight = body.getBoundingClientRect();
 const MainH1Height = MainH1.getBoundingClientRect();
 function updateScrollPosition() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  console.log("Scroll Position: " + scrollPosition);
+  // console.log("Scroll Position: " + scrollPosition);
 
   if (scrollPosition > 1000) {
     MainH1.style.transform = "translateY(-100px)";

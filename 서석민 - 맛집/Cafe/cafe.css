@@ -25,7 +25,7 @@ body {
   color: #3e3e3e;
 }
 span {
-  color: purple;
+  color: rgb(92, 10, 92);
   margin: 5px;
 }
 .Logo {
@@ -52,7 +52,9 @@ section {
   color: #3e3e3e;
   position: relative;
 }
-
+.head {
+  height: 270px;
+}
 .backGround::before {
   content: "";
   position: absolute;
@@ -76,6 +78,10 @@ section {
 .header-H1 {
   font-size: 70px;
   padding-left: 20px;
+  cursor: pointer;
+}
+.clear {
+  cursor: pointer;
 }
 #header-H2 {
   cursor: pointer;
@@ -92,13 +98,14 @@ section {
   border: 1px solid white;
   padding-left: 20px;
   border: none;
-  background-color: wheat;
+  background-color: rgb(92, 10, 92);
   border-radius: 15px;
+  color: snow;
 }
 .header-Anchor {
   text-decoration: none;
   font-size: 24px;
-  color: #3e3e3e;
+  color: snow;
   border: 1px solid white;
   border-radius: 20px;
   padding: 5px 10px;
@@ -139,28 +146,28 @@ section {
 .CateL {
   text-decoration: none;
   color: #3e3e3e;
-  font-size: 55px;
+  font-size: 36px;
   position: relative;
   cursor: pointer;
 }
 .CateA:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
   transition: 0.3 linear;
 }
 .CateD:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
   transition: 0.3 linear;
 }
 .CateG:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
   transition: 0.3 linear;
 }
 .CateJ:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
   transition: 0.3 linear;
 }
 .CateL:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
   transition: 0.3 linear;
 }
 
@@ -212,7 +219,7 @@ section {
   color: black;
 }
 .Cate-sub:hover {
-  color: rgb(158, 50, 0, 100%);
+  color: rgb(92, 10, 92);
   transition: 0.3s linear;
 }
 .result {
@@ -236,17 +243,17 @@ section {
   border-radius: 30px;
   margin-left: 60px;
   backdrop-filter: blur(20px);
-  background-color: wheat;
+  background-color: rgb(92, 10, 92);
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   box-shadow: 1px 1px 5px 1px gray;
-  color: #3e3e3e;
 }
+
 .sidebars > h1 {
   margin: 0;
-  color: black;
+  color: snow;
 }
 .sidebars > h1:hover {
   margin: 0;
@@ -254,12 +261,12 @@ section {
 }
 .sidebars > h2 {
   margin: 0;
-  color: black;
+  color: snow;
 }
 .sidebars > h2:hover {
   margin: 0;
   transform: scale(1.1);
-  color: black;
+  color: lightgray;
 }
 .sidebar-subs {
   display: flex;
@@ -288,14 +295,33 @@ section {
 .sidebar-sub:hover {
   transform: scale(1.05);
 }
+.sideinnerN {
+  font-size: 16px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerN:hover {
+  color: rgb(92, 10, 92);
+  white-space: nowrap;
+}
+.sideinnerT {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+  /* overflow: hidden; */
+}
+.sideinnerT:hover {
+  color: rgb(92, 10, 92);
+}
 .side-bar {
   width: 200px;
   padding: 10px 20px;
-  background-color: wheat;
+  background-color: rgb(92, 10, 92);
   border-radius: 30px;
   margin-left: 80px;
   position: fixed;
   top: 310px;
+  height: 300px;
 }
 .side-text {
   list-style-type: none;
@@ -317,11 +343,12 @@ section {
 }
 .side-text li:hover {
   transform: scale(1.05);
-  color: purple;
+  color: rgb(92, 10, 92);
 }
 .side-category h1 {
   padding-left: 5px;
   font-size: 40px;
+  color: lightgray;
 }
 
 .up {
@@ -336,7 +363,7 @@ section {
   font-size: 24px;
 }
 .sidebar-sub a:hover {
-  color: purple;
+  color: rgb(92, 10, 92);
 }
 /* 사이드바 끝 */
 /* 미들부분(사진)시작 */
@@ -358,6 +385,7 @@ main {
 .Main-img {
   width: 300px;
   height: 300px;
+  box-shadow: 1px 1px 5px 1px gray;
 }
 .MainH1 {
   font-size: 60px;
@@ -378,6 +406,24 @@ main {
   justify-items: center;
   width: max-content;
   cursor: pointer;
+}
+.Mainchart-inner1,
+.Mainchart-inner2,
+.Mainchart-inner3,
+.Mainchart-inner4 {
+  cursor: pointer;
+}
+.Mainchart-inner1:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner2:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner3:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner4:hover {
+  transform: scale(1.05);
 }
 .Hot {
   color: red;
@@ -553,6 +599,7 @@ main {
   width: 100%;
   cursor: pointer;
 }
+
 .Mainchart img {
   border-radius: 20px;
 }
@@ -578,7 +625,7 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-color: wheat;
+  background-color: rgb(92, 10, 92);
 }
 .info {
   margin-left: 50px;

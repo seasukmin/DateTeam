@@ -78,6 +78,10 @@ section {
 .header-H1 {
   font-size: 70px;
   padding-left: 20px;
+  cursor: pointer;
+}
+.clear {
+  cursor: pointer;
 }
 #header-H2 {
   cursor: pointer;
@@ -289,6 +293,22 @@ section {
 }
 .sidebar-sub:hover {
   transform: scale(1.05);
+}
+.sideinnerN {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerN:hover {
+  color: rgb(158, 50, 0, 100%);
+}
+.sideinnerT {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerT:hover {
+  color: rgb(158, 50, 0, 100%);
 }
 .side-bar {
   width: 200px;

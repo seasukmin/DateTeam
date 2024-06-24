@@ -12,7 +12,7 @@
     </button>
     <div class="container">
       <h2># 회원가입</h2>
-      <form class="join-box">
+      <form class="join-box" id="joinForm">
         <div class="form-box">
           <label>아이디 입력</label>
           <input
@@ -51,7 +51,6 @@
             name="email"
             required
             placeholder="ex) ***@gmail.com"
-            aria-placeholder=""
           />
         </div>
         <div class="form-box">
@@ -109,28 +108,11 @@
           <label for="male"> 남성</label>
           <input type="radio" name="gender" value="female" id="female" />
           <label for="female"> 여성</label>
-          <!-- <label for="gender" id="gender">성별</label>
-          <div class="genderBox">
-            <div class="maleBox">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                id="male"
-                checked="checked"
-                required
-              />
-              <label for="male"> 남성</label>
-            </div>
-            <div class="femaleBox">
-              <input type="radio" name="gender" value="female" id="female" />
-              <label for="female"> 여성</label>
-            </div>
-          </div> -->
         </div>
-        <button type="submit" class="joinBtn">Join</button>
+        <button type="submit" class="joinBtn" id="joinBtn">Join</button>
+        <div class="testDiv"></div>
       </form>
-      <a href="../HTML/mainPage.html" class="returnBtn">돌아가기</a>
+      <a href="../HTML/maing.html" class="returnBtn">돌아가기</a>
     </div>
   </body>
   <script src="../Javascript/join.js" type="module"></script>

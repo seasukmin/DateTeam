@@ -111,6 +111,7 @@ document
       welcomeMessage.classList.remove("hidden");
       document.querySelector(".blogin-box").classList.add("hidden");
       document.getElementById("plannerBox").classList.remove("hiddenBox");
+      returnBtn.classList.remove("hidden");
       loginBox.classList.add("hidden");
     } else {
       alert("닉네임을 입력해주세요.");
@@ -139,6 +140,7 @@ JMTtag.addEventListener("click", (e) => {
 });
 cafetag.addEventListener("click", (e) => {
   location.href = "#hTag-cafe";
+  // scroll.href = "#hTag-cafe";
 });
 hotPlacetag.addEventListener("click", (e) => {
   location.href = "#hTag-hotPlace";

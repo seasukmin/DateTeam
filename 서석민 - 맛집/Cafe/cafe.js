@@ -11,737 +11,8 @@ import {
 // const placeTag = document.querySelector(".h-Tag3Span");
 // const epliogueTag = document.querySelector(".h-Tag4Span");
 
-// const userName = "Cafe";
-// const dataObj = {
-//   list: [
-//     {
-//       src: "../photo/1.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: "addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/2.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/3.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/4.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/5.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/6.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/7.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/8.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/9.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/10.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/11.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/12.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/13.jpg",
-//       text1: "4.4",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/14.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/15.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/16.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/17.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/18.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/19.jpg",
-//       text1: "3.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/20.jpg",
-//       text1: "4.4",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/21.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/22.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/23.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/24.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/25.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/26.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/27.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/28.jpg",
-//       text1: "4.4",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/29.jpg",
-//       text1: "3.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/30.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/31.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/32.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/33.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/34.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: " #기념일",
-//     },
-//     {
-//       src: "../photo/35.jpg",
-//       text1: "4.4",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/36.jpg",
-//       text1: "4.1",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/37.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/38.jpg",
-//       text1: "4.4",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/39.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/40.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/41.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/42.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/43.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/44.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/45.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/46.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/47.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/48.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/49.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/50.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/51.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/52.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/53.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/54.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/55.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/56.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/57.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/58.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/59.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/60.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/61.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/62.jpg",
-//       text1: "3.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/63.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/64.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/65.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/66.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/67.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/68.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/69.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/70.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/71.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/72.jpg",
-//       text1: "4.1",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/73.jpg",
-//       text1: "4.2",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/74.jpg",
-//       text1: "4.5",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/75.jpg",
-//       text1: "4.3",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/76.jpg",
-//       text1: "4.8",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/77.jpg",
-//       text1: "4.9",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/78.jpg",
-//       text1: "4.7",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/79.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//     {
-//       src: "../photo/80.jpg",
-//       text1: "4.6",
-//       text2: "신도칼국수",
-//       text3: " addr. 동구 대전로 925번길 11",
-//       text4: "08:00 ~ 21:00",
-//       text5: "043-3030-3031",
-//       text6: "기념일",
-//     },
-//   ],
-// };
-
-function addstoreInfo() {
-  addDatas("Cafe", dataObj, userName);
-}
-
 // 예시로 함수 호출
-addstoreInfo();
+// addstoreInfo();
 
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
@@ -752,10 +23,10 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../사진/카페1.jpg",
-    "../사진/카페2.jpg",
-    "../사진/카페3.jpg",
-    "../사진/카페4.jpg",
+    "../Photo_Cafe/10.jpg",
+    "../Photo_Cafe/13.jpg",
+    "../Photo_Cafe/17.jpg",
+    "../Photo_Cafe/22.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");
@@ -773,124 +44,7 @@ function chgMainImg() {
 window.onload = chgMainImg;
 // 메인 사진 끝
 
-// 메인 스크립트 시작
-
-const Mainbox1 = document.querySelector(".Main-box1");
-const MainboxArr1 = [
-  {
-    src: "../photo/1.jpg",
-    text1: "4.9",
-    text2: "신도칼국수",
-    text3: "동구 대전로 925번길 11",
-    text4: "08:00 ~ 21:00 ",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/2.jpg",
-    text1: "4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대동 357-1",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/3.jpg",
-    text1: "4.5",
-    text2: "어글리딜리셔스",
-    text3: "동구 대동 357-1",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/4.jpg",
-    text1: "4.9",
-    text2: "명월본가수라상",
-    text3: "동구 계족로 184-23",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/5.jpg",
-    text1: "4.9",
-    text2: "힐링",
-    text3: "동구 가오동 신기로 123-28",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/6.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/7.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/8.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-  {
-    src: "../photo/9.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "#",
-  },
-  {
-    src: "../photo/10.jpg",
-    text1: "4.1",
-    text2: "지안",
-    text3: "동구 효동 126-3",
-    text4: "08:00 ~ 21:00",
-    text5: "043-3030-3031",
-    text6: "기념일",
-  },
-];
-MainboxArr1.forEach((el, idx) => {
-  Mainbox1.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="box">
-    <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
-              <img
-                class="box-img"
-                src="${el.src}"
-              />
-              <div class="box-point"><span>평점:</span> ${el.text1}</div>
-              <div class="box-name">${el.text2}</div>
-              <div class="box-tag"><span>addr:</span> ${el.text3}</div>
-              <div class="box-tag"><span>On.</span>${el.text4}</div>
-              <div class="box-tag"><span>N. </span>${el.text5}</div>
-              <div class="box-tag"><span>#</span>${el.text6}</div>
-            </div>
-
-         `
-  );
-});
-
-const text = "가장 Hot한 맛집들!";
+const text = "가장 Hot한 카페들!";
 const middleH1 = document.getElementById("middleH1");
 
 let index = 0;
@@ -908,133 +62,124 @@ function displayNextCharacter() {
 
 displayNextCharacter();
 
-const Search = document.querySelector(".Search");
-const headerInput = document.querySelector(".header-Input");
-const result = document.querySelector(".result");
-const SearchArr = [
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "윤가네만두 동구 #비오는 날에" },
-  { text: "적덕식당 동구 #비오는 날에" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "더 바틀 동구 #술 한잔" },
-  { text: "심야식당 동구 #술 한잔" },
-  { text: "오늘 와인한잔 동구 #술 한잔" },
-  { text: "전기줄위의참새 동구 #술 한잔" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-  { text: "신도칼국수 동구 #기념일" },
-  { text: "어글리딜리셔스 동구 #기념일" },
-  { text: "어반 더 쉐프 동구 #기념일" },
-  { text: "지안 동구 #기념일" },
-  { text: "구름식당 동구 #분위기 좋은" },
-  { text: "명월본가수라상 동구 #분위기 좋은" },
-  { text: "파운드 동구 #분위기 좋은" },
-  { text: "힐링 동구 #분위기 좋은" },
-  { text: "대전옥 동구 #비오는 날에" },
-  { text: "오씨칼국수 동구 #비오는 날에" },
-];
-
-// async function getstoreInfo() {
-
-// getstoreInfo();
-// }
-
 const datas = await getDatas("store");
-let infolist;
+console.log("datas:", datas);
+
+let infoinput = [];
+let infolist = [];
+
+// 데이터 병합
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  infolist = info.list;
+  console.log("info:", info);
+
+  if (info && info.input) {
+    infolist = info.members;
+    infoinput = infoinput.concat(info.input);
+  }
 });
+
+console.log("Merged infoinput:", infoinput);
+
+let infolistArr = infoinput.map(function (el) {
+  return `${el.name},${el.point}`;
+});
+let infolistArrsort = infolistArr.sort(function (a, b) {
+  let pointA = a.split(",")[1];
+  let pointB = b.split(",")[1];
+  return pointA - pointB;
+});
+const sidebarA = document.querySelectorAll(".sidebar-sub");
+const infolistSliceArr = infolistArrsort.slice(26, 36);
+sidebarA.forEach(function (el, idx) {
+  if (idx < infolistSliceArr.length) {
+    let infolistEnd = infolistSliceArr[idx].split(",")[0];
+    el.insertAdjacentHTML(
+      "afterbegin",
+      `<a href="#" class="sidebarA"><span class="sideinnerN">${
+        idx + 1
+      }. </span>  <span class="sideinnerT">${infolistEnd}</span></a>`
+    );
+  }
+});
+let infolistArr1 = infoinput.map(function (el) {
+  return el;
+});
+let infolistArrsort1 = infolistArr1.sort(function (a, b) {
+  let pointC = a.point;
+  let pointD = b.point;
+  return pointC - pointD;
+});
+const infolistSliceArr1 = infolistArrsort1.slice(26, 36);
+console.log(infolistSliceArr1);
+const Mainbox1 = document.querySelector(".Main-box1");
+infolistSliceArr1.forEach(function (el, idx) {
+  Mainbox1.insertAdjacentHTML(
+    "beforeend",
+    `
+  <div class="box">
+  <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
+            <img
+              class="box-img"
+              src="../Photo_Cafe/${el.src}"
+            />
+            <div class="box-point"><span>평점:</span> ${el.point}</div>
+            <div class="box-name">${el.name}</div>
+            <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+            <div class="box-tag"><span>On.</span>${el.time}</div>
+            <div class="box-tag"><span>N. </span>${el.number}</div>
+            <div class="box-tag"><span>#</span>${el.category}</div>
+          </div>
+
+       `
+  );
+});
+
 const Searches = document.querySelector(".Search");
-function addSearch(e) {
+const headerInput = document.querySelector(".header-Input");
+const result = document.querySelector(".result");
+function inputArr(e) {
   result.innerHTML = "";
-  let elnum;
-  SearchArr.forEach(function (el, idx) {
-    elnum = el;
-    if (el.text.includes(headerInput.value) && e.code == "Enter") {
+  const inputValue = headerInput.value;
+  if (inputValue === "") return;
+  infoinput.forEach(function (el, idx) {
+    if (
+      el.addr.includes(inputValue) ||
+      el.category.includes(inputValue) ||
+      el.name.includes(inputValue) ||
+      el.number.includes(inputValue) ||
+      el.point.includes(inputValue) ||
+      (el.time.includes(inputValue) && e.code == "Enter")
+    ) {
       result.insertAdjacentHTML(
         "beforeend",
         `
-                 <div class="box">
-                      <img
-                        class="box-img"
-                        src="${infolist[idx].src}"
-                      />
-                      <div class="box-point"><span>평점:</span> ${infolist[idx].text1}</div>
-                      <div class="box-name">${infolist[idx].text2}</div>
-                      <div class="box-tag"><span>addr:</span>${infolist[idx].text3}</div>
-                      <div class="box-tag"><span>On.</span>${infolist[idx].text4}</div>
-                      <div class="box-tag"><span>N.</span>${infolist[idx].text5}</div>
-                      <div class="box-tag"><span>#</span>${infolist[idx].text6}</div>
-                    </div>
-        
-               `
+                     <div class="box">
+                          <img
+                            class="box-img"
+                            src="../Photo_Cafe/${idx + 1}.jpg"
+                          />
+                          <div class="box-point"><span>평점:</span>
+                          ${el.point}</div>
+                          <div class="box-name">${el.name}</div>
+                          <div class="box-tag"><span>addr:</span>${
+                            el.addr
+                          }</div>
+                          <div class="box-tag"><span>On.</span>${el.time}</div>
+                          <div class="box-tag"><span>N.</span>${el.number}</div>
+                          <div class="box-tag"><span>#</span>${
+                            el.category
+                          }</div>
+                        </div>
+                   `
       );
     }
   });
+
+  headerInput.value = "";
 }
-Searches.addEventListener("click", addSearch);
-headerInput.addEventListener("keypress", addSearch);
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);
 
 const Mainboxes1 = Mainbox1.firstElementChild;
 Mainboxes1.addEventListener("click", function () {
@@ -1110,6 +255,16 @@ backinner4.lastElementChild.addEventListener("click", function () {
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H1";
+});
+//
+const headerH1 = document.querySelector("#header-H1");
+headerH1.addEventListener("click", function () {
+  location.reload();
+});
+// clear(초기화) 버튼
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", function () {
+  location.reload();
 });
 
 const Promise = document.querySelector("Promise-but");
