@@ -1,3 +1,11 @@
+import {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+} from "../javascript/DLU_firebase.js";
+
 const picnic = document.getElementById("picnic");
 const picnicArr = [
   {

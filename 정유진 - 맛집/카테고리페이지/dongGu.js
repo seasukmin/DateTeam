@@ -1,3 +1,11 @@
+import {
+  db,
+  getDatas,
+  addDatas,
+  deleteDatas,
+  updateDatas,
+} from "../javascript/DLU_firebase.js";
+
 const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
@@ -21,7 +29,7 @@ const picnicArr = [
   {
     a: "",
     img: "../img/식장산.jpg",
-    title: "식장산",
+    title: "식장산 전망대",
     text: "	대전 동구 세천동 산 43-5",
     text2: "",
     event: "#드라이브 #야경",
@@ -151,7 +159,7 @@ const insideArr = [
     title: "복합터미널",
     text: "대전 동구 동서대로 1689",
     text2: "<br>연중무휴",
-    event: "#복합센터",
+    event: "#복합센터 #시외버스",
     local: "동구",
   },
   {
@@ -275,8 +283,8 @@ const festivalArr = [
     a: "",
     img: "../img/대청호벚꽃.png",
     title: "대청호 벚꽃축제",
-    text: "2024.03.29 ~ 2024.03.31 3일간",
-    text2: "<br>10:00 ~ 21:00",
+    text: "대청호 벚꽃한터",
+    text2: "<br>2024.03.29 ~ 2024.03.31 3일간",
     event: "#벚꽃 #세상에서가장긴벚꽃길",
     local: "동구",
   },
@@ -285,7 +293,7 @@ const festivalArr = [
     img: "../img/야시장.png",
     title: "중앙시장 야시장",
     text: "2024.05.03 ~ 2024.10.26 매주 금,토",
-    text2: "<br>18:00 ~ 22:00",
+    text2: "<br>대전 중앙시장",
     event: "#동구야놀자 #먹거리",
     local: "동구",
   },
@@ -294,7 +302,7 @@ const festivalArr = [
     img: "../img/0시축제.jfif",
     title: "대전 0시 축제",
     text: "2024.08.09 ~ 2024.08.17 9일간",
-    text2: "<br>14:00 ~ 00:00",
+    text2: "<br>대전역 ~ 옛충남도청",
     event: "#대전부르스 #심야",
     local: "동구",
   },
@@ -303,7 +311,7 @@ const festivalArr = [
     img: "../img/동구동락.jfif",
     title: "동구동락 축제",
     text: "2024.10.04 ~ 2024.10.06 3일간",
-    text2: "<br>11:00 ~ 22:00",
+    text2: "<br>동광장로 및 대동천",
     event: "#동광장 #대동천",
     local: "동구",
   },
@@ -428,3 +436,63 @@ hotPlace.addEventListener("click", function () {
 });
 
 // 검색
+const datas = await getDatas("hotPlace");
+let infolist;
+datas.forEach((doc, idx) => {
+  const info = doc.data();
+  infolist = info.list;
+});
+console.log(infolist);
+
+const searchBtn = document.querySelector(".searchBtn");
+const searchInput = document.querySelector(".searchInput");
+const searchBox = document.querySelector("#searchBox");
+function placeArr(e) {
+  console.log(this);
+  searchBox.innerHTML = "";
+  let inputValue = searchInput.value;
+  inputValue = inputValue.replaceAll(" ", "&nbsp;");
+  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
+  if (inputValue === "") return;
+  infolist.forEach(function (el, idx) {
+    if (
+      el.img.includes(inputValue) ||
+      el.title.includes(inputValue) ||
+      el.text.includes(inputValue) ||
+      el.text2.includes(inputValue) ||
+      // el.event.includes(inputValue) ||
+      // el.point.includes(inputValue) ||
+      (el.event.includes(inputValue) && e.code == "Enter")
+    ) {
+      searchBox.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content" data-idx="${idx}">
+        <img src=..${el.img} />
+        <div title="planner에 추가하기" class="plusIc"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${el.title}
+          <a id="aIcon" target="_blank">
+          <i class='bx bx-right-arrow-circle' ></i>
+          </a></p>
+          <p class="hpTime">
+            ${el.text}<br>${el.text2} 
+          </p>
+          <p class="hpInfo">${el.event}</p>
+          
+        </div> `
+      );
+    }
+  });
+  searchInput.value = "";
+}
+searchBox.addEventListener("click", (e) => {
+  const box = e.target.closest(".content");
+  if (box) {
+    const idx = box.getAttribute("data-idx");
+    const selectedItem = infolist[idx];
+    console.log(box);
+    // 필요한 다른 작업 수행 가능
+  }
+});
+searchBtn.addEventListener("click", placeArr);
+searchInput.addEventListener("keypress", placeArr);

@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Ownglyph_noocar-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: snow;
+  height: 100vh;
+  font-family: "Ownglyph_noocar-Rg";
+  margin: 0;
+  color: #3e3e3e;
+}
+.review-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review-title {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.review-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+}
+.review-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  /* background-color: pink; */
+  border-radius: 10px;
+}
+.review-upload {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+.review-upload-btn {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+  color: rgb(255, 103, 128);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.tasty-box,
+.cafe-box,
+.hp-box {
+  border: 1px solid rgb(170, 170, 170);
+  padding: 10px 40px;
+  margin: 30px;
+  border-radius: 20px;
+  background-color: pink;
+  height: 400px;
+}
+.tasty-box {
+  margin-top: 0px;
+}
+
+.tasty-content,
+.cafe-content,
+.hp-content {
+  /* width: 80%; */
+  border: 1px solid gainsboro;
+  padding: 12px 30px;
+  font-size: 24px;
+  border-radius: 50px;
+  background-color: snow;
+  height: 300px;
+}
+
+.review-box h1 {
+  margin: 10px;
+}
+
+.review-user {
+  display: flex;
+  gap: 10px;
+  font-size: 28px;
+  height: 40px;
+  align-items: center;
+  /* margin: 10px 0px 0 20px; */
+}
+.review-user p {
+  margin: 0;
+}
+
+.review-text {
+  display: flex;
+  gap: 35px;
+}
+.review-text img {
+  width: 200px;
+  height: 130px;
+  border-radius: 8px;
+}
+
+.review-visited {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.review-visited h2 {
+  margin: 10px;
+}
+
+.review-point {
+  display: flex;
+  gap: 70px;
+}
+.review-point p {
+  margin-top: 17px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.keyword {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.keyword p {
+  font-size: 16px;
+  border: 1px solid #3e3e3e;
+  margin: 20px 0;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: peachpuff;
+}
+
+.R-hst {
+  color: hotpink;
+}
+.T-hst {
+  color: rgb(253, 220, 180);
+}
+.C-hst {
+  color: mediumpurple;
+}
+.H-hst {
+  color: skyblue;
+}
+
+.footerBox {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner {
+  width: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  height: 120px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.footer {
+  width: 74%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(178, 230, 250);
+  border-radius: 10px;
+}
+.info {
+  margin-left: 50px;
+}
+.service {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}

@@ -571,9 +571,9 @@ main {
   position: fixed;
   font-size: 32px;
   left: 50%;
-  bottom: 50px;
-  width: 80px;
-  height: 80px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
   opacity: 0.4;
   transition: 0.3s;
 }
