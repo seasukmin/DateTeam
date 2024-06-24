@@ -4,8 +4,8 @@ const picnicArr = [
     a: "",
     img: "../img/오월드.jpg",
     title: "대전 오월드",
-    text: "월-토: 09:00",
-    text2: "<br>일: 09:00",
+    text: "대전 중구 사정공원로 70",
+    text2: "<br>매일 09:30 ~ 22:00 (월요일 18시 마감)",
     event: "#동물원 #놀이공원 #산책",
     local: "중구",
   },
@@ -13,8 +13,8 @@ const picnicArr = [
     a: "",
     img: "../img/뿌리공원2.JPG",
     title: "뿌리공원",
-    text: "월-토: 09:00",
-    text2: "",
+    text: "대전 중구 뿌리공원로 79",
+    text2: "<br>05:00 ~ 23:00",
     event: "#드라이브 #산책 #야경",
     local: "중구",
   },
@@ -22,7 +22,7 @@ const picnicArr = [
     a: "",
     img: "../img/사정공원.jpg",
     title: "사정공원",
-    text: "월-토: 09:00",
+    text: "대전 중구 사정동 산1-4",
     text2: "",
     event: "#드라이브 #산책",
     local: "중구",
@@ -31,7 +31,7 @@ const picnicArr = [
     a: "",
     img: "../img/테미공원.jpg",
     title: "테미공원",
-    text: "월-토: 09:00",
+    text: "대전 중구 보문로199번길 37-36",
     text2: "",
     event: "#산책 #벚꽃",
     local: "중구",
@@ -40,7 +40,7 @@ const picnicArr = [
     a: "",
     img: "../img/서대전공원.jpg",
     title: "서대전공원",
-    text: "월-토: 09:00",
+    text: "대전 중구 문화동 1-40",
     text2: "",
     event: "#산책 #피크닉",
     local: "중구",
@@ -49,7 +49,7 @@ const picnicArr = [
     a: "",
     img: "../img/보문산.jpg",
     title: "보문산",
-    text: "월-토: 09:00",
+    text: "대전 중구",
     text2: "",
     event: "#등산 #산책",
     local: "중구",
@@ -89,17 +89,17 @@ const shoppingArr = [
     a: "",
     img: "../img/다구로잉.jfif",
     title: "다구로잉",
-    text: "월-토: 09:00",
-    text2: "<br>일: 09:00",
+    text: "대전 중구 대종로517번길 14 2층",
+    text2: "<br>화: 12:30 - 19:00, 수-일: 12:00 ~ 19:00",
     event: "#소품샵 #아기자기",
     local: "중구",
   },
   {
     a: "",
     img: "../img/프렐류드.jfif",
-    title: "프렐류드",
-    text: "월-토: 09:00",
-    text2: "",
+    title: "The Prelude Shop",
+    text: "대전 중구 중앙로129번길 30",
+    text2: "<br>월-금: 12:00 ~ 19:00, 토-일: 11:00 ~ 20:00",
     event: "#소품샵 #인기",
     local: "중구",
   },
@@ -107,8 +107,8 @@ const shoppingArr = [
     a: "",
     img: "../img/다다르다.jfif",
     title: "다다르다",
-    text: "월-토: 09:00",
-    text2: "",
+    text: "대전 중구 중교로73번길 6",
+    text2: "<br>매일 12:00 ~ 20:00",
     event: "#독립서점",
     local: "중구",
   },
@@ -138,8 +138,8 @@ const insideArr = [
     a: "",
     img: "../img/아이존팝.jfif",
     title: "아이존팝",
-    text: "월-토: 09:00",
-    text2: "<br>일: 09:00",
+    text: "대전 중구 중앙로164번길 35 2층",
+    text2: "<br>월-금: 12:00 ~ 22:00, 토-일: 11:00 ~ 23:00",
     event: "#오락실 #시간제",
     local: "중구",
   },
@@ -147,8 +147,8 @@ const insideArr = [
     a: "",
     img: "../img/냄시.jfif",
     title: "냄시",
-    text: "월-토: 09:00",
-    text2: "",
+    text: "대전 중구 목척9길 30",
+    text2: "<br>화-일: 11:00 ~ 20:00, 예약제",
     event: "#향수 #캔들 #공방",
     local: "중구",
   },
@@ -156,8 +156,8 @@ const insideArr = [
     a: "",
     img: "../img/아신극장.jfif",
     title: "아신극장",
-    time: "월-토: 09:00",
-    time2: "",
+    time: "대전 중구 대종로 458 2층, 3층",
+    time2: "<br>화-금: 10:00 ~ 20:00, 토-일: 12:00 ~ 20:00, 예약제",
     event: "#연극 #극장",
     local: "중구",
   },
@@ -186,16 +186,16 @@ const sportsArr = [
   {
     img: "../img/이글스파크.jpg",
     title: "한화이글스파크",
-    text: "월-토: 09:00",
-    text2: "<br>일: 09:00",
-    event: "#야구 #배구 #경기장",
+    text: "대전 중구 대종로 373",
+    text2: "<br>경기에 따라 변동",
+    event: "#야구 #한화 #경기장",
     local: "중구",
   },
   {
     img: "../img/중구국민체육센터.jpg",
     title: "중구국민체육센터",
-    text: "월-토: 09:00",
-    text2: "<br>일: 09:00",
+    text: "대전 중구 선화서로 70",
+    text2: "<br>월-금: 06:00 ~ 21:00, 토: 06:00 ~ 18:00",
     event: "#수영 #배드민턴 #체육관",
     local: "중구",
   },
@@ -225,28 +225,28 @@ const festivalArr = [
   {
     a: "",
     img: "../img/테미봄축제.jfif",
-    title: "테미 봄 축제",
-    text: "2024.03.29 ~ 2024.03.31",
-    text2: "<br>10:00 ~ 21:00",
-    event: "#벚꽃 #세상에서가장긴벚꽃길",
+    title: "테미 봄축제 <테미와 봄>",
+    text: "테미오래",
+    text2: "<br>2024.03.30 ~ 2024.03.31, 2일간",
+    event: "#벚꽃 #푸드트럭",
     local: "중구",
   },
   {
     a: "",
     img: "../img/세계인어울림축제.jfif",
     title: "세계인 어울림 축제",
-    text: "24.05.03 ~ 24.10.26 매주 금,토",
-    text2: "<br>18:00 ~ 22:00",
-    event: "#동구야놀자 #먹거리",
+    text: "서대전 시민공원",
+    text2: "<br>2024.05.11, 1일간",
+    event: "#세계 #먹거리 #문화",
     local: "중구",
   },
   {
     a: "",
     img: "../img/대전효문화뿌리축제.jfif",
     title: "효문화 뿌리축제",
-    text: "2024.08.09 ~ 2024.08.17",
-    text2: "<br>14:00 ~ 00:00",
-    event: "#대전부르스 #심야",
+    text: "뿌리공원 등",
+    text2: "<br>2024.10.11 ~ 2024.10.13",
+    event: "#뿌리공원 #가을축제",
     local: "중구",
   },
 ];
@@ -369,13 +369,61 @@ hotPlace.addEventListener("click", function () {
 });
 
 // 검색
-// const search = document.querySelector(".search");
-// const searchInput = document.querySelector(".serachInput");
-// const andiv = document.querySelector(".searchAn");
-// const searchArr = [
-//   { category: "picnic", data: picnicArr },
-//   { category: "shopping", data: shoppingArr },
-//   { category: "inside", data: insideArr },
-//   { category: "sports", data: sportsArr },
-//   { category: "festival", data: festivalArr },
-// ];
+const searchBtn = document.querySelector(".searchBtn");
+const searchInput = document.querySelector(".searchInput");
+const searchBox = document.querySelector("#searchBox");
+function placeArr(e) {
+  console.log(this);
+  searchBox.innerHTML = "";
+  let inputValue = searchInput.value;
+  inputValue = inputValue.replaceAll(" ", "&nbsp;");
+  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
+  if (inputValue === "") return;
+  infolist.forEach(function (el, idx) {
+    if (
+      el.img.includes(inputValue) ||
+      el.title.includes(inputValue) ||
+      el.text.includes(inputValue) ||
+      el.text2.includes(inputValue) ||
+      el.event.includes(inputValue) ||
+      el.point.includes(inputValue) ||
+      (el.time.includes(inputValue) && e.code == "Enter")
+    ) {
+      result.insertAdjacentHTML(
+        "beforeend",
+        `
+                     <div class="box">
+                          <img
+                            class="box-img"
+                            src="../Photo/${idx + 1}.jpg"
+                          />
+                          <div class="box-point"><span>평점:</span>
+                          ${el.point}</div>
+                          <div class="box-name">${el.name}</div>
+                          <div class="box-tag"><span>addr:</span>${
+                            el.addr
+                          }</div>
+                          <div class="box-tag"><span>On.</span>${el.time}</div>
+                          <div class="box-tag"><span>N.</span>${el.number}</div>
+                          <div class="box-tag"><span>#</span>${
+                            el.category
+                          }</div>
+                        </div>
+                   `
+      );
+    }
+  });
+
+  headerInput.value = "";
+}
+result.addEventListener("click", (e) => {
+  const box = e.target.closest(".box");
+  if (box) {
+    const idx = box.getAttribute("data-idx");
+    const selectedItem = infolist[idx];
+    console.log(box);
+    // 필요한 다른 작업 수행 가능
+  }
+});
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);

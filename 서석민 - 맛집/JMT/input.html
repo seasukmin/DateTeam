@@ -21,7 +21,7 @@
       display: grid;
       grid-template-rows: repeat(5, 1fr);
       position: absolute;
-      right: 300px;
+      right: 700px;
       margin-top: 20px;
     }
     .form-item {
@@ -29,6 +29,7 @@
       align-items: center;
       gap: 10px;
       height: 30px;
+      background-color: azure;
     }
     .form-item > .form-label {
       width: 30%;
@@ -60,6 +61,7 @@
             <th>나이</th>
             <th>주소</th>
             <th>전화번호</th>
+            <th>전화번호</th>
           </tr>
         </table>
       </div>
@@ -69,28 +71,24 @@
           <div class="form-input"><input type="text" name="point" /></div>
         </div>
         <div class="form-item">
+          <div class="form-label"><span>이미지</span></div>
+          <div class="form-input"><input type="text" name="img" /></div>
+        </div>
+        <div class="form-item">
           <div class="form-label"><span>가게이름</span></div>
-          <div class="form-input"><input type="text" name="name" /></div>
+          <div class="form-input"><input type="text" name="title" /></div>
         </div>
         <div class="form-item">
           <div class="form-label"><span>주소</span></div>
-          <div class="form-input"><input type="text" name="addr" /></div>
+          <div class="form-input"><input type="text" name="text" /></div>
         </div>
         <div class="form-item">
           <div class="form-label"><span>운영시간</span></div>
-          <div class="form-input"><input type="text" name="time" /></div>
-        </div>
-        <div class="form-item">
-          <div class="form-label"><span>전화번호</span></div>
-          <div class="form-input"><input type="text" name="number" /></div>
+          <div class="form-input"><input type="text" name="text2" /></div>
         </div>
         <div class="form-item">
           <div class="form-label"><span>카테고리</span></div>
-          <div class="form-input"><input type="text" name="category" /></div>
-        </div>
-        <div class="form-item">
-          <div class="form-label"><span>연령대</span></div>
-          <div class="form-input"><input type="text" name="age" /></div>
+          <div class="form-input"><input type="text" name="event" /></div>
         </div>
       </div>
     </div>
@@ -103,37 +101,99 @@
     // 테이블에 members 배열 데이터를 추가하는 함수
     let updateTarget;
     async function getMembers() {
-      const docId = "storeArr"; // 문서 ID
-      const data = await getDocument("store", docId);
+      const docId = "placeArr"; // 문서 ID
+      const data = await getDocument("hotPlace", docId);
       if (!data) return;
 
       const tableTag = document.querySelector("table");
-      const members = data.members || [];
+      const members = data.list || [];
+      console.log(members);
       members.forEach((member, index) => {
-        const { point, name, addr, time, number, category, age } = member;
+        const { point, img, title, text, text2, event } = member;
         tableTag.insertAdjacentHTML(
           "beforeend",
           `
                       <tr data-id=${docId} data-index=${index}>
                           <td class="point">${point}</td>
-                          <td class="name">${name}</td>
-                          <td class="addr">${addr}</td>
-                          <td class="time">${time}</td>
-                          <td class="number">${number}</td>
-                          <td class="category">${category}</td>
-                          <td class="age">${age}</td>
+                          <td class="name">${img}</td>
+                          <td class="addr">${title}</td>
+                          <td class="time">${text}</td>
+                          <td class="number">${text2}</td>
+                          <td class="category">${event}</td>
                       </tr>
                     `
         );
       });
     }
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   getMembers();
+
+    //   const saveBtn = document.getElementById("saveBtn");
+
+    //   saveBtn.addEventListener("click", async function (e, index) {
+    //     e.preventDefault(); // 기본 동작 방지
+
+    //     if (updateTarget) {
+    //       alert("회원정보 수정중에는 저장할 수 없습니다.");
+    //       return false;
+    //     }
+
+    //     const inputs = document.querySelectorAll(".form-container input");
+    //     const inputsArr = Array.from(inputs);
+
+    //     const addObj = {};
+    //     inputsArr.forEach((input) => {
+    //       addObj[input.name] = input.value;
+    //     });
+
+    //     const docId = "placeArr";
+    //     const fieldName = "list";
+    //     const newObj = addObj;
+
+    //     // 기존 문서를 가져옵니다.
+    //     const data = await getDocument("hotPlace", docId);
+    //     if (!data) {
+    //       console.error("Document not found!");
+    //       return;
+    //     }
+
+    //     // members 배열을 가져와서 앞에 새로운 객체를 추가합니다.
+    //     const members = data[fieldName] || [];
+    //     members.unshift(newObj); // 배열의 앞에 새로운 객체 추가
+
+    //     // Firestore 문서의 배열 필드를 업데이트합니다.
+    //     await updateArrayInDocument("hotPlace", docId, fieldName, members);
+
+    //     const { point, img, title, text, text2, event } = addObj;
+
+    //     // 테이블에 새로운 행 추가
+    //     const newRow = `
+    //            <tr data-id=${docId} data-index=${index}>
+    //                       <td class="point">${point}</td>
+    //                       <td class="name">${img}</td>
+    //                       <td class="addr">${title}</td>
+    //                       <td class="time">${text}</td>
+    //                       <td class="number">${text2}</td>
+    //                       <td class="category">${event}</td>
+    //                   </tr>
+    //         `;
+    //     const tableTag = document.querySelector("table"); // tableTag 변수 정의 추가
+    //     tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
+
+    //     // 입력 필드 초기화
+    //     inputsArr.forEach((input) => {
+    //       input.value = "";
+    //     });
+    //   });
+
+    // 페이지 로드 시 데이터를 가져와 테이블에 표시
     document.addEventListener("DOMContentLoaded", function () {
       getMembers();
 
       const saveBtn = document.getElementById("saveBtn");
 
-      saveBtn.addEventListener("click", async function (event) {
-        event.preventDefault(); // 기본 동작 방지
+      saveBtn.addEventListener("click", async function (e, index) {
+        e.preventDefault(); // 기본 동작 방지
 
         if (updateTarget) {
           alert("회원정보 수정중에는 저장할 수 없습니다.");
@@ -148,39 +208,31 @@
           addObj[input.name] = input.value;
         });
 
-        const docId = "storeArr";
-        const fieldName = "members";
+        const docId = "placeArr";
+        const fieldName = "list";
         const newObj = addObj;
 
-        // 기존 문서를 가져옵니다.
-        const data = await getDocument("store", docId);
-        if (!data) {
-          console.error("Document not found!");
-          return;
-        }
+        // 특정 문서에 배열 필드로 추가
+        const updatedDoc = await addFieldToArrayInDocument(
+          "hotPlace",
+          docId,
+          fieldName,
+          newObj
+        );
 
-        // members 배열을 가져와서 앞에 새로운 객체를 추가합니다.
-        const members = data[fieldName] || [];
-        members.unshift(newObj); // 배열의 앞에 새로운 객체 추가
-
-        // Firestore 문서의 배열 필드를 업데이트합니다.
-        await updateArrayInDocument("store", docId, fieldName, members);
-
-        const { point, name, addr, time, number, category, age } = addObj;
+        const { point, img, title, text, text2, event } = addObj;
 
         // 테이블에 새로운 행 추가
         const newRow = `
-              <tr data-id=${docId}>
-                  <td class="point">${point}</td>
-                  <td class="name">${name}</td>
-                  <td class="addr">${addr}</td>
-                  <td class="time">${time}</td>
-                  <td class="number">${number}</td>
-                  <td class="category">${category}</td>
-                  <td class="age">${age}</td>
-              </tr>
-            `;
-        const tableTag = document.querySelector("table"); // tableTag 변수 정의 추가
+                 <tr data-id=${docId} data-index=${index}>
+                           <td class="point">${point}</td>
+                           <td class="name">${img}</td>
+                           <td class="addr">${title}</td>
+                           <td class="time">${text}</td>
+                        <td class="number">${text2}</td>
+                         <td class="category">${event}</td>
+                    </tr>
+              `;
         tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
 
         // 입력 필드 초기화
@@ -188,62 +240,6 @@
           input.value = "";
         });
       });
-
-      // // 페이지 로드 시 데이터를 가져와 테이블에 표시
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   getMembers();
-
-      //   const saveBtn = document.getElementById("saveBtn");
-
-      //   saveBtn.addEventListener("click", async function (event) {
-      //     event.preventDefault(); // 기본 동작 방지
-
-      //     if (updateTarget) {
-      //       alert("회원정보 수정중에는 저장할 수 없습니다.");
-      //       return false;
-      //     }
-
-      //     const inputs = document.querySelectorAll(".form-container input");
-      //     const inputsArr = Array.from(inputs);
-
-      //     const addObj = {};
-      //     inputsArr.forEach((input) => {
-      //       addObj[input.name] = input.value;
-      //     });
-
-      //     const docId = "storeArr";
-      //     const fieldName = "members";
-      //     const newObj = addObj;
-
-      //     // 특정 문서에 배열 필드로 추가
-      //     const updatedDoc = await addFieldToArrayInDocument(
-      //       "store",
-      //       docId,
-      //       fieldName,
-      //       newObj
-      //     );
-
-      //     const { point, name, addr, time, number, category, age } = addObj;
-
-      //     // 테이블에 새로운 행 추가
-      //     const newRow = `
-      //           <tr data-id=${docId}>
-      //               <td class="point">${point}</td>
-      //               <td class="name">${name}</td>
-      //               <td class="addr">${addr}</td>
-      //               <td class="time">${time}</td>
-      //               <td class="number">${number}</td>
-      //               <td class="category">${category}</td>
-      //               <td class="age">${age}</td>
-      //           </tr>
-      //         `;
-      //     tableTag.firstElementChild.insertAdjacentHTML("afterend", newRow);
-
-      //     // 입력 필드 초기화
-      //     inputsArr.forEach((input) => {
-      //       input.value = "";
-      //     });
-      //   });
 
       // table 에 클릭 이벤트 생성
       const tableTag = document.querySelector("table");
@@ -320,16 +316,17 @@
             console.log("Updated document:", updatedDoc);
 
             // 테이블의 행을 업데이트
-            const { point, name, addr, time, number, category, age } =
-              updatedObj;
+            const { img, title, text, text2, event, local, point } = updatedObj;
             updateTarget.innerHTML = `
-                <td class="point">${point}</td>
-                <td class="name">${name}</td>
-                <td class="addr">${addr}</td>
-                <td class="time">${time}</td>
-                <td class="number">${number}</td>
-                <td class="category">${category}</td>
-                <td class="age">${age}</td>
+              <tr data-id=${docId} data-index=${index}>
+                          <td class="point">${img}</td>
+                          <td class="name">${title}</td>
+                          <td class="addr">${text}</td>
+                          <td class="time">${text2}</td>
+                          <td class="number">${event}</td>
+                          <td class="category">${local}</td>
+                          <td class="category">${point}</td>
+                      </tr>
               `;
 
             updateTarget.classList.remove("selected");
@@ -351,8 +348,8 @@
     const deleteBtn = document.getElementById("deleteBtn");
     deleteBtn.addEventListener("click", async function () {
       const selectedTrs = document.querySelectorAll(".selected");
-      const docId = "storeArr"; // 문서 ID
-      const data = await getDocument("store", docId);
+      const docId = "placeArr"; // 문서 ID
+      const data = await getDocument("hotPlace", docId);
 
       if (!data) return;
 
@@ -365,7 +362,7 @@
           members.splice(memberIndex, 1);
 
           // Firestore 문서의 배열 필드를 업데이트
-          await updateArrayInDocument("store", docId, "members", members);
+          await updateArrayInDocument("hotPlace", docId, "list", members);
 
           // 테이블에서 행 제거
           tr.remove();

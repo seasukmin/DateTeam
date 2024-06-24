@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맞춤형 데이트 플래너</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #ff6f61;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .container {
+        padding: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #ff6f61;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ff4c3b;
+      }
+      .results {
+        margin-top: 20px;
+      }
+      .result-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>맞춤형 데이트 플래너</h1>
+      <p>사랑의 순간을 설계합니다</p>
+    </header>
+
+    <div class="container">
+      <form id="datePlannerForm">
+        <div class="form-group">
+          <label for="name">이름:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="partnerName">파트너 이름:</label>
+          <input type="text" id="partnerName" name="partnerName" required />
+        </div>
+        <div class="form-group">
+          <label for="occasion">기념일:</label>
+          <select id="occasion" name="occasion" required>
+            <option value="anniversary">기념일</option>
+            <option value="birthday">생일</option>
+            <option value="firstDate">첫 데이트</option>
+            <option value="valentine">발렌타인 데이</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">날짜:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="preferences">선호 활동:</label>
+          <textarea id="preferences" name="preferences" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="food">선호 맛집:</label>
+          <textarea
+            id="food"
+            name="food"
+            rows="2"
+            placeholder="좋아하는 음식이나 레스토랑"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fashion">패션 스타일:</label>
+          <textarea
+            id="fashion"
+            name="fashion"
+            rows="2"
+            placeholder="선호하는 패션 스타일"
+          ></textarea>
+        </div>
+        <button type="submit">플랜 생성</button>
+      </form>
+
+      <div class="results" id="results">
+        <!-- 데이트 플랜 결과가 여기에 표시됩니다 -->
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("datePlannerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const partnerName = document.getElementById("partnerName").value;
+          const occasion = document.getElementById("occasion").value;
+          const date = document.getElementById("date").value;
+          const preferences = document.getElementById("preferences").value;
+          const food = document.getElementById("food").value;
+          const fashion = document.getElementById("fashion").value;
+
+          const result = `
+            <div class="result-item">
+                <h3>${name}와 ${partnerName}의 데이트 플랜</h3>
+                <p><strong>기념일:</strong> ${occasion}</p>
+                <p><strong>날짜:</strong> ${date}</p>
+                <p><strong>선호 활동:</strong> ${preferences}</p>
+                <p><strong>선호 맛집:</strong> ${food}</p>
+                <p><strong>패션 스타일:</strong> ${fashion}</p>
+                <p>추천 데이트: 멋진 레스토랑에서 저녁 식사 후 로맨틱한 산책</p>
+                <p>추천 패션: 캐주얼한 데이트에는 깔끔한 셔츠와 청바지, 특별한 날에는 세미 정장 스타일</p>
+            </div>
+        `;
+
+          document.getElementById("results").innerHTML = result;
+        });
+    </script>
+  </body>
+</html>

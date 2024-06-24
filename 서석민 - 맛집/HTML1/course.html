@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#데이트 코스</title>
+  </head>
+  <body>
+    <h1>#데이트 코스</h1>
+    <h2>코스</h2>
+    <ul>
+      <li><a href="index.php">메인</a></li>
+      <li><a href="list.php">코스 리스트</a></li>
+      <li><a href="write.php">코스 작성</a></li>
+      <li><a href="logout.php">로그아웃</a></li>
+    </ul>
+    <hr />
+    <h2>코스 작성</h2>
+    <form action="write_process.php" method="post">
+      <table>
+        <tr>
+          <td>코스명</td>
+          <td><input type="text" name="title" /></td>
+        </tr>
+        <tr>
+          <td>내용</td>
+          <td><textarea name="content" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" /></td>
+        </tr>
+      </table>
+      <input type="hidden" name="user_id" value="?=$_SESSION['user_id']?" />
+      <input type="hidden" name="user_name" value="?=$_SESSION['user_name']?" />
+      <input
+        type="hidden"
+        name="user_level"
+        value="?=$_SESSION['user_level']?"
+      />
+      <input
+        type="hidden"
+        name="user_email"
+        value="?=$_SESSION['user_email']?"
+      />
+      <input type="hidden" name="user_tel" value="?=$_SESSION['user_tel']?" />
+      <input
+        type="hidden"
+        name="user_address"
+        value="?=$_SESSION['user_address']?"
+      />
+      <input
+        type="hidden"
+        name="user_gender"
+        value="?=$_SESSION['user_gender']?"
+      />
+      <input
+        type="hidden"
+        name="user_birth"
+        value="?=$_SESSION['user_birth']?"
+      />
+      <input
+        type="hidden"
+        name="user_profile"
+        value="?=$_SESSION['user_profile']?"
+      />
+      <input
+        type="hidden"
+        name="user_reg_date"
+        value="?=$_SESSION['user_reg_date']?"
+      />
+      <input
+        type="hidden"
+        name="user_login_date"
+        value="?=$_SESSION['user_login_date']?"
+      />
+      <input
+        type="hidden"
+        name="user_login_ip"
+        value="?=$_SESSION['user_login_ip']?"
+      />
+      <input
+        type="hidden"
+        name="user_login_count"
+        value="?=$_SESSION['user_login_count']?"
+      />
+      <input
+        type="hidden"
+        name="user_last_login"
+        value="?=$_SESSION['user_last_login']?"
+      />
+      <input
+        type="hidden"
+        name="user_last_ip"
+        value="?=$_SESSION['user_last_ip']?"
+      />
+      <input
+        type="hidden"
+        name="user_last_count"
+        value="?=$_SESSION['user_last_count']?"
+      />
+      <input
+        type="hidden"
+        name="user_last_date"
+        value="?=$_SESSION['user_last_date']?"
+      />
+    </form>
+  </body>
+</html>

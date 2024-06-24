@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JMT</title>
     <link rel="stylesheet" href="JMT.css" />
+    <link
+      rel="stylesheet"
+      href="../../박근모 - 메인/CSS/calendar_wether_date.css"
+    />
+    <link rel="stylesheet" href="../../박근모 - 메인/CSS/planner.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <img class="Logo" src="../사진/DaejeonLoveU.png" width="250" />
     <!-- 헤더부분 시작 -->
-    <header>
+    <header class="headrMain">
+      <h1 class="header-H1" id="header-H1"><span>#</span>맛집</h1>
       <div class="header bar">
-        <h1 class="header-H1" id="header-H1"><span>#</span>맛집</h1>
         <div class="header-Main">
           <input
             class="header-Input"
@@ -105,11 +114,10 @@
     </div>
     <!-- 사이드 리스트 끝 -->
     <!-- 메인부분 시작 -->
-    <main>
-      <h1>데이트 코스로 가장<span class="Hot">Hot</span>한 맛집!</h1>
+    <div>
       <div class="back">
-        <img class="backImg" id="backImg" src="../Photo/48.jpg" />
-        <div class="back-inner">
+        <img class="backImg" id="backImg" src="../title/1.jpg" />
+        <!-- <div class="back-inner">
           <div class="backinner1">
             <h1 class="box-h1"><span>#</span>Top1</h1>
             <img class="backImgG" src="../Photo/48.jpg" />
@@ -125,9 +133,10 @@
           <div class="backinner4">
             <h1 class="box-h2"><span>#</span>Top4</h1>
             <img class="backImgG" src="../Photo/60.jpg" />
-          </div>
-        </div>
+          </div> -->
       </div>
+    </div>
+    <main>
       <section>
         <div class="middle">
           <h1 class="middleH1" id="middleH1"></h1>
@@ -151,12 +160,6 @@
         <a class="Top">맨 위로!</a>
       </div>
       <!-- 동구 끝 -->
-      <div class="hidden">
-        <div class="input-thing">
-          <input type="text" placeholder="예약자" />
-          <input type="text" placeholder="전화번호" />
-        </div>
-      </div>
     </main>
     <div class="banner">
       <p>광고입니다.</p>
@@ -174,7 +177,58 @@
       </div>
     </div>
     <!-- 메인부분 끝 -->
+    <!-- 플래너 시작 -->
+
+    <div class="plannerBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
+          </div>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days-planner" id="days-planner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="planListBox" id="planListBox">
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <button class="shareBtn">공유하기</button>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+      </div>
+    </div>
+    <!-- 플래너 끝 -->
   </body>
   <script src="JMT.js" type="module"></script>
   <script src="DLU_firebase.js" type="module"></script>
+  <script
+    src="../../박근모 - 메인/Javascript/calendarRangeX.js"
+    type="module"
+  ></script>
+  <script
+    src="../../박근모 - 메인/Javascript/planner.js"
+    type="module"
+  ></script>
 </html>

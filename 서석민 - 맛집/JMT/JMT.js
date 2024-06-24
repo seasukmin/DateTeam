@@ -23,10 +23,10 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../Photo/48.jpg",
-    "../Photo/51.jpg",
-    "../Photo/55.jpg",
-    "../Photo/60.jpg",
+    "../title/1.jpg",
+    "../title/2.jpg",
+    "../title/3.jpg",
+    "../title/4.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");

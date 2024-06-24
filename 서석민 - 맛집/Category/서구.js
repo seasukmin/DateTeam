@@ -22,6 +22,10 @@ const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
   location.href = "../JMT/JMT.html";
 });
+const Top1 = document.querySelector(".topBtn");
+Top1.addEventListener("click", function () {
+  location.href = "#header-H2";
+});
 // 헤더 끝
 
 // 카테고리 스크립트 시작

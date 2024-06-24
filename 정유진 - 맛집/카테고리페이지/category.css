@@ -100,7 +100,7 @@ body {
   border-radius: 25px;
   position: fixed;
   top: 280px;
-  left: 80px;
+  left: 60px;
 }
 .side-text {
   list-style-type: none;
@@ -290,9 +290,10 @@ body {
 .content-name {
   font-size: 40px;
   position: absolute;
-  top: -130px;
+  top: -112px;
   left: 5px;
-  padding-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 0;
 }
 #aIcon {
   font-size: 24px;
@@ -314,21 +315,31 @@ body {
   cursor: pointer;
 }
 
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .banner {
+  width: 68%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
   height: 120px;
-  /* margin-top: 80px; */
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .footer {
+  width: 74%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 200px;
   background-color: rgb(178, 230, 250);
+  border-radius: 10px;
 }
 .info {
   margin-left: 50px;
