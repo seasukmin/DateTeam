@@ -260,7 +260,7 @@
                 <label for="email" class="IdLabel"></label>
                 <input
                   type="text"
-                  id="text"
+                  id="id"
                   name="text"
                   placeholder="ID"
                   required
@@ -281,6 +281,7 @@
             </form>
           </div>
         </aside>
+
         <!-- </div> -->
 
         <!--비회원 로그인 작은화면 -->
@@ -308,9 +309,10 @@
           </div>
           <button class="addPlanner">+ Planner</button>
         </aside>
+
         <div class="bloginBox2 hidden" id="bloginBox2">
           <div class="welcome-message hidden" id="welcomeMessage"></div>
-          <button class="return-button" id="returnButton">돌아가기</button>
+          <button class="return-button" id="returnButton">로그아웃</button>
         </div>
 
         <!-- App / QR Code -->
@@ -343,6 +345,7 @@
         </div>
       </div>
       <div class="planListBox" id="planListBox">
+        <h4 id="planner-title"></h4>
         <div class="nav-planner" id="nav-planner">
           <div class="day1"></div>
           <i class="bx bx-sun" undefined></i>
@@ -365,4 +368,5 @@
   <script src="../Javascript/mainPage.js" type="module"></script>
   <script src="../Javascript/calendar.js" type="module"></script>
   <script src="../Javascript/calendarRangeX.js" type="module"></script>
+  <script src="../Javascript/LogIn.js" type="module"></script>
 </html>
