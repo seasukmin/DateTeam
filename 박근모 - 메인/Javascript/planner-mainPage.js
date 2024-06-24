@@ -7,34 +7,15 @@ import {
   getUserPlans,
 } from "./DLU_firebase.js";
 
-const planListBox = document.getElementById("planListBox");
-// const navPlannerBox = document.getElementById("nav-planner");
+// const plannerTitle = document.getElementById("planner-title");
+// const titleId = localStorage.getItem("semiID");
 
-// async function plannerTitleName() {
-//   const data = await getDatas("customer");
-//   data.forEach((doc) => {
-//     // if(doc.data(.))//문서와 userId 연결
-//     planListBox.insertAdjacentHTML(
-//       "afterbegin",
-//       `<h4>${doc.data().userId}님의 Planner</h4>`
-//     );
-//   });
+// function plannerTitleName() {
+//   console.log(titleId);
+
+//   plannerTitle.innerHTML = `${titleId}'s planner`;
 // }
-async function plannerTitleName() {
-  const planSnapshot = await getUserPlans("customer", "2024-06-18", "asdqwe1");
-  planSnapshot.forEach((doc) => {
-    // console.log(doc.data());
-  });
-  const data = await getDatas("customer");
-  data.forEach((doc) => {
-    // if(doc.data(.))//문서와 userId 연결
-    planListBox.insertAdjacentHTML(
-      "afterbegin",
-      `<h4>${doc.data().userId}님의 Planner</h4>`
-    );
-  });
-}
-plannerTitleName();
+// plannerTitleName();
 
 const cancelBtn = document.querySelectorAll(`.bx-x`);
 console.log(cancelBtn);

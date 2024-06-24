@@ -11,26 +11,22 @@ const planListBox = document.getElementById("planListBox");
 // const navPlannerBox = document.getElementById("nav-planner");
 
 async function plannerTitleName() {
-  const planSnapshot = await getUserPlans("plan", "2024-06-18", "asdqwe1");
-  planSnapshot.forEach((doc) => {
-    // console.log(doc.data());
-  });
-  const data = await getDatas("plan");
-  data.forEach((doc) => {
-    // console.log(doc.data());
-    // const info = doc.data();
-    // let { addr, age, email, gender, tel } = doc.data();
-    planListBox.insertAdjacentHTML(
-      "afterbegin",
-      `<h4>${doc.data().userId}님의 Planner</h4>`
-    );
-    // navPlannerBox.insertAdjacentHTML(
-    //   "afterbegin",
-    //   `<div class="day1">${doc.data().date}</div>`
-    // );
-  });
+  const titleId = localStorage.getItem("semiID");
+
+  planListBox.insertAdjacentHTML("afterbegin", `<h4>${titleId}'s Planner</h4>`);
 }
-// console.log(plannerTitleName());
+// async function plannerTitleName() {
+//   const planSnapshot = await getUserPlans("plan", "2024-06-18", "asdqwe1");
+//   planSnapshot.forEach((doc) => {
+//   });
+//   const data = await getDatas("plan");
+//   data.forEach((doc) => {
+//     planListBox.insertAdjacentHTML(
+//       "afterbegin",
+//       `<h4>${doc.data().userId}님의 Planner</h4>`
+//     );
+//   });
+// }
 plannerTitleName();
 
 // const navPlanner = document.getElementById("nav-planner");

@@ -123,6 +123,8 @@ document
     const nickName = document.getElementById("nickName").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
 
+    localStorage.setItem(`id`, `${nickName}`);
+
     console.log(`아이디: ${id}`);
     console.log(`비밀번호: ${password}`);
     console.log(`비밀번호 확인: ${confirmPassword}`);
@@ -145,7 +147,7 @@ document
     };
     // 여기에 추가 작업을 수행할 수 있습니다. 예: 서버로 데이터 전송
     const datas = await addDatas("customer", data, nickName);
-    location.href = "../Javascript/mainPage.js";
+    location.href = "../HTML/mainPage.html";
 
     alert(`${name}님, 회원가입이 완료되었습니다!`);
     // 예시: 성공 메시지를 표시하고 폼 초기화
