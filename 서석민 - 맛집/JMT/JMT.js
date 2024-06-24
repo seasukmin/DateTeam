@@ -194,7 +194,6 @@ let planlist;
 datasPlan.forEach((doc, idx) => {
   const info = doc.data();
   planlist = info;
-  console.log(planlist.list);
 });
 
 Mainbox1.addEventListener("click", async function (e) {
@@ -202,11 +201,10 @@ Mainbox1.addEventListener("click", async function (e) {
     alert("회원정보 수정중에는 저장할 수 없습니다.");
     return false;
   }
-  // // 중복을 제거하는 함수
-  // function removeDuplicates(array) {
-  //   return array.filter((item, index) => array.indexOf(item) === index);
-  // }
-  // removeDuplicates();
+  // 중복을 제거하는 함수
+
+  // 중복 확인 함수
+
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -215,7 +213,6 @@ Mainbox1.addEventListener("click", async function (e) {
     addrChild =
       box.firstElementChild.nextElementSibling.nextElementSibling
         .nextElementSibling.nextElementSibling;
-    console.log(nameChild);
   }
 
   const nameText = nameChild.innerHTML;
@@ -223,37 +220,55 @@ Mainbox1.addEventListener("click", async function (e) {
   const memberInfo = {
     Date: 12,
     cafe: ["1", nameText, addrText, "2"],
-    resto: ["1", nameText, addrText, "2"],
-    hotplace: ["1", nameText, addrText, "2"],
     userId: 13,
   };
-  // 기존 planArr를 가져온다.
   let planArr = planlist.planArr || [];
-
-  // 새로운 멤버 정보를 추가
-
-  planArr[0].push(memberInfo);
-
-  console.log(planArr);
-
-  // planArr를 데이터베이스에 저장
+  planArr.push(memberInfo);
   const result = await addDatas("plan", { planArr }, "planArr");
 
-  // 레스토랑 배열에 추가 및 중복 제거
-  const resturantArr = [];
-  function pluslistFood(a) {
-    const newEntry = a;
-    resturantArr.push(newEntry);
-    const uniqueArr = [...new Set(resturantArr.map(JSON.stringify))].map(
-      JSON.parse
-    );
-    console.log(uniqueArr);
-  }
-  pluslistFood(memberInfo);
-});
+
+  // Firestore 문서에 배열 필드 생성 및 객체 추가하기
+
+// Firestore 문서에 배열 필드 생성 및 객체 추가하기
+
+// 새로운 멤버 정보를 추가
+
+// planArr를 데이터베이스에 저장
+
+// function removeDuplicates(array) {
+//   return array.filter((item, index) => array.indexOf(item) === index);
+// }
+// removeDuplicates(planArr);
+// function removeDuplicates(array) {
+//   return [...new Set(array)];
+// }
+
+// console.log(planArr);
+
+// console.log(planArr);
+// function removeDuplicates(array) {
+//   return array.filter((item, index) => array.indexOf(item) === index);
+// }
+
+// const uniqueArray = removeDuplicates(planArr);
+// console.log(uniqueArray);
+
+// const resul = await updateDatas("plan", { planArr }, updateInfoObj);
+
+// 레스토랑 배열에 추가 및 중복 제거
+// const resturantArr = [];
+//   function pluslistFood(a) {
+//     const newEntry = a;
+//     resturantArr.push(newEntry);
+//     const uniqueArr = [...new Set(resturantArr.map(JSON.stringify))].map(
+//       JSON.parse
+//     );
+//     console.log(uniqueArr);
+//   }
+//   pluslistFood(memberInfo);
 
 // 함수를 호출하여 데이터를 저장합니다.
-saveDataToFirestore();
+// saveDataToFirestore();
 
 // e.preventDefault();
 // const Mainboxes1 = Mainbox1.firstElementChild;
