@@ -593,8 +593,14 @@ main {
   justify-items: center;
   width: 100%;
   cursor: pointer;
-}
+  position: relative;
 
+}
+.charth1 { position: absolute;
+  top: -140px;
+  left: 40%;
+  font-size: 38px;
+}
 .Mainchart img {
   border-radius: 20px;
 }
@@ -630,3 +636,7 @@ main {
   justify-content: space-around;
   gap: 20px;
 }
+.Mainchart {
+
+  
+ 
