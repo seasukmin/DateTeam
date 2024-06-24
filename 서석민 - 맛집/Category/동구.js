@@ -22,6 +22,14 @@ const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
   location.href = "../JMT/JMT.html";
 });
+const Top = document.querySelector(".TopLoop");
+Top.addEventListener("click", function () {
+  location.href = "#header-H2";
+});
+const Top1 = document.querySelector(".topBtn");
+Top1.addEventListener("click", function () {
+  location.href = "#header-H2";
+});
 // 헤더 끝
 
 // 메인 스크립트 시작
@@ -320,10 +328,6 @@ Eainboxes4.addEventListener("click", function () {
   alert("4");
 });
 // 맛집별 사이트 접속 종료
-const Top = document.querySelector(".TopLoop");
-Top.addEventListener("click", function () {
-  location.href = "#header-H2";
-});
 
 const Mainchart1 = document.querySelector(".Mainchart-inner1");
 Mainchart1.lastElementChild.addEventListener("click", function () {
