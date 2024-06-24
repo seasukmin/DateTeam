@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  word-break: keep-all;
+  font-family: Ownglyph_noocar-Rg;
+}
+body {
+  position: relative;
+}
+
+.planListBox {
+  width: fit-content;
+  padding: 8px 16px;
+  border: 2px solid rgb(255, 51, 204);
+  /* border-right: 0; */
+  /* border-radius: 24px; */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.planListBox > h4 {
+  font-size: 40px;
+  margin: 6px;
+}
+.h-Tag1p:hover {
+  border-bottom: 2px solid #ffa600;
+}
+.h-Tag2p:hover {
+  border-bottom: 2px solid purple;
+}
+.h-Tag3p:hover {
+  border-bottom: 2px solid skyblue;
+}
+.h-Tag4p:hover {
+  border-bottom: 2px solid rgb(255, 51, 204);
+}
+.h-Tag1Span {
+  color: #ffa600;
+}
+.h-Tag2Span {
+  color: purple;
+}
+.h-Tag3Span {
+  color: skyblue;
+}
+.h-Tag4Span {
+  color: rgb(255, 51, 204);
+}
+
+.h-Tag1p,
+.h-Tag2p,
+.h-Tag3p,
+.h-Tag4p {
+  height: 28px;
+  width: fit-content;
+  font-size: 24px;
+}
+input[type="checkbox"] {
+  accent-color: black;
+}
+.foodStore[type="checkbox"] {
+  accent-color: #ffa600;
+}
+.cafeStore[type="checkbox"] {
+  accent-color: purple;
+}
+.placeStore[type="checkbox"] {
+  accent-color: skyblue;
+}
+.capture-Btn,
+.KT-Share-Btn {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(255, 51, 204);
+  border-radius: 24px;
+  cursor: pointer;
+}
+.capture-Btn:hover,
+.KT-Share-Btn:hover {
+  background-color: rgba(255, 51, 204, 0.2);
+  transition: 0.2s;
+}
+
+.hiddenBox {
+  display: none;
+}

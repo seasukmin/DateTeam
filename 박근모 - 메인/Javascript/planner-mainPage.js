@@ -53,6 +53,7 @@ sizeBtn.addEventListener("click", () => {
 // });
 
 const shareBtn = document.querySelector(".shareBtn");
+let child;
 shareBtn.addEventListener("click", () => {
   child = widnow.open(
     "../HTML/sharePage.html",
