@@ -68,6 +68,9 @@ signUpBtn.addEventListener("click", (e) => {
 // 회원 로그인
 signInBtn.addEventListener("click", () => {
   aloginBox.classList.toggle("hiddenALogin");
+  aloginBox.classList.remove("hidden");
+  bloginBox.classList.remove("hidden");
+
   if (bloginBox.classList.contains("hiddenBLogin") !== true) {
     bloginBox.classList.add("hiddenBLogin");
   }
@@ -77,58 +80,12 @@ signInBtn.addEventListener("click", () => {
 
 nonsignInBtn.addEventListener("click", () => {
   bloginBox.classList.toggle("hiddenBLogin");
+  aloginBox.classList.remove("hidden");
+  bloginBox.classList.remove("hidden");
   if (aloginBox.classList.contains("hiddenALogin") !== true) {
     aloginBox.classList.add("hiddenALogin");
   }
 });
-
-document
-  .querySelector(".addPlanner")
-  .addEventListener("click", async function () {
-    const nickname = document.getElementById("nicknameInfo").value;
-    const userage = document.getElementById("ageInfo").value;
-    const genderElements = document.getElementsByName("gender");
-    let genderValue;
-
-    for (const genderElement of genderElements) {
-      if (genderElement.checked) {
-        genderValue = genderElement.value;
-        console.log(genderValue);
-        break;
-      }
-    }
-    const loginBox2 = document.getElementById("bloginBox2");
-    const welcomeMessage = document.getElementById("welcomeMessage");
-    const customerInfo = {
-      userId: nickname,
-      age: userage,
-      gender: genderValue,
-    };
-    if (nickname) {
-      const datas = await addDatas("semiCustomer", customerInfo, nickname);
-      welcomeMessage.innerText = `${nickname}님 환영합니다.`;
-      loginBox2.classList.remove("hidden");
-      welcomeMessage.classList.remove("hidden");
-      document.querySelector(".blogin-box").classList.add("hidden");
-      document.getElementById("plannerBox").classList.remove("hiddenBox");
-      returnBtn.classList.remove("hidden");
-      loginBox.classList.add("hidden");
-    } else {
-      alert("닉네임을 입력해주세요.");
-    }
-  });
-document
-  .getElementById("returnButton")
-  .addEventListener("click", async function () {
-    const nickname = document.getElementById("nicknameInfo").value;
-    const deleteresult = await deleteDatas("semiCustomer", nickname);
-    loginBox.classList.remove("hidden");
-    document.querySelector(".blogin-box").classList.remove("hidden");
-    document.getElementById("bloginBox2").classList.add("hidden");
-    document.getElementById("welcomeMessage").classList.add("hidden");
-    document.getElementById("plannerBox").classList.add("hiddenBox");
-    this.classList.add("hidden");
-  });
 
 const JMTtag = document.getElementById("h-JMT");
 const cafetag = document.getElementById("h-cafe");
