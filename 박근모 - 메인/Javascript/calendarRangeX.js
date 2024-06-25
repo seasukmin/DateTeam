@@ -9,6 +9,7 @@ const currentMonthYear = document.getElementById("currentMonthYear-planner");
 const daysContainer = document.getElementById("days-planner");
 const navPlannerBox = document.getElementById("nav-planner");
 const day1Tag = document.querySelector(".day1");
+const shareDay1 = document.querySelector(".share-day1");
 const calendarTag = document.querySelector(".calendar-planner");
 let currentDatePlan = new Date();
 
@@ -48,6 +49,9 @@ function renderCalendar() {
       );
       const selectedWeek = selectedDate.getDay();
       day1Tag.innerHTML = `${year}.${month + 1}.${selectedDiv.innerHTML} (${
+        weekArr[selectedWeek]
+      })`;
+      shareDay1.innerHTML = `${year}.${month + 1}.${selectedDiv.innerHTML} (${
         weekArr[selectedWeek]
       })`;
     });
