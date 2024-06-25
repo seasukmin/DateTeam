@@ -69,6 +69,7 @@ let infolist;
 let infoinput;
 datas.forEach((doc, idx) => {
   const info = doc.data();
+  console.log(info);
   infolist = info.members;
   infoinput = info.input;
 });
@@ -190,56 +191,37 @@ let addrChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 
 const datasPlan = await getDatas("plan");
-let memberInfoArr;
+let memberInfoArr = [];
 let memberInfoObj = { resturant: {} };
 datasPlan.forEach((doc, idx) => {
   const info = doc.data();
-  memberInfoArr = info.memberInfo;
-  const storeTitle = memberInfoArr.resturant[0];
-  const storeAddr = memberInfoArr.resturant[1];
-  // memberInfoObj = { title: storeTitle, addr: storeAddr };
+  info.planArr.forEach((item) => {
+    const storeTitle = item.resturant[0];
+    const storeAddr = item.resturant[1];
+    // memberInfoObj = { title: storeTitle, addr: storeAddr };
+    memberInfoArr.push(memberInfoObj);
+  });
 });
 
 // const newMemberInfoObj = {};
-function removeDuplicates(array) {
-  return [...new Set(array)];
-}
-// const box = Mainbox1.closest(".box");
-// console.log(box);
-// if (box) {
-//   nameChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling;
-//   addrChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling.nextElementSibling;
+// function removeDuplicates(array) {
+//   return [...new Set(array)];
 // }
-
-// const day1 = document.querySelector(".day1");
-// const day1inner = day1.innerHTML;
-// const nameText = nameChild.innerHTML;
-// const addrText = addrChild.innerHTML.substring(18, 22);
-// const memberInfo = {
-//   title: nameText,
-//   addr: addrText,
-//   // resturant: { title: nameText, addr: addrText },
-// };
-
+let memberInfo = {};
 Mainbox1.addEventListener("click", async function (e) {
-  console.log(e.target);
   if (updateTarget) {
     alert("회원정보 수정중에는 저장할 수 없습니다.");
     return false;
   }
-  // const box = e.target.closest(".box");
-  // if (box) {
-  //   nameChild =
-  //     box.firstElementChild.nextElementSibling.nextElementSibling
-  //       .nextElementSibling;
-  //   addrChild =
-  //     box.firstElementChild.nextElementSibling.nextElementSibling
-  //       .nextElementSibling.nextElementSibling;
-  // }
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+  }
 
   // const day1 = document.querySelector(".day1");
   // const day1inner = day1.innerHTML;
@@ -292,158 +274,28 @@ Mainbox1.addEventListener("click", async function (e) {
 
   async function resturantupdateDatas() {
     // const result = await addDatas("plan", newMemberInfoArr, "planArr");
+  memberInfo = {
+    title: nameText,
+    addr: addrText,
+    // resturant: { title: nameText, addr: addrText },
+  };
+  function removeDuplicates(array) {
+    return [...new Set(array)];
+  }
+  memberInfoArr.push(memberInfo);
+  const newMemberInfoArr = removeDuplicates(memberInfoArr);
+  memberInfoObj.resturant = newMemberInfoArr;
+  console.log(memberInfoObj); // [{},{}]  { restaurant: [{}]  }
+  // const result = await addDatas("plan", memberInfoObj, "planArr");
+  try {
+    const result = await addDatas("plan", memberInfoObj, "planArr");
+    // const result = await updateDatas("plan", "planArr", memberInfoObj);
+    console.log("데이터가 성공적으로 추가되었습니다: ", result);
+  } catch (error) {
+    console.error("데이터 추가 중 오류 발생: ", error);
   }
 });
 
-// Remove the 'capital' field from the document
-
-// } else {
-//   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
-//   updateDatas("plan", "planArr", { newmemberInfo });
-// }
-
-// const shareBtn = document.querySelector(".shareBtn");
-// async function shareBtnclick() {
-//   const result1 = await deleteDatas("plan", "planArr");
-// }
-// shareBtn.addEventListener("click", shareBtnclick);
-// Firestore 문서에 배열 필드 생성 및 객체 추가하기
-
-// Firestore 문서에 배열 필드 생성 및 객체 추가하기
-
-// 새로운 멤버 정보를 추가
-
-// planArr를 데이터베이스에 저장
-
-// function removeDuplicates(array) {
-//   return array.filter((item, index) => array.indexOf(item) === index);
-// }
-// removeDuplicates(planArr);
-// function removeDuplicates(array) {
-//   return [...new Set(array)];
-// }
-
-// console.log(planArr);
-
-// console.log(planArr);
-// function removeDuplicates(array) {
-//   return array.filter((item, index) => array.indexOf(item) === index);
-// }
-
-// const uniqueArray = removeDuplicates(planArr);
-// console.log(uniqueArray);
-
-// const resul = await updateDatas("plan", { planArr }, updateInfoObj);
-
-// 레스토랑 배열에 추가 및 중복 제거
-// const resturantArr = [];
-//   function pluslistFood(a) {
-//     const newEntry = a;
-//     resturantArr.push(newEntry);
-//     const uniqueArr = [...new Set(resturantArr.map(JSON.stringify))].map(
-//       JSON.parse
-//     );
-//     console.log(uniqueArr);
-//   }
-//   pluslistFood(memberInfo);
-
-// 함수를 호출하여 데이터를 저장합니다.
-// saveDataToFirestore();
-
-// e.preventDefault();
-// const Mainboxes1 = Mainbox1.firstElementChild;
-// const box = e.target.closest(".box");
-// if (box) {
-//   nameChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling;
-//   addrChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling.nextElementSibling;
-
-//   resturantBoxes.insertAdjacentHTML(
-//     "beforeend",
-//     `<div>✔ ${nameText} : ${addrText}</div>`
-//   );
-// }
-
-// resturantBoxes.("nameChild, addrChild");
-
-// if (box) {
-//   const idx = box.getAttribute("data-idx");
-//   const selectedItem = infolistSliceArr1[idx];
-// }
-
-// Mainboxes1.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-// });
-// const Mainboxes2 = Mainboxes1.nextElementSibling;
-// Mainboxes2.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("2");
-// });
-// const Mainboxes3 = Mainboxes2.nextElementSibling;
-// Mainboxes3.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("3");
-// });
-// const Mainboxes4 = Mainboxes3.nextElementSibling;
-// Mainboxes4.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("4");
-// });
-// const Mainboxes5 = Mainboxes4.nextElementSibling;
-// Mainboxes5.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("5");
-// });
-// const Mainboxes6 = Mainboxes5.nextElementSibling;
-// Mainboxes6.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("6");
-// });
-// const Mainboxes7 = Mainboxes6.nextElementSibling;
-// Mainboxes7.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("7");
-// });
-// const Mainboxes8 = Mainboxes7.nextElementSibling;
-// Mainboxes8.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("8");
-// });
-// const Mainboxes9 = Mainboxes8.nextElementSibling;
-// Mainboxes9.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("9");
-// });
-// const Mainboxes10 = Mainboxes9.nextElementSibling;
-// Mainboxes10.addEventListener("click", function () {
-//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-//   alert("10");
-// });
-
-// 맛집별 사이트 접속 종료
-// 메인 상단 사이트 접속 시작
-// const backinner1 = document.querySelector(".backinner1");
-// backinner1.lastElementChild.addEventListener("click", function () {
-//   alert("1");
-// });
-// const backinner2 = document.querySelector(".backinner2");
-// backinner2.lastElementChild.addEventListener("click", function () {
-//   alert("2");
-// });
-// const backinner3 = document.querySelector(".backinner3");
-// backinner3.lastElementChild.addEventListener("click", function () {
-//   alert("3");
-// });
-// const backinner4 = document.querySelector(".backinner4");
-// backinner4.lastElementChild.addEventListener("click", function () {
-//   alert("4");
-// });
-
-// 메인 상단 사이트 접속 종료
-// Top 버튼
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
   location.href = "#header-H1";
