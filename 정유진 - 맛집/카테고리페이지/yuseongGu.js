@@ -9,67 +9,40 @@ import {
 const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
-    a: "https://map.naver.com/p/entry/place/413568990?lng=127.4720818&lat=36.2332871&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh",
-    img: "../img/상소동.jpg",
-    title: "상소동 산림욕장",
+    a: "",
+    img: "../img/한빛탑.jpg",
+    title: "엑스포 과학공원",
     text: "대전 동구 산내로 714",
     text2: "<br>일: 09:00",
-    event: "#드라이브 #산림욕 #산책",
-    local: "동구",
+    event: "#꿈돌이 #음악분수 #한빛탑",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/만인산.jpg",
-    title: "만인산자연휴양림",
+    img: "../img/유성온천.jpg",
+    title: "유성온천",
     text: "대전 동구 산내로 106",
     text2: "",
-    event: "#드라이브 #봉이호떡 #산책",
-    local: "동구",
+    event: "#족욕 #온천 #산책",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/식장산.jpg",
-    title: "식장산",
+    img: "../img/유림공원.jpg",
+    title: "유림공원",
     text: "	대전 동구 세천동 산 43-5",
     text2: "",
-    event: "#드라이브 #야경",
-    local: "동구",
+    event: "#산책 #꽃구경",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/옛터.jfif",
-    title: "옛터민속박물관",
+    img: "../img/궁동로데오.jpg",
+    title: "궁동로데오거리",
     text: "대전 동구 산내로 321-35",
     text2: "<br>매일 10:00 ~ 00:30",
-    event: "#관람무료 #드라이브 #한옥 #카페",
-    local: "동구",
-  },
-  {
-    a: "",
-    img: "../img/대동벽화마을.jpg",
-    title: "대동하늘공원",
-    text: "	대전 동구 이화로 35번길 50",
-    text2: "",
-    event: "#산책 #벽화마을 #야경",
-    local: "동구",
-  },
-  {
-    a: "",
-    img: "../img/소제동.jpeg",
-    title: "소제동 거리",
-    text: "대전 동구 소제동",
-    text2: "",
-    event: "#카페거리 #감성",
-    local: "동구",
-  },
-  {
-    a: "",
-    img: "../img/문글램핑.jfif",
-    title: "문 글램핑",
-    text: "대전 동구 산내로 237",
-    text2: "<br>예약제",
-    event: "#힐링 #글램핑",
-    local: "동구",
+    event: "#대학로 #술집",
+    local: "유성구",
   },
 ];
 picnicArr.forEach((info, idx) => {
@@ -96,39 +69,39 @@ const shopping = document.getElementById("shopping");
 const shoppingArr = [
   {
     a: "",
-    img: "../img/중앙시장.jpg",
-    title: "중앙시장",
+    img: "../img/t신세계.jpg",
+    title: "신세계백화점",
     text: "대전 동구 중앙로 200-1",
     text2: "<br>매일 07:00 ~ 17:00 변동사항 있음",
-    event: "#전통시장 #먹거리",
-    local: "동구",
+    event: "#백화점 #복합",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/다이소.jpg",
-    title: "다이소 본점",
+    img: "../img/현대아울렛.png",
+    title: "현대아울렛",
     text: "대전 동구 동서대로1695번길 8",
     text2: "<br>매일 10:00 ~ 22:00",
-    event: "#6층 #초대형",
-    local: "동구",
+    event: "#아울렛 #복합",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/머물다가게.jpg",
-    title: "머물다가게",
-    text: "대전 동구 동대전로154번길 39",
-    text2: "<br>월-금: 13:00 ~ 21:00",
-    event: "#독립서점 #예약가능",
-    local: "동구",
-  },
-  {
-    a: "",
-    img: "../img/트래블라운지.jpg",
-    title: "트래블라운지",
+    img: "../img/디즈니스토어.png",
+    title: "디즈니스토어",
     text: "대전 동구 중앙로 187-1",
     text2: "<br>매일 09:00 ~ 21:00",
-    event: "#팝업스토어 #교복여행",
-    local: "동구",
+    event: "#팝업스토어 #현대아울렛",
+    local: "유성구",
+  },
+  {
+    a: "",
+    img: "../img/꿈돌이팝업.jpg",
+    title: "꿈돌이스토어",
+    text: "대전 동구 중앙로 187-1",
+    text2: "<br>매일 09:00 ~ 21:00",
+    event: "#팝업스토어 #전시관 #신세계백화점",
+    local: "유성구",
   },
 ];
 shoppingArr.forEach((info, idx) => {
@@ -155,30 +128,30 @@ const inside = document.getElementById("inside");
 const insideArr = [
   {
     a: "",
-    img: "../img/복합터미널.jpg",
-    title: "복합터미널",
+    img: "../img/엑스포아쿠아리움.jpg",
+    title: "엑스포 아쿠아리움",
     text: "대전 동구 동서대로 1689",
     text2: "<br>연중무휴",
-    event: "#복합센터",
-    local: "동구",
+    event: "#물고기 #디지털",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/빛나는순간.jpg",
-    title: "빛나는 순간",
+    img: "../img/세요도자기공방.jfif",
+    title: "세요 도자기공방",
     text: "대전 동구 새울로 98-20 201호",
     text2: "<br>수: 15:00 ~ 19:00, 목-일: 11:00 ~ 19:00",
-    event: "#반지 #공방 #예약제",
-    local: "동구",
+    event: "#도자기 #공방 #예약제",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/헤레디움.jpg",
-    title: "헤레디움",
+    img: "../img/신세계메가박스.jpg",
+    title: "메가박스 신세계점",
     text: "대전 동구 대전로 735",
     text2: "<br>수-일: 11:00 ~ 19:00",
-    event: "#전시관 #관람료있음",
-    local: "동구",
+    event: "#영화관 # #",
+    local: "유성구",
   },
 ];
 insideArr.forEach((info, idx) => {
@@ -201,59 +174,25 @@ insideArr.forEach((info, idx) => {
   );
 });
 
-// const sports = document.getElementById("sports");
-// const sportsArr = [
-//   {
-
-//     img: "../img/동구체육관.jpg",
-//     name: "동구국민체육센터",
-//     time: "월-토: 09:00",
-//     time2: "<br>일: 09:00",
-//     event: "#수영 #배드민턴 #탁구",
-//     local: "동구",
-//   },
-//   {
-//     img: "../img/킹스타.jfif",
-//     name: "킹스타볼링센터",
-//     time: "월-토: 09:00",
-//     time2: "<br>일: 09:00",
-//     event: "#볼링",
-//     local: "동구",
-//   },
-// ];
-// sportsArr.forEach((info, idx) => {
-//   sports.insertAdjacentHTML(
-//     "beforeend",
-
-//     ` <div class="content">
-//           <img src=${info.img} />
-//           <p class="hpName">${info.name}</p>
-//         <p class="hpTime">
-//           ${info.time}${info.time2}
-//         </p>
-//         <p class="hpInfo">${info.event}</p>
-//       </div> `
-//   );
-// });
 const sports = document.getElementById("sports");
 const sportsArr = [
   {
     a: "",
-    img: "../img/동구체육관.jpg",
-    title: "동구국민체육센터",
+    img: "../img/스포츠몬스터.jfif",
+    title: "스포츠몬스터",
     text: "대전 동구 가양로 9",
     text2: "<br>일 휴무, 종목별 운영시간 상이",
-    event: "#수영 #배드민턴 #탁구",
-    local: "동구",
+    event: "#신세계 #액티비티",
+    local: "유성구",
   },
   {
     a: "",
-    img: "../img/킹스타.jfif",
-    title: "킹스타볼링센터",
+    img: "../img/월드컵경기장.jpg",
+    title: "대전 월드컵경기장",
     text: "대전 동구 대전로 647 지하1층",
     text2: "<br>월-금: 13:00 ~ 02:00, 토-일: 10:00 ~ 02:00",
-    event: "#볼링",
-    local: "동구",
+    event: "#축구",
+    local: "유성구",
   },
 ];
 
@@ -281,11 +220,11 @@ const festival = document.getElementById("festival");
 const festivalArr = [
   {
     a: "",
-    img: "../img/대청호벚꽃.png",
-    title: "대청호 벚꽃축제",
+    img: "../img/컨벤션센터.jpg",
+    title: "컨벤션센터",
     text: "2024.03.29 ~ 2024.03.31 3일간",
     text2: "<br>10:00 ~ 21:00",
-    event: "#벚꽃 #세상에서가장긴벚꽃길",
+    event: "#팝업 #행사 #축제",
     local: "동구",
   },
   {
@@ -304,15 +243,6 @@ const festivalArr = [
     text: "2024.08.09 ~ 2024.08.17 9일간",
     text2: "<br>14:00 ~ 00:00",
     event: "#대전부르스 #심야",
-    local: "동구",
-  },
-  {
-    a: "https://map.naver.com/p/entry/place/1139336376?placePath=%252Fhome%253Fentry%253Dplt&searchType=place&lng=127.4491245&lat=36.3353339&c=15.00,0,0,0,dh",
-    img: "../img/동구동락.jfif",
-    title: "동구동락 축제",
-    text: "2024.10.04 ~ 2024.10.06 3일간",
-    text2: "<br>11:00 ~ 22:00",
-    event: "#동광장 #대동천",
     local: "동구",
   },
 ];
@@ -436,3 +366,63 @@ hotPlace.addEventListener("click", function () {
 });
 
 // 검색
+const datas = await getDatas("hotPlace");
+let infolist;
+datas.forEach((doc, idx) => {
+  const info = doc.data();
+  infolist = info.list;
+});
+console.log(infolist);
+
+const searchBtn = document.querySelector(".searchBtn");
+const searchInput = document.querySelector(".searchInput");
+const searchBox = document.querySelector("#searchBox");
+function placeArr(e) {
+  console.log(this);
+  searchBox.innerHTML = "";
+  let inputValue = searchInput.value;
+  inputValue = inputValue.replaceAll(" ", "&nbsp;");
+  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
+  if (inputValue === "") return;
+  infolist.forEach(function (el, idx) {
+    if (
+      el.img.includes(inputValue) ||
+      el.title.includes(inputValue) ||
+      el.text.includes(inputValue) ||
+      el.text2.includes(inputValue) ||
+      // el.event.includes(inputValue) ||
+      // el.point.includes(inputValue) ||
+      (el.event.includes(inputValue) && e.code == "Enter")
+    ) {
+      searchBox.insertAdjacentHTML(
+        "beforeend",
+
+        ` <div class="content" data-idx="${idx}">
+        <img src=..${el.img} />
+        <div title="planner에 추가하기" class="plusIc"><i class='bx bx-plus' ></i></div>
+          <p class="hpName">${el.title}
+          <a id="aIcon" target="_blank">
+          <i class='bx bx-right-arrow-circle' ></i>
+          </a></p>
+          <p class="hpTime">
+            ${el.text}<br>${el.text2} 
+          </p>
+          <p class="hpInfo">${el.event}</p>
+          
+        </div> `
+      );
+    }
+  });
+  searchInput.value = "";
+}
+searchBox.addEventListener("click", (e) => {
+  const box = e.target.closest(".content");
+  if (box) {
+    const idx = box.getAttribute("data-idx");
+    const selectedItem = infolist[idx];
+    console.log(box);
+    // 필요한 다른 작업 수행 가능
+  }
+});
+searchBtn.addEventListener("click", placeArr);
+searchInput.addEventListener("keypress", placeArr);

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewForm</title>
+  </head>
+  <link rel="stylesheet" href="./reviewForm.css" />
+  <body>
+    <div class="reviewForm-container">
+      <h1># 데이트 후기 작성</h1>
+      <form action="/submit-review" method="post" enctype="multipart/form-data">
+        <div class="reviewForm-box">
+          <label for="category">어디를 다녀오셨나요?</label>
+          <select id="category" name="category" required>
+            <option value="tasty">#맛집</option>
+            <option value="cafe">#카페</option>
+            <option value="hotPlace">#핫플</option>
+          </select>
+        </div>
+        <div class="reviewForm-box">
+          <label for="location">방문한 곳</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+        <div class="reviewForm-box">
+          <label for="date">다녀온 날짜</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="reviewForm-box">
+          <label for="photo">사진 추가</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
+        <div class="reviewForm-box">
+          <label for="rating">평점</label>
+          <select id="rating" name="rating" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="reviewForm-box">
+          <label for="review">후기</label>
+          <textarea id="review" name="review" rows="5" required></textarea>
+        </div>
+        <div class="reviewForm-btn">
+          <button type="submit">제출</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
