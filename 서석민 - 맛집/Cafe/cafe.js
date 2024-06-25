@@ -23,10 +23,11 @@ Logo.addEventListener("click", function () {
 // 메인 사진 시작
 function chgMainImg() {
   const mainImgArr = [
-    "../Photo_Cafe/10.jpg",
-    "../Photo_Cafe/13.jpg",
-    "../Photo_Cafe/17.jpg",
-    "../Photo_Cafe/22.jpg",
+    "../사진/Cafe_1.jpg",
+    "../사진/Cafe_2.jpg",
+    "../사진/Cafe_3.jpg",
+    "../사진/Cafe_4.jpg",
+    "../사진/Cafe_5.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("backImg");

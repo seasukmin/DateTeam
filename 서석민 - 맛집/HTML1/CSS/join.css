@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Ownglyph_noocar-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ownglyph_noocar-Rg";
+  background-color: snow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.logo {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.container {
+  width: 500px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  padding: 50px;
+  gap: 20px;
+}
+
+.container h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.form-box {
+  width: 400px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input::placeholder {
+  color: rgba(128, 128, 128, 0.49);
+  font-size: 12px;
+}
+label {
+  /* display: inline-block; */
+  width: 100px;
+  text-align: center;
+  color: #555;
+}
+
+.form-box > input {
+  width: 300px;
+  padding: 8px;
+  margin: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.joinBtn {
+  margin-top: 40px;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  border: none;
+  border-radius: 20px;
+  background-color: hotpink;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.486);
+  color: white;
+  font-family: "Ownglyph_noocar-Rg";
+  border-radius: 4px;
+}
+.joinBtn:hover {
+  background-color: rgb(255, 73, 164);
+  box-shadow: 0;
+  transition: 0.2s;
+}
+.genderRadio {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.genderRadio > label {
+  width: 92.68px;
+}
+.genderBox {
+  margin: 0 70px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.maleBox,
+.femaleBox {
+  width: fit-content;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+input[type="radio"] {
+  width: 50px;
+  display: none;
+}
+input[type="radio"]:checked + label {
+  padding: 4px 12px;
+  border: 2px solid hotpink;
+  border-radius: 4px;
+  color: hotpink;
+}
+.container {
+  position: relative;
+}
+
+.returnBtn {
+  color: #555;
+  position: absolute;
+  font-size: 20px;
+  left: 24px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 12px;
+  text-decoration: none;
+}
+.returnBtn:active,
+.returnBtn:hover {
+  font-weight: bold;
+  text-decoration: none;
+}

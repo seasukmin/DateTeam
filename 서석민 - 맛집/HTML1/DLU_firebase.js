@@ -11,8 +11,6 @@ import {
   updateDoc,
   where,
   query,
-  arrayUnion,
-  deleteField,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -48,16 +46,15 @@ async function getUserPlans(collectionName, date, userId) {
 }
 
 async function addDatas(collectionName, dataObj, userName) {
-  //   문서 ID 수동
-
   try {
+    //   문서 ID 수동
     // const saveDoc = doc(db, 컬렉션명, 문서ID)
-    const saveDoc = await doc(db, collectionName, userName);
     // console.log(`doc() 결과 : ${saveDoc}`);
+    // console.log(`setDoc() 결과 : ${saveResult}`);
+    const saveDoc = await doc(db, collectionName, userName);
     const saveResult = await setDoc(saveDoc, dataObj);
-    console.log(`setDoc() 결과 : ${saveResult}`);
 
-    // // 문서 ID 자동
+    // 문서 ID 자동
     // const collect = await collection(db, collectionName);
     // await addDoc(collect, dataObj);
 
@@ -65,23 +62,6 @@ async function addDatas(collectionName, dataObj, userName) {
   } catch (error) {
     return false;
   } finally {
-  }
-}
-
-async function addFieldToArrayInDocument(
-  collectionName,
-  docId,
-  fieldName,
-  newObj
-) {
-  try {
-    const docRef = doc(db, collectionName, docId);
-    await updateDoc(docRef, {
-      [fieldName]: arrayUnion(newObj),
-    });
-    console.log("Document successfully updated!");
-  } catch (error) {
-    console.error("Error updating document: ", error);
   }
 }
 
@@ -100,12 +80,4 @@ async function updateDatas(collectionName, docId, updateInfoObj) {
   updateDoc(docRef, updateInfoObj);
 }
 
-export {
-  db,
-  getDatas,
-  addDatas,
-  deleteDatas,
-  updateDatas,
-  getUserPlans,
-  addFieldToArrayInDocument,
-};
+export { db, getDatas, addDatas, deleteDatas, updateDatas, getUserPlans };

@@ -101,8 +101,8 @@
     // 테이블에 members 배열 데이터를 추가하는 함수
     let updateTarget;
     async function getMembers() {
-      const docId = "placeArr"; // 문서 ID
-      const data = await getDocument("hotPlace", docId);
+      const docId = "storeArr"; // 문서 ID
+      const data = await getDocument("store", docId);
       if (!data) return;
 
       const tableTag = document.querySelector("table");
@@ -208,13 +208,13 @@
           addObj[input.name] = input.value;
         });
 
-        const docId = "placeArr";
-        const fieldName = "list";
+        const docId = "storeArr";
+        const fieldName = "members";
         const newObj = addObj;
 
         // 특정 문서에 배열 필드로 추가
         const updatedDoc = await addFieldToArrayInDocument(
-          "hotPlace",
+          "store",
           docId,
           fieldName,
           newObj

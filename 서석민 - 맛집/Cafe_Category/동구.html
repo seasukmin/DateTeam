@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>동구</title>
     <link rel="stylesheet" href="../Cafe/cafe.css" />
+    <link
+    rel="stylesheet"
+    href="../../박근모 - 메인/CSS/calendar_wether_date.css"
+  />
+  <link rel="stylesheet" href="../../박근모 - 메인/CSS/planner.css" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
   </head>
   <body>
     <img class="Logo" src="../사진/DaejeonLoveU.png" width="100" height="100" />
@@ -124,6 +133,49 @@
         <a class="Top">맨 위로!</a>
       </div>
       <!-- 동구 끝 -->
+        <!-- 플래너 시작 -->
+
+    <div class="plannerBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
+          </div>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days-planner" id="days-planner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="planListBox" id="planListBox">
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <button class="shareBtn">공유하기</button>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+      </div>
+    </div>
+    <!-- 플래너 끝 -->
     </main>
     <div class="banner">
       <p>광고입니다.</p>
