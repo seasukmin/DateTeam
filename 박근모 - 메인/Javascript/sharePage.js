@@ -1,5 +1,5 @@
 // capture
-const captureBtn = document.getElementById("captureBtn");
+const captureBtn = document.getElementById("capture-Btn");
 const captureArea = document.querySelector(".captureArea");
 captureBtn.addEventListener("click", function () {
   html2canvas(document.querySelector(".captureArea")).then(function (canvas) {

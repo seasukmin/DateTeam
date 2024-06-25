@@ -7,7 +7,7 @@ body {
   position: relative;
 }
 
-.planListBox {
+.share-planListBox {
   width: fit-content;
   padding: 8px 16px;
   border: 2px solid rgb(255, 51, 204);
@@ -17,8 +17,18 @@ body {
   flex-direction: column;
   gap: 4px;
 }
-
-.planListBox > h4 {
+.share-nav-planner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.share-day1 {
+  font-size: 24px;
+}
+.share-weather {
+  color: rgba(255, 255, 255, 0);
+}
+.share-planListBox > h4 {
   font-size: 40px;
   margin: 6px;
 }
@@ -34,23 +44,23 @@ body {
 .h-Tag4p:hover {
   border-bottom: 2px solid rgb(255, 51, 204);
 }
-.h-Tag1Span {
+.share-h-Tag1Span {
   color: #ffa600;
 }
-.h-Tag2Span {
+.share-h-Tag2Span {
   color: purple;
 }
-.h-Tag3Span {
+.share-h-Tag3Span {
   color: skyblue;
 }
-.h-Tag4Span {
+.share-h-Tag4Span {
   color: rgb(255, 51, 204);
 }
 
-.h-Tag1p,
-.h-Tag2p,
-.h-Tag3p,
-.h-Tag4p {
+.share-h-Tag1p,
+.share-h-Tag2p,
+.share-h-Tag3p,
+.share-h-Tag4p {
   height: 28px;
   width: fit-content;
   font-size: 24px;

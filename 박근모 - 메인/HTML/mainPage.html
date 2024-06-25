@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="../CSS/mainPage-content.css" />
     <link rel="stylesheet" href="../CSS/calendar_wether.css" />
     <link rel="stylesheet" href="../CSS/calendar_wether_date.css" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="../CSS/sharePage.css" />
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+      integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init("5f2b4d3556667dcbf146d56dd715a105");
+    </script>
   </head>
   <body>
     <!-- title -->
@@ -357,7 +367,38 @@
         <div class="cafeBoxes" id="cafeBoxes"></div>
         <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
         <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
-        <button class="shareBtn">공유하기</button>
+        <!-- <button
+          class="shareBtn"
+          onclick="window.open(`../HTML/sharePage.html`, `_blank`,`width=800px, height=500px, location = no, menubar = no, toolbar = no`)"
+        >
+          공유하기
+        </button> -->
+        <button class="shareBtn" id="shareBtn">공유하기</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="share-planListBox captureArea" id="planListBox">
+              <h4>짱구님의 Planner</h4>
+              <div class="share-nav-planner" id="nav-planner">
+                <div class="share-day1"></div>
+                <i class="bx bx-sun share-weather" undefined></i>
+              </div>
+              <div class="nav-planner"></div>
+              <a class="h-Tag1p"
+                ><span class="share-h-Tag1Span">#</span>맛집&nbsp;</a
+              >
+              <div class="resturantBoxes" id="resturantBoxes"></div>
+              <a class="h-Tag2p"
+                ><span class="share-h-Tag2Span">#</span>카페&nbsp;</a
+              >
+              <div class="cafeBoxes" id="cafeBoxes"></div>
+              <a class="h-Tag3p"><span class="share-h-Tag3Span">#</span>핫플</a>
+              <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+            </div>
+            <button class="capture-Btn" id="capture-Btn">사진저장</button>
+            <button class="KT-Share-Btn" id="KT-Share-Btn">카톡공유하기</button>
+          </div>
+        </div>
       </div>
       <div class="changeSize">
         <i class="changeSizeBtn bx bx-chevrons-down"></i>
@@ -369,4 +410,8 @@
   <script src="../Javascript/calendar.js" type="module"></script>
   <script src="../Javascript/calendarRangeX.js" type="module"></script>
   <script src="../Javascript/LogIn.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+  <!-- <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+
+  <script src="../Javascript/sharePage.js"></script>
 </html>
