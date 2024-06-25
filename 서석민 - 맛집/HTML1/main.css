@@ -18,7 +18,7 @@ img {
 .boxes-inner {
   display: flex;
   flex-direction: column;
-  gap: 300px;
+  gap: 10px;
 }
 /* Slideshow container */
 .slideshow-container {

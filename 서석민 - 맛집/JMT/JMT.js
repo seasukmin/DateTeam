@@ -207,73 +207,73 @@ datasPlan.forEach((doc, idx) => {
 // function removeDuplicates(array) {
 //   return [...new Set(array)];
 // }
-let memberInfo = {};
-Mainbox1.addEventListener("click", async function (e) {
-  if (updateTarget) {
-    alert("회원정보 수정중에는 저장할 수 없습니다.");
-    return false;
-  }
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-    addrChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling.nextElementSibling;
-  }
+// let memberInfo = {};
+// Mainbox1.addEventListener("click", async function (e) {
+//   if (updateTarget) {
+//     alert("회원정보 수정중에는 저장할 수 없습니다.");
+//     return false;
+//   }
+//   const box = e.target.closest(".box");
+//   if (box) {
+//     nameChild =
+//       box.firstElementChild.nextElementSibling.nextElementSibling
+//         .nextElementSibling;
+//     addrChild =
+//       box.firstElementChild.nextElementSibling.nextElementSibling
+//         .nextElementSibling.nextElementSibling;
+//   }
 
-  // const day1 = document.querySelector(".day1");
-  // const day1inner = day1.innerHTML;
-  // const nameText = nameChild.innerHTML;
-  // const addrText = addrChild.innerHTML.substring(18, 22);
-  // const memberInfo = {
-  //   title: nameText,
-  //   addr: addrText,
-  //   // resturant: { title: nameText, addr: addrText },
-  // };
-  // 중복을 제거하는 함수
+// const day1 = document.querySelector(".day1");
+// const day1inner = day1.innerHTML;
+// const nameText = nameChild.innerHTML;
+// const addrText = addrChild.innerHTML.substring(18, 22);
+// const memberInfo = {
+//   title: nameText,
+//   addr: addrText,
+//   // resturant: { title: nameText, addr: addrText },
+// };
+// 중복을 제거하는 함수
 
-  // 중복 확인 함수
+// 중복 확인 함수
 
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-    addrChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling.nextElementSibling;
-  }
+const box = e.target.closest(".box");
+if (box) {
+  nameChild =
+    box.firstElementChild.nextElementSibling.nextElementSibling
+      .nextElementSibling;
+  addrChild =
+    box.firstElementChild.nextElementSibling.nextElementSibling
+      .nextElementSibling.nextElementSibling;
+}
 
-  const day1 = document.querySelector(".day1");
-  const day1inner = day1.innerHTML;
-  const nameText = nameChild.innerHTML;
-  const addrText = addrChild.innerHTML.substring(18, 22);
-  const memberInfo = {
-    resturant: [nameText, addrText],
-  };
+const day1 = document.querySelector(".day1");
+const day1inner = day1.innerHTML;
+const nameText = nameChild.innerHTML;
+const addrText = addrChild.innerHTML.substring(18, 22);
+const memberInfo = {
+  resturant: [nameText, addrText],
+};
 
-  let planArr = planlist.planArr.resturant || [];
-  console.log(planArr);
-  planArr.push(memberInfo);
-  const result = await addDatas("plan", { planArr }, "planArr");
-  // let lastValue = planArr[planArr.length - 1];
+let planArr = planlist.planArr.resturant || [];
+console.log(planArr);
+planArr.push(memberInfo);
+// const result = await addDatas("plan", { planArr }, "planArr");
+// let lastValue = planArr[planArr.length - 1];
 
-  // if (planArr.includes(memberInfo)) {
-  // } else {
-  //   // deletefield("planArr", memberInfo);
-  //   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
-  //   updateDatas("plan", "planArr", { newmemberInfo });
-  // }
-  // newMemberInfoArr.push(memberInfoArr);
-  // memberInfoObj.resturant = `${memberInfo}`;
-  memberInfoObj.resturant = memberInfo;
+// if (planArr.includes(memberInfo)) {
+// } else {
+//   // deletefield("planArr", memberInfo);
+//   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
+//   updateDatas("plan", "planArr", { newmemberInfo });
+// }
+// newMemberInfoArr.push(memberInfoArr);
+// memberInfoObj.resturant = `${memberInfo}`;
+memberInfoObj.resturant = memberInfo;
 
-  console.log(memberInfoObj.resturant);
+console.log(memberInfoObj.resturant);
 
-  async function resturantupdateDatas() {
-    // const result = await addDatas("plan", newMemberInfoArr, "planArr");
+async function resturantupdateDatas() {
+  // const result = await addDatas("plan", newMemberInfoArr, "planArr");
   memberInfo = {
     title: nameText,
     addr: addrText,
@@ -294,7 +294,7 @@ Mainbox1.addEventListener("click", async function (e) {
   } catch (error) {
     console.error("데이터 추가 중 오류 발생: ", error);
   }
-});
+}
 
 const Top = document.querySelector(".TopLoop");
 Top.addEventListener("click", function () {
