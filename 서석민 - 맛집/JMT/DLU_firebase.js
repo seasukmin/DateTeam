@@ -55,7 +55,7 @@ async function addDatas(collectionName, dataObj, userName) {
     const saveDoc = await doc(db, collectionName, userName);
     // console.log(`doc() 결과 : ${saveDoc}`);
     const saveResult = await setDoc(saveDoc, dataObj);
-    // console.log(`setDoc() 결과 : ${saveResult}`);
+    console.log(`setDoc() 결과 : ${saveResult}`);
 
     // // 문서 ID 자동
     // const collect = await collection(db, collectionName);
