@@ -190,70 +190,46 @@ let addrChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 
 const datasPlan = await getDatas("plan");
+let planlist;
 let memberInfoArr;
-let memberInfoObj = { resturant: {} };
 datasPlan.forEach((doc, idx) => {
   const info = doc.data();
   memberInfoArr = info.memberInfo;
-  const storeTitle = memberInfoArr.resturant[0];
-  const storeAddr = memberInfoArr.resturant[1];
-  // memberInfoObj = { title: storeTitle, addr: storeAddr };
+
+  planlist = info;
 });
 
-// const newMemberInfoObj = {};
-function removeDuplicates(array) {
-  return [...new Set(array)];
-}
-// const box = Mainbox1.closest(".box");
-// console.log(box);
-// if (box) {
-//   nameChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling;
-//   addrChild =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling.nextElementSibling;
-// }
-
-// const day1 = document.querySelector(".day1");
-// const day1inner = day1.innerHTML;
-// const nameText = nameChild.innerHTML;
-// const addrText = addrChild.innerHTML.substring(18, 22);
-// const memberInfo = {
-//   title: nameText,
-//   addr: addrText,
-//   // resturant: { title: nameText, addr: addrText },
-// };
-
 Mainbox1.addEventListener("click", async function (e) {
-  console.log(e.target);
-  if (updateTarget) {
-    alert("회원정보 수정중에는 저장할 수 없습니다.");
-    return false;
-  }
-  // const box = e.target.closest(".box");
-  // if (box) {
-  //   nameChild =
-  //     box.firstElementChild.nextElementSibling.nextElementSibling
-  //       .nextElementSibling;
-  //   addrChild =
-  //     box.firstElementChild.nextElementSibling.nextElementSibling
-  //       .nextElementSibling.nextElementSibling;
+  // if (updateTarget) {
+  //   alert("회원정보 수정중에는 저장할 수 없습니다.");
+  //   return false;
   // }
-
-  // const day1 = document.querySelector(".day1");
-  // const day1inner = day1.innerHTML;
-  // const nameText = nameChild.innerHTML;
-  // const addrText = addrChild.innerHTML.substring(18, 22);
-  // const memberInfo = {
-  //   title: nameText,
-  //   addr: addrText,
-  //   // resturant: { title: nameText, addr: addrText },
-  // };
   // 중복을 제거하는 함수
 
   // 중복 확인 함수
 
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+  }
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const memberInfo = {
+    resturant: [nameText, addrText],
+  };
+
+  const newmemberInfoArr = [];
+  newmemberInfoArr.push(memberInfo);
+  console.log(newmemberInfoArr);
+
+  memberInfoArr.forEach((el) => {});
   // let planArr = planlist.planArr || [];
   // console.log(planArr);
   // planArr.push(memberInfo);
@@ -266,17 +242,7 @@ Mainbox1.addEventListener("click", async function (e) {
   //   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
   //   updateDatas("plan", "planArr", { newmemberInfo });
   // }
-  // newMemberInfoArr.push(memberInfoArr);
-  // memberInfoObj.resturant = `${memberInfo}`;
-  memberInfoObj.resturant = memberInfo;
-
-  console.log(memberInfoObj.resturant);
-
-  async function resturantupdateDatas() {
-    // const result = await addDatas("plan", newMemberInfoArr, "planArr");
-  }
 });
-
 // Remove the 'capital' field from the document
 
 // } else {
