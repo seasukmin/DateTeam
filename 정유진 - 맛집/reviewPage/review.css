@@ -41,7 +41,7 @@ body {
   flex-direction: column;
   padding: 20px 50px;
   /* background-color: pink; */
-  border-radius: 10px;
+  border-radius: 4px;
 }
 .review-upload {
   display: flex;
@@ -53,7 +53,7 @@ body {
   border: none;
   background-color: transparent;
   padding: 2px;
-  color: rgb(255, 103, 128);
+  color: rgb(224, 109, 148);
   font-size: 35px;
   cursor: pointer;
 }
@@ -64,7 +64,7 @@ body {
   border: 1px solid rgb(170, 170, 170);
   padding: 10px 40px;
   margin: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: pink;
   height: 400px;
 }
@@ -143,17 +143,25 @@ body {
   background-color: peachpuff;
 }
 
+.category-Tag {
+  padding-bottom: 5px;
+}
+
 .R-hst {
   color: hotpink;
+  padding-right: 5px;
 }
 .T-hst {
   color: rgb(253, 220, 180);
+  padding-right: 5px;
 }
 .C-hst {
   color: mediumpurple;
+  padding-right: 5px;
 }
 .H-hst {
   color: skyblue;
+  padding-right: 5px;
 }
 
 .footerBox {

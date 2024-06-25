@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Ownglyph_noocar-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ownglyph_noocar-Rg";
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+.reviewForm-container {
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(253, 242, 242, 0.938);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.reviewForm-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviewForm-box {
+  margin-bottom: 15px;
+}
+
+.reviewForm-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.reviewForm-box input,
+.reviewForm-box select,
+.reviewForm-box textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Ownglyph_noocar-Rg";
+  font-size: 16px;
+}
+#photo {
+  font-size: 14px;
+}
+.reviewForm-box input[type="file"] {
+  padding: 6px;
+  background-color: #fff;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+  background-color: rgba(224, 109, 147, 0.822);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgb(224, 109, 148);
+}
