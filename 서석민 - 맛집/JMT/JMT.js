@@ -223,10 +223,10 @@ Mainbox1.addEventListener("click", async function (e) {
     resturant: [nameText, addrText],
   };
 
-  let planArr = planlist.planArr || [];
+  let planArr = planlist.planArr.resturant || [];
   console.log(planArr);
   planArr.push(memberInfo);
-  // const result = await addDatas("plan", { memberInfo }, "planArr");
+  const result = await addDatas("plan", { planArr }, "planArr");
   // let lastValue = planArr[planArr.length - 1];
 
   // if (planArr.includes(memberInfo)) {
