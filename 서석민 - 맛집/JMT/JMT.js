@@ -3,6 +3,7 @@ import {
   db,
   getDatas,
   addDatas,
+  addDatasAuto,
   deleteDatas,
   updateDatas,
   addFieldToArrayInDocument,
@@ -64,14 +65,49 @@ function displayNextCharacter() {
 
 displayNextCharacter();
 
-const datas = await getDatas("store");
+const datas = await getDatas("hotPlace");
 let infolist;
 let infoinput;
-datas.forEach((doc, idx) => {
+datas.forEach(async (doc, idx) => {
   const info = doc.data();
-  console.log(info);
-  infolist = info.members;
+  // infolist = info.members;
   infoinput = info.input;
+  infolist = info.list;
+  console.log(infolist);
+  // let idx = 1;
+  infolist.forEach(async (e, idx) => {
+    console.log(e);
+    // const addr = e.addr;
+    // const name = e.name;
+    const point = e.point;
+    // const age = e.age;
+    // const category = e.category;
+    // const number = e.number;
+    // const time = e.time;
+    const event = e.event;
+    const img = e.img;
+    const text = e.text;
+    const text2 = e.text2;
+    const title = e.title;
+    const id = `hotPlace${idx + 1}`;
+
+    const store1Obj = {
+      // addr: addr,
+      // name: name,
+      // point: point,
+      // age: age,
+      // category: category,
+      // number: number,
+      // time: time,
+      event: event,
+      img: img,
+      text: text,
+      text2: text2,
+      title: title,
+      id: id,
+    };
+    // const result = await addDatasAuto("hotPlace1", store1Obj);
+  });
 });
 
 let infolistArr = infolist.map(function (el) {

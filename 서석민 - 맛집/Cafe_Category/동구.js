@@ -150,6 +150,22 @@ infolistSlice1.forEach((el, idx) => {
         </div>
 
      `
+    // `
+    //  <div class="box" data-placeID =${firebase -- cafe1 -- id}>
+    //       <img
+    //         class="box-img"
+    //         src="../Photo_Cafe/${idx + 1}.jpg"
+    //       />
+    //       <div class="box-point"><span>평점:</span> ${el.point}</div>
+    //       <div class="box-name">${el.name}</div>
+    //       <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+    //       <div class="box-tag"><span>On.</span> ${el.time}</div>
+    //       <div class="box-tag"><span>N.</span>${el.number}</div>
+    //       <div class="box-tag"><span>#</span>${el.category}</div>
+
+    //     </div>
+
+    //  `
   );
 });
 const Mainbox2 = document.querySelector(".Main-box2");
