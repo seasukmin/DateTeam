@@ -215,32 +215,39 @@ Mainbox1.addEventListener("click", async function (e) {
         .nextElementSibling.nextElementSibling;
   }
 
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
   const nameText = nameChild.innerHTML;
   const addrText = addrChild.innerHTML.substring(18, 22);
   const memberInfo = {
-    Date: 12,
-    cafe: ["1", nameText, addrText, "2"],
-    userId: 13,
+    resturant: [nameText, addrText],
   };
+
   let planArr = planlist.planArr || [];
+  console.log(planArr);
   planArr.push(memberInfo);
-  const result = await addDatas("plan", { planArr }, "planArr");
+  // const result = await addDatas("plan", { memberInfo }, "planArr");
+  // let lastValue = planArr[planArr.length - 1];
 
-  const newmemberInfo = {
-    Date: 12,
-    cafe: ["1", nameText, addrText, "2"],
-    userId: 13,
-    ddd: 30,
-  };
-  planArr.push(newmemberInfo);
-  updateDatas("plan", "planArr", { newmemberInfo });
+  // if (planArr.includes(memberInfo)) {
+  // } else {
+  //   // deletefield("planArr", memberInfo);
+  //   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
+  //   updateDatas("plan", "planArr", { newmemberInfo });
+  // }
 });
+// Remove the 'capital' field from the document
 
-const shareBtn = document.querySelector(".shareBtn");
-async function shareBtnclick() {
-  const result1 = await deleteDatas("plan", "planArr");
-}
-shareBtn.addEventListener("click", shareBtnclick);
+// } else {
+//   const newmemberInfo = { rt: [nameText, addrText], ...memberInfo };
+//   updateDatas("plan", "planArr", { newmemberInfo });
+// }
+
+// const shareBtn = document.querySelector(".shareBtn");
+// async function shareBtnclick() {
+//   const result1 = await deleteDatas("plan", "planArr");
+// }
+// shareBtn.addEventListener("click", shareBtnclick);
 // Firestore 문서에 배열 필드 생성 및 객체 추가하기
 
 // Firestore 문서에 배열 필드 생성 및 객체 추가하기
