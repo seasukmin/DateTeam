@@ -62,15 +62,55 @@ Maintitle.forEach(function (el, idx) {
 // 카테고리 스크립트 종료
 // 검색창 시작
 // 도프차일드키친 트루 열개의테이블 흙과 마루45485560
-const datas = await getDatas("store");
-let infolist;
+const datas = await getDatas("store1");
+// const textinner = "분위기 있는";
 let infoinput;
+const infoinputArr = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  infolist = info.members;
-  infoinput = info.input;
+  // console.log(infoinput);
+  infoinputArr.push(info);
 });
-console.log(infolist.slice(40, 60));
+console.log(infoinputArr);
+let addrInner = "중구";
+let addrArr = [];
+let categoryArr = [];
+const infoinputArrResult = infoinputArr.forEach(function (el) {
+  if (el.addr.includes(addrInner)) {
+    addrArr.push(el);
+  }
+});
+addrInner = "기념일";
+let MyaniverseArr = [];
+const aniverseArr = addrArr.forEach(function (el) {
+  if (el.category.includes(addrInner)) {
+    MyaniverseArr.push(el);
+  }
+});
+addrInner = "분위기 좋은";
+let MymodegoodArr = [];
+const modegood = addrArr.forEach(function (el) {
+  if (el.category.includes(addrInner)) {
+    MymodegoodArr.push(el);
+  }
+});
+addrInner = "술 한잔";
+let MywateroneArr = [];
+const waterone = addrArr.forEach(function (el) {
+  if (el.category.includes(addrInner)) {
+    MywateroneArr.push(el);
+  }
+});
+addrInner = "야외";
+let MyoutsideArr = [];
+const outsideArr = addrArr.forEach(function (el) {
+  if (el.category.includes(addrInner)) {
+    MyoutsideArr.push(el);
+  }
+});
+
+console.log(MyaniverseArr);
+
 const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
 const result = document.querySelector(".result");
@@ -78,7 +118,7 @@ function inputArr(e) {
   result.innerHTML = "";
   const inputValue = headerInput.value;
   if (inputValue === "") return;
-  infolist.forEach(function (el, idx) {
+  infoinputArr.forEach(function (el, idx) {
     if (
       el.addr.includes(inputValue) ||
       el.category.includes(inputValue) ||
@@ -114,23 +154,18 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
-
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 // 검색창 종료
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
-  console.log(box);
-});
 
 // 메인 시작
+const infolistSlice1 = MyaniverseArr;
 const Mainbox1 = document.querySelector(".Main-box1");
-const infolistSlice1 = infolist.slice(40, 44);
 infolistSlice1.forEach((el, idx) => {
   Mainbox1.insertAdjacentHTML(
     "beforeend",
     `
-  <div class="box">
+     <div class="box">
           <img
             class="box-img"
             src="../Photo/${idx + 41}.jpg"
@@ -147,14 +182,13 @@ infolistSlice1.forEach((el, idx) => {
      `
   );
 });
-
 const Mainbox2 = document.querySelector(".Main-box2");
-const infolistSlice2 = infolist.slice(44, 48);
+const infolistSlice2 = MymodegoodArr;
 infolistSlice2.forEach((el, idx) => {
   Mainbox2.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="box">
+  <div class="box">
           <img
             class="box-img"
             src="../Photo/${idx + 45}.jpg"
@@ -171,12 +205,12 @@ infolistSlice2.forEach((el, idx) => {
   );
 });
 const Mainbox3 = document.querySelector(".Main-box3");
-const infolistSlice3 = infolist.slice(48, 52);
+const infolistSlice3 = MywateroneArr;
 infolistSlice3.forEach((el, idx) => {
   Mainbox3.insertAdjacentHTML(
     "beforeend",
     `
-   <div class="box">
+  <div class="box">
           <img
             class="box-img"
             src="../Photo/${idx + 49}.jpg"
@@ -194,7 +228,7 @@ infolistSlice3.forEach((el, idx) => {
 });
 
 const Mainbox4 = document.querySelector(".Main-box4");
-const infolistSlice4 = infolist.slice(52, 56);
+const infolistSlice4 = MyoutsideArr;
 infolistSlice4.forEach((el, idx) => {
   Mainbox4.insertAdjacentHTML(
     "beforeend",
@@ -217,12 +251,12 @@ infolistSlice4.forEach((el, idx) => {
 });
 
 const Mainbox5 = document.querySelector(".Main-box5");
-const infolistSlice5 = infolist.slice(56, 60);
+const infolistSlice5 = MyoutsideArr;
 infolistSlice5.forEach((el, idx) => {
   Mainbox5.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="box">
+  <div class="box">
           <img
             class="box-img"
             src="../Photo/${idx + 57}.jpg"

@@ -62,23 +62,53 @@ Maintitle.forEach(function (el, idx) {
 // 카테고리 스크립트 종료
 
 // 검색창 시작
-const datas = await getDatas("store");
-console.log("datas:", datas);
-
-let infoinput = [];
-let infolist = [];
+const datas = await getDatas("cafe1");
+const textinner = "분위기 있는";
+let infoinput;
+const infoinputArr = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  console.log("info:", info);
-  if (info && info.input) {
-    infolist = info.members;
-    infoinput = infoinput.concat(info.input);
+  // console.log(infoinput);
+  infoinputArr.push(info);
+});
+const addrInner = "중구";
+let categoryInner = "분위기 있는";
+let addrArr = [];
+let categoryArr = [];
+const infoinputArrResult = infoinputArr.forEach(function (el) {
+  if (el.addr.includes(addrInner)) {
+    addrArr.push(el);
   }
 });
-console.log("Merged infoinput:", infoinput);
+const infoinputArrRe = addrArr.forEach(function (el) {
+  if (el.category.includes(categoryInner)) {
+    categoryArr.push(el);
+  }
+});
+// console.log(categoryArr);
+let MydesertArr = [];
+categoryInner = "디저트가 맛있는";
+const desertArr = addrArr.forEach(function (el) {
+  if (el.category.includes(categoryInner)) {
+    MydesertArr.push(el);
+  }
+});
+let MybigMartArr = [];
+categoryInner = "대형 매장";
+const bigMartArr = addrArr.forEach(function (el) {
+  if (el.category.includes(categoryInner)) {
+    MybigMartArr.push(el);
+  }
+});
+console.log();
 
-const infolist20 = infoinput.slice(18, 27);
-console.log(infolist20);
+MybigMartArr;
+
+let temp = MybigMartArr[1];
+MybigMartArr[1] = MybigMartArr[2];
+MybigMartArr[2] = temp;
+
+console.log(MybigMartArr);
 
 const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
@@ -87,7 +117,7 @@ function inputArr(e) {
   result.innerHTML = "";
   const inputValue = headerInput.value;
   if (inputValue === "") return;
-  infoinput.forEach(function (el, idx) {
+  infoinputArr.forEach(function (el, idx) {
     if (
       el.addr.includes(inputValue) ||
       el.category.includes(inputValue) ||
@@ -128,8 +158,8 @@ headerInput.addEventListener("keypress", inputArr);
 // 검색창 종료
 
 // 메인 시작
-console.log(infolist);
-const infolistSlice1 = infoinput.slice(18, 21);
+
+const infolistSlice1 = categoryArr;
 const Mainbox1 = document.querySelector(".Main-box1");
 infolistSlice1.forEach((el, idx) => {
   Mainbox1.insertAdjacentHTML(
@@ -138,7 +168,7 @@ infolistSlice1.forEach((el, idx) => {
      <div class="box">
           <img
             class="box-img"
-            src="../Photo_Cafe/${idx + 18}.jpg"
+            src="../Photo_Cafe/${idx + 19}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>
@@ -153,7 +183,7 @@ infolistSlice1.forEach((el, idx) => {
   );
 });
 const Mainbox2 = document.querySelector(".Main-box2");
-const infolistSlice2 = infoinput.slice(21, 24);
+const infolistSlice2 = MydesertArr;
 infolistSlice2.forEach((el, idx) => {
   Mainbox2.insertAdjacentHTML(
     "beforeend",
@@ -161,7 +191,7 @@ infolistSlice2.forEach((el, idx) => {
   <div class="box">
           <img
             class="box-img"
-            src="../Photo_Cafe/${idx + 21}.jpg"
+            src="../Photo_Cafe/${idx + 22}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>
@@ -175,7 +205,7 @@ infolistSlice2.forEach((el, idx) => {
   );
 });
 const Mainbox3 = document.querySelector(".Main-box3");
-const infolistSlice3 = infoinput.slice(24, 27);
+const infolistSlice3 = MybigMartArr;
 infolistSlice3.forEach((el, idx) => {
   Mainbox3.insertAdjacentHTML(
     "beforeend",
@@ -183,7 +213,7 @@ infolistSlice3.forEach((el, idx) => {
   <div class="box">
           <img
             class="box-img"
-            src="../Photo_Cafe/${idx + 24}.jpg"
+            src="../Photo_Cafe/${idx + 25}.jpg"
           />
           <div class="box-point"><span>평점:</span> ${el.point}</div>
           <div class="box-name">${el.name}</div>

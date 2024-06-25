@@ -63,26 +63,34 @@ function displayNextCharacter() {
 
 displayNextCharacter();
 
-const datas = await getDatas("store");
-console.log("datas:", datas);
+// const datas = await getDatas("store");
+// console.log("datas:", datas);
 
-let infoinput = [];
-let infolist = [];
+// let infoinput = [];
+// let infolist = [];
 
-// 데이터 병합
+// // 데이터 병합
+// datas.forEach((doc, idx) => {
+//   const info = doc.data();
+//   console.log("info:", info);
+
+//   if (info && info.input) {
+//     infolist = info.members;
+//     infoinput = infoinput.concat(info.input);
+//   }
+// });
+const datas = await getDatas("cafe1");
+const textinner = "분위기 있는";
+let infoinput;
+const infoinputArr = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  console.log("info:", info);
-
-  if (info && info.input) {
-    infolist = info.members;
-    infoinput = infoinput.concat(info.input);
-  }
+  // console.log(infoinput);
+  infoinputArr.push(info);
 });
+console.log(infoinputArr);
 
-console.log("Merged infoinput:", infoinput);
-
-let infolistArr = infoinput.map(function (el) {
+let infolistArr = infoinputArr.map(function (el) {
   return `${el.name},${el.point}`;
 });
 let infolistArrsort = infolistArr.sort(function (a, b) {
@@ -95,6 +103,7 @@ const infolistSliceArr = infolistArrsort.slice(26, 36);
 sidebarA.forEach(function (el, idx) {
   if (idx < infolistSliceArr.length) {
     let infolistEnd = infolistSliceArr[idx].split(",")[0];
+    console.log(infolistEnd);
     el.insertAdjacentHTML(
       "afterbegin",
       `<a href="#" class="sidebarA"><span class="sideinnerN">${
@@ -103,7 +112,7 @@ sidebarA.forEach(function (el, idx) {
     );
   }
 });
-let infolistArr1 = infoinput.map(function (el) {
+let infolistArr1 = infoinputArr.map(function (el) {
   return el;
 });
 let infolistArrsort1 = infolistArr1.sort(function (a, b) {
@@ -122,7 +131,7 @@ infolistSliceArr1.forEach(function (el, idx) {
   <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
             <img
               class="box-img"
-              src="../Photo_Cafe/${el.src}"
+              src="${el.src}"
             />
             <div class="box-point"><span>평점:</span> ${el.point}</div>
             <div class="box-name">${el.name}</div>
@@ -143,7 +152,8 @@ function inputArr(e) {
   result.innerHTML = "";
   const inputValue = headerInput.value;
   if (inputValue === "") return;
-  infoinput.forEach(function (el, idx) {
+  infoinputArr.forEach(function (el, idx) {
+    console.log(el.addr);
     if (
       el.addr.includes(inputValue) ||
       el.category.includes(inputValue) ||
@@ -152,6 +162,7 @@ function inputArr(e) {
       el.point.includes(inputValue) ||
       (el.time.includes(inputValue) && e.code == "Enter")
     ) {
+      console.log(el);
       result.insertAdjacentHTML(
         "beforeend",
         `
@@ -182,117 +193,117 @@ function inputArr(e) {
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 
-const Mainboxes1 = Mainbox1.firstElementChild;
-Mainboxes1.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-});
-const Mainboxes2 = Mainboxes1.nextElementSibling;
-Mainboxes2.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("2");
-});
-const Mainboxes3 = Mainboxes2.nextElementSibling;
-Mainboxes3.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("3");
-});
-const Mainboxes4 = Mainboxes3.nextElementSibling;
-Mainboxes4.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("4");
-});
-const Mainboxes5 = Mainboxes4.nextElementSibling;
-Mainboxes5.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("5");
-});
-const Mainboxes6 = Mainboxes5.nextElementSibling;
-Mainboxes6.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("6");
-});
-const Mainboxes7 = Mainboxes6.nextElementSibling;
-Mainboxes7.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("7");
-});
-const Mainboxes8 = Mainboxes7.nextElementSibling;
-Mainboxes8.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("8");
-});
-const Mainboxes9 = Mainboxes8.nextElementSibling;
-Mainboxes9.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("9");
-});
-const Mainboxes10 = Mainboxes9.nextElementSibling;
-Mainboxes10.addEventListener("click", function () {
-  location.href = "https://www.instagram.com/Chiangmai_bangkok/";
-  alert("10");
-});
+// const Mainboxes1 = Mainbox1.firstElementChild;
+// Mainboxes1.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+// });
+// const Mainboxes2 = Mainboxes1.nextElementSibling;
+// Mainboxes2.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("2");
+// });
+// const Mainboxes3 = Mainboxes2.nextElementSibling;
+// Mainboxes3.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("3");
+// });
+// const Mainboxes4 = Mainboxes3.nextElementSibling;
+// Mainboxes4.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("4");
+// });
+// const Mainboxes5 = Mainboxes4.nextElementSibling;
+// Mainboxes5.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("5");
+// });
+// const Mainboxes6 = Mainboxes5.nextElementSibling;
+// Mainboxes6.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("6");
+// });
+// const Mainboxes7 = Mainboxes6.nextElementSibling;
+// Mainboxes7.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("7");
+// });
+// const Mainboxes8 = Mainboxes7.nextElementSibling;
+// Mainboxes8.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("8");
+// });
+// const Mainboxes9 = Mainboxes8.nextElementSibling;
+// Mainboxes9.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("9");
+// });
+// const Mainboxes10 = Mainboxes9.nextElementSibling;
+// Mainboxes10.addEventListener("click", function () {
+//   location.href = "https://www.instagram.com/Chiangmai_bangkok/";
+//   alert("10");
+// });
 
-// 맛집별 사이트 접속 종료
-// 메인 상단 사이트 접속 시작
-const backinner1 = document.querySelector(".backinner1");
-backinner1.lastElementChild.addEventListener("click", function () {
-  alert("1");
-});
-const backinner2 = document.querySelector(".backinner2");
-backinner2.lastElementChild.addEventListener("click", function () {
-  alert("2");
-});
-const backinner3 = document.querySelector(".backinner3");
-backinner3.lastElementChild.addEventListener("click", function () {
-  alert("3");
-});
-const backinner4 = document.querySelector(".backinner4");
-backinner4.lastElementChild.addEventListener("click", function () {
-  alert("4");
-});
+// // 맛집별 사이트 접속 종료
+// // 메인 상단 사이트 접속 시작
+// const backinner1 = document.querySelector(".backinner1");
+// backinner1.lastElementChild.addEventListener("click", function () {
+//   alert("1");
+// });
+// const backinner2 = document.querySelector(".backinner2");
+// backinner2.lastElementChild.addEventListener("click", function () {
+//   alert("2");
+// });
+// const backinner3 = document.querySelector(".backinner3");
+// backinner3.lastElementChild.addEventListener("click", function () {
+//   alert("3");
+// });
+// const backinner4 = document.querySelector(".backinner4");
+// backinner4.lastElementChild.addEventListener("click", function () {
+//   alert("4");
+// });
 
-// 메인 상단 사이트 접속 종료
-// Top 버튼
-const Top = document.querySelector(".TopLoop");
-Top.addEventListener("click", function () {
-  location.href = "#header-H1";
-});
-//
-const headerH1 = document.querySelector("#header-H1");
-headerH1.addEventListener("click", function () {
-  location.reload();
-});
-// clear(초기화) 버튼
-const clear = document.querySelector(".clear");
-clear.addEventListener("click", function () {
-  location.reload();
-});
+// // 메인 상단 사이트 접속 종료
+// // Top 버튼
+// const Top = document.querySelector(".TopLoop");
+// Top.addEventListener("click", function () {
+//   location.href = "#header-H1";
+// });
+// //
+// const headerH1 = document.querySelector("#header-H1");
+// headerH1.addEventListener("click", function () {
+//   location.reload();
+// });
+// // clear(초기화) 버튼
+// const clear = document.querySelector(".clear");
+// clear.addEventListener("click", function () {
+//   location.reload();
+// });
 
-const Promise = document.querySelector("Promise-but");
-let child;
-function openPopup() {
-  child = window.open(
-    "../240510/2_numberguess.html",
-    "_blank",
-    "width=1000,height=500, left=500, top=0,"
-  );
-  // location=no ==> 주소입력창 없어짐
-  // resizable=no ==> 팝업창의 크기를 조절할 수 없음
-  // toolbar=no ==> 도구모음이 없어짐
-}
-const body = document.querySelector("body");
-const MainH1 = document.querySelector(".MainH1");
-const bodyHeight = body.getBoundingClientRect();
-const MainH1Height = MainH1.getBoundingClientRect();
-function updateScrollPosition() {
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+// const Promise = document.querySelector("Promise-but");
+// let child;
+// function openPopup() {
+//   child = window.open(
+//     "../240510/2_numberguess.html",
+//     "_blank",
+//     "width=1000,height=500, left=500, top=0,"
+//   );
+//   // location=no ==> 주소입력창 없어짐
+//   // resizable=no ==> 팝업창의 크기를 조절할 수 없음
+//   // toolbar=no ==> 도구모음이 없어짐
+// }
+// const body = document.querySelector("body");
+// const MainH1 = document.querySelector(".MainH1");
+// const bodyHeight = body.getBoundingClientRect();
+// const MainH1Height = MainH1.getBoundingClientRect();
+// function updateScrollPosition() {
+//   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollPosition > 1000) {
-    MainH1.style.transform = "translateY(-100px)";
-    MainH1.style.transition = "0.5s linear";
-  }
-}
+//   if (scrollPosition > 1000) {
+//     MainH1.style.transform = "translateY(-100px)";
+//     MainH1.style.transition = "0.5s linear";
+//   }
+// }
 
-window.addEventListener("scroll", updateScrollPosition);
+// window.addEventListener("scroll", updateScrollPosition);
 
-// body.addEventListener('wheel', function(){
+// // body.addEventListener('wheel', function(){
