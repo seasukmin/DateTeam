@@ -12,6 +12,7 @@ import {
   where,
   query,
   arrayUnion,
+  deleteField,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -84,8 +85,8 @@ async function addFieldToArrayInDocument(
   }
 }
 
-async function deleteDatas(collectionName, docId, filedname) {
-  const docRef = await doc(db, collectionName, docId, filedname);
+async function deleteDatas(collectionName, docId) {
+  const docRef = await doc(db, collectionName, docId);
   // deleteDoc(삭제할 문서);
   await deleteDoc(docRef);
 }
