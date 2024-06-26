@@ -70,7 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  /* gap: 8px; */
   list-style-type: none;
   /* border: 2px solid black; */
   border-radius: 24px;
@@ -78,22 +78,18 @@ body {
 .category-menus li {
   cursor: pointer;
   font-size: 24px;
-  padding-right: 24px;
+  padding: 0 24px;
   border-right: 2px solid black;
 }
 .category-menus li span:hover {
   display: inline-block;
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   transition: 0.1s;
+  transform: scale(1.1);
 }
-.category-menus > .category-img,
-.category-menus > .category-epilogue,
-.category-menus > .category-customer-service {
+
+.category-menus > .category-epilogue {
   border-right: 0;
-}
-.category-menus > .category-epilogue,
-.category-menus > .category-customer-service {
-  padding-left: 24px;
 }
 
 .search-box > .bx {
