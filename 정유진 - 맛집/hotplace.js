@@ -267,3 +267,12 @@ allbox.addEventListener("click", function (e) {
   addDatas("Hotplace2", { werwe });
   localStorage.setItem("id", "Hotplace01");
 });
+
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
