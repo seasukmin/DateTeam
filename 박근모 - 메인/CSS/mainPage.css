@@ -63,7 +63,7 @@ body {
 }
 .h-Tag4p:hover {
   cursor: pointer;
-  border-bottom: 2px solid rgb(255, 51, 204);
+  border-bottom: 2px solid hotpink;
 }
 .h-Tag1Span {
   color: #ffa600;
@@ -75,7 +75,7 @@ body {
   color: skyblue;
 }
 .h-Tag4Span {
-  color: rgb(255, 51, 204);
+  color: hotpink;
 }
 
 /* title */
@@ -104,8 +104,8 @@ body {
   display: flex;
   /* position: sticky; */
   position: fixed;
-  top: 250px;
-  left: 3%;
+  top: 230px;
+  left: 9.5%;
 }
 .short-category {
   border: 2px solid black;
@@ -161,7 +161,7 @@ body {
   transition: 0.3s;
 }
 .bx-home-heart:hover,
-.bx-arrow-from-bottom:hover {
+.bx-info-circle:hover {
   background-color: hotpink;
 }
 .bx-restaurant:hover {
@@ -177,8 +177,8 @@ body {
   position: relative;
 } */
 .QR-code {
-  /* border: 2px solid black; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   background-color: snow;
   border-radius: 24px;
   height: fit-content;
@@ -190,13 +190,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s;
+  /* transition: 0.1s; */
+  cursor: pointer;
 }
-.QR-code:hover {
-  box-shadow: 0 4px 8px rgba(255, 51, 204, 0.4);
+.QR-code:active {
+  box-shadow: 0 2px 2px rgba(255, 51, 204, 0.4);
   border: 1px solid rgba(255, 51, 204, 0.4);
-  font-weight: bold;
-  transform: scale(1.1);
+  /* font-weight: bold; */
+  /* transform: scale(1);    */
 }
 
 .plannListBox {
@@ -310,14 +311,14 @@ body {
 .return-button {
   margin-top: 12px;
   font-size: 18px;
-  background-color: #ff33cc;
+  background-color: hotpink;
   border: 0;
   color: white;
   border-radius: 24px;
   cursor: pointer;
 }
 .return-button:hover {
-  background-color: rgb(255, 44, 150);
+  background-color: rgb(255, 85, 170);
   color: snow;
 }
 .hiddenALogin {
@@ -346,17 +347,16 @@ input[type="radio"] {
 
 input[type="radio"]:checked + label {
   padding: 3px 24px;
-  border: 2px solid #ff33cc;
-  background-color: #ff33cc;
+  border: 2px solid hotpink;
+  background-color: hotpink;
   border-radius: 24px;
-  /* color: #ff33cc; */
   color: white;
   cursor: pointer;
 }
 .addPlanner {
   width: 170px;
   font-size: 18px;
-  background-color: #ff33cc;
+  background-color: hotpink;
   border: 0;
   color: white;
   border-radius: 24px;
@@ -364,7 +364,7 @@ input[type="radio"]:checked + label {
 }
 
 .addPlanner:hover {
-  background-color: rgb(255, 44, 150);
+  background-color: rgb(255, 85, 170);
   color: snow;
 }
 

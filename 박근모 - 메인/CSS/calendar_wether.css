@@ -94,12 +94,12 @@
   color: #3e3e3ede;
 }
 .wether-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
-  background-color: rgb(255, 51, 204);
+  background-color: hotpink;
   border-radius: 10px;
-  margin: 6px 0;
-  padding: 4px;
+  margin: 7px 0;
+  padding: 3px 10px;
   color: white;
   text-align: center;
 }
