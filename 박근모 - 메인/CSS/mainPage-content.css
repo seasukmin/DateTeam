@@ -16,14 +16,17 @@
 .restaurant-section {
   background-color: #ffa60033;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .cafe-section {
   background-color: rgba(128, 0, 128, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .hotplace-section {
   background-color: rgba(135, 207, 235, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .subscribe-banner {
   background-color: rgb(255, 239, 239);
@@ -35,6 +38,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 23px;
   font-weight: 600;
+  cursor: pointer;
 }
 .subscribe-banner ul {
   margin-top: 12px;
@@ -56,8 +60,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 19px;
   font-weight: 600;
+  cursor: pointer;
 }
 .epilogue-section {
   background-color: rgba(255, 192, 203, 0.89);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }

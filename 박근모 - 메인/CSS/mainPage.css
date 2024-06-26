@@ -38,6 +38,7 @@ body {
   display: flex;
   gap: 14px;
   font-size: 30px;
+  cursor: pointer;
 }
 .Tag-titles p {
   margin-top: 20px;
@@ -47,9 +48,9 @@ body {
 .Tag-titles p:hover {
   /* border-bottom: 2px solid rgb(255, 51, 204); */
   transform: scale(1.1);
-  transition: 0.2s;
+  transition: 0.1s;
 }
-.h-Tag1p:hover {
+/* .h-Tag1p:hover {
   cursor: pointer;
   border-bottom: 2px solid #ffa600;
 }
@@ -64,7 +65,7 @@ body {
 .h-Tag4p:hover {
   cursor: pointer;
   border-bottom: 2px solid hotpink;
-}
+} */
 .h-Tag1Span {
   color: #ffa600;
 }
@@ -276,6 +277,7 @@ body {
   border: 0;
   padding-top: 6px;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 .signUp:active,
 .signUp:hover {
@@ -371,13 +373,22 @@ input[type="radio"]:checked + label {
 .hidden {
   display: none;
 }
-
+.mainPage-banner {
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 24px;
+  cursor: pointer;
+  height: 7%;
+}
 .mainPage-footer {
   width: 100%;
   text-align: center;
   /* border: 2px solid black; */
   background-color: gainsboro;
-  border-radius: 24px;
+  border-radius: 8px;
   margin-top: 24px;
   padding: 8px;
 

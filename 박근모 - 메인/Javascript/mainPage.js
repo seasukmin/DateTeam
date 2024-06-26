@@ -122,10 +122,10 @@ jmtLoop.addEventListener("click", (e) => {
 });
 cafeLoop.addEventListener("click", (e) => {
   // location.href = "#hTag-cafe";
-  window.scrollTo(0, 600);
+  window.scrollTo(0, 500);
 });
 placeLoop.addEventListener("click", (e) => {
-  window.scrollTo(0, 900);
+  window.scrollTo(0, 800);
 });
 bottomLoop.addEventListener("click", (e) => {
   location.href = "./subPage.html";
