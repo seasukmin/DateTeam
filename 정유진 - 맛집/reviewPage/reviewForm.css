@@ -10,16 +10,19 @@
   box-sizing: border-box;
 }
 body {
+  background-color: snow;
+  height: 100vh;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
-  padding: 0;
-  font-size: 22px;
+  color: #3e3e3e;
 }
-
+.hiddenForm {
+  display: none;
+}
 .reviewForm-container {
-  max-width: 600px;
+  width: 600px;
   padding: 30px;
-  background-color: rgba(253, 242, 242, 0.938);
+  background-color: rgba(253, 242, 242, 0.801);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
@@ -58,11 +61,13 @@ body {
   background-color: #fff;
 }
 
-button {
+.reviewForm-btn {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  gap: 32px;
+}
+
+.reviewForm-btn button {
+  width: 45%;
   padding: 10px;
   background-color: rgba(224, 109, 147, 0.822);
   color: #fff;
@@ -72,6 +77,6 @@ button {
   font-size: 16px;
 }
 
-button:hover {
+.reviewForm-btn button:hover {
   background-color: rgb(224, 109, 148);
 }
