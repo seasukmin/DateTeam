@@ -11,13 +11,18 @@
 }
 body {
   background-color: snow;
-  /* height: 100vh; */
+  height: 100vh;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
   color: #3e3e3e;
 }
+.reviewLogo {
+  display: flex;
+  justify-content: center;
+}
 .review-logo {
   cursor: pointer;
+  margin-top: 20px;
 }
 .review-container {
   display: flex;
@@ -28,62 +33,69 @@ body {
 .review-title {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 24px;
-  margin-bottom: 30px;
 }
+.review-title h2 {
+  border-bottom: 2px solid hotpink;
+  margin-bottom: 50px;
+}
+
+.review-upload-btn {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+  color: hotpink;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
 .review-category {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   font-size: 24px;
+  font-weight: 800;
+  font-style: italic;
 }
 .review-box {
-  width: 70%;
   display: flex;
   flex-direction: column;
   padding: 20px 50px;
-  /* background-color: pink; */
   border-radius: 4px;
-}
-.review-upload {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 20px;
-}
-.review-upload-btn {
-  border: none;
-  background-color: transparent;
-  padding: 2px;
-  color: rgb(224, 109, 148);
-  font-size: 35px;
-  cursor: pointer;
 }
 
 .tasty-box,
 .cafe-box,
 .hp-box {
-  border: 1px solid rgb(170, 170, 170);
-  padding: 10px 40px;
+  padding: 15px 40px 40px 40px;
   margin: 30px;
-  border-radius: 10px;
-  background-color: pink;
+  border-radius: 16px;
   height: fit-content;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.1);
 }
 .tasty-box {
   margin-top: 0px;
+  background-color: #ffa60033;
+}
+.cafe-box {
+  background-color: rgba(128, 0, 128, 0.3);
+}
+.hp-box {
+  background-color: rgba(135, 207, 235, 0.3);
 }
 
 .tasty-content,
 .cafe-content,
 .hp-content {
-  /* width: 80%; */
   border: 1px solid gainsboro;
-  padding: 12px 30px;
+  padding: 20px 35px;
   font-size: 24px;
   margin: 12px 0;
-  border-radius: 50px;
+  border-radius: 70px;
   background-color: snow;
   height: fit-content;
 }
@@ -127,6 +139,7 @@ body {
 .review-point {
   display: flex;
   gap: 70px;
+  margin-left: 20px;
 }
 .review-point p {
   margin-top: 17px;
@@ -156,11 +169,11 @@ body {
   padding-right: 5px;
 }
 .T-hst {
-  color: rgb(253, 220, 180);
+  color: rgb(255, 212, 160);
   padding-right: 5px;
 }
 .C-hst {
-  color: mediumpurple;
+  color: rgb(224, 133, 224);
   padding-right: 5px;
 }
 .H-hst {
@@ -169,14 +182,14 @@ body {
 }
 
 .footerBox {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .banner {
-  width: 68%;
+  width: 87%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,12 +199,12 @@ body {
   margin-bottom: 20px;
 }
 .footer {
-  width: 74%;
+  width: 87%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-color: rgb(178, 230, 250);
+  background-color: gainsboro;
   border-radius: 10px;
 }
 .info {
@@ -207,4 +220,64 @@ body {
   position: fixed;
   top: 14%;
   left: 34%;
+}
+
+.long-category {
+  border: 2px solid #3e3e3ee8;
+  border-radius: 24px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 330px;
+  left: 300px;
+}
+.category-top,
+.category-center,
+.category-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 28px;
+  padding: 4px;
+}
+.category-top {
+  border-bottom: 2px solid #3e3e3ee8;
+}
+.category-center {
+  margin-bottom: 32px;
+}
+.category-bottom {
+  border-top: 2px solid #3e3e3ee8;
+}
+.long-category div > i {
+  padding: 6px;
+  border-radius: 50px;
+  color: #3e3e3ee8;
+}
+.long-category div > i:hover {
+  cursor: pointer;
+  padding: 6px;
+  /* background-color: rgb(255, 51, 204); */
+  border: 0;
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.bx-home-heart:hover,
+.bx-info-circle:hover {
+  background-color: hotpink;
+}
+.bx-restaurant:hover {
+  background-color: #ffa600;
+}
+.bxs-coffee:hover {
+  background-color: purple;
+}
+.bxs-map:hover {
+  background-color: skyblue;
 }
