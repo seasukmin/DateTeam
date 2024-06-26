@@ -61,6 +61,11 @@ body {
   background-color: skyblue;
   border-radius: 15px;
 }
+.searchBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .login {
   cursor: pointer;
   margin-left: 15px;

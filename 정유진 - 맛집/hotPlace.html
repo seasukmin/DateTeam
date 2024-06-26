@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HotPlace</title>
     <link rel="stylesheet" href="./hotPlace.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div>
@@ -20,6 +24,13 @@
       <div class="category-bar">
         <div class="search">
           <input class="searchInput" placeholder="키워드를 입력해주세요." />
+          <button class="searchBtn">
+            <img
+              src="./img/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </button>
           <a class="login">로그인</a>
         </div>
         <ul class="category">
@@ -62,170 +73,5 @@
       </div>
     </div>
   </body>
-  <script>
-    const contents = document.getElementById("content");
-    const contentArr = [
-      {
-        a: "",
-        img: "./img/한밭수목원.jpg",
-        name: "한밭수목원",
-        time: "월-토: 09:00",
-        time2: "<br>일: 09:00",
-        event: "입장료: 무료",
-      },
-      {
-        a: "",
-        img: "./img/한빛탑야간.jpg",
-        name: "엑스포 과학공원",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#음악분수",
-      },
-      {
-        a: "",
-        img: "./img/오월드.jpg",
-        name: "대전 오월드",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#동물원 #나이트유니버스",
-      },
-      {
-        a: "",
-        img: "./img/대전시립미술관.jpg",
-        name: "대전시립박물관",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "입장료:",
-      },
-      {
-        a: "",
-        img: "./img/이글스파크.jpg",
-        name: "한화이글스파크",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#야구",
-      },
-      {
-        a: "",
-        img: "./img/유성온천.jpg",
-        name: "유성온천",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#족욕",
-      },
-      {
-        a: "",
-        img: "./img/으능정이거리.jpg",
-        name: "으능정이거리",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#스카이로드",
-      },
-      {
-        a: "",
-        img: "./img/신세계백화점.jpg",
-        name: "신세계백화점",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#쇼핑",
-      },
-      {
-        a: "",
-        img: "./img/옛터민속박물관.jpg",
-        name: "옛터민속박물관",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#드라이브",
-      },
-      {
-        a: "",
-        img: "./img/식장산.jpg",
-        name: "식장산",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#야경 #드라이브",
-      },
-      {
-        a: "",
-        img: "./img/만인산자연휴양림.jpg",
-        name: "만인산자연휴양림",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#봉이호떡 #산책",
-      },
-      {
-        a: "",
-        img: "./img/대청호3.jpg",
-        name: "대청호",
-        time: "월-토: 09:00",
-        time2: "",
-        event: "#드라이브",
-      },
-    ];
-    contentArr.forEach((info, idx) => {
-      content.insertAdjacentHTML(
-        "beforeend",
-
-        ` <div class="content">
-            <a href=${info.a}>
-              <img src=${info.img} />
-              <p class="hpName">${info.name}</p></a
-            >
-            <p class="hpTime">
-              ${info.time}${info.time2}
-            </p>
-            <p class="hpInfo">${info.event}</p>
-          </div> `
-      );
-    });
-
-    function chgMainImg() {
-      const mainImgArr = [
-        "./img/메인1.jpg",
-        "./img/메인2.jpg",
-        "./img/메인3.jpg",
-        "./img/메인4.jpg",
-        "./img/메인5.jpg",
-        "./img/메인7.jpg",
-      ];
-      let mainImgIndex = 0;
-      const mainImgEl = document.getElementById("mainImg");
-
-      setInterval(() => {
-        mainImgEl.classList.add("mainImgfadeOut");
-
-        setTimeout(() => {
-          mainImgIndex = (mainImgIndex + 1) % mainImgArr.length;
-          mainImgEl.src = mainImgArr[mainImgIndex];
-          mainImgEl.classList.remove("mainImgfadeOut");
-        }, 2000);
-      }, 3500);
-    }
-    window.onload = chgMainImg;
-
-    const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
-    const wave = document.querySelector(".main-text");
-    let textLength = 0;
-
-    function textWave() {
-      if (textLength < text.length) {
-        wave.innerHTML += text[textLength++];
-      } else {
-        clearInterval(intervalMainText);
-        setTimeout(() => {
-          wave.textContent = "";
-          textLength = 0;
-          intervalMainText = setInterval(textWave, 250);
-        }, 2500);
-      }
-    }
-    intervalMainText = setInterval(textWave, 250);
-
-    document.querySelectorAll(".category li").forEach((item) => {
-      item.addEventListener("click", function () {
-        const url = this.getAttribute("data-url");
-        window.location.href = url;
-      });
-    });
-  </script>
+  <script src="./hotplace.js" type="module"></script>
 </html>
