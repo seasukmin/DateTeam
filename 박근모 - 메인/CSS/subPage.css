@@ -12,7 +12,7 @@ html {
   padding: 8px;
   width: fit-content;
   margin-top: 32px;
-  margin-left: 48px;
+  margin-left: 250px;
   /* border: 2px solid black; */
   border-radius: 24px;
 }
@@ -26,7 +26,7 @@ body {
 .login-box {
   margin: 0 24px;
   padding: 8px;
-  border: 2px solid black;
+  border: 2px solid #cccccc;
   border-radius: 24px;
   position: absolute;
   display: flex;
@@ -34,9 +34,14 @@ body {
   justify-content: center;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 .login-box > p {
   margin: 0;
+}
+.login-box:hover {
+  background-color: hotpink;
+  color: snow;
 }
 .search-box {
   padding: 12px;
@@ -45,6 +50,13 @@ body {
   width: fit-content;
   display: flex;
   align-items: center;
+}
+
+.searchBtn {
+  border: none;
+  background-color: transparent;
+  margin-left: 5px;
+  cursor: pointer;
 }
 .submain-center {
   display: flex;
@@ -90,8 +102,11 @@ body {
 .search-box > input {
   padding-left: 24px;
   border-radius: 24px;
-  width: 500px;
+  width: 550px;
+  height: 36px;
   font-size: 24px;
+  background-color: rgba(255, 105, 180, 0.705);
+  border: none;
 }
 .contents-container {
   width: 100%;
@@ -113,10 +128,18 @@ body {
 .contents-container .hidden {
   display: none;
 }
+.notice ul {
+  background-color: rgb(235, 235, 235);
+  border-radius: 8px;
+  padding: 100px;
+  margin-top: 50px;
+}
 .notice ul li {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #3e3e3e;
   padding: 16px;
   padding-left: 8px;
+  cursor: pointer;
+  font-size: 18px;
 }
 .notice ul li:hover {
   list-style-type: circle;
@@ -133,13 +156,15 @@ body {
 }
 .submainPage-footer {
   text-align: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 24px;
-  margin: 24px;
+  margin: 8px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
+  background-color: gainsboro;
 }
 .footer-right,
 .footer-left {
@@ -152,9 +177,10 @@ body {
   align-items: center;
 }
 .banner-box > p {
+  background-color: rgb(255, 218, 246);
   height: 80px;
   width: 90%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 24px;
   display: flex;
   justify-content: center;
