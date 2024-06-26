@@ -198,3 +198,9 @@ body {
   justify-content: space-around;
   gap: 20px;
 }
+
+#showForm {
+  position: fixed;
+  top: 14%;
+  left: 34%;
+}
