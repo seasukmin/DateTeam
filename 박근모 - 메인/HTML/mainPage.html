@@ -56,14 +56,16 @@
           </div> -->
           <div class="long-category">
             <div class="category-top">
-              <i class="bx bx-home-heart"></i>
+              <i class="bx bx-home-heart" id="topI"></i>
             </div>
             <div class="category-center">
-              <i class="bx bx-restaurant"></i>
-              <i class="bx bxs-coffee bx-flip-horizontal"></i>
-              <i class="bx bxs-map"></i>
+              <i class="bx bx-restaurant" id="jmtI"></i>
+              <i class="bx bxs-coffee" id="cafeI"></i>
+              <i class="bx bxs-map" id="placeI"></i>
             </div>
-            <div class="category-bottom"><i class="bx bx-search"></i></div>
+            <div class="category-bottom">
+              <i class="bx bx-info-circle" id="infoI"></i>
+            </div>
           </div>
         </aside>
       </div>
@@ -73,7 +75,7 @@
       <!-- main Area -->
       <div class="contents-center">
         <div class="calender-wether">
-          <div class="calendar">
+          <!-- <div class="calendar">
             <div class="calendar-header">
               <button id="prevMonth">&lt;</button>
               <div id="currentMonthYear"></div>
@@ -91,7 +93,18 @@
               </div>
               <div class="days" id="days"></div>
             </div>
+          </div> -->
+          <div class="subscribe-banner">
+            공지사항
+            <ul>
+              <li>스페셜 이벤트 공지</li>
+              <li>버전 1.16.06.13 업데이트 공지</li>
+              <li>시스템 점검안내 (7/1 2:00 ~ 6:00)</li>
+              <li>포인트 적립 서비스 약관</li>
+              <li>개인정보처리방침 개정 안내</li>
+            </ul>
           </div>
+
           <div class="wether-box">
             <h1 class="wether-title">이번주 날씨</h1>
             <div class="wether-week">
@@ -206,9 +219,10 @@
               <span>88</span>㎍/m³
             </div>
           </div>
+          <!-- <div class="subscribe-banner">이벤트</div> -->
         </div>
-        <section class="subscribe-banner">공지사항</section>
-        <section class="subscribe-banner">이벤트</section>
+        <!-- <section class="subscribe-banner">공지사항</section>
+        <section class="subscribe-banner">이벤트</section> -->
         <section class="restaurant-section">
           <h1 class="content-title" id="hTag-JMT">
             <span class="h-Tag1Span">#</span>맛집
@@ -224,13 +238,16 @@
             <span class="h-Tag3Span" id="hTag-hotPlace">#</span>핫플레이스
           </h1>
         </section>
-        <section class="subscribe-banner">제휴가게 및 쿠폰</section>
+        <section class="coupon-banner">제휴가게 및 쿠폰</section>
         <section class="epilogue-section">
           <h1 class="content-title">
             <span class="h-Tag4Span" id="hTag-epilogue">#</span>데이트후기
           </h1>
         </section>
         <!-- Footer -->
+        <div class="mainPage-banner">
+          <p>광고입니다.</p>
+        </div>
         <footer class="mainPage-footer">
           <div class="footer-left">
             <p>2024 D.W.Academy</p>
@@ -245,9 +262,7 @@
             </div>
           </div>
           <div class="footer-right">
-            <a class="customer-service" href="../HTML/subPage.html"
-              >고객지원센터</a
-            >
+            <a class="customer-service" href="../HTML/subPage.html">고객센터</a>
             <span>/</span>
             <p class="customer-service">이용약관</p>
             <p></p>

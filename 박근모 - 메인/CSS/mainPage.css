@@ -6,7 +6,7 @@
 }
 html {
   width: 100%;
-  height: auto;
+  height: 100vh;
 }
 body {
   background-color: snow;
@@ -38,6 +38,7 @@ body {
   display: flex;
   gap: 14px;
   font-size: 30px;
+  cursor: pointer;
 }
 .Tag-titles p {
   margin-top: 20px;
@@ -47,9 +48,9 @@ body {
 .Tag-titles p:hover {
   /* border-bottom: 2px solid rgb(255, 51, 204); */
   transform: scale(1.1);
-  transition: 0.2s;
+  transition: 0.1s;
 }
-.h-Tag1p:hover {
+/* .h-Tag1p:hover {
   cursor: pointer;
   border-bottom: 2px solid #ffa600;
 }
@@ -63,8 +64,8 @@ body {
 }
 .h-Tag4p:hover {
   cursor: pointer;
-  border-bottom: 2px solid rgb(255, 51, 204);
-}
+  border-bottom: 2px solid hotpink;
+} */
 .h-Tag1Span {
   color: #ffa600;
 }
@@ -75,7 +76,7 @@ body {
   color: skyblue;
 }
 .h-Tag4Span {
-  color: rgb(255, 51, 204);
+  color: hotpink;
 }
 
 /* title */
@@ -91,7 +92,7 @@ body {
   font-weight: bold;
 }
 .main-center {
-  height: 1500px;
+  /* height: 1500px; */
   padding-top: 220px;
   margin-right: 120px;
   display: flex;
@@ -104,8 +105,8 @@ body {
   display: flex;
   /* position: sticky; */
   position: fixed;
-  top: 250px;
-  left: 3%;
+  top: 230px;
+  left: 9.5%;
 }
 .short-category {
   border: 2px solid black;
@@ -118,7 +119,7 @@ body {
   font-size: 32px;
 }
 .long-category {
-  border: 2px solid black;
+  border: 2px solid #3e3e3ee8;
   border-radius: 24px;
   width: fit-content;
   height: fit-content;
@@ -138,17 +139,18 @@ body {
   padding: 4px;
 }
 .category-top {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #3e3e3ee8;
 }
 .category-center {
   margin-bottom: 32px;
 }
 .category-bottom {
-  border-top: 2px solid black;
+  border-top: 2px solid #3e3e3ee8;
 }
 .long-category div > i {
   padding: 6px;
   border-radius: 50px;
+  color: #3e3e3e;
 }
 .long-category div > i:hover {
   cursor: pointer;
@@ -160,8 +162,8 @@ body {
   transition: 0.3s;
 }
 .bx-home-heart:hover,
-.bx-search:hover {
-  background-color: rgb(255, 51, 204);
+.bx-info-circle:hover {
+  background-color: hotpink;
 }
 .bx-restaurant:hover {
   background-color: #ffa600;
@@ -176,8 +178,8 @@ body {
   position: relative;
 } */
 .QR-code {
-  /* border: 2px solid black; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   background-color: snow;
   border-radius: 24px;
   height: fit-content;
@@ -189,13 +191,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s;
+  /* transition: 0.1s; */
+  cursor: pointer;
 }
-.QR-code:hover {
-  box-shadow: 0 4px 8px rgba(255, 51, 204, 0.4);
+.QR-code:active {
+  box-shadow: 0 2px 2px rgba(255, 51, 204, 0.4);
   border: 1px solid rgba(255, 51, 204, 0.4);
-  font-weight: bold;
-  transform: scale(1.1);
+  /* font-weight: bold; */
+  /* transform: scale(1);    */
 }
 
 .plannListBox {
@@ -209,6 +212,9 @@ body {
 }
 .calender-wether {
   display: flex;
+  gap: 12px;
+  margin: 0 8px;
+  height: 280px;
 }
 .login-box {
   display: flex;
@@ -238,14 +244,14 @@ body {
   height: 35px;
   margin-top: 16px;
   font-size: 18px;
-  background-color: #ff33cc;
+  background-color: hotpink;
   border: 0;
   color: white;
   border-radius: 24px;
   cursor: pointer;
 }
 .login-btn:hover {
-  background-color: rgb(255, 44, 150);
+  background-color: rgb(255, 85, 170);
   color: snow;
 }
 .signIn,
@@ -256,12 +262,13 @@ body {
   font-size: 20px;
   border: 0;
   border-radius: 24px;
-  background-color: rgb(255, 51, 204);
+  background-color: hotpink;
   color: white;
+  cursor: pointer;
 }
 .signIn:hover,
 .nonsignIn:hover {
-  background-color: rgb(255, 0, 191);
+  background-color: rgb(255, 85, 170);
   color: white;
 }
 .signUp {
@@ -270,10 +277,11 @@ body {
   border: 0;
   padding-top: 6px;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 .signUp:active,
 .signUp:hover {
-  color: rgb(255, 51, 204);
+  color: rgb(255, 85, 170);
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
 }
@@ -305,14 +313,14 @@ body {
 .return-button {
   margin-top: 12px;
   font-size: 18px;
-  background-color: #ff33cc;
+  background-color: hotpink;
   border: 0;
   color: white;
   border-radius: 24px;
   cursor: pointer;
 }
 .return-button:hover {
-  background-color: rgb(255, 44, 150);
+  background-color: rgb(255, 85, 170);
   color: snow;
 }
 .hiddenALogin {
@@ -341,17 +349,16 @@ input[type="radio"] {
 
 input[type="radio"]:checked + label {
   padding: 3px 24px;
-  border: 2px solid #ff33cc;
-  background-color: #ff33cc;
+  border: 2px solid hotpink;
+  background-color: hotpink;
   border-radius: 24px;
-  /* color: #ff33cc; */
   color: white;
   cursor: pointer;
 }
 .addPlanner {
   width: 170px;
   font-size: 18px;
-  background-color: #ff33cc;
+  background-color: hotpink;
   border: 0;
   color: white;
   border-radius: 24px;
@@ -359,21 +366,32 @@ input[type="radio"]:checked + label {
 }
 
 .addPlanner:hover {
-  background-color: rgb(255, 44, 150);
+  background-color: rgb(255, 85, 170);
   color: snow;
 }
 
 .hidden {
   display: none;
 }
-
+.mainPage-banner {
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 24px;
+  cursor: pointer;
+  height: 7%;
+}
 .mainPage-footer {
   width: 100%;
   text-align: center;
-  border: 2px solid black;
-  border-radius: 24px;
-  /* margin: 24px; */
+  /* border: 2px solid black; */
+  background-color: gainsboro;
+  border-radius: 8px;
   margin-top: 24px;
+  padding: 8px;
+
   display: flex;
   justify-content: center;
   align-items: flex-end;

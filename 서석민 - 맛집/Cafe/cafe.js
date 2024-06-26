@@ -212,6 +212,15 @@ const memberInfo = {
   resturant: [nameText, addrText],
 };
 
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
+
 // const Mainboxes1 = Mainbox1.firstElementChild;
 // Mainboxes1.addEventListener("click", function () {
 //   location.href = "https://www.instagram.com/Chiangmai_bangkok/";

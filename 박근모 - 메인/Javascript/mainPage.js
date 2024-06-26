@@ -93,18 +93,44 @@ const hotPlacetag = document.getElementById("h-hotPlace");
 const epiloguetag = document.getElementById("h-epilogue");
 
 JMTtag.addEventListener("click", (e) => {
-  location.href = "#hTag-JMT";
+  // location.href = "#hTag-JMT";
+  location.href = "/DateTeam/서석민 - 맛집/JMT/JMT.html";
 });
 cafetag.addEventListener("click", (e) => {
-  location.href = "#hTag-cafe";
-  // scroll.href = "#hTag-cafe";
+  location.href = "/DateTeam/서석민 - 맛집/Cafe/Cafe.html";
 });
 hotPlacetag.addEventListener("click", (e) => {
-  location.href = "#hTag-hotPlace";
+  location.href = "/DateTeam/정유진 - 맛집/hotPlace.html";
 });
 epiloguetag.addEventListener("click", (e) => {
-  location.href = "#hTag-epilogue";
+  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
 });
+
+const topLoop = document.getElementById("topI");
+const jmtLoop = document.getElementById("jmtI");
+const cafeLoop = document.getElementById("cafeI");
+const placeLoop = document.getElementById("placeI");
+const bottomLoop = document.getElementById("infoI");
+
+topLoop.addEventListener("click", (e) => {
+  // location.href = "#hTag-JMT";
+  window.scrollTo(0, 0);
+});
+jmtLoop.addEventListener("click", (e) => {
+  // location.href = "#hTag-JMT";
+  window.scrollTo(0, 300);
+});
+cafeLoop.addEventListener("click", (e) => {
+  // location.href = "#hTag-cafe";
+  window.scrollTo(0, 500);
+});
+placeLoop.addEventListener("click", (e) => {
+  window.scrollTo(0, 800);
+});
+bottomLoop.addEventListener("click", (e) => {
+  location.href = "./subPage.html";
+});
+
 const instagram = document.querySelector(".bxl-instagram-alt");
 const facebook = document.querySelector(".bxl-facebook-circle");
 const twitter = document.querySelector(".bxl-twitter");
@@ -125,24 +151,6 @@ youtube.addEventListener(
   "click",
   () => (location.href = "https://www.youtube.com")
 );
-
-const shareBtn = document.getElementById("shareBtn");
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
-
-shareBtn.addEventListener("click", () => {
-  modal.style.display = "block";
-});
-
-span.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (event) => {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
 
 const datas = await getDatas("store");
 let infolist;

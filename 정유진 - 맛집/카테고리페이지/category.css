@@ -13,7 +13,7 @@
 
 body {
   background-color: snow;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: "Ownglyph_noocar-Rg";
   margin: 0;
@@ -58,7 +58,6 @@ body {
 .searchInput {
   width: 40%;
   height: 40px;
-  border: 1px solid black;
   padding: 0 20px;
   border: none;
   background-color: skyblue;
@@ -368,6 +367,7 @@ body {
   height: 200px;
   background-color: rgb(178, 230, 250);
   border-radius: 10px;
+  position: relative;
 }
 .info {
   margin-left: 50px;
@@ -376,4 +376,9 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+}
+.footer-icons {
+  font-size: 24px;
+  position: absolute;
+  top: 120px;
 }
