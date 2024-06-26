@@ -42,7 +42,7 @@ body {
   border-bottom: 2px solid skyblue;
 }
 .h-Tag4p:hover {
-  border-bottom: 2px solid rgb(255, 51, 204);
+  border-bottom: 2px solid hotpink;
 }
 .share-h-Tag1Span {
   color: #ffa600;
@@ -54,7 +54,7 @@ body {
   color: skyblue;
 }
 .share-h-Tag4Span {
-  color: rgb(255, 51, 204);
+  color: hotpink;
 }
 
 .share-h-Tag1p,

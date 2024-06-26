@@ -416,7 +416,11 @@ Mainbox1.addEventListener("click", function (e) {
     </div>
   `
   );
+  const result = addDatas("");
 });
+if (localStorage.getItem("store30")) {
+  resturantBoxes.innerHTML = `ㅎㅇ`;
+}
 // 눌렀을때 값이
 // const result = await addDatas("Hotplace2", { Textinfomation });
 //   // });

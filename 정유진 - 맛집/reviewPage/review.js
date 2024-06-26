@@ -49,7 +49,7 @@ function submitReview() {
                                        </div>
                                        <div class="review-visited">
                                            <h2>방문한 곳: ${location}</h2>
-                                           <p>작성일: ${date}</p>
+                                           <p>방문일: ${date}</p>
                                        </div>
                                        <div class="review-text">
                                        //   <img src="${photoURL}" alt="Photo" />
@@ -77,7 +77,7 @@ function submitReview() {
                                  </div>
                                  <div class="review-visited">
                                      <h2>방문한 곳: ${location}</h2>
-                                     <p>작성일: ${date}</p>
+                                     <p>방문일: ${date}</p>
                                  </div>
                                  <div class="review-text">
                                      <p>${review}</p>
