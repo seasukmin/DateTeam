@@ -16,6 +16,8 @@ const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
   location.href = "#";
 });
+// const resturantBoxes = document.querySelector(".resturantBoxes");
+
 // 로고 끝
 // 헤더 시작
 const header = document.querySelector("#header-H2");
@@ -411,3 +413,6 @@ const Mainchart4 = document.querySelector(".Mainchart-inner4");
 Mainchart4.lastElementChild.addEventListener("click", function () {
   alert("4");
 });
+if (localStorage.getItem("store30")) {
+  resturantBoxes.innerHTML = `ㅎㅇ`;
+}
