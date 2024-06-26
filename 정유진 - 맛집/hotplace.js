@@ -96,14 +96,6 @@ const contentArr = [
     time2: "",
     event: "#봉이호떡 #산책",
   },
-  {
-    a: "",
-    img: "./img/대청호3.jpg",
-    name: "대청호",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#드라이브",
-  },
 ];
 contentArr.forEach((info, idx) => {
   content.insertAdjacentHTML(
@@ -171,87 +163,107 @@ window.onload = chgMainImg;
 //   });
 // });
 
-const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
-const wave = document.querySelector(".main-text");
-let textLength = 0;
-let intervalMainText;
-function textWave() {
-  if (textLength < text.length) {
-    wave.innerHTML += text[textLength++];
-  } else {
-    clearInterval(intervalMainText);
-    setTimeout(() => {
-      wave.textContent = "";
-      textLength = 0;
-      intervalMainText = setInterval(textWave, 250);
-    }, 2500);
-  }
-}
+// const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
+// const wave = document.querySelector(".main-text");
+// let textLength = 0;
+// let intervalMainText;
+// function textWave() {
+//   if (textLength < text.length) {
+//     wave.innerHTML += text[textLength++];
+//   } else {
+//     clearInterval(intervalMainText);
+//     setTimeout(() => {
+//       wave.textContent = "";
+//       textLength = 0;
+//       intervalMainText = setInterval(textWave, 250);
+//     }, 2500);
+//   }
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
-  intervalMainText = setInterval(textWave, 250);
+// document.addEventListener("DOMContentLoaded", () => {
+//   intervalMainText = setInterval(textWave, 250);
 
-  document.querySelectorAll(".category li").forEach((item) => {
-    item.addEventListener("click", function () {
-      const url = this.getAttribute("data-url");
-      window.location.href = url;
-    });
-  });
-});
+//   document.querySelectorAll(".category li").forEach((item) => {
+//     item.addEventListener("click", function () {
+//       const url = this.getAttribute("data-url");
+//       window.location.href = url;
+//     });
+//   });
+// });
 
-const datas = await getDatas("hotPlace1");
-let infoinput;
-const infoinputArr = [];
-datas.forEach((doc, idx) => {
-  const info = doc.data();
-  // console.log(infoinput);
-  infoinputArr.push(info);
-});
+//   contentArr.forEach(async (e, idx) => {
+//     // console.log(e);
+//     const a = e.a;
+//     const img = e.img;
+//     const name = e.name;
+//     const time = e.time;
+//     const time2 = e.time2;
+//     const event = e.event;
+//     const event2 = `hotPlace${idx + 1}`;
+//     const store1Obj = {
+//       a: a,
+//       img: img,
+//       name: name,
+//       time: time,
+//       time2: time2,
+//       event: event,
+//       event2: event2,
+//     };
+//     // const result = await addDatas("Hotplace", store1Obj);
+//   });
+// });
+
 const searchInput = document.querySelector(".searchInput");
 const searchBtn = document.querySelector(".searchBtn");
 const searchBox = document.querySelector(".searchBox");
-console.log(infoinputArr);
+console.log(searchInput);
 function inputArr(e) {
   searchBox.innerHTML = "";
-  const inputValue = headerInput.value;
-  if (inputValue === "") return;
-  infoinputArr.forEach(function (el, idx) {
-    console.log(el.addr);
-    if (
-      el.addr.includes(inputValue) ||
-      el.category.includes(inputValue) ||
-      el.name.includes(inputValue) ||
-      el.number.includes(inputValue) ||
-      el.point.includes(inputValue) ||
-      (el.time.includes(inputValue) && e.code == "Enter")
-    ) {
-      console.log(el);
+  const inputValue = searchInput.value;
+  infoinput.forEach(function (el, idx) {
+    if (el.event.includes(inputValue)) {
       searchBox.insertAdjacentHTML(
         "beforeend",
         `
                      <div class="box">
                           <img
                             class="box-img"
-                            src="../Photo/${idx + 1}.jpg"
+                            src="../Photo/23.jpg"
                           />
                           <div class="box-point"><span>평점:</span>
-                          ${el.point}</div>
-                          <div class="box-name">${el.name}</div>
-                          <div class="box-tag"><span>addr:</span>${
-                            el.addr
-                          }</div>
-                          <div class="box-tag"><span>On.</span>${el.time}</div>
-                          <div class="box-tag"><span>N.</span>${el.number}</div>
-                          <div class="box-tag"><span>#</span>${
-                            el.category
-                          }</div>
+                        23</div>
+                          <div class="box-name">23</div>
+                          <div class="box-tag"><span>addr:</span>23</div>
+                          <div class="box-tag"><span>On.</span>12</div>
+                          <div class="box-tag"><span>N.</span>12</div>
+                          <div class="box-tag"><span>#</span>
+                          12</div>
                         </div>
                    `
       );
     }
   });
-
-  headerInput.value = "";
 }
 searchBtn.addEventListener("click", inputArr);
 searchInput.addEventListener("keypress", inputArr);
+let etarget;
+
+// content-box 클릭 이벤트 리스너
+const allbox = document.querySelector(".content-box");
+
+const datas = await getDatas("Hotplace2");
+const infoinput = [];
+datas.forEach((doc, idx) => {
+  const info = doc.data();
+  // console.log(infoinput);s
+  infoinput.push(info);
+});
+
+let target;
+allbox.addEventListener("click", function (e) {
+  e.target;
+  console.log(e.target);
+  const werwe = { name: e.target.innerHTML };
+  addDatas("Hotplace2", { werwe });
+  localStorage.setItem("id", "Hotplace01");
+});

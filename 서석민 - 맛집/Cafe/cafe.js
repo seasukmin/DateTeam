@@ -192,6 +192,34 @@ function inputArr(e) {
 }
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
+Mainbox1.addEventListener("click", function () {
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+  }
+});
+
+const day1 = document.querySelector(".day1");
+const day1inner = day1.innerHTML;
+const nameText = nameChild.innerHTML;
+const addrText = addrChild.innerHTML.substring(18, 22);
+const memberInfo = {
+  resturant: [nameText, addrText],
+};
+
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
 
 // const Mainboxes1 = Mainbox1.firstElementChild;
 // Mainboxes1.addEventListener("click", function () {

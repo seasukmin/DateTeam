@@ -296,3 +296,12 @@ const Mainchart4 = document.querySelector(".Mainchart-inner4");
 Mainchart4.lastElementChild.addEventListener("click", function () {
   alert("4");
 });
+
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
