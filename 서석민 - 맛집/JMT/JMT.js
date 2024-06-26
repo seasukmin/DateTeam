@@ -3,10 +3,8 @@ import {
   db,
   getDatas,
   addDatas,
-  addDatasAuto,
   deleteDatas,
   updateDatas,
-  addFieldToArrayInDocument,
 } from "./DLU_firebase.js";
 // const jmtTag = document.querySelector(".h-Tag1Span");
 // const cafeTag = document.querySelector(".h-Tag2Span");
@@ -271,7 +269,10 @@ displayNextCharacter();
 // 중복을 제거하는 함수
 
 // 중복 확인 함수
+
+// console.log(infoinputArr);
 const datas = await getDatas("store1");
+// const textinner = "분위기 있는";
 let infoinput;
 const infoinputArr = [];
 datas.forEach((doc, idx) => {
@@ -280,7 +281,6 @@ datas.forEach((doc, idx) => {
   infoinputArr.push(info);
 });
 console.log(infoinputArr);
-
 let infolistArr = infoinputArr.map(function (el) {
   return `${el.name},${el.point}`;
 });
@@ -318,19 +318,20 @@ infolistSliceArr1.forEach(function (el, idx) {
   Mainbox1.insertAdjacentHTML(
     "beforeend",
     `
-  <div class="box">
-  <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
-            <img
+   <div class="box">
+   <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
+             <img
               class="box-img"
-              src="${el.src}"
+            src="../Photo/${el.src}"
             />
-            <div class="box-point"><span>평점:</span> ${el.point}</div>
-            <div class="box-name">${el.name}</div>
-            <div class="box-tag"><span>addr:</span> ${el.addr}</div>
-            <div class="box-tag"><span>On.</span>${el.time}</div>
-            <div class="box-tag"><span>N. </span>${el.number}</div>
-            <div class="box-tag"><span>#</span>${el.category}</div>
-          </div>
+          <div class="box-point"><span>평점:</span> ${el.point}</div>
+          <div class="box-name">${el.name}</div>
+          <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+          <div class="box-tag"><span>On.</span>${el.time}</div>        
+          <div class="box-tag"><span>N. </span>${el.number}</div>        
+          <div class="box-tag"><span>#</span>${el.category}</div>
+          <div class="hidden"><span>#</span>${el.id}</div>
+           </div>
 
        `
   );
@@ -340,7 +341,7 @@ const Searches = document.querySelector(".Search");
 const headerInput = document.querySelector(".header-Input");
 const result = document.querySelector(".result");
 function inputArr(e) {
-  result.innerHTML = "";
+  headerInput.innerHTML = "";
   const inputValue = headerInput.value;
   if (inputValue === "") return;
   infoinputArr.forEach(function (el, idx) {
@@ -384,27 +385,50 @@ function inputArr(e) {
 Searches.addEventListener("click", inputArr);
 headerInput.addEventListener("keypress", inputArr);
 
-const box = e.target.closest(".box");
-if (box) {
-  nameChild =
-    box.firstElementChild.nextElementSibling.nextElementSibling
-      .nextElementSibling;
-  addrChild =
-    box.firstElementChild.nextElementSibling.nextElementSibling
-      .nextElementSibling.nextElementSibling;
-}
+let nameChild;
+let addrChild;
+let idChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+    idChild = box.lastElementChild;
+  }
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const IdText = idChild.innerHTML.substring(14, 22);
+  console.log(nameText, addrText, IdText);
+  localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+  let username = localStorage.getItem(`${IdText}`);
+  resturantBoxes.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div>
+    <span>${username}</span>
+    </div>
+  `
+  );
+});
+// 눌렀을때 값이
+// const result = await addDatas("Hotplace2", { Textinfomation });
+//   // });
+//
 
-const day1 = document.querySelector(".day1");
-const day1inner = day1.innerHTML;
-const nameText = nameChild.innerHTML;
-const addrText = addrChild.innerHTML.substring(18, 22);
-const memberInfo = {
-  resturant: [nameText, addrText],
-};
+// const memberInfo = {
+//   resturant: [nameText, addrText],
+// };
 
-let planArr = planlist.planArr.resturant || [];
-console.log(planArr);
-planArr.push(memberInfo);
+// let planArr = planlist.planArr.resturant || [];
+// console.log(planArr);
+// planArr.push(memberInfo);
 // const result = await addDatas("plan", { planArr }, "planArr");
 // let lastValue = planArr[planArr.length - 1];
 
@@ -416,75 +440,75 @@ planArr.push(memberInfo);
 // }
 // newMemberInfoArr.push(memberInfoArr);
 // memberInfoObj.resturant = `${memberInfo}`;
-memberInfoObj.resturant = memberInfo;
+// memberInfoObj.resturant = memberInfo;
 
-console.log(memberInfoObj.resturant);
+// console.log(memberInfoObj.resturant);
 
-async function resturantupdateDatas() {
-  // const result = await addDatas("plan", newMemberInfoArr, "planArr");
-  memberInfo = {
-    title: nameText,
-    addr: addrText,
-    // resturant: { title: nameText, addr: addrText },
-  };
-  function removeDuplicates(array) {
-    return [...new Set(array)];
-  }
-  memberInfoArr.push(memberInfo);
-  const newMemberInfoArr = removeDuplicates(memberInfoArr);
-  memberInfoObj.resturant = newMemberInfoArr;
-  console.log(memberInfoObj); // [{},{}]  { restaurant: [{}]  }
-  // const result = await addDatas("plan", memberInfoObj, "planArr");
-  try {
-    const result = await addDatas("plan", memberInfoObj, "planArr");
-    // const result = await updateDatas("plan", "planArr", memberInfoObj);
-    console.log("데이터가 성공적으로 추가되었습니다: ", result);
-  } catch (error) {
-    console.error("데이터 추가 중 오류 발생: ", error);
-  }
-}
+// async function resturantupdateDatas() {
+//   // const result = await addDatas("plan", newMemberInfoArr, "planArr");
+//   memberInfo = {
+//     title: nameText,
+//     addr: addrText,
+//     // resturant: { title: nameText, addr: addrText },
+//   };
+//   function removeDuplicates(array) {
+//     return [...new Set(array)];
+//   }
+//   memberInfoArr.push(memberInfo);
+//   const newMemberInfoArr = removeDuplicates(memberInfoArr);
+//   memberInfoObj.resturant = newMemberInfoArr;
+//   console.log(memberInfoObj); // [{},{}]  { restaurant: [{}]  }
+//   // const result = await addDatas("plan", memberInfoObj, "planArr");
+//   try {
+//     const result = await addDatas("plan", memberInfoObj, "planArr");
+//     // const result = await updateDatas("plan", "planArr", memberInfoObj);
+//     console.log("데이터가 성공적으로 추가되었습니다: ", result);
+//   } catch (error) {
+//     console.error("데이터 추가 중 오류 발생: ", error);
+//   }
+// }
 
-const Top = document.querySelector(".TopLoop");
-Top.addEventListener("click", function () {
-  location.href = "#header-H1";
-});
-//
-const headerH1 = document.querySelector("#header-H1");
-headerH1.addEventListener("click", function () {
-  location.reload();
-});
-// clear(초기화) 버튼
-const clear = document.querySelector(".clear");
-clear.addEventListener("click", function () {
-  location.reload();
-});
+// const Top = document.querySelector(".TopLoop");
+// Top.addEventListener("click", function () {
+//   location.href = "#header-H1";
+// });
+// //
+// const headerH1 = document.querySelector("#header-H1");
+// headerH1.addEventListener("click", function () {
+//   location.reload();
+// });
+// // clear(초기화) 버튼
+// const clear = document.querySelector(".clear");
+// clear.addEventListener("click", function () {
+//   location.reload();
+// });
 
-const Promise = document.querySelector("Promise-but");
-let child;
-function openPopup() {
-  child = window.open(
-    "../240510/2_numberguess.html",
-    "_blank",
-    "width=1000,height=500, left=500, top=0,"
-  );
-  // location=no ==> 주소입력창 없어짐
-  // resizable=no ==> 팝업창의 크기를 조절할 수 없음
-  // toolbar=no ==> 도구모음이 없어짐
-}
-const body = document.querySelector("body");
-const MainH1 = document.querySelector(".MainH1");
-const bodyHeight = body.getBoundingClientRect();
-const MainH1Height = MainH1.getBoundingClientRect();
-function updateScrollPosition() {
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  // console.log("Scroll Position: " + scrollPosition);
+// const Promise = document.querySelector("Promise-but");
+// let child;
+// function openPopup() {
+//   child = window.open(
+//     "../240510/2_numberguess.html",
+//     "_blank",
+//     "width=1000,height=500, left=500, top=0,"
+//   );
+//   // location=no ==> 주소입력창 없어짐
+//   // resizable=no ==> 팝업창의 크기를 조절할 수 없음
+//   // toolbar=no ==> 도구모음이 없어짐
+// }
+// const body = document.querySelector("body");
+// const MainH1 = document.querySelector(".MainH1");
+// const bodyHeight = body.getBoundingClientRect();
+// const MainH1Height = MainH1.getBoundingClientRect();
+// function updateScrollPosition() {
+//   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+//   // console.log("Scroll Position: " + scrollPosition);
 
-  if (scrollPosition > 1000) {
-    MainH1.style.transform = "translateY(-100px)";
-    MainH1.style.transition = "0.5s linear";
-  }
-}
+//   if (scrollPosition > 1000) {
+//     MainH1.style.transform = "translateY(-100px)";
+//     MainH1.style.transition = "0.5s linear";
+//   }
+// }
 
-window.addEventListener("scroll", updateScrollPosition);
+// window.addEventListener("scroll", updateScrollPosition);
 
 // body.addEventListener('wheel', function(){

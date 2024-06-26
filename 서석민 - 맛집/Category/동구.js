@@ -368,7 +368,7 @@ Mainbox4.addEventListener("click", function (e) {
 });
 let nameChild5;
 let addrChild5;
-const resturantBoxes = document.querySelector(".resturantBoxes");
+const resturantBoxes5 = document.querySelector(".resturantBoxes");
 Mainbox5.addEventListener("click", function (e) {
   e.preventDefault();
   const box = e.target.closest(".box");
@@ -386,6 +386,27 @@ Mainbox5.addEventListener("click", function (e) {
       `<div>✔ ${nameText} : ${addrText}</div>`
     );
   }
+});
+let nameChild6;
+let addrChild6;
+const Mainchartinner = document.querySelector(".Mainchart-inner1");
+const resturantBoxe6 = document.querySelector(".resturantBoxes");
+Mainchartinner.addEventListener("click", function (e) {
+  alert("d");
+  // const box = e.target.closest(".box");
+  // if (box) {
+  //   nameChild6 = box.firstElementChild.nextElementSibling.nextElementSibling;
+  //   addrChild6 =
+  //     box.firstElementChild.nextElementSibling.nextElementSibling
+  //       .nextElementSibling;
+  //   const nameText = nameChild6.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+  //   const addrText = addrChild6.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+  //   console.log(nameChild5);
+  //   resturantBoxe6.insertAdjacentHTML(
+  //     "beforeend",
+  //     `<div>✔ ${nameText} : ${addrText}</div>`
+  //   );
+  // }
 });
 // 메인 종료
 
