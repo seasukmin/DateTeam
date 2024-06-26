@@ -3,6 +3,7 @@ import {
   db,
   getDatas,
   addDatas,
+  addDatasAuto,
   deleteDatas,
   updateDatas,
   addFieldToArrayInDocument,
@@ -64,144 +65,179 @@ function displayNextCharacter() {
 
 displayNextCharacter();
 
-const datas = await getDatas("store");
-let infolist;
-let infoinput;
-datas.forEach((doc, idx) => {
-  const info = doc.data();
-  console.log(info);
-  infolist = info.members;
-  infoinput = info.input;
-});
+// const datas = await getDatas("hotPlace");
+// let infolist;
+// let infoinput;
+// datas.forEach(async (doc, idx) => {
+//   const info = doc.data();
+//   // infolist = info.members;
+//   infoinput = info.input;
+//   infolist = info.list;
+//   console.log(infolist);
+//   // let idx = 1;
+//   infolist.forEach(async (e, idx) => {
+//     console.log(e);
+//     // const addr = e.addr;
+//     // const name = e.name;
+//     const point = e.point;
+//     // const age = e.age;
+//     // const category = e.category;
+//     // const number = e.number;
+//     // const time = e.time;
+//     const event = e.event;
+//     const img = e.img;
+//     const text = e.text;
+//     const text2 = e.text2;
+//     const title = e.title;
+//     const id = `hotPlace${idx + 1}`;
 
-let infolistArr = infolist.map(function (el) {
-  return `${el.name},${el.point}`;
-});
-let infolistArrsort = infolistArr.sort(function (a, b) {
-  let pointA = a.split(",")[1];
-  let pointB = b.split(",")[1];
-  return pointA - pointB;
-});
-const sidebarA = document.querySelectorAll(".sidebar-sub");
-const infolistSliceArr = infolistArrsort.slice(70, 80);
-sidebarA.forEach(function (el, idx) {
-  if (idx < infolistSliceArr.length) {
-    let infolistEnd = infolistSliceArr[idx].split(",")[0];
-    el.insertAdjacentHTML(
-      "afterbegin",
-      `<a href="#" class="sidebarA"><span class="sideinnerN">${
-        idx + 1
-      }. </span>  <span class="sideinnerT">${infolistEnd}</span></a>`
-    );
-  }
-});
-let infolistArr1 = infolist.map(function (el) {
-  return el;
-});
-let infolistArrsort1 = infolistArr1.sort(function (a, b) {
-  let pointC = a.point;
-  let pointD = b.point;
-  return pointC - pointD;
-});
-const infolistSliceArr1 = infolistArrsort1.slice(70, 80);
-console.log(infolistSliceArr1);
-const Mainbox1 = document.querySelector(".Main-box1");
-infolistSliceArr1.forEach(function (el, idx) {
-  Mainbox1.insertAdjacentHTML(
-    "beforeend",
-    `
-  <div class="box">
-  <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
-            <img
-              class="box-img"
-              src="../Photo/${el.src}"
-            />
-            <div class="box-point"><span>평점:</span> ${el.point}</div>
-            <div class="box-name">${el.name}</div>
-            <div class="box-tag"><span>addr:</span> ${el.addr}</div>
-            <div class="box-tag"><span>On.</span>${el.time}</div>
-            <div class="box-tag"><span>N. </span>${el.number}</div>
-            <div class="box-tag"><span>#</span>${el.category}</div>
-          </div>
+//     const store1Obj = {
+//       // addr: addr,
+//       // name: name,
+//       // point: point,
+//       // age: age,
+//       // category: category,
+//       // number: number,
+//       // time: time,
+//       event: event,
+//       img: img,
+//       text: text,
+//       text2: text2,
+//       title: title,
+//       id: id,
+//     };
+//     // const result = await addDatasAuto("hotPlace1", store1Obj);
+//   });
+// });
 
-       `
-  );
-});
+// let infolistArr = infolist.map(function (el) {
+//   return `${el.name},${el.point}`;
+// });
+// let infolistArrsort = infolistArr.sort(function (a, b) {
+//   let pointA = a.split(",")[1];
+//   let pointB = b.split(",")[1];
+//   return pointA - pointB;
+// });
+// const sidebarA = document.querySelectorAll(".sidebar-sub");
+// const infolistSliceArr = infolistArrsort.slice(70, 80);
+// sidebarA.forEach(function (el, idx) {
+//   if (idx < infolistSliceArr.length) {
+//     let infolistEnd = infolistSliceArr[idx].split(",")[0];
+//     el.insertAdjacentHTML(
+//       "afterbegin",
+//       `<a href="#" class="sidebarA"><span class="sideinnerN">${
+//         idx + 1
+//       }. </span>  <span class="sideinnerT">${infolistEnd}</span></a>`
+//     );
+//   }
+// });
+// let infolistArr1 = infolist.map(function (el) {
+//   return el;
+// });
+// let infolistArrsort1 = infolistArr1.sort(function (a, b) {
+//   let pointC = a.point;
+//   let pointD = b.point;
+//   return pointC - pointD;
+// });
+// const infolistSliceArr1 = infolistArrsort1.slice(70, 80);
+// console.log(infolistSliceArr1);
+// const Mainbox1 = document.querySelector(".Main-box1");
+// infolistSliceArr1.forEach(function (el, idx) {
+//   Mainbox1.insertAdjacentHTML(
+//     "beforeend",
+//     `
+//   <div class="box">
+//   <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
+//             <img
+//               class="box-img"
+//               src="../Photo/${el.src}"
+//             />
+//             <div class="box-point"><span>평점:</span> ${el.point}</div>
+//             <div class="box-name">${el.name}</div>
+//             <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+//             <div class="box-tag"><span>On.</span>${el.time}</div>
+//             <div class="box-tag"><span>N. </span>${el.number}</div>
+//             <div class="box-tag"><span>#</span>${el.category}</div>
+//           </div>
 
-const Searches = document.querySelector(".Search");
-const headerInput = document.querySelector(".header-Input");
-const result = document.querySelector(".result");
-function inputArr(e) {
-  console.log(this);
-  result.innerHTML = "";
-  let inputValue = headerInput.value;
-  inputValue = inputValue.replaceAll(" ", "&nbsp;");
-  // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
-  if (inputValue === "") return;
-  infolist.forEach(function (el, idx) {
-    if (
-      el.addr.includes(inputValue) ||
-      el.category.includes(inputValue) ||
-      el.name.includes(inputValue) ||
-      el.number.includes(inputValue) ||
-      el.point.includes(inputValue) ||
-      (el.time.includes(inputValue) && e.code == "Enter")
-    ) {
-      result.insertAdjacentHTML(
-        "beforeend",
-        `
-                     <div class="box">
-                          <img
-                            class="box-img"
-                            src="../Photo/${idx + 1}.jpg"
-                          />
-                          <div class="box-point"><span>평점:</span>
-                          ${el.point}</div>
-                          <div class="box-name">${el.name}</div>
-                          <div class="box-tag"><span>addr:</span>${
-                            el.addr
-                          }</div>
-                          <div class="box-tag"><span>On.</span>${el.time}</div>
-                          <div class="box-tag"><span>N.</span>${el.number}</div>
-                          <div class="box-tag"><span>#</span>${
-                            el.category
-                          }</div>
-                        </div>
-                   `
-      );
-    }
-  });
+//        `
+//   );
+// });
 
-  headerInput.value = "";
-}
-Searches.addEventListener("click", inputArr);
-headerInput.addEventListener("keypress", inputArr);
+// const Searches = document.querySelector(".Search");
+// const headerInput = document.querySelector(".header-Input");
+// const result = document.querySelector(".result");
+// function inputArr(e) {
+//   console.log(this);
+//   result.innerHTML = "";
+//   let inputValue = headerInput.value;
+//   inputValue = inputValue.replaceAll(" ", "&nbsp;");
+//   // let changeMessage = inputValue.replaceAll(' ',"&nbsp;")
+//   if (inputValue === "") return;
+//   infolist.forEach(function (el, idx) {
+//     if (
+//       el.addr.includes(inputValue) ||
+//       el.category.includes(inputValue) ||
+//       el.name.includes(inputValue) ||
+//       el.number.includes(inputValue) ||
+//       el.point.includes(inputValue) ||
+//       (el.time.includes(inputValue) && e.code == "Enter")
+//     ) {
+//       result.insertAdjacentHTML(
+//         "beforeend",
+//         `
+//                      <div class="box">
+//                           <img
+//                             class="box-img"
+//                             src="../Photo/${idx + 1}.jpg"
+//                           />
+//                           <div class="box-point"><span>평점:</span>
+//                           ${el.point}</div>
+//                           <div class="box-name">${el.name}</div>
+//                           <div class="box-tag"><span>addr:</span>${
+//                             el.addr
+//                           }</div>
+//                           <div class="box-tag"><span>On.</span>${el.time}</div>
+//                           <div class="box-tag"><span>N.</span>${el.number}</div>
+//                           <div class="box-tag"><span>#</span>${
+//                             el.category
+//                           }</div>
+//                         </div>
+//                    `
+//       );
+//     }
+//   });
 
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
-  console.log(box);
-});
-// if (box) {
-//   const idx = box.getAttribute("data-idx");
-//   const selectedItem = infolist[idx];
+//   headerInput.value = "";
 // }
-let updateTarget;
-let nameChild;
-let addrChild;
-const resturantBoxes = document.querySelector(".resturantBoxes");
+// Searches.addEventListener("click", inputArr);
+// headerInput.addEventListener("keypress", inputArr);
 
-const datasPlan = await getDatas("plan");
-let memberInfoArr = [];
-let memberInfoObj = { resturant: {} };
-datasPlan.forEach((doc, idx) => {
-  const info = doc.data();
-  info.planArr.forEach((item) => {
-    const storeTitle = item.resturant[0];
-    const storeAddr = item.resturant[1];
-    // memberInfoObj = { title: storeTitle, addr: storeAddr };
-    memberInfoArr.push(memberInfoObj);
-  });
-});
+// result.addEventListener("click", (e) => {
+//   const box = e.target.closest(".box");
+//   console.log(box);
+// });
+// // if (box) {
+// //   const idx = box.getAttribute("data-idx");
+// //   const selectedItem = infolist[idx];
+// // }
+// let updateTarget;
+// let nameChild;
+// let addrChild;
+// const resturantBoxes = document.querySelector(".resturantBoxes");
+
+// const datasPlan = await getDatas("plan");
+// let memberInfoArr = [];
+// let memberInfoObj = { resturant: {} };
+// datasPlan.forEach((doc, idx) => {
+//   const info = doc.data();
+//   info.planArr.forEach((item) => {
+//     const storeTitle = item.resturant[0];
+//     const storeAddr = item.resturant[1];
+//     // memberInfoObj = { title: storeTitle, addr: storeAddr };
+//     memberInfoArr.push(memberInfoObj);
+//   });
+// });
 
 // const newMemberInfoObj = {};
 // function removeDuplicates(array) {
@@ -235,6 +271,118 @@ datasPlan.forEach((doc, idx) => {
 // 중복을 제거하는 함수
 
 // 중복 확인 함수
+const datas = await getDatas("store1");
+let infoinput;
+const infoinputArr = [];
+datas.forEach((doc, idx) => {
+  const info = doc.data();
+  // console.log(infoinput);
+  infoinputArr.push(info);
+});
+console.log(infoinputArr);
+
+let infolistArr = infoinputArr.map(function (el) {
+  return `${el.name},${el.point}`;
+});
+let infolistArrsort = infolistArr.sort(function (a, b) {
+  let pointA = a.split(",")[1];
+  let pointB = b.split(",")[1];
+  return pointA - pointB;
+});
+const sidebarA = document.querySelectorAll(".sidebar-sub");
+const infolistSliceArr = infolistArrsort.slice(70, 80);
+sidebarA.forEach(function (el, idx) {
+  if (idx < infolistSliceArr.length) {
+    let infolistEnd = infolistSliceArr[idx].split(",")[0];
+    console.log(infolistEnd);
+    el.insertAdjacentHTML(
+      "afterbegin",
+      `<a href="#" class="sidebarA"><span class="sideinnerN">${
+        idx + 1
+      }. </span>  <span class="sideinnerT">${infolistEnd}</span></a>`
+    );
+  }
+});
+let infolistArr1 = infoinputArr.map(function (el) {
+  return el;
+});
+let infolistArrsort1 = infolistArr1.sort(function (a, b) {
+  let pointC = a.point;
+  let pointD = b.point;
+  return pointC - pointD;
+});
+const infolistSliceArr1 = infolistArrsort1.slice(70, 80);
+console.log(infolistSliceArr1);
+const Mainbox1 = document.querySelector(".Main-box1");
+infolistSliceArr1.forEach(function (el, idx) {
+  Mainbox1.insertAdjacentHTML(
+    "beforeend",
+    `
+  <div class="box">
+  <h1 class="box-h3"><span>#</span>Top${idx + 1}</h1>
+            <img
+              class="box-img"
+              src="${el.src}"
+            />
+            <div class="box-point"><span>평점:</span> ${el.point}</div>
+            <div class="box-name">${el.name}</div>
+            <div class="box-tag"><span>addr:</span> ${el.addr}</div>
+            <div class="box-tag"><span>On.</span>${el.time}</div>
+            <div class="box-tag"><span>N. </span>${el.number}</div>
+            <div class="box-tag"><span>#</span>${el.category}</div>
+          </div>
+
+       `
+  );
+});
+
+const Searches = document.querySelector(".Search");
+const headerInput = document.querySelector(".header-Input");
+const result = document.querySelector(".result");
+function inputArr(e) {
+  result.innerHTML = "";
+  const inputValue = headerInput.value;
+  if (inputValue === "") return;
+  infoinputArr.forEach(function (el, idx) {
+    console.log(el.addr);
+    if (
+      el.addr.includes(inputValue) ||
+      el.category.includes(inputValue) ||
+      el.name.includes(inputValue) ||
+      el.number.includes(inputValue) ||
+      el.point.includes(inputValue) ||
+      (el.time.includes(inputValue) && e.code == "Enter")
+    ) {
+      console.log(el);
+      result.insertAdjacentHTML(
+        "beforeend",
+        `
+                     <div class="box">
+                          <img
+                            class="box-img"
+                            src="../Photo/${idx + 1}.jpg"
+                          />
+                          <div class="box-point"><span>평점:</span>
+                          ${el.point}</div>
+                          <div class="box-name">${el.name}</div>
+                          <div class="box-tag"><span>addr:</span>${
+                            el.addr
+                          }</div>
+                          <div class="box-tag"><span>On.</span>${el.time}</div>
+                          <div class="box-tag"><span>N.</span>${el.number}</div>
+                          <div class="box-tag"><span>#</span>${
+                            el.category
+                          }</div>
+                        </div>
+                   `
+      );
+    }
+  });
+
+  headerInput.value = "";
+}
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);
 
 const box = e.target.closest(".box");
 if (box) {

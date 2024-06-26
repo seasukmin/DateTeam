@@ -180,12 +180,15 @@ input[type="checkbox"] {
 }
 .changeSize {
   background-color: snow;
-  padding: 2px;
+  border-radius: 24px;
   position: absolute;
   font-size: 20px;
   right: 12px;
   top: 12px;
   cursor: pointer;
+}
+.changeSizeBtn {
+  padding: 4px;
 }
 .changeSize .bx:hover {
   font-weight: bold;
