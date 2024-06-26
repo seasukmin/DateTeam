@@ -281,125 +281,6 @@ result.addEventListener("click", (e) => {
   console.log(box);
 });
 
-let nameChild1;
-let addrChild1;
-const resturantBoxes1 = document.querySelector(".resturantBoxes");
-Mainbox1.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild1 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild1 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild1.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild1.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild1);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild2;
-let addrChild2;
-const resturantBoxes2 = document.querySelector(".resturantBoxes");
-Mainbox2.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild2 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild2 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild2.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild2.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild2);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild3;
-let addrChild3;
-const resturantBoxes3 = document.querySelector(".resturantBoxes");
-Mainbox3.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild3 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild3 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild3.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild3.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild3);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-
-let nameChild4;
-let addrChild4;
-const resturantBoxes4 = document.querySelector(".resturantBoxes");
-Mainbox4.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild4 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild4 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild4.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild4.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild4);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild5;
-let addrChild5;
-const resturantBoxes5 = document.querySelector(".resturantBoxes");
-Mainbox5.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild5 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild5 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild5.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild5.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild5);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild6;
-let addrChild6;
-const Mainchartinner = document.querySelector(".Mainchart-inner1");
-const resturantBoxe6 = document.querySelector(".resturantBoxes");
-Mainchartinner.addEventListener("click", function (e) {
-  alert("d");
-});
-
-const resturantBoxes = document.querySelector(".resturantBoxes");
-console.log(resturantBoxes);
-if (localStorage.getItem("store30")) {
-  resturantBoxes.innerHTML = `ㅎㅇ`;
-}
 // const box = e.target.closest(".box");
 // if (box) {
 //   nameChild6 = box.firstElementChild.nextElementSibling.nextElementSibling;
@@ -521,3 +402,105 @@ if (localStorage.getItem("store30")) {
 // Mainchart4.lastElementChild.addEventListener("click", function () {
 //   alert("4");
 // });
+let nameChild;
+let addrChild;
+let idChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild = box.firstElementChild.nextElementSibling.nextElementSibling;
+
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    idChild = box.lastElementChild;
+  }
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const IdText = idChild.innerHTML.substring(14, 22);
+  console.log(nameText, addrText, IdText);
+  localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+  let username = localStorage.getItem(`${IdText}`);
+
+  if (localStorage.getItem(`${IdText}`)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === username
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${username}</span>
+      </div>
+      `
+      );
+    }
+  }
+});
+
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+  console.log(key);
+  if (localStorage.getItem(key)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === value
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${value}</span>
+      </div>
+      `
+      );
+    }
+  }
+}
+// resturantBoxes 클릭 이벤트 핸들러 함수
+resturantBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, resturantBoxes);
+});
+
+// cafeBoxes 클릭 이벤트 핸들러 함수
+cafeBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, cafeBoxes);
+});
+
+// hotPlaceBoxes 클릭 이벤트 핸들러 함수
+hotPlaceBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, hotPlaceBoxes);
+});
+
+// 클릭 이벤트 핸들러 함수 정의
+function handleBoxClick(e, box) {
+  if (e.target.tagName === "SPAN") {
+    const span = e.target;
+    const username = span.textContent;
+
+    // span의 부모 요소를 찾아서 삭제
+    if (span.parentElement) {
+      span.parentElement.remove();
+    }
+
+    // localStorage에서 해당 데이터 삭제
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      if (value === username) {
+        localStorage.removeItem(key);
+        break; // 삭제 후 반복문 종료
+      }
+    }
+  }
+}

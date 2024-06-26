@@ -266,39 +266,7 @@ infolistSlice5.forEach((el, idx) => {
      `
   );
 });
-result.addEventListener("click", (e) => {
-  const box = e.target.closest(".box");
-  console.log(box);
-});
 
-let nameChild;
-let addrChild;
-let nameChildinner;
-let addrChildinner;
-const resturantBoxes = document.querySelector(".resturantBoxes");
-Mainbox1.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-    addrChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling.nextElementSibling;
-
-    const nameText = nameChild.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-if (localStorage.getItem("store30")) {
-  resturantBoxes.innerHTML = `ㅎㅇ`;
-}
 // 메인 끝
 
 // 맛집별 사이트 접속
@@ -408,3 +376,105 @@ if (localStorage.getItem("store30")) {
 // Mainchart4.lastElementChild.addEventListener("click", function () {
 //   alert("4");
 // });
+let nameChild;
+let addrChild;
+let idChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild = box.firstElementChild.nextElementSibling.nextElementSibling;
+
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    idChild = box.lastElementChild;
+  }
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const IdText = idChild.innerHTML.substring(14, 22);
+  console.log(nameText, addrText, IdText);
+  localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+  let username = localStorage.getItem(`${IdText}`);
+
+  if (localStorage.getItem(`${IdText}`)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === username
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${username}</span>
+      </div>
+      `
+      );
+    }
+  }
+});
+
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+  console.log(key);
+  if (localStorage.getItem(key)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === value
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${value}</span>
+      </div>
+      `
+      );
+    }
+  }
+}
+// resturantBoxes 클릭 이벤트 핸들러 함수
+resturantBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, resturantBoxes);
+});
+
+// cafeBoxes 클릭 이벤트 핸들러 함수
+cafeBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, cafeBoxes);
+});
+
+// hotPlaceBoxes 클릭 이벤트 핸들러 함수
+hotPlaceBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, hotPlaceBoxes);
+});
+
+// 클릭 이벤트 핸들러 함수 정의
+function handleBoxClick(e, box) {
+  if (e.target.tagName === "SPAN") {
+    const span = e.target;
+    const username = span.textContent;
+
+    // span의 부모 요소를 찾아서 삭제
+    if (span.parentElement) {
+      span.parentElement.remove();
+    }
+
+    // localStorage에서 해당 데이터 삭제
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      if (value === username) {
+        localStorage.removeItem(key);
+        break; // 삭제 후 반복문 종료
+      }
+    }
+  }
+}
