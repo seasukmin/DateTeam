@@ -394,6 +394,14 @@ const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
 Mainbox1.addEventListener("click", function (e) {
+  const userId = localStorage.getItem("ID");
+  console.log(userId);
+  if (userId === null) {
+    alert("로그인이 필요합니다.");
+    location.href = "../../박근모 - 메인/HTML/mainPage.html";
+    return false;
+  } else if (userId !== null) {
+  }
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -432,7 +440,8 @@ Mainbox1.addEventListener("click", function (e) {
         `
       );
     }
-  } else if (IdText.includes("cafe")) {
+  }
+  if (IdText.includes("cafe")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
     let username = localStorage.getItem(`${IdText}`);
 
@@ -477,7 +486,6 @@ Mainbox1.addEventListener("click", function (e) {
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
   const value = localStorage.getItem(key);
-  console.log(key);
 
   if (key.includes("store")) {
     let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
@@ -496,23 +504,21 @@ for (let i = 0; i < localStorage.length; i++) {
       );
     }
   }
-  if (localStorage.getItem("ID") !== null) {
-    if (key.includes("cafe")) {
-      let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
-        (span) => span.textContent === value
-      );
+  if (key.includes("cafe")) {
+    let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === value
+    );
 
-      // cafeBoxes에 추가
-      if (!exists) {
-        cafeBoxes.insertAdjacentHTML(
-          "beforeend",
-          `
+    // cafeBoxes에 추가
+    if (!exists) {
+      cafeBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
         <div>
         <span>${value}</span>
         </div>
         `
-        );
-      }
+      );
     }
   } else if (key.includes("hotplace")) {
     let exists = Array.from(hotPlaceBoxes.querySelectorAll("span")).some(
@@ -532,18 +538,17 @@ for (let i = 0; i < localStorage.length; i++) {
     }
   }
 }
-
-// resturantBoxes 클릭 이벤트 함수
+// resturantBoxes 클릭 이벤트 핸들러 함수
 resturantBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, resturantBoxes);
 });
 
-// cafeBoxes 클릭 이벤트 함수
+// cafeBoxes 클릭 이벤트 핸들러 함수
 cafeBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, cafeBoxes);
 });
 
-// hotPlaceBoxes 클릭 이벤트 함수
+// hotPlaceBoxes 클릭 이벤트 핸들러 함수
 hotPlaceBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, hotPlaceBoxes);
 });
@@ -554,6 +559,7 @@ function handleBoxClick(e, box) {
     const span = e.target;
     const username = span.textContent;
 
+    // span의 부모 요소를 찾아서 삭제
     if (span.parentElement) {
       span.parentElement.remove();
     }
@@ -564,8 +570,18 @@ function handleBoxClick(e, box) {
       const value = localStorage.getItem(key);
       if (value === username) {
         localStorage.removeItem(key);
-        break;
+        break; // 삭제 후 반복문 종료
       }
     }
   }
 }
+
+// const hi = document.querySelector(".hi");
+// for (let i = 0; i < localStorage.length; i++) {
+//   const key = localStorage.key(i);
+//   console.log(key);
+//   hi.addEventListener("click", function () {
+//     localStorage.removeItem(key);
+//     location.reload();
+//   });
+// }
