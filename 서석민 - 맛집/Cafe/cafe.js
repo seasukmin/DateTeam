@@ -434,14 +434,16 @@ Mainbox1.addEventListener("click", function (e, idx) {
 
     // resturantBoxes에 추가
     if (!exists) {
-      resturantBoxes.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div>
-        <span>${username}</span>
-        </div>
-        `
-      );
+      resturantBoxes.forEach((resturantBox) => {
+        resturantBox.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span>${username}</span>
+          </div>
+          `
+        );
+      });
     }
   }
   if (IdText.includes("cafe")) {
@@ -463,14 +465,6 @@ Mainbox1.addEventListener("click", function (e, idx) {
           `
         );
       });
-      //   .insertAdjacentHTML(
-      //   "beforeend",
-      //   `
-      //   <div>
-      //   <span>${username}</span>
-      //   </div>
-      //   `
-      // );
     }
   } else if (IdText.includes("hotplace")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
@@ -482,14 +476,16 @@ Mainbox1.addEventListener("click", function (e, idx) {
 
     // hotPlaceBoxes에 추가
     if (!exists) {
-      hotPlaceBoxes.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div>
-        <span>${username}</span>
-        </div>
-        `
-      );
+      hotPlaceBoxes.forEach((hotPlaceBox) => {
+        hotPlaceBox.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span>${username}</span>
+          </div>
+          `
+        );
+      });
     }
   }
 });
