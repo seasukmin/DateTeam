@@ -122,10 +122,10 @@ jmtLoop.addEventListener("click", (e) => {
 });
 cafeLoop.addEventListener("click", (e) => {
   // location.href = "#hTag-cafe";
-  window.scrollTo(0, 500);
+  window.scrollTo(0, 600);
 });
 placeLoop.addEventListener("click", (e) => {
-  window.scrollTo(0, 800);
+  window.scrollTo(0, 900);
 });
 bottomLoop.addEventListener("click", (e) => {
   location.href = "./subPage.html";
@@ -465,7 +465,7 @@ async function fetchAndDisplayStoreData() {
       "beforeend",
       `
       <div class="box mySlides fade">
-        <h1 class="box-h3">TOP${idx + 1} ${el.name}</h1>
+        <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
         <div class="boxes">
           <img class="box-img" src="../../서석민 - 맛집/Photo/${el.src}" />
           <div class="boxes-inner">
@@ -514,7 +514,7 @@ async function fetchAndDisplayCafeData() {
       "beforeend",
       `
       <div class="box mySlides fade">
-        <h1 class="box-h3">TOP${idx + 1} ${el.name}</h1>
+        <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
         <div class="boxes">
           <img class="box-img" src="../../서석민 - 맛집/Photo_Cafe/${
             idx + 1
@@ -551,7 +551,7 @@ async function fetchAndDisplayHotPlaceData() {
         "beforeend",
         `
         <div class="box mySlides fade">
-          <h1 class="box-h3">TOP${idx + 1} ${el.title}</h1>
+          <h1 class="box-h3">TOP ${idx + 1} ${el.title}</h1>
           <div class="boxes">
             <img class="box-img"src="../../정유진 - 맛집/img/${idx + 1}.jpg" />
             <div class="boxes-inner">

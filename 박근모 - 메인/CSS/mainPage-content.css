@@ -12,21 +12,31 @@
 .content-title {
   font-size: 32px;
   font-weight: bold;
+  width: 130px;
 }
 .restaurant-section {
   background-color: #ffa60033;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
 }
 .cafe-section {
   background-color: rgba(128, 0, 128, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
 }
 .hotplace-section {
   background-color: rgba(135, 207, 235, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
 }
 .subscribe-banner {
   background-color: rgb(255, 239, 239);
