@@ -14,12 +14,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCE0cnBDF7EuYjiJEfUi9JVCnNtHWMYMZY",
-  authDomain: "daejeon-loveu2.firebaseapp.com",
-  projectId: "daejeon-loveu2",
-  storageBucket: "daejeon-loveu2.appspot.com",
-  messagingSenderId: "114983282693",
-  appId: "1:114983282693:web:3634e8c935173e890f546c",
+  apiKey: "AIzaSyBiyG3AdHa7uWa4miLcAqCQGqQhaC-amD4",
+  authDomain: "daejeon-loveu.firebaseapp.com",
+  projectId: "daejeon-loveu",
+  storageBucket: "daejeon-loveu.appspot.com",
+  messagingSenderId: "952789620772",
+  appId: "1:952789620772:web:8e1b46f0e4c99dab9ea0b1",
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

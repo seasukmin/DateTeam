@@ -98,7 +98,7 @@ const contentArr = [
   },
 ];
 contentArr.forEach((info, idx) => {
-  content.insertAdjacentHTML(
+  contents.insertAdjacentHTML(
     "beforeend",
 
     ` <div class="content">
@@ -272,7 +272,7 @@ allbox.addEventListener("click", function (e) {
   addDatas("Hotplace2", { werwe });
   localStorage.setItem("id", "Hotplace01");
 });
-
+// planner title
 const plannertitle = document.getElementById("planner-title");
 const localId = localStorage.getItem("ID");
 const localSemiId = localStorage.getItem("semiID");
@@ -289,7 +289,7 @@ const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
-Mainbox1.addEventListener("click", function (e) {
+contents.addEventListener("click", function (e) {
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -301,8 +301,8 @@ Mainbox1.addEventListener("click", function (e) {
     idChild = box.lastElementChild;
   }
   console.log(box);
-  const day1 = document.querySelector(".day1");
-  const day1inner = day1.innerHTML;
+  // const day1 = document.querySelector(".day1");
+  // const day1inner = day1.innerHTML;
   const nameText = nameChild.innerHTML;
   const addrText = addrChild.innerHTML.substring(18, 22);
   const IdText = idChild.innerHTML.substring(14, 22);
