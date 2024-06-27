@@ -267,11 +267,11 @@ section {
   margin: 0;
   transform: scale(1.1);
 }
-.sidebars > h2 {
+.sidebars > p {
   margin: 0;
   color: snow;
 }
-.sidebars > h2:hover {
+.sidebars > p:hover {
   margin: 0;
   transform: scale(1.1);
   color: lightgray;
@@ -419,12 +419,12 @@ main {
   margin: 0;
   margin-left: 150px;
 }
-.Main-title {
+/* .Main-title {
   font-size: 40px;
   font-weight: 800;
   margin: 0px 0 8px 0;
   padding-top: 40px;
-}
+} */
 
 .Main-box1,
 .Main-box2,
@@ -750,11 +750,23 @@ main {
 }
 .rank-title {
   font-size: 27px;
-  margin-left: 33%;
+  text-align: center;
 }
 .main-container {
   margin-left: 100px;
 }
 .rank-container {
   margin-left: 80px;
+}
+.main-container2 {
+  margin-left: 100px;
+}
+.Main-title {
+  font-size: 36px;
+  padding-top: 50px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.box-tag {
+  margin-left: 8px;
 }
