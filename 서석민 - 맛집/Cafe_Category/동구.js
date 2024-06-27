@@ -360,12 +360,15 @@ const Mainbox = document.querySelectorAll(".Mainbox");
 
 // planner title
 const plannertitle = document.getElementById("planner-title");
+const plannertitle1 = document.getElementById("planner-title1");
 const localId = localStorage.getItem("ID");
 const localSemiId = localStorage.getItem("semiID");
 if (localId !== null && localSemiId == null) {
   plannertitle.innerHTML = `${localId} planner`;
+  plannertitle1.innerHTML = `${localId} planner`;
 } else if (localSemiId !== null && localId == null) {
   plannertitle.innerHTML = `${localSemiId} planner`;
+  plannertitle1.innerHTML = `${localSemiId} planner`;
 }
 
 Mainbox.forEach(function (el) {

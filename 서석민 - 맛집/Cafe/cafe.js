@@ -89,6 +89,7 @@ datas.forEach((doc, idx) => {
   infoinputArr.push(info);
 });
 console.log(infoinputArr);
+
 let infolistArr = infoinputArr.map(function (el) {
   return `${el.name},${el.point}`;
 });
@@ -190,14 +191,17 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
-
+// planner title
 const plannertitle = document.getElementById("planner-title");
+const plannertitle1 = document.getElementById("planner-title1");
 const localId = localStorage.getItem("ID");
 const localSemiId = localStorage.getItem("semiID");
 if (localId !== null && localSemiId == null) {
   plannertitle.innerHTML = `${localId} planner`;
+  plannertitle1.innerHTML = `${localId} planner`;
 } else if (localSemiId !== null && localId == null) {
   plannertitle.innerHTML = `${localSemiId} planner`;
+  plannertitle1.innerHTML = `${localSemiId} planner`;
 }
 
 // const Mainboxes1 = Mainbox1.firstElementChild;
@@ -388,18 +392,18 @@ if (localId !== null && localSemiId == null) {
 let nameChild;
 let addrChild;
 let idChild;
-const resturantBoxes = document.querySelector(".resturantBoxes");
-const cafeBoxes = document.querySelector(".cafeBoxes");
-const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+const resturantBoxes = document.querySelectorAll(".resturantBoxes");
+const cafeBoxes = document.querySelectorAll(".cafeBoxes");
+const hotPlaceBoxes = document.querySelectorAll(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+
 Mainbox1.addEventListener("click", function (e, idx) {
   const userId = localStorage.getItem("ID");
-  const userId2 = localStorage.getItem("semiID");
   console.log(userId);
-  if (userId === null && userId2 === null) {
+  if (userId === null) {
     alert("로그인이 필요합니다.");
     location.href = "../../박근모 - 메인/HTML/mainPage.html";
     return false;
-  } else {
+  } else if (userId !== null) {
   }
   const box = e.target.closest(".box");
   if (box) {
@@ -449,14 +453,24 @@ Mainbox1.addEventListener("click", function (e, idx) {
 
     // cafeBoxes에 추가
     if (!exists) {
-      cafeBoxes.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div>
-        <span>${username}</span>
-        </div>
-        `
-      );
+      cafeBoxes.forEach((cafeBox) => {
+        cafeBox.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span>${username}</span>
+          </div>
+          `
+        );
+      });
+      //   .insertAdjacentHTML(
+      //   "beforeend",
+      //   `
+      //   <div>
+      //   <span>${username}</span>
+      //   </div>
+      //   `
+      // );
     }
   } else if (IdText.includes("hotplace")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
