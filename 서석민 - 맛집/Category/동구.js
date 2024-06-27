@@ -180,7 +180,7 @@ infolistSlice1.forEach((el, idx) => {
           <div class="box-tag"><span>On.</span> ${el.time}</div>
           <div class="box-tag"><span>N.</span>${el.number}</div>
           <div class="box-tag"><span>#</span>${el.category}</div>
-
+            <div class="box-tag"><span>#</span>${el.id}</div>
         </div>
 
      `
@@ -203,7 +203,7 @@ infolistSlice2.forEach((el, idx) => {
           <div class="box-tag"><span>On.</span> ${el.time}</div>
           <div class="box-tag"><span>N.</span>${el.number}</div>
           <div class="box-tag"><span>#</span>${el.category}</div>
-
+            <div class="box-tag"><span>#</span>${el.id}</div>
         </div>
      `
   );
@@ -225,7 +225,7 @@ infolistSlice3.forEach((el, idx) => {
           <div class="box-tag"><span>On.</span> ${el.time}</div>
           <div class="box-tag"><span>N.</span>${el.number}</div>
           <div class="box-tag"><span>#</span>${el.category}</div>
-
+            <div class="box-tag"><span>#</span>${el.id}</div>
         </div>
      `
   );
@@ -248,7 +248,7 @@ infolistSlice4.forEach((el, idx) => {
           <div class="box-tag"><span>On.</span> ${el.time}</div>
           <div class="box-tag"><span>N.</span>${el.number}</div>
           <div class="box-tag"><span>#</span>${el.category}</div>
-
+            <div class="box-tag"><span>#</span>${el.id}</div>
         </div>
      `
   );
@@ -271,6 +271,7 @@ infolistSlice5.forEach((el, idx) => {
           <div class="box-tag"><span>On.</span> ${el.time}</div>
           <div class="box-tag"><span>N.</span>${el.number}</div>
           <div class="box-tag"><span>#</span>${el.category}</div>
+          <div class="box-tag"><span>#</span>${el.id}</div>
 
         </div>
      `
@@ -406,44 +407,11 @@ let nameChild;
 let addrChild;
 let idChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
-Mainbox1.addEventListener("click", function (e) {
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild = box.firstElementChild.nextElementSibling.nextElementSibling;
+const cafeBoxes = document.querySelector(".cafeBoxes");
+const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+const Mainbox = document.querySelectorAll(".Mainbox");
 
-    addrChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    idChild = box.lastElementChild;
-  }
-  const day1 = document.querySelector(".day1");
-  const day1inner = day1.innerHTML;
-  const nameText = nameChild.innerHTML;
-  const addrText = addrChild.innerHTML.substring(18, 22);
-  const IdText = idChild.innerHTML.substring(14, 22);
-  console.log(nameText, addrText, IdText);
-  localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
-  let username = localStorage.getItem(`${IdText}`);
-
-  if (localStorage.getItem(`${IdText}`)) {
-    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
-      (span) => span.textContent === username
-    );
-
-    // username이 존재하지 않으면 추가
-    if (!exists) {
-      resturantBoxes.insertAdjacentHTML(
-        "beforeend",
-        `
-      <div>
-      <span>${username}</span>
-      </div>
-      `
-      );
-    }
-  }
-});
+// planner title
 const plannertitle = document.getElementById("planner-title");
 const localId = localStorage.getItem("ID");
 const localSemiId = localStorage.getItem("semiID");
@@ -453,64 +421,186 @@ if (localId !== null && localSemiId == null) {
   plannertitle.innerHTML = `${localSemiId} planner`;
 }
 
-for (let i = 0; i < localStorage.length; i++) {
-  const key = localStorage.key(i);
-  const value = localStorage.getItem(key);
-  if (key == "ID" || key == "semiID") {
-  } else {
-    if (localStorage.getItem(key)) {
+Mainbox.forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    const userId = localStorage.getItem("ID");
+    console.log(userId);
+    if (userId === null) {
+      alert("로그인이 필요합니다.");
+      location.href = "../../박근모 - 메인/HTML/mainPage.html";
+      return false;
+    } else if (userId !== null) {
+    }
+    const box = e.target.closest(".box");
+    if (box) {
+      nameChild = box.firstElementChild.nextElementSibling.nextElementSibling;
+
+      addrChild =
+        box.firstElementChild.nextElementSibling.nextElementSibling
+          .nextElementSibling;
+      idChild = box.lastElementChild;
+    }
+    console.log(box);
+    const day1 = document.querySelector(".day1");
+    const day1inner = day1.innerHTML;
+    const nameText = nameChild.innerHTML;
+    const addrText = addrChild.innerHTML.substring(18, 22);
+    const IdText = idChild.innerHTML.substring(14, 22);
+    console.log(nameText, addrText, IdText);
+
+    // key 값에 따라 localStorage에 저장 및 각 상자에 추가
+    if (IdText.includes("store")) {
+      localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+      let username = localStorage.getItem(`${IdText}`);
+
       let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
-        (span) => span.textContent === value
+        (span) => span.textContent === username
       );
 
-      // username이 존재하지 않으면 추가
+      // resturantBoxes에 추가
       if (!exists) {
         resturantBoxes.insertAdjacentHTML(
           "beforeend",
           `
-        <div>
-        <span>${value}</span>
-        </div>
-        `
+          <div>
+          <span class="Username">${username}</span>
+          </div>
+          `
+        );
+      }
+    }
+    if (IdText.includes("cafe")) {
+      localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+      let username = localStorage.getItem(`${IdText}`);
+
+      let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === username
+      );
+
+      // cafeBoxes에 추가
+      if (!exists) {
+        cafeBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span class="Username">${username}</span>
+          </div>
+          `
+        );
+      }
+    } else if (IdText.includes("hotplace")) {
+      localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+      let username = localStorage.getItem(`${IdText}`);
+
+      let exists = Array.from(hotPlaceBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === username
+      );
+
+      // hotPlaceBoxes에 추가
+      if (!exists) {
+        hotPlaceBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span class="Username">${username}</span>
+          </div>
+          `
+        );
+      }
+    }
+  });
+
+  // 페이지 로드 시 기존에 저장된 데이터 확인 및 각 상자에 추가
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+
+    if (key.includes("store")) {
+      let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === value
+      );
+
+      // resturantBoxes에 추가
+      if (!exists) {
+        resturantBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span class="Username">${value}</span>
+          </div>
+          `
+        );
+      }
+    }
+    if (key.includes("cafe")) {
+      let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === value
+      );
+
+      // cafeBoxes에 추가
+      if (!exists) {
+        cafeBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span class="Username">${value}</span>
+          </div>
+          `
+        );
+      }
+    } else if (key.includes("hotplace")) {
+      let exists = Array.from(hotPlaceBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === value
+      );
+
+      // hotPlaceBoxes에 추가
+      if (!exists) {
+        hotPlaceBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div>
+          <span class="Username">${value}</span>
+          </div>
+          `
         );
       }
     }
   }
-}
-// resturantBoxes 클릭 이벤트 핸들러 함수
-resturantBoxes.addEventListener("click", function (e) {
-  handleBoxClick(e, resturantBoxes);
-});
+  // resturantBoxes 클릭 이벤트 핸들러 함수
+  resturantBoxes.addEventListener("click", function (e) {
+    handleBoxClick(e, resturantBoxes);
+  });
 
-// cafeBoxes 클릭 이벤트 핸들러 함수
-cafeBoxes.addEventListener("click", function (e) {
-  handleBoxClick(e, cafeBoxes);
-});
+  // cafeBoxes 클릭 이벤트 핸들러 함수
+  cafeBoxes.addEventListener("click", function (e) {
+    handleBoxClick(e, cafeBoxes);
+  });
 
-// hotPlaceBoxes 클릭 이벤트 핸들러 함수
-hotPlaceBoxes.addEventListener("click", function (e) {
-  handleBoxClick(e, hotPlaceBoxes);
-});
+  // hotPlaceBoxes 클릭 이벤트 핸들러 함수
+  hotPlaceBoxes.addEventListener("click", function (e) {
+    handleBoxClick(e, hotPlaceBoxes);
+  });
 
-// 클릭 이벤트 핸들러 함수 정의
-function handleBoxClick(e, box) {
-  if (e.target.tagName === "SPAN") {
-    const span = e.target;
-    const username = span.textContent;
+  // 클릭 이벤트 핸들러 함수 정의
+  function handleBoxClick(e, box) {
+    if (e.target.tagName === "SPAN") {
+      const span = e.target;
+      const username = span.textContent;
 
-    // span의 부모 요소를 찾아서 삭제
-    if (span.parentElement) {
-      span.parentElement.remove();
-    }
+      // span의 부모 요소를 찾아서 삭제
+      if (span.parentElement) {
+        span.parentElement.remove();
+      }
 
-    // localStorage에서 해당 데이터 삭제
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      const value = localStorage.getItem(key);
-      if (value === username) {
-        localStorage.removeItem(key);
-        break; // 삭제 후 반복문 종료
+      // localStorage에서 해당 데이터 삭제
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        if (value === username) {
+          localStorage.removeItem(key);
+          break; // 삭제 후 반복문 종료
+        }
       }
     }
   }
-}
+});
