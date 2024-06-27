@@ -14,7 +14,7 @@ import {
 // 로고 시작
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
+  location.href = "../../박근모 - 메인/HTML/mainPage.html";
 });
 
 const Top = document.querySelector(".Top");
@@ -30,7 +30,7 @@ header.addEventListener("click", function () {
 });
 const reviewBtn = document.querySelector(".reviewBtn");
 reviewBtn.addEventListener("click", function () {
-  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../정유진 - 맛집/reviewPage/review.html";
 });
 // 헤더 끝
 
@@ -257,7 +257,15 @@ infolistSlice3.forEach((el, idx) => {
      `
   );
 });
-
+const hi = document.querySelector(".Logout");
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  console.log(key);
+  hi.addEventListener("click", function () {
+    localStorage.removeItem(key);
+    location.reload();
+  });
+}
 // 메인 종료
 
 // 맛집별 사이트 접속

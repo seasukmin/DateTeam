@@ -191,6 +191,8 @@ function inputArr(e) {
 
   headerInput.value = "";
 }
+Searches.addEventListener("click", inputArr);
+headerInput.addEventListener("keypress", inputArr);
 // planner title
 const plannertitle = document.getElementById("planner-title");
 const plannertitle1 = document.getElementById("planner-title1");
@@ -275,20 +277,20 @@ if (localId !== null && localSemiId == null) {
 
 // // 메인 상단 사이트 접속 종료
 // // Top 버튼
-// const Top = document.querySelector(".TopLoop");
-// Top.addEventListener("click", function () {
-//   location.href = "#header-H1";
-// });
+const Top1 = document.querySelector(".TopLoop");
+Top1.addEventListener("click", function () {
+  location.href = "#header-H1";
+});
 // //
-// const headerH1 = document.querySelector("#header-H1");
-// headerH1.addEventListener("click", function () {
-//   location.reload();
-// });
+const headerH1 = document.querySelector("#header-H1");
+headerH1.addEventListener("click", function () {
+  location.reload();
+});
 // // clear(초기화) 버튼
-// const clear = document.querySelector(".clear");
-// clear.addEventListener("click", function () {
-//   location.reload();
-// });
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", function () {
+  location.reload();
+});
 
 // const Promise = document.querySelector("Promise-but");
 // let child;
@@ -584,15 +586,15 @@ function handleBoxClick(e, box) {
   }
 }
 
-// const hi = document.querySelector(".hi");
-// for (let i = 0; i < localStorage.length; i++) {
-//   const key = localStorage.key(i);
-//   console.log(key);
-//   hi.addEventListener("click", function () {
-//     localStorage.removeItem(key);
-//     location.reload();
-//   });
-// }
+const hi = document.querySelector(".Logout");
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  console.log(key);
+  hi.addEventListener("click", function () {
+    localStorage.removeItem(key);
+    location.reload();
+  });
+}
 
 const Top = document.querySelector(".Top");
 Top.addEventListener("click", function () {

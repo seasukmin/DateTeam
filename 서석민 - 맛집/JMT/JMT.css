@@ -29,7 +29,13 @@ span {
   margin: 6px;
   cursor: pointer;
 }
-
+.Logout {
+  position: absolute;
+  top: 35px;
+  right: 265px;
+  font-size: 13px;
+  cursor: pointer;
+}
 .Logo {
   position: fixed;
   top: 15px;
@@ -50,6 +56,7 @@ section {
   height: 270px;
   margin: 15px 250px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   position: relative;
 }
@@ -159,6 +166,7 @@ section {
   gap: 70px;
   list-style-type: none;
   padding: 0;
+  margin-bottom: 0;
 }
 .CateA,
 .CateD,
@@ -246,8 +254,17 @@ section {
 .result {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
+  background-color: snow;
+  backdrop-filter: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  width: 1000px;
+  transform: translateX(-50%);
+  box-shadow: inset 1px 3px 10px 2px hsl(39, 55%, 87%);
 }
 .hidden {
   display: none;
@@ -543,7 +560,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin: 5px;
+  margin: 15px;
 }
 .box-img {
   border-radius: 30px;

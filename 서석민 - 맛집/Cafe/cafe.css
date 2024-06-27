@@ -17,7 +17,13 @@ body {
   color: #3e3e3e;
   background-color: snow;
 }
-
+.Logout {
+  position: absolute;
+  top: 35px;
+  right: 265px;
+  font-size: 13px;
+  cursor: pointer;
+}
 #body {
   height: 100%;
   font-family: "Ownglyph_noocar-Rg";
@@ -231,8 +237,17 @@ section {
 .result {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
+  background-color: snow;
+  backdrop-filter: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  width: 1000px;
+  transform: translateX(-50%);
+  box-shadow: inset 1px 3px 10px 2px rgb(92, 10, 92, 50%);
 }
 .hidden {
   display: none;
@@ -530,7 +545,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin: 5px;
+  margin: 15px;
 }
 .box-img {
   border-radius: 30px;

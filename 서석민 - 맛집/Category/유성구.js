@@ -596,3 +596,12 @@ Mainbox.forEach(function (el) {
     }
   }
 });
+const hi = document.querySelector(".Logout");
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  console.log(key);
+  hi.addEventListener("click", function () {
+    localStorage.removeItem(key);
+    location.reload();
+  });
+}
