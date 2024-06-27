@@ -418,9 +418,14 @@ const Top = document.querySelector(".topBtn");
 Top.addEventListener("click", function () {
   location.href = "#toploop";
 });
-const Top2 = document.querySelector(".sideBtn");
-Top2.addEventListener("click", function () {
-  location.href = "#toploop";
+const reviewBtn = document.querySelector(".sideBtn");
+reviewBtn.addEventListener("click", function () {
+  location.href = "../reviewPage/review.html";
+});
+
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
 });
 
 // 로고 누르면 (홈)으로 이동

@@ -332,6 +332,11 @@ document.querySelectorAll(".category li").forEach((item) => {
   });
 });
 
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
+});
+
 // 사진 hover 하면 + 버튼 나타나게
 document.querySelectorAll(".plusIc1").forEach((img, idx) => {
   img.addEventListener("click", () => {
@@ -382,9 +387,9 @@ const Top = document.querySelector(".topBtn");
 Top.addEventListener("click", function () {
   location.href = "#toploop";
 });
-const Top2 = document.querySelector(".sideBtn");
-Top2.addEventListener("click", function () {
-  location.href = "#toploop";
+const reviewBtn = document.querySelector(".sideBtn");
+reviewBtn.addEventListener("click", function () {
+  location.href = "../reviewPage/review.html";
 });
 
 // 로고 누르면 (홈)으로 이동
