@@ -31,6 +31,9 @@ body {
 .hashTag {
   color: skyblue;
 }
+.hidden {
+  display: none;
+}
 .title-btn {
   border: none;
   background-color: transparent;
