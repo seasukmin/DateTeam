@@ -116,7 +116,7 @@ body {
 }
 .side-text {
   list-style-type: none;
-  font-size: 26px;
+  font-size: 24px;
   margin: 12px 0;
   padding: 10px;
   padding-left: 0;
@@ -127,6 +127,7 @@ body {
   background-color: white;
   border-radius: 15px;
   margin: 10px 0;
+  cursor: pointer;
 }
 .side-category h1 {
   margin: 12px 10px;
@@ -148,7 +149,6 @@ body {
   transform: scale(1.05);
 }
 .side-text li:hover {
-  cursor: pointer;
   transform: scale(1.1);
 }
 

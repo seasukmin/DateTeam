@@ -22,9 +22,9 @@ const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
   location.href = "../Cafe/Cafe.html";
 });
-const Top1 = document.querySelector(".topBtn");
-Top1.addEventListener("click", function () {
-  location.href = "#header-H2";
+const reviewBtn = document.querySelector(".reviewBtn");
+reviewBtn.addEventListener("click", function () {
+  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
 });
 // 헤더 끝
 
