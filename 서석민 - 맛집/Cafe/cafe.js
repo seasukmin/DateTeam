@@ -16,7 +16,7 @@ import {
 
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "#";
+  location.href = "../../박근모 - 메인/HTML/mainPage.html";
 });
 // 로고 끝
 
@@ -477,6 +477,7 @@ Mainbox1.addEventListener("click", function (e) {
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
   const value = localStorage.getItem(key);
+  console.log(key);
 
   if (key.includes("store")) {
     let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
@@ -494,21 +495,24 @@ for (let i = 0; i < localStorage.length; i++) {
         `
       );
     }
-  } else if (key.includes("cafe")) {
-    let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
-      (span) => span.textContent === value
-    );
+  }
+  if (localStorage.getItem("ID") !== null) {
+    if (key.includes("cafe")) {
+      let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === value
+      );
 
-    // cafeBoxes에 추가
-    if (!exists) {
-      cafeBoxes.insertAdjacentHTML(
-        "beforeend",
-        `
+      // cafeBoxes에 추가
+      if (!exists) {
+        cafeBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
         <div>
         <span>${value}</span>
         </div>
         `
-      );
+        );
+      }
     }
   } else if (key.includes("hotplace")) {
     let exists = Array.from(hotPlaceBoxes.querySelectorAll("span")).some(
@@ -529,17 +533,17 @@ for (let i = 0; i < localStorage.length; i++) {
   }
 }
 
-// resturantBoxes 클릭 이벤트 핸들러 함수
+// resturantBoxes 클릭 이벤트 함수
 resturantBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, resturantBoxes);
 });
 
-// cafeBoxes 클릭 이벤트 핸들러 함수
+// cafeBoxes 클릭 이벤트 함수
 cafeBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, cafeBoxes);
 });
 
-// hotPlaceBoxes 클릭 이벤트 핸들러 함수
+// hotPlaceBoxes 클릭 이벤트 함수
 hotPlaceBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, hotPlaceBoxes);
 });
@@ -550,7 +554,6 @@ function handleBoxClick(e, box) {
     const span = e.target;
     const username = span.textContent;
 
-    // span의 부모 요소를 찾아서 삭제
     if (span.parentElement) {
       span.parentElement.remove();
     }
@@ -561,7 +564,7 @@ function handleBoxClick(e, box) {
       const value = localStorage.getItem(key);
       if (value === username) {
         localStorage.removeItem(key);
-        break; // 삭제 후 반복문 종료
+        break;
       }
     }
   }

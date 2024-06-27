@@ -70,3 +70,38 @@ sizeBtn.addEventListener("click", () => {
 //     child.focus();
 //   }
 // });
+
+// const plannertitle = document.getElementById("planner-title");
+// const localId = localStorage.getItem("ID");
+// const localSemiId = localStorage.getItem("semiID");
+// if (localId !== null && localSemiId == null) {
+//   plannertitle.innerHTML = `${localId} planner`;
+// } else if (localSemiId !== null && localId == null) {
+//   plannertitle.innerHTML = `${localSemiId} planner`;
+// }
+const resturantBoxes = document.querySelector(".resturantBoxes");
+
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+  if (key == "ID" || key == "semiID") {
+  } else {
+    if (localStorage.getItem(key)) {
+      let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+        (span) => span.textContent === value
+      );
+
+      // username이 존재하지 않으면 추가
+      if (!exists) {
+        resturantBoxes.insertAdjacentHTML(
+          "beforeend",
+          `
+        <div>
+        <span>${value}</span>
+        </div>
+        `
+        );
+      }
+    }
+  }
+}
