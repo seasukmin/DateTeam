@@ -14,7 +14,7 @@ import {
 // 로고 시작
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "#";
+  location.href = "../../박근모 - 메인/HTML/mainPage.html";
 });
 // 로고 끝
 // 헤더 시작
@@ -503,4 +503,13 @@ function handleBoxClick(e, box) {
       }
     }
   }
+}
+
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
 }
