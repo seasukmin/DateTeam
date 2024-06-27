@@ -58,9 +58,6 @@ function submitReview() {
                                        <div class="review-point">
                                            <p>평점: ${rating}</p>
                                            <div class="keyword">
-                                           <p>친절해요</p>
-                                           <p>청결해요</p>
-                                               <p>또 가고싶어요</p>
                                            </div>
                                            </div>
                                            </div>`;
@@ -85,9 +82,6 @@ function submitReview() {
                                  <div class="review-point">
                                      <p>평점: ${rating}</p>
                                      <div class="keyword">
-                                         <p>친절해요</p>
-                                         <p>청결해요</p>
-                                         <p>또 가고싶어요</p>
                                      </div>
                                  </div>
                              </div>`;
@@ -112,3 +106,50 @@ submitReview();
 //   event.preventDefault();
 
 // const cafeBox = document.getElementById("cafe-box");
+
+// 페이지 이동
+
+const Tastytag = document.querySelector("#Tastytag");
+const Cafetag = document.querySelector("#Cafetag");
+const Placetag = document.querySelector("#Placetag");
+
+Tastytag.addEventListener("click", () => {
+  location.href = "/DateTeam/서석민 - 맛집/JMT/JMT.html";
+});
+Cafetag.addEventListener("click", () => {
+  location.href = "/DateTeam/서석민 - 맛집/Cafe/Cafe.html";
+});
+Placetag.addEventListener("click", () => {
+  location.href = "../hotPlace.html";
+});
+
+const mainLoop = document.getElementById("topI");
+const tastyLoop = document.getElementById("jmtI");
+const cafeLoop = document.getElementById("cafeI");
+const placeLoop = document.getElementById("placeI");
+const bottomLoop = document.getElementById("infoI");
+
+mainLoop.addEventListener("click", () => {
+  // location.href = "#hTag-JMT";
+  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
+});
+tastyLoop.addEventListener("click", (e) => {
+  // location.href = "#hTag-JMT";
+  window.scrollTo(0, 300);
+});
+cafeLoop.addEventListener("click", (e) => {
+  // location.href = "#hTag-cafe";
+  window.scrollTo(0, 800);
+});
+placeLoop.addEventListener("click", (e) => {
+  window.scrollTo(0, 1300);
+});
+bottomLoop.addEventListener("click", (e) => {
+  window.scrollTo(0, 0);
+});
+
+const service = document.getElementById("service");
+
+service.addEventListener("click", () => {
+  location.href = "/DateTeam/박근모 - 메인/HTML/subPage.html";
+});

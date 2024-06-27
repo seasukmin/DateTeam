@@ -23,9 +23,9 @@
         </div>
 
         <div class="review-category">
-          <p><span class="T-hst">#</span>맛집</p>
-          <p><span class="C-hst">#</span>카페</p>
-          <p><span class="H-hst">#</span>핫플</p>
+          <p id="Tastytag"><span class="T-hst">#</span>맛집</p>
+          <p id="Cafetag"><span class="C-hst">#</span>카페</p>
+          <p id="Placetag"><span class="H-hst">#</span>핫플</p>
         </div>
         <div class="review-title">
           <h2><span class="R-hst">#</span>데이트후기</h2>
@@ -46,149 +46,154 @@
             <i class="bx bxs-map" id="placeI"></i>
           </div>
           <div class="category-bottom">
-            <i class="bx bx-info-circle" id="infoI"></i>
+            <i class="bx bx-arrow-from-bottom" id="infoI"></i>
           </div>
         </div>
 
         <div class="review-box">
-        <div class="tasty-box">
-          <h1 class="category-Tag"><span class="T-hst">#</span>맛집</h1>
-          <div id="tasty-content-box">
-            <div class="tasty-content" id="tasty-box">
-              <div class="review-user">
-                <i class="bx bxs-user-circle"></i>
-                <p class="username">유디님의 후기</p>
+          <div class="tasty-box">
+            <h1 class="category-Tag"><span class="T-hst">#</span>맛집</h1>
+            <div id="tasty-content-box">
+              <div class="tasty-content" id="tasty-box">
+                <div class="review-user">
+                  <i class="bx bxs-user-circle"></i>
+                  <p class="username">유디님의 후기</p>
+                </div>
+                <div class="review-visited">
+                  <h2>방문한 곳: 칸 스테이크</h2>
+                  <p>방문일: 2024-6-5</p>
+                </div>
+                <div class="review-text">
+                  <img src="../img/맛집4.jpg" />
+                  <p>
+                    맛있어여 기념일에 가서 잘 먹었습니다! 분위기 너무 좋네요
+                  </p>
+                </div>
+                <div class="review-point">
+                  <p>평점: 5</p>
+                  <div class="keyword"></div>
+                </div>
               </div>
-              <div class="review-visited">
-                <h2>방문한 곳: 칸 스테이크</h2>
-                <p>방문일: 2024-6-5</p>
+            </div>
+          </div>
+
+          <div class="cafe-box">
+            <h1 class="category-Tag"><span class="C-hst">#</span>카페</h1>
+            <div id="cafe-content-box">
+              <div class="cafe-content" id="cafe-box">
+                <div class="review-user">
+                  <i class="bx bxs-user-circle"></i>
+                  <p class="username">민정님의 후기</p>
+                </div>
+                <div class="review-visited">
+                  <h2>방문한 곳: 카페하소</h2>
+                  <p>방문일: 2024-6-22</p>
+                </div>
+                <div class="review-text">
+                  <img src="../img/카페2.jpg" />
+                  <p>
+                    치즈케이크 쫀맛 치즈케이크는 주말에만 팔아요! 참고하세용
+                  </p>
+                </div>
+                <div class="review-point">
+                  <p>평점: 5</p>
+                  <div class="keyword"></div>
+                </div>
               </div>
-              <div class="review-text">
-                <img src="../img/맛집4.jpg" />
-                <p>맛있어여 기념일에 가서 잘 먹었습니다! 분위기 너무 좋네요</p>
-              </div>
-              <div class="review-point">
-                <p>평점: 5</p>
-                <div class="keyword"></div>
+            </div>
+          </div>
+
+          <div class="hp-box">
+            <h1 class="category-Tag"><span class="H-hst">#</span>핫플</h1>
+            <div id="hp-content-box">
+              <div class="hp-content" id="hp-box">
+                <div class="review-user">
+                  <i class="bx bxs-user-circle"></i>
+                  <p class="username">지민님의 후기</p>
+                </div>
+                <div class="review-visited">
+                  <h2>방문한 곳: 만인산</h2>
+                  <p>방문일: 2024-6-15</p>
+                </div>
+                <div class="review-text">
+                  <img src="../img/만인산.jpg" />
+                  <p>
+                    산책하기 좋아여 분수가 있어요. 봉이호떡 웨이팅이 길지만
+                    갔으면 먹어줘야죠 ㅎㅎ
+                  </p>
+                </div>
+                <div class="review-point">
+                  <p>평점: 4</p>
+                  <div class="keyword"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="cafe-box">
-          <h1 class="category-Tag"><span class="C-hst">#</span>카페</h1>
-          <div id="cafe-content-box">
-            <div class="cafe-content" id="cafe-box">
-              <div class="review-user">
-                <i class="bx bxs-user-circle"></i>
-                <p class="username">민정님의 후기</p>
-              </div>
-              <div class="review-visited">
-                <h2>방문한 곳: 카페하소</h2>
-                <p>방문일: 2024-6-22</p>
-              </div>
-              <div class="review-text">
-                <img src="../img/카페2.jpg" />
-                <p>치즈케이크 쫀맛 치즈케이크는 주말에만 팔아요! 참고하세용</p>
-              </div>
-              <div class="review-point">
-                <p>평점: 5</p>
-                <div class="keyword"></div>
-              </div>
-            </div>
+        <div class="footerBox">
+          <div class="banner">
+            <p>광고입니다.</p>
           </div>
-        </div>
-
-        <div class="hp-box">
-          <h1 class="category-Tag"><span class="H-hst">#</span>핫플</h1>
-          <div id="hp-content-box">
-            <div class="hp-content" id="hp-box">
-              <div class="review-user">
-                <i class="bx bxs-user-circle"></i>
-                <p class="username">지민님의 후기</p>
-              </div>
-              <div class="review-visited">
-                <h2>방문한 곳: 만인산</h2>
-                <p>방문일: 2024-6-15</p>
-              </div>
-              <div class="review-text">
-                <img src="../img/만인산.jpg" />
-                <p>
-                  산책하기 좋아여 분수가 있어요. 봉이호떡 웨이팅이 길지만 갔으면
-                  먹어줘야죠 ㅎㅎ
-                </p>
-              </div>
-              <div class="review-point">
-                <p>평점: 4</p>
-                <div class="keyword"></div>
-              </div>
+          <div class="footer">
+            <div class="info">
+              <p>2024. DW Academy</p>
+              <p>tel: 042-123-4567</p>
+              <p>Email: DWA123@gmail.com</p>
+            </div>
+            <div class="service">
+              <p id="service">고객센터</p>
+              <p>이용약관</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="footerBox">
-        <div class="banner">
-          <p>광고입니다.</p>
-        </div>
-        <div class="footer">
-          <div class="info">
-            <p>2024. DW Academy</p>
-            <p>tel: 042-123-4567</p>
-            <p>Email: DWA123@gmail.com</p>
-          </div>
-          <div class="service">
-            <p>고객센터</p>
-            <p>이용약관</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="hiddenForm" id="showForm">
+        <div class="reviewForm-container">
+          <h1># 데이트 후기 작성</h1>
 
-    <div class="hiddenForm" id="showForm">
-      <div class="reviewForm-container">
-        <h1># 데이트 후기 작성</h1>
-
-        <div class="reviewForm-box">
-          <label for="category">어디를 다녀오셨나요?</label>
-          <select id="category" name="category" required>
-            <option value="tasty">#맛집</option>
-            <option value="cafe">#카페</option>
-            <option value="hotPlace">#핫플</option>
-          </select>
-        </div>
-        <div class="reviewForm-box">
-          <label for="location">방문한 곳</label>
-          <input type="text" id="location" name="location" required />
-        </div>
-        <div class="reviewForm-box">
-          <label for="date">다녀온 날짜</label>
-          <input type="date" id="date" name="date" required />
-        </div>
-        <div class="reviewForm-box">
-          <label for="photo">사진 추가</label>
-          <input type="file" id="photo" name="photo" accept="image/*" />
-        </div>
-        <div class="reviewForm-box">
-          <label for="rating">평점</label>
-          <select id="rating" name="rating" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="reviewForm-box">
-          <label for="review">후기</label>
-          <textarea id="review" name="review" rows="6" required></textarea>
-        </div>
-        <div class="reviewForm-btn">
-          <button class="upload">게시하기</button>
-          <button type="button" class="reivew-cancel-btn">
-            <!-- onclick="hideReviewForm" -->
-            <span class="hideReviewForm">취소하기</span>
-          </button>
+          <div class="reviewForm-box">
+            <label for="category">어디를 다녀오셨나요?</label>
+            <select id="category" name="category" required>
+              <option value="tasty">#맛집</option>
+              <option value="cafe">#카페</option>
+              <option value="hotPlace">#핫플</option>
+            </select>
+          </div>
+          <div class="reviewForm-box">
+            <label for="location">방문한 곳</label>
+            <input type="text" id="location" name="location" required />
+          </div>
+          <div class="reviewForm-box">
+            <label for="date">다녀온 날짜</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="reviewForm-box">
+            <label for="photo">사진 추가</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </div>
+          <div class="reviewForm-box">
+            <label for="rating">평점</label>
+            <select id="rating" name="rating" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="reviewForm-box">
+            <label for="review">후기</label>
+            <textarea id="review" name="review" rows="6" required></textarea>
+          </div>
+          <div class="reviewForm-btn">
+            <button class="upload">게시하기</button>
+            <button type="button" class="reivew-cancel-btn">
+              <!-- onclick="hideReviewForm" -->
+              <span class="hideReviewForm">취소하기</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
