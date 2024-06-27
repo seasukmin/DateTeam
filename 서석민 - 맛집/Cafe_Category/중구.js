@@ -14,7 +14,7 @@ import {
 // 로고 시작
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "#";
+  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
 });
 // 로고 끝
 // 헤더 시작
