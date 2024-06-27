@@ -336,6 +336,12 @@ festivalArr.forEach((info, idx) => {
   );
 });
 
+// 로고 홈페이지 이동
+const logo = document.querySelector(".hotPlace-logo");
+logo.addEventListener("click", () => {
+  location.href = "../../박근모 - 메인/HTML/mainPage.html";
+});
+
 // 사이드바 누르면 위치로
 const Maintitle = document.querySelectorAll(".side-text li");
 Maintitle.forEach(function (el, idx) {
