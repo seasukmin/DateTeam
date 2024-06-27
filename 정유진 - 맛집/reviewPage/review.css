@@ -60,6 +60,7 @@ body {
   font-size: 24px;
   font-weight: 800;
   font-style: italic;
+  cursor: pointer;
 }
 .review-box {
   display: flex;
@@ -214,6 +215,7 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  cursor: pointer;
 }
 
 #showForm {
@@ -269,7 +271,7 @@ body {
   transition: 0.3s;
 }
 .bx-home-heart:hover,
-.bx-info-circle:hover {
+.bx-arrow-from-bottom:hover {
   background-color: hotpink;
 }
 .bx-restaurant:hover {
