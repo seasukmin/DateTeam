@@ -238,7 +238,7 @@ section {
 }
 .hidden {
   display: none;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 /* 헤더 부분 끝 */
 
@@ -309,7 +309,7 @@ section {
   font-weight: 700;
 }
 .sideinnerN:hover {
-  color: rgb(92, 10, 92, 80%);
+  /* color: rgb(92, 10, 92, 80%); */
   white-space: nowrap;
 }
 .sideinnerT {
@@ -318,9 +318,9 @@ section {
   font-weight: 700;
   /* overflow: hidden; */
 }
-.sideinnerT:hover {
+/* .sideinnerT:hover {
   color: rgb(92, 10, 92, 80%);
-}
+} */
 .side-bar {
   padding: 10px 15px;
   background-color: rgb(209, 152, 209);

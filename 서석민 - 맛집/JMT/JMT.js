@@ -680,3 +680,8 @@ function handleBoxClick(e, box) {
 // window.addEventListener("scroll", updateScrollPosition);
 
 // body.addEventListener('wheel', function(){
+
+const Top = document.querySelector(".Top");
+Top.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});

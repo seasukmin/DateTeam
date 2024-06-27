@@ -16,20 +16,23 @@ const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
   location.href = "../../박근모 - 메인/HTML/mainPage.html";
 });
+
+const Top = document.querySelector(".Top");
+Top.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
 // 로고 끝
 // 헤더 시작
 const header = document.querySelector("#header-H2");
 header.addEventListener("click", function () {
   location.href = "../JMT/JMT.html";
 });
-const Top = document.querySelector(".TopLoop");
-Top.addEventListener("click", function () {
-  location.href = "#header-H2";
+
+const reviewBtn = document.querySelector(".reviewBtn");
+reviewBtn.addEventListener("click", function () {
+  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
 });
-const Top1 = document.querySelector(".topBtn");
-Top1.addEventListener("click", function () {
-  location.href = "#header-H2";
-});
+
 // 헤더 끝
 
 // 메인 스크립트 시작
