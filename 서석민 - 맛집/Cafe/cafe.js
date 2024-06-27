@@ -45,20 +45,20 @@ function chgMainImg() {
 window.onload = chgMainImg;
 // 메인 사진 끝
 
-const text = "가장 Hot한 카페들!";
+const text = "가장 Hot한 카페들 !";
 const middleH1 = document.getElementById("middleH1");
 
 let index = 0;
 
 function displayNextCharacter() {
   if (index < text.length) {
-    middleH1.innerText += text[index];
+    middleH1.innerHTML += text[index];
     index++;
   } else {
     index = 0;
     middleH1.innerText = ""; // 기존 텍스트를 지우고 다시 시작
   }
-  setTimeout(displayNextCharacter, 300); // 0.5초 간격으로 다음 문자 출력
+  setTimeout(displayNextCharacter, 500); // 0.5초 간격으로 다음 문자 출력
 }
 
 displayNextCharacter();
