@@ -2,42 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Object within Object</title>
+    <title>Planner</title>
+    <style>
+      #planner-title {
+        display: block;
+        color: black;
+      }
+    </style>
   </head>
   <body>
-    <button id="addObjectBtn">Add Object</button>
-    <pre id="displayArea"></pre>
+    <div id="planner-title"></div>
+    <script>
+      window.onload = () => {
+        const plannertitle = document.getElementById("planner-title");
+        console.log("Element:", plannertitle); // 이 로그가 콘솔에 출력되는지 확인
+        const localId = localStorage.getItem("ID");
+        const localSemiId = localStorage.getItem("semiID");
 
-    <script src="script.js"></script>
-  </body>
-  <script>
-    // 초기 객체
-    let mainObject = {
-      objects: {},
-    };
+        console.log("ID:", localId);
+        console.log("semiID:", localSemiId);
 
-    // 객체 추가 함수
-    function addObject() {
-      const id = new Date().getTime(); // 고유 ID 생성 (현재 시간 기반)
-      const newObject = {
-        name: `Object_${id}`,
-        value: Math.random().toString(36).substring(7), // 임의의 값 생성
+        if (localId !== null && localSemiId == null) {
+          plannertitle.innerHTML = `${localId} planner`;
+        } else if (localSemiId !== null && localId == null) {
+          plannertitle.innerHTML = `${localSemiId} planner`;
+        }
       };
-
-      mainObject.objects[id] = newObject; // 객체 안에 객체 추가
-      displayObject(); // 업데이트된 객체 표시
-    }
-
-    // 객체를 화면에 표시하는 함수
-    function displayObject() {
-      const displayArea = document.getElementById("displayArea");
-      displayArea.textContent = JSON.stringify(mainObject, null, 2);
-    }
-
-    // 버튼 클릭 이벤트 리스너 등록
-    document
-      .getElementById("addObjectBtn")
-      .addEventListener("click", addObject);
-  </script>
+    </script>
+  </body>
 </html>

@@ -16,7 +16,7 @@ import {
 
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "#";
+  location.href = "../../박근모 - 메인/HTML/mainPage.html";
 });
 // 로고 끝
 
