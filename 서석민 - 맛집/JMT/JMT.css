@@ -26,8 +26,10 @@ body {
 }
 span {
   color: #eece93;
-  margin: 5px;
+  margin: 6px;
+  cursor: pointer;
 }
+
 .Logo {
   position: fixed;
   top: 15px;

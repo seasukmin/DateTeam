@@ -7,112 +7,112 @@ import {
 } from "./javascript/DLU_firebase.js";
 
 const contents = document.getElementById("content");
-const contentArr = [
-  {
-    a: "",
-    img: "./img/한밭수목원.jpg",
-    name: "한밭수목원",
-    time: "월-토: 09:00",
-    time2: "<br>일: 09:00",
-    event: "입장료: 무료",
-  },
-  {
-    a: "",
-    img: "./img/한빛탑야간.jpg",
-    name: "엑스포 과학공원",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#음악분수",
-  },
-  {
-    a: "",
-    img: "./img/오월드.jpg",
-    name: "대전 오월드",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#동물원 #나이트유니버스",
-  },
-  {
-    a: "",
-    img: "./img/대전시립미술관.jpg",
-    name: "대전시립박물관",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "입장료:",
-  },
-  {
-    a: "",
-    img: "./img/이글스파크.jpg",
-    name: "한화이글스파크",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#야구",
-  },
-  {
-    a: "",
-    img: "./img/유성온천.jpg",
-    name: "유성온천",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#족욕",
-  },
-  {
-    a: "",
-    img: "./img/으능정이거리.jpg",
-    name: "으능정이거리",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#스카이로드",
-  },
-  {
-    a: "",
-    img: "./img/신세계백화점.jpg",
-    name: "신세계백화점",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#쇼핑",
-  },
-  {
-    a: "",
-    img: "./img/옛터민속박물관.jpg",
-    name: "옛터민속박물관",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#드라이브",
-  },
-  {
-    a: "",
-    img: "./img/식장산.jpg",
-    name: "식장산",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#야경 #드라이브",
-  },
-  {
-    a: "",
-    img: "./img/만인산자연휴양림.jpg",
-    name: "만인산자연휴양림",
-    time: "월-토: 09:00",
-    time2: "",
-    event: "#봉이호떡 #산책",
-  },
-];
-contentArr.forEach((info, idx) => {
-  contents.insertAdjacentHTML(
-    "beforeend",
+// const contentArr = [
+//   {
+//     a: "",
+//     img: "./img/한밭수목원.jpg",
+//     name: "한밭수목원",
+//     time: "월-토: 09:00",
+//     time2: "<br>일: 09:00",
+//     event: "입장료: 무료",
+//   },
+//   {
+//     a: "",
+//     img: "./img/한빛탑야간.jpg",
+//     name: "엑스포 과학공원",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#음악분수",
+//   },
+//   {
+//     a: "",
+//     img: "./img/오월드.jpg",
+//     name: "대전 오월드",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#동물원 #나이트유니버스",
+//   },
+//   {
+//     a: "",
+//     img: "./img/대전시립미술관.jpg",
+//     name: "대전시립박물관",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "입장료:",
+//   },
+//   {
+//     a: "",
+//     img: "./img/이글스파크.jpg",
+//     name: "한화이글스파크",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#야구",
+//   },
+//   {
+//     a: "",
+//     img: "./img/유성온천.jpg",
+//     name: "유성온천",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#족욕",
+//   },
+//   {
+//     a: "",
+//     img: "./img/으능정이거리.jpg",
+//     name: "으능정이거리",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#스카이로드",
+//   },
+//   {
+//     a: "",
+//     img: "./img/신세계백화점.jpg",
+//     name: "신세계백화점",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#쇼핑",
+//   },
+//   {
+//     a: "",
+//     img: "./img/옛터민속박물관.jpg",
+//     name: "옛터민속박물관",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#드라이브",
+//   },
+//   {
+//     a: "",
+//     img: "./img/식장산.jpg",
+//     name: "식장산",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#야경 #드라이브",
+//   },
+//   {
+//     a: "",
+//     img: "./img/만인산자연휴양림.jpg",
+//     name: "만인산자연휴양림",
+//     time: "월-토: 09:00",
+//     time2: "",
+//     event: "#봉이호떡 #산책",
+//   },
+// ];
+// contentArr.forEach((info, idx) => {
+//   contents.insertAdjacentHTML(
+//     "beforeend",
 
-    ` <div class="content">
-              <a href=${info.a}>
-                <img src=${info.img} />
-                <p class="hpName">${info.name}</p></a
-              >
-              <p class="hpTime">
-                ${info.time}${info.time2}
-              </p>
-              <p class="hpInfo">${info.event}</p>
-            </div> `
-  );
-});
+//     ` <div class="content">
+//               <a href=${info.a}>
+//                 <img src=${info.img} />
+//                 <p class="hpName">${info.name}</p></a
+//               >
+//               <p class="hpTime">
+//                 ${info.time}${info.time2}
+//               </p>
+//               <p class="hpInfo">${info.event}</p>
+//             </div> `
+//   );
+// });
 
 function chgMainImg() {
   const mainImgArr = [
@@ -163,89 +163,6 @@ document.querySelectorAll(".category li").forEach((item) => {
   });
 });
 
-// const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
-// const wave = document.querySelector(".main-text");
-// let textLength = 0;
-// let intervalMainText;
-// function textWave() {
-//   if (textLength < text.length) {
-//     wave.innerHTML += text[textLength++];
-//   } else {
-//     clearInterval(intervalMainText);
-//     setTimeout(() => {
-//       wave.textContent = "";
-//       textLength = 0;
-//       intervalMainText = setInterval(textWave, 250);
-//     }, 2500);
-//   }
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   intervalMainText = setInterval(textWave, 250);
-
-//   document.querySelectorAll(".category li").forEach((item) => {
-//     item.addEventListener("click", function () {
-//       const url = this.getAttribute("data-url");
-//       window.location.href = url;
-//     });
-//   });
-// });
-
-//   contentArr.forEach(async (e, idx) => {
-//     // console.log(e);
-//     const a = e.a;
-//     const img = e.img;
-//     const name = e.name;
-//     const time = e.time;
-//     const time2 = e.time2;
-//     const event = e.event;
-//     const event2 = `hotPlace${idx + 1}`;
-//     const store1Obj = {
-//       a: a,
-//       img: img,
-//       name: name,
-//       time: time,
-//       time2: time2,
-//       event: event,
-//       event2: event2,
-//     };
-//     // const result = await addDatas("Hotplace", store1Obj);
-//   });
-// });
-
-const searchInput = document.querySelector(".searchInput");
-const searchBtn = document.querySelector(".searchBtn");
-const searchBox = document.querySelector(".searchBox");
-console.log(searchInput);
-function inputArr(e) {
-  searchBox.innerHTML = "";
-  const inputValue = searchInput.value;
-  infoinput.forEach(function (el, idx) {
-    if (el.event.includes(inputValue)) {
-      searchBox.insertAdjacentHTML(
-        "beforeend",
-        `
-                     <div class="box">
-                          <img
-                            class="box-img"
-                            src="../Photo/23.jpg"
-                          />
-                          <div class="box-point"><span>평점:</span>
-                        23</div>
-                          <div class="box-name">23</div>
-                          <div class="box-tag"><span>addr:</span>23</div>
-                          <div class="box-tag"><span>On.</span>12</div>
-                          <div class="box-tag"><span>N.</span>12</div>
-                          <div class="box-tag"><span>#</span>
-                          12</div>
-                        </div>
-                   `
-      );
-    }
-  });
-}
-searchBtn.addEventListener("click", inputArr);
-searchInput.addEventListener("keypress", inputArr);
 let etarget;
 
 const resetBtn = document.querySelector(".reset");
@@ -262,22 +179,70 @@ logo.addEventListener("click", () => {
 // content-box 클릭 이벤트 리스너
 const allbox = document.querySelector(".content-box");
 
-const datas = await getDatas("Hotplace2");
+const datas = await getDatas("hotPlace");
 const infoinput = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
   // console.log(infoinput);s
-  infoinput.push(info);
+  infoinput.push(info.list);
+  console.log(infoinput.length);
 });
+const sidebarsub = document.querySelectorAll(".sidebar-sub");
+const infoinputArr = infoinput.forEach(function (el) {
+  const elslice = el.slice(30, 38);
+  elslice.forEach(function (e, idx) {
+    contents.insertAdjacentHTML(
+      "beforeend",
+      `
+       <div class="content">
+             
+                <img src=img/${idx + 1}.jpg />
+              <p class="hpName">${e.title}</p></a
+               >
+               <p class="hpTime">
+                ${e.text2}
+              </p>
+               <p class="hpInfo">${e.event}</p>
+               <p class="hpInfo hidden">${e.id}</p>
+             </div> 
+    `
+    );
+  });
+});
+// const searchInput = document.querySelector(".searchInput");
+// const searchBtn = document.querySelector(".searchBtn");
+// const searchBox = document.querySelector(".searchBox");
+// console.log(searchInput);
+// function inputArr(e) {
+//   searchBox.innerHTML = "";
+//   const inputValue = searchInput.value;
+//   infoinput.forEach(function (el, idx) {
+//     if (el.event.includes(inputValue)) {
+//       searchBox.insertAdjacentHTML(
+//         "beforeend",
+//         `
+//                      <div class="box">
+//                           <img
+//                             class="box-img"
+//                             src="../Photo/23.jpg"
+//                           />
+//                           <div class="box-point"><span>평점:</span>
+//                         23</div>
+//                           <div class="box-name">23</div>
+//                           <div class="box-tag"><span>addr:</span>23</div>
+//                           <div class="box-tag"><span>On.</span>12</div>
+//                           <div class="box-tag"><span>N.</span>12</div>
+//                           <div class="box-tag"><span>#</span>
+//                           12</div>
+//                         </div>
+//                    `
+//       );
+//     }
+//   });
+// }
+// searchBtn.addEventListener("click", inputArr);
+// searchInput.addEventListener("keypress", inputArr);
 
-let target;
-allbox.addEventListener("click", function (e) {
-  e.target;
-  console.log(e.target);
-  const werwe = { name: e.target.innerHTML };
-  addDatas("Hotplace2", { werwe });
-  localStorage.setItem("id", "Hotplace01");
-});
 // planner title
 const plannertitle = document.getElementById("planner-title");
 const localId = localStorage.getItem("ID");
@@ -295,20 +260,27 @@ const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
-contents.addEventListener("click", function (e) {
-  const box = e.target.closest(".box");
+contents.addEventListener("click", function (e, idx) {
+  const userId = localStorage.getItem("ID");
+  console.log(userId);
+  if (userId === null) {
+    alert("로그인이 필요합니다.");
+    location.href = "../../박근모 - 메인/HTML/mainPage.html";
+    return false;
+  } else if (userId !== null) {
+  }
+  const box = e.target.closest(".content");
+  console.log(box);
   if (box) {
-    nameChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
+    nameChild = box.firstElementChild.nextElementSibling;
     addrChild =
       box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling.nextElementSibling;
-    idChild = box.lastElementChild;
+        .nextElementSibling;
+    idChild = box.firstElementChild.nextElementSibling;
   }
   console.log(box);
-  // const day1 = document.querySelector(".day1");
-  // const day1inner = day1.innerHTML;
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
   const nameText = nameChild.innerHTML;
   const addrText = addrChild.innerHTML.substring(18, 22);
   const IdText = idChild.innerHTML.substring(14, 22);
@@ -334,10 +306,10 @@ contents.addEventListener("click", function (e) {
         `
       );
     }
-  } else if (IdText.includes("cafe")) {
+  }
+  if (IdText.includes("cafe")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
     let username = localStorage.getItem(`${IdText}`);
-
     let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
       (span) => span.textContent === username
     );
@@ -396,7 +368,8 @@ for (let i = 0; i < localStorage.length; i++) {
         `
       );
     }
-  } else if (key.includes("cafe")) {
+  }
+  if (key.includes("cafe")) {
     let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
       (span) => span.textContent === value
     );
@@ -430,7 +403,6 @@ for (let i = 0; i < localStorage.length; i++) {
     }
   }
 }
-
 // resturantBoxes 클릭 이벤트 핸들러 함수
 resturantBoxes.addEventListener("click", function (e) {
   handleBoxClick(e, resturantBoxes);
@@ -468,3 +440,13 @@ function handleBoxClick(e, box) {
     }
   }
 }
+
+// const hi = document.querySelector(".hi");
+// for (let i = 0; i < localStorage.length; i++) {
+//   const key = localStorage.key(i);
+//   console.log(key);
+//   hi.addEventListener("click", function () {
+//     localStorage.removeItem(key);
+//     location.reload();
+//   });
+// }
