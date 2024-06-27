@@ -338,9 +338,7 @@ festivalArr.forEach((info, idx) => {
 
 // 사이드바 누르면 위치로
 const Maintitle = document.querySelectorAll(".side-text li");
-console.log(Maintitle);
 Maintitle.forEach(function (el, idx) {
-  console.log(el);
   el.addEventListener("click", function () {
     if (idx == 0) {
       location.href = "#one";
@@ -447,7 +445,6 @@ datas.forEach((doc, idx) => {
   const info = doc.data();
   infolist = info.list;
 });
-console.log(infolist);
 
 const searchBtn = document.querySelector(".searchBtn");
 const searchInput = document.querySelector(".searchInput");
@@ -508,6 +505,16 @@ let idChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+
+// planner title
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
 
 Mainbox1.addEventListener("click", function (e) {
   const box = e.target.closest(".box");
@@ -588,16 +595,6 @@ Mainbox1.addEventListener("click", function (e) {
     }
   }
 });
-
-// planner title
-const plannertitle = document.getElementById("planner-title");
-const localId = localStorage.getItem("ID");
-const localSemiId = localStorage.getItem("semiID");
-if (localId !== null && localSemiId == null) {
-  plannertitle.innerHTML = `${localId} planner`;
-} else if (localSemiId !== null && localId == null) {
-  plannertitle.innerHTML = `${localSemiId} planner`;
-}
 
 // 페이지 로드 시 기존에 저장된 데이터 확인 및 각 상자에 추가
 for (let i = 0; i < localStorage.length; i++) {

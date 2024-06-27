@@ -473,6 +473,16 @@ Mainbox1.addEventListener("click", function (e) {
   }
 });
 
+// planner title
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
+
 // 페이지 로드 시 기존에 저장된 데이터 확인 및 각 상자에 추가
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
