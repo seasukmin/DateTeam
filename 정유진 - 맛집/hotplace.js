@@ -263,10 +263,8 @@ contents.addEventListener("click", function (e, idx) {
   console.log(box);
   if (box) {
     nameChild = box.firstElementChild.nextElementSibling;
-    addrChild =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-    idChild = box.firstElementChild.nextElementSibling;
+    addrChild = box.firstElementChild;
+    idChild = box.firstElementChild.nextElementSibling.nextElementSibling;
   }
   console.log(box);
   const day1 = document.querySelector(".day1");

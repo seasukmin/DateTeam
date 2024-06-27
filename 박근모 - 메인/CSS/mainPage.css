@@ -28,6 +28,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .mainPage-logo {
   cursor: pointer;
@@ -469,4 +470,33 @@ input[type="radio"]:checked + label {
   to {
     opacity: 1;
   }
+}
+
+.restaurantsection {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: max-content;
+}
+.box-img {
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+}
+.box-point,
+.box-name,
+.box-tag {
+  font-size: 20px;
+}
+.cafesection {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: max-content;
+}
+.hotplace-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: max-content;
 }

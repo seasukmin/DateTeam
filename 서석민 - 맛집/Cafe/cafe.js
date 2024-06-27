@@ -89,7 +89,6 @@ datas.forEach((doc, idx) => {
   infoinputArr.push(info);
 });
 console.log(infoinputArr);
-
 let infolistArr = infoinputArr.map(function (el) {
   return `${el.name},${el.point}`;
 });
@@ -392,15 +391,15 @@ let idChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
-
 Mainbox1.addEventListener("click", function (e, idx) {
   const userId = localStorage.getItem("ID");
+  const userId2 = localStorage.getItem("semiID");
   console.log(userId);
-  if (userId === null) {
+  if (userId === null && userId2 === null) {
     alert("로그인이 필요합니다.");
     location.href = "../../박근모 - 메인/HTML/mainPage.html";
     return false;
-  } else if (userId !== null) {
+  } else {
   }
   const box = e.target.closest(".box");
   if (box) {
