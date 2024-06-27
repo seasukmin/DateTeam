@@ -322,43 +322,56 @@ section {
   color: rgb(92, 10, 92, 80%);
 }
 .side-bar {
-  width: 200px;
-  padding: 10px 20px;
-  background-color: rgb(92, 10, 92, 80%);
-  border-radius: 30px;
-  margin-left: 80px;
+  padding: 10px 15px;
+  background-color: rgb(209, 152, 209);
+  border-radius: 25px;
   position: fixed;
-  top: 310px;
-  height: 350px;
+  top: 280px;
+  left: 60px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
 }
 .side-text {
   list-style-type: none;
   font-size: 24px;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  gap: 10px;
+  margin: 12px 0;
+  padding: 10px;
+  padding-left: 0;
 }
 
 .side-text li {
-  padding: 5px 5px;
-  border: 1px solid snow;
-  border-radius: 20px;
-  background-color: snow;
+  width: 120px;
+  padding: 4px 7px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 10px 0;
   cursor: pointer;
 }
 .side-text li:hover {
   transform: scale(1.05);
-  color: rgb(92, 10, 92, 80%);
 }
 .side-category h1 {
-  padding-left: 5px;
+  margin: 12px 10px;
+  color: #575757;
+  padding-left: 3px;
   font-size: 40px;
-  color: lightgray;
 }
-
+.side-bottom {
+  margin: 0;
+}
+.reviewBtn {
+  width: fit-content;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 4px;
+  cursor: pointer;
+  margin: 40px 0 5px 20%;
+}
+.reviewBtn:hover {
+  transform: scale(1.05);
+}
 .up {
   color: purple;
 }
@@ -380,7 +393,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 135.66px;
-  margin: 80px 0 130px 0;
+  margin: 80px 0 130px 100px;
 }
 .middleH1 {
   font-size: 60px;
@@ -391,11 +404,12 @@ section {
 /* 미들부분(사진) 끝*/
 /* 메인 부분 시작 */
 main {
-  margin: 0 350px;
+  margin: 20px 300px 0 250px;
 }
 .Main-img {
   width: 300px;
   height: 300px;
+  border-radius: 30px;
   box-shadow: 1px 1px 5px 1px gray;
 }
 .MainH1 {
@@ -403,10 +417,15 @@ main {
   bottom: 0;
   color: black;
   margin: 0;
+  margin-left: 150px;
 }
 .Main-title {
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0px 0 8px 0;
+  padding-top: 40px;
 }
+
 .Main-box1,
 .Main-box2,
 .Main-box3,
@@ -414,12 +433,13 @@ main {
 .Main-box5 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  gap: 20px;
   align-items: center;
   justify-items: center;
   width: max-content;
   cursor: pointer;
 }
+
 .Mainchart-inner1,
 .Mainchart-inner2,
 .Mainchart-inner3,
@@ -515,7 +535,7 @@ main {
   margin: 5px;
 }
 .box-img {
-  border-radius: 15px;
+  border-radius: 30px;
   width: 280px;
   height: 280px;
   box-shadow: 1px 1px 5px 1px gray;
@@ -528,11 +548,12 @@ main {
   align-self: flex-end;
   font-size: 18px;
   padding: 6px 6px 0 0;
+  margin-right: 7px;
 }
 .box-name {
   font-size: 26px;
   color: black;
-  margin-left: 8px;
+  margin-left: 12px;
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -574,7 +595,7 @@ main {
 .Top {
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -588,13 +609,14 @@ main {
   border: 3px solid #3e3e3e;
   transform: translateX(-50%);
   position: fixed;
-  font-size: 32px;
+  font-size: 20px;
   left: 50%;
   bottom: 50px;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   opacity: 0.4;
   transition: 0.3s;
+  cursor: pointer;
 }
 .TopLoop:hover {
   opacity: 1;
@@ -624,6 +646,11 @@ main {
 
 .Mainchart img {
   border-radius: 20px;
+  width: 18rem;
+  height: 16rem;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px 1px gray;
+  cursor: pointer;
 }
 .input-thing {
   border: 1px solid #3e3e3e;
@@ -665,16 +692,17 @@ main {
 .Mainchart {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   justify-items: center;
   width: 100%;
   cursor: pointer;
   position: relative;
+  margin: 0;
 }
 .charth1 {
   position: absolute;
-  top: -140px;
+  top: -70px;
   left: 40%;
   font-size: 38px;
   animation-name: moveText;
@@ -711,4 +739,22 @@ main {
   font-family: "Ownglyph_noocar-Rg";
   font-size: 16px;
   cursor: pointer;
+}
+/* .Main-first {
+  margin-top: 100px;
+} */
+.rank {
+  font-weight: 800;
+  font-size: 24px;
+  margin: 40px 0 7px 0;
+}
+.rank-title {
+  font-size: 27px;
+  margin-left: 33%;
+}
+.main-container {
+  margin-left: 100px;
+}
+.rank-container {
+  margin-left: 80px;
 }
