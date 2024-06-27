@@ -1,0 +1,11 @@
+.hidden-CCM {
+  display: none;
+}
+.ChimChackMan {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  top: 17px;
+  right: 190px;
+}
