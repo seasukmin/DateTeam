@@ -248,6 +248,7 @@ section {
   width: 1000px;
   transform: translateX(-50%);
   box-shadow: inset 1px 3px 10px 2px rgb(92, 10, 92, 50%);
+  z-index: 1;
 }
 .hidden {
   display: none;
@@ -664,6 +665,7 @@ main {
   border-radius: 30px;
   box-shadow: 1px 1px 5px 1px gray;
   cursor: pointer;
+  z-index: -1;
 }
 .input-thing {
   border: 1px solid #3e3e3e;

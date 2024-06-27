@@ -400,12 +400,13 @@ const hotPlaceBoxes = document.querySelectorAll(".hotPlaceBoxes"); // hotPlaceBo
 
 Mainbox1.addEventListener("click", function (e, idx) {
   const userId = localStorage.getItem("ID");
+  const userId1 = localStorage.getItem("semiID");
   console.log(userId);
-  if (userId === null) {
+  if (userId === null && userId1 === null) {
     alert("로그인이 필요합니다.");
     location.href = "../../박근모 - 메인/HTML/mainPage.html";
     return false;
-  } else if (userId !== null) {
+  } else {
   }
   const box = e.target.closest(".box");
   if (box) {

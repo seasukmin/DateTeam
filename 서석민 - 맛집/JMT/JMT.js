@@ -585,7 +585,7 @@ function handleBoxClick(e, box) {
   }
 }
 
-const hi = document.querySelector(".hi");
+const hi = document.querySelector(".Logout");
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
   console.log(key);
@@ -690,8 +690,3 @@ clear.addEventListener("click", function () {
 // window.addEventListener("scroll", updateScrollPosition);
 
 // body.addEventListener('wheel', function(){
-
-const Top = document.querySelector(".Top");
-Top.addEventListener("click", function () {
-  window.scrollTo(0, 0);
-});

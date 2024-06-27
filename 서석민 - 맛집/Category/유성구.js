@@ -21,6 +21,11 @@ const reviewBtn = document.querySelector(".reviewBtn");
 reviewBtn.addEventListener("click", function () {
   location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
 });
+// // clear(초기화) 버튼
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", function () {
+  location.reload();
+});
 // const resturantBoxes = document.querySelector(".resturantBoxes");
 
 // 로고 끝

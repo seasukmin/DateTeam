@@ -25,12 +25,13 @@ if (localId !== null && localSemiId == null) {
 Mainbox.forEach(function (el) {
   el.addEventListener("click", function (e) {
     const userId = localStorage.getItem("ID");
-    console.log(userId);
-    if (userId === null) {
+    const userId1 = localStorage.getItem("semiID");
+    console.log(userId1);
+    if (userId === null && userId1 === null) {
       alert("로그인이 필요합니다.");
       location.href = "../../박근모 - 메인/HTML/mainPage.html";
       return false;
-    } else if (userId !== null) {
+    } else {
     }
     const box = e.target.closest(".box");
     if (box) {

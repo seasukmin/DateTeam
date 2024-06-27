@@ -33,6 +33,11 @@ const Top = document.querySelector(".Top");
 Top.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
+// // clear(초기화) 버튼
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", function () {
+  location.reload();
+});
 // 헤더 끝
 
 // 카테고리 스크립트 시작
