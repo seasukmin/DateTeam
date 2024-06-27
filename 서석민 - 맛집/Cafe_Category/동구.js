@@ -16,6 +16,12 @@ const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
   location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
 });
+
+const Top = document.querySelector(".Top");
+Top.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
+
 // 로고 끝
 // 헤더 시작
 const header = document.querySelector("#header-H2");

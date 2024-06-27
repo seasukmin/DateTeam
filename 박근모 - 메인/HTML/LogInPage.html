@@ -14,13 +14,18 @@
       <form action="login" method="POST" id="loginForm">
         <div class="input-group">
           <label for="email" class="IdLabel">ID</label>
-          <input type="text" id="text" name="text" required />
+          <input type="text" id="loginPage-ID" name="text" required />
         </div>
         <div class="input-group">
           <label for="password" class="PwLabel">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input
+            type="password"
+            id="loginPage-password"
+            name="password"
+            required
+          />
         </div>
-        <button type="submit" class="login-btn">Login</button>
+        <button type="submit" class="login-page-btn">Login</button>
         <div class="signUpBox">
           <a href="../HTML/mainPage.html" class="returnPage">돌아가기</a>
           <a href="../HTML/join.html" class="signUp-btn">회원가입</a>
@@ -28,5 +33,5 @@
       </form>
     </div>
   </body>
-  <script src="../Javascript/LoginPage.js"></script>
+  <script src="../Javascript/LoginPage.js" type="module"></script>
 </html>

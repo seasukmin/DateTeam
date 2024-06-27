@@ -583,3 +583,8 @@ function handleBoxClick(e, box) {
 //     location.reload();
 //   });
 // }
+
+const Top = document.querySelector(".Top");
+Top.addEventListener("click", function () {
+  location.href = "#toploop";
+});

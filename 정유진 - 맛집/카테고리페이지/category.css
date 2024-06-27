@@ -334,6 +334,7 @@ body {
   opacity: 0.4;
   transition: 0.3s;
   cursor: pointer;
+  z-index: 1;
 }
 .topBtn:hover {
   opacity: 1;
@@ -350,31 +351,21 @@ body {
   }
 }
 
-.footerBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .banner {
-  width: 68%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   height: 120px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
 .footer {
-  width: 74%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 200px;
   background-color: rgb(178, 230, 250);
-  border-radius: 10px;
   position: relative;
 }
 .info {

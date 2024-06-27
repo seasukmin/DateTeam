@@ -146,7 +146,8 @@ body {
 .hpName {
   font-size: 26px;
   font-weight: 600;
-  margin: 15px 0;
+  margin: 25px 0 90px 0;
+  text-align: center;
 }
 .hpTime {
   margin: 0;
@@ -203,7 +204,7 @@ body {
   top: 300px;
   position: fixed;
   width: 200px;
-  height: 550px;
+  height: fit-content;
   border-radius: 30px;
   margin-left: 60px;
   backdrop-filter: blur(20px);
@@ -216,19 +217,17 @@ body {
 }
 
 .sidebars > h1 {
-  margin: 0;
+  margin: 20px 0 10px 0;
   color: snow;
 }
 .sidebars > h1:hover {
-  margin: 0;
   transform: scale(1.1);
 }
 .sidebars > p {
-  margin: 0;
+  margin-bottom: 20px;
   color: snow;
 }
 .sidebars > p:hover {
-  margin: 0;
   transform: scale(1.1);
   color: lightgray;
 }
@@ -328,4 +327,29 @@ body {
 }
 .sidebar-sub a:hover {
   color: skyblue;
+}
+.topBtn {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #3e3e3e;
+  transform: translateX(-50%);
+  position: fixed;
+  font-size: 20px;
+  left: 50%;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.topBtn:hover {
+  opacity: 1;
+}
+.topBtn:active {
+  animation: pulse 0.3s;
 }
