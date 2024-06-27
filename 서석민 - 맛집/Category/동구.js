@@ -281,236 +281,226 @@ result.addEventListener("click", (e) => {
   console.log(box);
 });
 
-let nameChild1;
-let addrChild1;
-const resturantBoxes1 = document.querySelector(".resturantBoxes");
-Mainbox1.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild1 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild1 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
+// const box = e.target.closest(".box");
+// if (box) {
+//   nameChild6 = box.firstElementChild.nextElementSibling.nextElementSibling;
+//   addrChild6 =
+//     box.firstElementChild.nextElementSibling.nextElementSibling
+//       .nextElementSibling;
+//   const nameText = nameChild6.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
+//   const addrText = addrChild6.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
+//   console.log(nameChild5);
+//   resturantBoxe6.insertAdjacentHTML(
+//     "beforeend",
+//     `<div>✔ ${nameText} : ${addrText}</div>`
+//   );
+// }
 
-    const nameText = nameChild1.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild1.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild1);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild2;
-let addrChild2;
-const resturantBoxes2 = document.querySelector(".resturantBoxes");
-Mainbox2.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild2 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild2 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild2.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild2.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild2);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild3;
-let addrChild3;
-const resturantBoxes3 = document.querySelector(".resturantBoxes");
-Mainbox3.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild3 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild3 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild3.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild3.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild3);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-
-let nameChild4;
-let addrChild4;
-const resturantBoxes4 = document.querySelector(".resturantBoxes");
-Mainbox4.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild4 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild4 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild4.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild4.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild4);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild5;
-let addrChild5;
-const resturantBoxes5 = document.querySelector(".resturantBoxes");
-Mainbox5.addEventListener("click", function (e) {
-  e.preventDefault();
-  const box = e.target.closest(".box");
-  if (box) {
-    nameChild5 = box.firstElementChild.nextElementSibling.nextElementSibling;
-    addrChild5 =
-      box.firstElementChild.nextElementSibling.nextElementSibling
-        .nextElementSibling;
-
-    const nameText = nameChild5.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-    const addrText = addrChild5.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-    console.log(nameChild5);
-    resturantBoxes.insertAdjacentHTML(
-      "beforeend",
-      `<div>✔ ${nameText} : ${addrText}</div>`
-    );
-  }
-});
-let nameChild6;
-let addrChild6;
-const Mainchartinner = document.querySelector(".Mainchart-inner1");
-const resturantBoxe6 = document.querySelector(".resturantBoxes");
-Mainchartinner.addEventListener("click", function (e) {
-  alert("d");
-  // const box = e.target.closest(".box");
-  // if (box) {
-  //   nameChild6 = box.firstElementChild.nextElementSibling.nextElementSibling;
-  //   addrChild6 =
-  //     box.firstElementChild.nextElementSibling.nextElementSibling
-  //       .nextElementSibling;
-  //   const nameText = nameChild6.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-  //   const addrText = addrChild6.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-  //   console.log(nameChild5);
-  //   resturantBoxe6.insertAdjacentHTML(
-  //     "beforeend",
-  //     `<div>✔ ${nameText} : ${addrText}</div>`
-  //   );
-  // }
-});
 // 메인 종료
 
 // 맛집별 사이트 접속
-const Mainboxes1 = Mainbox1.firstElementChild;
-Mainboxes1.addEventListener("click", function () {
-  location.href = "#";
-  alert("1");
-});
-const Mainboxes2 = Mainboxes1.nextElementSibling;
-Mainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Mainboxes3 = Mainboxes2.nextElementSibling;
-Mainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Mainboxes4 = Mainboxes3.nextElementSibling;
-Mainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
-const Nainboxes1 = Mainbox2.firstElementChild;
-Nainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Nainboxes2 = Nainboxes1.nextElementSibling;
-Nainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Nainboxes3 = Nainboxes2.nextElementSibling;
-Nainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Nainboxes4 = Nainboxes3.nextElementSibling;
-Nainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
-const Qainboxes1 = Mainbox3.firstElementChild;
-Qainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Qainboxes2 = Qainboxes1.nextElementSibling;
-Qainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Qainboxes3 = Qainboxes2.nextElementSibling;
-Qainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Qainboxes4 = Qainboxes3.nextElementSibling;
-Qainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
-const Wainboxes1 = Mainbox4.firstElementChild;
-Wainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Wainboxes2 = Wainboxes1.nextElementSibling;
-Wainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Wainboxes3 = Wainboxes2.nextElementSibling;
-Wainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Wainboxes4 = Wainboxes3.nextElementSibling;
-Wainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-//
-const Eainboxes1 = Mainbox5.firstElementChild;
-Eainboxes1.addEventListener("click", function () {
-  alert("1");
-});
-const Eainboxes2 = Eainboxes1.nextElementSibling;
-Eainboxes2.addEventListener("click", function () {
-  alert("2");
-});
-const Eainboxes3 = Eainboxes2.nextElementSibling;
-Eainboxes3.addEventListener("click", function () {
-  alert("3");
-});
-const Eainboxes4 = Eainboxes3.nextElementSibling;
-Eainboxes4.addEventListener("click", function () {
-  alert("4");
-});
-// 맛집별 사이트 접속 종료
+// const Mainboxes1 = Mainbox1.firstElementChild;
+// Mainboxes1.addEventListener("click", function () {
+//   location.href = "#";
+//   alert("1");
+// });
+// const Mainboxes2 = Mainboxes1.nextElementSibling;
+// Mainboxes2.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Mainboxes3 = Mainboxes2.nextElementSibling;
+// Mainboxes3.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Mainboxes4 = Mainboxes3.nextElementSibling;
+// Mainboxes4.addEventListener("click", function () {
+//   alert("4");
+// });
+// //
+// const Nainboxes1 = Mainbox2.firstElementChild;
+// Nainboxes1.addEventListener("click", function () {
+//   alert("1");
+// });
+// const Nainboxes2 = Nainboxes1.nextElementSibling;
+// Nainboxes2.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Nainboxes3 = Nainboxes2.nextElementSibling;
+// Nainboxes3.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Nainboxes4 = Nainboxes3.nextElementSibling;
+// Nainboxes4.addEventListener("click", function () {
+//   alert("4");
+// });
+// //
+// const Qainboxes1 = Mainbox3.firstElementChild;
+// Qainboxes1.addEventListener("click", function () {
+//   alert("1");
+// });
+// const Qainboxes2 = Qainboxes1.nextElementSibling;
+// Qainboxes2.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Qainboxes3 = Qainboxes2.nextElementSibling;
+// Qainboxes3.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Qainboxes4 = Qainboxes3.nextElementSibling;
+// Qainboxes4.addEventListener("click", function () {
+//   alert("4");
+// });
+// //
+// const Wainboxes1 = Mainbox4.firstElementChild;
+// Wainboxes1.addEventListener("click", function () {
+//   alert("1");
+// });
+// const Wainboxes2 = Wainboxes1.nextElementSibling;
+// Wainboxes2.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Wainboxes3 = Wainboxes2.nextElementSibling;
+// Wainboxes3.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Wainboxes4 = Wainboxes3.nextElementSibling;
+// Wainboxes4.addEventListener("click", function () {
+//   alert("4");
+// });
+// //
+// const Eainboxes1 = Mainbox5.firstElementChild;
+// Eainboxes1.addEventListener("click", function () {
+//   alert("1");
+// });
+// const Eainboxes2 = Eainboxes1.nextElementSibling;
+// Eainboxes2.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Eainboxes3 = Eainboxes2.nextElementSibling;
+// Eainboxes3.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Eainboxes4 = Eainboxes3.nextElementSibling;
+// Eainboxes4.addEventListener("click", function () {
+//   alert("4");
+// });
+// // 맛집별 사이트 접속 종료
 
-const Mainchart1 = document.querySelector(".Mainchart-inner1");
-Mainchart1.lastElementChild.addEventListener("click", function () {
-  alert("1");
+// const Mainchart1 = document.querySelector(".Mainchart-inner1");
+// Mainchart1.lastElementChild.addEventListener("click", function () {
+//   alert("1");
+// });
+// const Mainchart2 = document.querySelector(".Mainchart-inner2");
+// Mainchart2.lastElementChild.addEventListener("click", function () {
+//   alert("2");
+// });
+// const Mainchart3 = document.querySelector(".Mainchart-inner3");
+// Mainchart3.lastElementChild.addEventListener("click", function () {
+//   alert("3");
+// });
+// const Mainchart4 = document.querySelector(".Mainchart-inner4");
+// Mainchart4.lastElementChild.addEventListener("click", function () {
+//   alert("4");
+// });
+let nameChild;
+let addrChild;
+let idChild;
+const resturantBoxes = document.querySelector(".resturantBoxes");
+Mainbox1.addEventListener("click", function (e) {
+  const box = e.target.closest(".box");
+  if (box) {
+    nameChild = box.firstElementChild.nextElementSibling.nextElementSibling;
+
+    addrChild =
+      box.firstElementChild.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+
+    idChild = box.lastElementChild;
+  }
+  const day1 = document.querySelector(".day1");
+  const day1inner = day1.innerHTML;
+  const nameText = nameChild.innerHTML;
+  const addrText = addrChild.innerHTML.substring(18, 22);
+  const IdText = idChild.innerHTML.substring(14, 22);
+  console.log(nameText, addrText, IdText);
+  localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
+  let username = localStorage.getItem(`${IdText}`);
+
+  if (localStorage.getItem(`${IdText}`)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === username
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${username}</span>
+      </div>
+      `
+      );
+    }
+  }
 });
-const Mainchart2 = document.querySelector(".Mainchart-inner2");
-Mainchart2.lastElementChild.addEventListener("click", function () {
-  alert("2");
+
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+  console.log(key);
+  if (localStorage.getItem(key)) {
+    let exists = Array.from(resturantBoxes.querySelectorAll("span")).some(
+      (span) => span.textContent === value
+    );
+
+    // username이 존재하지 않으면 추가
+    if (!exists) {
+      resturantBoxes.insertAdjacentHTML(
+        "beforeend",
+        `
+      <div>
+      <span>${value}</span>
+      </div>
+      `
+      );
+    }
+  }
+}
+// resturantBoxes 클릭 이벤트 핸들러 함수
+resturantBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, resturantBoxes);
 });
-const Mainchart3 = document.querySelector(".Mainchart-inner3");
-Mainchart3.lastElementChild.addEventListener("click", function () {
-  alert("3");
+
+// cafeBoxes 클릭 이벤트 핸들러 함수
+cafeBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, cafeBoxes);
 });
-const Mainchart4 = document.querySelector(".Mainchart-inner4");
-Mainchart4.lastElementChild.addEventListener("click", function () {
-  alert("4");
+
+// hotPlaceBoxes 클릭 이벤트 핸들러 함수
+hotPlaceBoxes.addEventListener("click", function (e) {
+  handleBoxClick(e, hotPlaceBoxes);
 });
+
+// 클릭 이벤트 핸들러 함수 정의
+function handleBoxClick(e, box) {
+  if (e.target.tagName === "SPAN") {
+    const span = e.target;
+    const username = span.textContent;
+
+    // span의 부모 요소를 찾아서 삭제
+    if (span.parentElement) {
+      span.parentElement.remove();
+    }
+
+    // localStorage에서 해당 데이터 삭제
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      if (value === username) {
+        localStorage.removeItem(key);
+        break; // 삭제 후 반복문 종료
+      }
+    }
+  }
+}

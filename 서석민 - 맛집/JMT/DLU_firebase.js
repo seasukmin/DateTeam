@@ -88,22 +88,22 @@ async function addDatasAuto(collectionName, dataObj, userName) {
   }
 }
 
-async function addFieldToArrayInDocument(
-  collectionName,
-  docId,
-  fieldName,
-  newObj
-) {
-  try {
-    const docRef = doc(db, collectionName, docId);
-    await updateDoc(docRef, {
-      [fieldName]: arrayUnion(newObj),
-    });
-    console.log("Document successfully updated!");
-  } catch (error) {
-    console.error("Error updating document: ", error);
-  }
-}
+// async function addFieldToArrayInDocument(
+//   collectionName,
+//   docId,
+//   fieldName,
+//   newObj
+// ) {
+//   try {
+//     const docRef = doc(db, collectionName, docId);
+//     await updateDoc(docRef, {
+//       [fieldName]: arrayUnion(newObj),
+//     });
+//     console.log("Document successfully updated!");
+//   } catch (error) {
+//     console.error("Error updating document: ", error);
+//   }
+// }
 
 async function deleteDatas(collectionName, docId) {
   const docRef = await doc(db, collectionName, docId);
@@ -120,6 +120,41 @@ async function updateDatas(collectionName, docId, updateInfoObj) {
   updateDoc(docRef, updateInfoObj);
 }
 
+async function addObjectToFieldInSpecificDocumentById(
+  collectionName,
+  docId,
+  fieldName,
+  newObj
+) {
+  try {
+    // 문서 참조 생성
+    const docRef = doc(db, collectionName, docId);
+
+    // 문서 업데이트 - 필드 배열에 새로운 객체 추가
+    await updateDoc(docRef, {
+      [fieldName]: arrayUnion(newObj),
+    });
+
+    console.log(`Document with ID ${docId} successfully updated!`);
+  } catch (error) {
+    console.error("Error updating document: ", error);
+  }
+}
+async function addCafeIDToUser(userId, cafeId) {
+  try {
+    const userRef = doc(db, "users", userId);
+
+    // cafeID 배열 필드에 새로운 요소 추가
+    await updateDoc(userRef, {
+      cafeID: arrayUnion(cafeId),
+    });
+
+    console.log(`Cafe ID '${cafeId}' added to user '${userId}' successfully.`);
+  } catch (error) {
+    console.error("Error adding cafe ID:", error);
+  }
+}
+
 export {
   db,
   getDatas,
@@ -128,5 +163,5 @@ export {
   deleteDatas,
   updateDatas,
   getUserPlans,
-  addFieldToArrayInDocument,
+  addObjectToFieldInSpecificDocumentById,
 };

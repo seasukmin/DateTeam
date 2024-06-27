@@ -14,7 +14,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="../../박근모 - 메인/CSS/mainPage.css"/> -->
   </head>
   <body>
     <img class="Logo" src="../사진/DaejeonLoveU.png" width="250" />
@@ -155,118 +154,122 @@
         <p>고객센터</p>
         <p>이용약관</p>
       </div>
-      <!-- 플래너 시작 -->
-      <div class="plannerBox" id="plannerBox">
-        <div class="calendar-area">
-          <div class="calendar-planner hidden">
-            <div class="calendar-header-planner">
-              <button id="prevMonth-planner">&lt;</button>
-              <div id="currentMonthYear-planner"></div>
-              <button id="nextMonth-planner">&gt;</button>
-            </div>
-            <div class="calendar-body-planner">
-              <div class="day-names-planner">
-                <div>S</div>
-                <div>M</div>
-                <div>Tu</div>
-                <div>W</div>
-                <div>Th</div>
-                <div>F</div>
-                <div>Sa</div>
-              </div>
-              <div class="days-planner" id="days-planner"></div>
-            </div>
+    </div>
+    <!-- 플래너 시작 -->
+    <div class="plannerBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner hidden">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
           </div>
-        </div>
-        <div class="planListBox" id="planListBox">
-          <h4 id="planner-title"></h4>
-          <div class="nav-planner" id="nav-planner">
-            <div class="day1"></div>
-            <i class="bx bx-sun" undefined></i>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days-planner" id="days-planner"></div>
           </div>
-          <div class="nav-planner"></div>
-          <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
-          <div class="resturantBoxes" id="resturantBoxes"></div>
-          <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
-          <div class="cafeBoxes" id="cafeBoxes"></div>
-          <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
-          <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
-          <button class="shareBtn">공유하기</button>
-        </div>
-        <div class="changeSize">
-          <i class="changeSizeBtn bx bx-chevrons-down"></i>
         </div>
       </div>
-      <!-- 플래너 끝 -->
-       <!-- 로그인 시작-->
-       <body>
-        <div class="container">
-          <h2>회원가입</h2>
-          <form id="form-box">
-            <div class="idPwEm">
-              <label for="username">사용자 이름</label
-              ><input type="text" id="username" name="username" required />
-            </div>
-            <div class="form-group">
-              <label for="email">이메일</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="password">비밀번호</label>
-              <input type="password" id="password" name="password" required />
-            </div>
-            <div class="form-group">
-              <label for="confirm-password">비밀번호 확인</label>
-              <input
-                type="password"
-                id="confirm-password"
-                name="confirm-password"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="dob">생년월일</label>
-              <input type="date" id="dob" name="dob" required />
-            </div>
-            <div class="form-group">
-              <label for="gender">성별</label>
-              <select id="gender" name="gender" required>
-                <option value="male">남성</option>
-                <option value="female">여성</option>
-                <option value="other">기타</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="phone">전화번호</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-              />
-            </div>
-            <div class="form-group">
-              <label for="carrier">통신사</label>
-              <select id="carrier" name="carrier" required>
-                <option value="SKT">SKT</option>
-                <option value="KT">KT</option>
-                <option value="LGU+">LGU+</option>
-              </select>
-            </div>
-            <button type="submit">가입하기</button>
-          </form>
+      <div class="planListBox" id="planListBox">
+        <h4 id="planner-title"></h4>
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
         </div>
-       <!-- 로그인 끝 -->
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <button class="shareBtn">공유하기</button>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+      </div>
+    </div>
+    <!-- 플래너 끝 -->
+    <!-- 로그인 시작-->
+    <!-- <div class="container">
+      <h2>회원가입</h2>
+      <form id="form-box">
+        <div class="idPwEm">
+          <label for="username">사용자 이름</label
+          ><input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dob">생년월일</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div class="form-group">
+          <label for="gender">성별</label>
+          <select id="gender" name="gender" required>
+            <option value="male">남성</option>
+            <option value="female">여성</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="phone">전화번호</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="carrier">통신사</label>
+          <select id="carrier" name="carrier" required>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LGU+">LGU+</option>
+          </select>
+        </div>
+        <button type="submit">가입하기</button>
+      </form>
+    </div> -->
+    <!-- 로그인 끝 -->
     <!-- 메인부분 끝 -->
   </body>
   <script
-  src="../../박근모 - 메인/Javascript/calendarRangeX.js"
-  type="module"
+    src="../../박근모 - 메인/Javascript/calendarRangeX.js"
+    type="module"
   ></script>
   <script
-  src="../../박근모 - 메인/Javascript/planner.js"
-  type="module"
+    src="../../박근모 - 메인/Javascript/planner-mainPage.js"
+    type="module"
+  ></script>
+  <script
+    src="../../박근모 - 메인/Javascript/sharePage.js"
+    type="module"
   ></script>
   <script src="cafe.js" type="module"></script>
 </html>
