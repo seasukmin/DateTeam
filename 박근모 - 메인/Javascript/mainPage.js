@@ -94,16 +94,16 @@ const epiloguetag = document.getElementById("h-epilogue");
 
 JMTtag.addEventListener("click", (e) => {
   // location.href = "#hTag-JMT";
-  location.href = "/DateTeam/서석민 - 맛집/JMT/JMT.html";
+  location.href = "../../서석민 - 맛집/JMT/JMT.html";
 });
 cafetag.addEventListener("click", (e) => {
-  location.href = "/DateTeam/서석민 - 맛집/Cafe/Cafe.html";
+  location.href = "../../서석민 - 맛집/Cafe/Cafe.html";
 });
 hotPlacetag.addEventListener("click", (e) => {
-  location.href = "/DateTeam/정유진 - 맛집/hotPlace.html";
+  location.href = "../../정유진 - 맛집/hotPlace.html";
 });
 epiloguetag.addEventListener("click", (e) => {
-  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../정유진 - 맛집/reviewPage/review.html";
 });
 
 const topLoop = document.getElementById("topI");
