@@ -391,7 +391,12 @@ let addrChild;
 let idChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
+<<<<<<< Updated upstream
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+=======
+const hotPlaceBoxes = document.querySelectorAll(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+
+>>>>>>> Stashed changes
 // planner title
 const plannertitle = document.getElementById("planner-title");
 const localId = localStorage.getItem("ID");
@@ -401,6 +406,10 @@ if (localId !== null && localSemiId == null) {
 } else if (localSemiId !== null && localId == null) {
   plannertitle.innerHTML = `${localSemiId} planner`;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 Mainbox1.addEventListener("click", function (e, idx) {
   const userId = localStorage.getItem("ID");
   console.log(userId);
