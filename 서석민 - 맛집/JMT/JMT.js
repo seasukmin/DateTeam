@@ -46,20 +46,20 @@ function chgMainImg() {
 window.onload = chgMainImg;
 // 메인 사진 끝
 
-const text = "가장 Hot한 맛집들!";
+const text = "가장 Hot한 맛집들 !";
 const middleH1 = document.getElementById("middleH1");
 
 let index = 0;
 
 function displayNextCharacter() {
   if (index < text.length) {
-    middleH1.innerText += text[index];
+    middleH1.innerHTML += text[index];
     index++;
   } else {
     index = 0;
     middleH1.innerText = ""; // 기존 텍스트를 지우고 다시 시작
   }
-  setTimeout(displayNextCharacter, 300); // 0.5초 간격으로 다음 문자 출력
+  setTimeout(displayNextCharacter, 500); // 0.5초 간격으로 다음 문자 출력
 }
 
 displayNextCharacter();
@@ -472,6 +472,16 @@ Mainbox1.addEventListener("click", function (e) {
     }
   }
 });
+
+// planner title
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
 
 // 페이지 로드 시 기존에 저장된 데이터 확인 및 각 상자에 추가
 for (let i = 0; i < localStorage.length; i++) {

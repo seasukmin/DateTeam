@@ -11,9 +11,11 @@
     />
     <link
       rel="stylesheet"
-      href="/DateTeam/박근모 - 메인/CSS/calendar_wether_date.css"
+      href="../../박근모 - 메인/CSS/calendar_wether_date.css"
     />
-    <link rel="stylesheet" href="/DateTeam/박근모 - 메인/CSS/planner.css" />
+    <link rel="stylesheet" href="../../박근모 - 메인/CSS/planner.css" />
+    <link rel="stylesheet" href="../../박근모 - 메인/CSS/sharePage.css" />
+    <link rel="stylesheet" href="../../박근모 - 메인/CSS/sharePopUp.css" />
   </head>
   <body>
     <div class="container">
@@ -140,88 +142,83 @@
           </div>
         </div>
       </div>
-      <div class="plannerBox">
-        <div class="calendar-area">
-          <div class="calendar-planner hidden">
-            <div class="calendar-header-planner">
-              <button id="prevMonth-planner">&lt;</button>
-              <div id="currentMonthYear-planner"></div>
-              <button id="nextMonth-planner">&gt;</button>
+    </div>
+    <!-- 플래너 시작 -->
+    <div class="plannerBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner hidden">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
+          </div>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
             </div>
-            <div class="calendar-body-planner">
-              <div class="day-names-planner">
-                <div>S</div>
-                <div>M</div>
-                <div>Tu</div>
-                <div>W</div>
-                <div>Th</div>
-                <div>F</div>
-                <div>Sa</div>
+            <div class="days-planner" id="days-planner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="planListBox" id="planListBox">
+        <h4 id="planner-title"></h4>
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <button class="shareBtn" id="shareBtn">공유하기</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="share-planListBox captureArea" id="planListBox">
+              <h4>짱구님의 Planner</h4>
+              <div class="share-nav-planner" id="nav-planner">
+                <div class="share-day1"></div>
+                <i class="bx bx-sun share-weather" undefined></i>
               </div>
-              <div class="days-planner" id="days-planner"></div>
+              <div class="nav-planner"></div>
+              <a class="h-Tag1p"
+                ><span class="share-h-Tag1Span">#</span>맛집&nbsp;</a
+              >
+              <div class="resturantBoxes" id="resturantBoxes"></div>
+              <a class="h-Tag2p"
+                ><span class="share-h-Tag2Span">#</span>카페&nbsp;</a
+              >
+              <div class="cafeBoxes" id="cafeBoxes"></div>
+              <a class="h-Tag3p"><span class="share-h-Tag3Span">#</span>핫플</a>
+              <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
             </div>
+            <button class="capture-Btn" id="capture-Btn">사진저장</button>
+            <button class="KT-Share-Btn" id="KT-Share-Btn">카톡공유하기</button>
           </div>
         </div>
-        <div class="planListBox" id="planListBox">
-          <!-- <h4>핑구님의 Planner</h4> -->
-          <div class="nav-planner" id="nav-planner">
-            <div class="day1"></div>
-            <i class="bx bx-sun" undefined></i>
-          </div>
-          <div class="nav-planner"></div>
-          <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
-          <div class="resturantBoxes" id="resturantBoxes">
-            <!-- <div class="resturantBox">
-            <input
-              type="checkbox"
-              id="foodStore1"
-              class="foodStore"
-              checked
-            /><label for="foodStore1">성심당</label>
-            <i class='bx bx-x' ></i>
-          </div> -->
-          </div>
-          <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
-          <div class="cafeBoxes" id="cafeBoxes">
-            <!-- <div class="cafeBox">
-            <input
-              type="checkbox"
-              id="cafeStore1"
-              class="cafeStore"
-              checked
-            /><label for="cafeStore1">노티드</label>
-            <i class="bx bx-x"></i>
-          </div> -->
-          </div>
-          <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
-          <div class="hotPlaceBoxes" id="hotPlaceBoxes">
-            <!-- <div class="hotPlaceBox">
-            <input
-              type="checkbox"
-              id="placeStore1"
-              class="placeStore"
-              checked
-            /><label for="placeStore1">한빛탑</label>
-            <i class='bx bx-x' ></i>
-          </div> -->
-          </div>
-          <button class="shareBtn">공유하기</button>
-        </div>
-        <div class="changeSize">
-          <i class="changeSizeBtn bx bx-chevrons-down"></i>
-          <!-- <i class="bx bx-chevrons-up"></i> -->
-        </div>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
       </div>
     </div>
   </body>
   <script src="./jungGu.js" type="module"></script>
   <script
-    src="/DateTeam/박근모 - 메인/Javascript/calendarRangeX.js"
+    src="../../박근모 - 메인/Javascript/calendarRangeX.js"
     type="module"
   ></script>
   <script
-    src="/DateTeam/박근모 - 메인/Javascript/planner-mainPage.js"
+    src="../../박근모 - 메인/Javascript/planner-mainPage.js"
     type="module"
   ></script>
-  <!-- <script src="../javascript/search.js" type="module"></script> -->
+  <script src="../../박근모 - 메인/Javascript/sharePage.js"></script>
 </html>

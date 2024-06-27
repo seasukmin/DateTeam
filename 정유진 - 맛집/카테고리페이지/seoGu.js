@@ -470,7 +470,17 @@ let addrChild;
 let idChild;
 const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
-const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
+const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가;
+
+// planner title
+const plannertitle = document.getElementById("planner-title");
+const localId = localStorage.getItem("ID");
+const localSemiId = localStorage.getItem("semiID");
+if (localId !== null && localSemiId == null) {
+  plannertitle.innerHTML = `${localId} planner`;
+} else if (localSemiId !== null && localId == null) {
+  plannertitle.innerHTML = `${localSemiId} planner`;
+}
 
 Mainbox1.addEventListener("click", function (e) {
   const box = e.target.closest(".box");
