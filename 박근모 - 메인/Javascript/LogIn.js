@@ -183,21 +183,3 @@ if (localID === null && localSemiID === null) {
       this.classList.add("hidden");
     });
 }
-
-// } else if (localSemiID !== null || localID !== null) {
-//   if (localID !== null && localSemiID === null) {
-//     loginBox.classList.add("hidden");
-//     document.getElementById("plannerBox").classList.remove("hiddenBox");
-//     const welcomeMessage = document.getElementById("welcomeMessage");
-//     document.getElementById("bloginBox2").classList.remove("hidden");
-//     welcomeMessage.innerHTML = `${localID}님 환영합니다.`;
-//   } else if (localSemiID !== null && localID === null) {
-//     loginBox.classList.add("hidden");
-//     document.getElementById("plannerBox").classList.remove("hiddenBox");
-//     const welcomeMessage = document.getElementById("welcomeMessage");
-//     document.getElementById("bloginBox2").classList.remove("hidden");
-//     welcomeMessage.innerHTML = `${localStorage.getItem(
-//       "semiID"
-//     )}님 환영합니다.`;
-//   }
-// }

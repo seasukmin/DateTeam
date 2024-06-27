@@ -253,6 +253,12 @@ resetBtn.addEventListener("click", () => {
   window.location.reload();
 });
 
+// 로고 홈페이지 이동
+const logo = document.querySelector(".hotPlace-logo");
+logo.addEventListener("click", () => {
+  location.href = "../박근모 - 메인/HTML/mainPage.html";
+});
+
 // content-box 클릭 이벤트 리스너
 const allbox = document.querySelector(".content-box");
 
