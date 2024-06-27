@@ -129,10 +129,10 @@ body {
   margin: 10px 0;
 }
 .side-category h1 {
-  margin: 10px;
-  color: #3e3e3e;
-  padding-left: 5px;
-  font-size: 42px;
+  margin: 12px 10px;
+  color: #575757;
+  padding-left: 3px;
+  font-size: 40px;
 }
 .sideBtn {
   width: fit-content;
