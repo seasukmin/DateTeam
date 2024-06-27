@@ -7,112 +7,108 @@ import {
 } from "./javascript/DLU_firebase.js";
 
 const contents = document.getElementById("content");
-// const contentArr = [
-//   {
-//     a: "",
-//     img: "./img/한밭수목원.jpg",
-//     name: "한밭수목원",
-//     time: "월-토: 09:00",
-//     time2: "<br>일: 09:00",
-//     event: "입장료: 무료",
-//   },
-//   {
-//     a: "",
-//     img: "./img/한빛탑야간.jpg",
-//     name: "엑스포 과학공원",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#음악분수",
-//   },
-//   {
-//     a: "",
-//     img: "./img/오월드.jpg",
-//     name: "대전 오월드",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#동물원 #나이트유니버스",
-//   },
-//   {
-//     a: "",
-//     img: "./img/대전시립미술관.jpg",
-//     name: "대전시립박물관",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "입장료:",
-//   },
-//   {
-//     a: "",
-//     img: "./img/이글스파크.jpg",
-//     name: "한화이글스파크",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#야구",
-//   },
-//   {
-//     a: "",
-//     img: "./img/유성온천.jpg",
-//     name: "유성온천",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#족욕",
-//   },
-//   {
-//     a: "",
-//     img: "./img/으능정이거리.jpg",
-//     name: "으능정이거리",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#스카이로드",
-//   },
-//   {
-//     a: "",
-//     img: "./img/신세계백화점.jpg",
-//     name: "신세계백화점",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#쇼핑",
-//   },
-//   {
-//     a: "",
-//     img: "./img/옛터민속박물관.jpg",
-//     name: "옛터민속박물관",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#드라이브",
-//   },
-//   {
-//     a: "",
-//     img: "./img/식장산.jpg",
-//     name: "식장산",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#야경 #드라이브",
-//   },
-//   {
-//     a: "",
-//     img: "./img/만인산자연휴양림.jpg",
-//     name: "만인산자연휴양림",
-//     time: "월-토: 09:00",
-//     time2: "",
-//     event: "#봉이호떡 #산책",
-//   },
-// ];
-// contentArr.forEach((info, idx) => {
-//   contents.insertAdjacentHTML(
-//     "beforeend",
+const contentArr = [
+  {
+    a: "",
+    img: "./img/한밭수목원.jpg",
+    name: "한밭수목원",
+    time: "월-토: 09:00",
+    time2: "<br>일: 09:00",
+    event: "입장료: 무료",
+  },
+  {
+    a: "",
+    img: "./img/한빛탑야간.jpg",
+    name: "엑스포 과학공원",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#음악분수",
+  },
+  {
+    a: "",
+    img: "./img/오월드.jpg",
+    name: "대전 오월드",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#동물원 #나이트유니버스",
+  },
+  {
+    a: "",
+    img: "./img/대전시립미술관.jpg",
+    name: "대전시립박물관",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "입장료:",
+  },
+  {
+    a: "",
+    img: "./img/이글스파크.jpg",
+    name: "한화이글스파크",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#야구",
+  },
+  {
+    a: "",
+    img: "./img/유성온천.jpg",
+    name: "유성온천",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#족욕",
+  },
+  {
+    a: "",
+    img: "./img/으능정이거리.jpg",
+    name: "으능정이거리",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#스카이로드",
+  },
+  {
+    a: "",
+    img: "./img/신세계백화점.jpg",
+    name: "신세계백화점",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#쇼핑",
+  },
+  {
+    a: "",
+    img: "./img/옛터민속박물관.jpg",
+    name: "옛터민속박물관",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#드라이브",
+  },
+  {
+    a: "",
+    img: "./img/식장산.jpg",
+    name: "식장산",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#야경 #드라이브",
+  },
+  {
+    a: "",
+    img: "./img/만인산자연휴양림.jpg",
+    name: "만인산자연휴양림",
+    time: "월-토: 09:00",
+    time2: "",
+    event: "#봉이호떡 #산책",
+  },
+];
+contentArr.forEach((info, idx) => {
+  contents.insertAdjacentHTML(
+    "beforeend",
 
-//     ` <div class="content">
-//               <a href=${info.a}>
-//                 <img src=${info.img} />
-//                 <p class="hpName">${info.name}</p></a
-//               >
-//               <p class="hpTime">
-//                 ${info.time}${info.time2}
-//               </p>
-//               <p class="hpInfo">${info.event}</p>
-//             </div> `
-//   );
-// });
+    ` <div class="content">
+              <a href=${info.a}>
+                <img src=${info.img} />
+                <p class="hpName">${info.name}</p></a
+              >
+               `
+  );
+});
 
 function chgMainImg() {
   const mainImgArr = [
@@ -177,38 +173,32 @@ logo.addEventListener("click", () => {
 });
 
 // content-box 클릭 이벤트 리스너
-const allbox = document.querySelector(".content-box");
+// const allbox = document.querySelector(".content-box");
 
-const datas = await getDatas("hotPlace");
-const infoinput = [];
-datas.forEach((doc, idx) => {
-  const info = doc.data();
-  // console.log(infoinput);s
-  infoinput.push(info.list);
-  console.log(infoinput.length);
-});
-const sidebarsub = document.querySelectorAll(".sidebar-sub");
-const infoinputArr = infoinput.forEach(function (el) {
-  const elslice = el.slice(30, 38);
-  elslice.forEach(function (e, idx) {
-    contents.insertAdjacentHTML(
-      "beforeend",
-      `
-       <div class="content">
-             
-                <img src=img/${idx + 1}.jpg />
-              <p class="hpName">${e.title}</p></a
-               >
-               <p class="hpTime">
-                ${e.text2}
-              </p>
-               <p class="hpInfo">${e.event}</p>
-               <p class="hpInfo hidden">${e.id}</p>
-             </div> 
-    `
-    );
-  });
-});
+// const datas = await getDatas("hotPlace");
+// const infoinput = [];
+// datas.forEach((doc, idx) => {
+//   const info = doc.data();
+//   // console.log(infoinput);s
+//   infoinput.push(info.list);
+//   console.log(infoinput.length);
+// });
+// const sidebarsub = document.querySelectorAll(".sidebar-sub");
+// const infoinputArr = infoinput.forEach(function (el) {
+//   const elslice = el.slice(30, 38);
+//   elslice.forEach(function (e, idx) {
+//     contents.insertAdjacentHTML(
+//       "beforeend",
+//       `
+//        <div class="content">
+
+//                 <img src=img/${idx + 1}.jpg />
+//               <p class="hpName">${e.title}</p></a
+//                >
+//     `
+//     );
+//   });
+// });
 // const searchInput = document.querySelector(".searchInput");
 // const searchBtn = document.querySelector(".searchBtn");
 // const searchBox = document.querySelector(".searchBox");
