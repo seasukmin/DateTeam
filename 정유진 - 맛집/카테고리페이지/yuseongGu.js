@@ -353,6 +353,11 @@ Top2.addEventListener("click", function () {
   location.href = "#toploop";
 });
 
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
+});
+
 // 로고 누르면 (홈)으로 이동
 const mainBtn = document.querySelector(".title-btn");
 mainBtn.addEventListener("click", function () {

@@ -309,6 +309,11 @@ document.querySelectorAll(".category li").forEach((item) => {
   });
 });
 
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
+});
+
 // 사진 hover 하면 + 버튼 나타나게
 
 document.querySelectorAll(".plusIc1").forEach((img, idx) => {

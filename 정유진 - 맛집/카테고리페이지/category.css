@@ -48,7 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 .search {
   display: flex;
@@ -56,13 +56,14 @@ body {
   align-items: center;
 }
 .searchInput {
-  width: 40%;
-  height: 40px;
+  width: 48%;
+  height: 45px;
   padding: 0 20px;
   border: none;
   background-color: skyblue;
   border-radius: 15px;
   font-size: 16px;
+  margin-left: 120px;
 }
 .searchBtn {
   border: none;
@@ -70,27 +71,29 @@ body {
   margin-left: 10px;
   cursor: pointer;
 }
-.login {
+.reset {
   cursor: pointer;
-  margin-left: 15px;
-  border-bottom: 1px solid black;
+  margin-left: 5px;
+  border: none;
   font-size: 18px;
+  background-color: transparent;
 }
-.login:hover {
+.reset:hover {
   color: rgb(103, 183, 214);
 }
 .category {
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 180px;
   font-size: 36px;
-  font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
   position: relative;
 }
 .category li:hover {
   color: rgb(103, 183, 214);
+  transform: scale(1.1);
 }
 
 #searchBox {
@@ -109,11 +112,12 @@ body {
   position: fixed;
   top: 280px;
   left: 60px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
 }
 .side-text {
   list-style-type: none;
   font-size: 26px;
-  margin: 10px 0;
+  margin: 12px 0;
   padding: 10px;
   padding-left: 0;
 }
@@ -131,17 +135,21 @@ body {
   font-size: 42px;
 }
 .sideBtn {
-  width: 60px;
-  margin: 40px 0 5px 25%;
+  width: fit-content;
+  margin: 40px 0 5px 20%;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 30px;
   background-color: white;
-  padding: 4px 2px 0 2px;
+  padding: 4px;
   cursor: pointer;
 }
-.side-text:hover {
+.sideBtn:hover {
+  transform: scale(1.05);
+}
+.side-text li:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .rank-container {

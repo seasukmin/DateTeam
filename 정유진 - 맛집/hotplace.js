@@ -138,30 +138,30 @@ function chgMainImg() {
 }
 window.onload = chgMainImg;
 
-// const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
-// const wave = document.querySelector(".main-text");
-// let textLength = 0;
-// let intervalMainText;
-// function textWave() {
-//   if (textLength < text.length) {
-//     wave.innerHTML += text[textLength++];
-//   } else {
-//     clearInterval(intervalMainText);
-//     setTimeout(() => {
-//       wave.textContent = "";
-//       textLength = 0;
-//       intervalMainText = setInterval(textWave, 250);
-//     }, 2500);
-//   }
-// }
-// intervalMainText = setInterval(textWave, 250);
+const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
+const wave = document.querySelector(".main-text");
+let textLength = 0;
+let intervalMainText;
+function textWave() {
+  if (textLength < text.length) {
+    wave.innerHTML += text[textLength++];
+  } else {
+    clearInterval(intervalMainText);
+    setTimeout(() => {
+      wave.textContent = "";
+      textLength = 0;
+      intervalMainText = setInterval(textWave, 250);
+    }, 2500);
+  }
+}
+intervalMainText = setInterval(textWave, 250);
 
-// document.querySelectorAll(".category li").forEach((item) => {
-//   item.addEventListener("click", function () {
-//     const url = this.getAttribute("data-url");
-//     window.location.href = url;
-//   });
-// });
+document.querySelectorAll(".category li").forEach((item) => {
+  item.addEventListener("click", function () {
+    const url = this.getAttribute("data-url");
+    window.location.href = url;
+  });
+});
 
 // const text = "대전의 다양한 데이트 명소를 즐겨보세요.";
 // const wave = document.querySelector(".main-text");
@@ -247,6 +247,11 @@ function inputArr(e) {
 searchBtn.addEventListener("click", inputArr);
 searchInput.addEventListener("keypress", inputArr);
 let etarget;
+
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
+});
 
 // content-box 클릭 이벤트 리스너
 const allbox = document.querySelector(".content-box");
