@@ -25,7 +25,7 @@ body {
   color: #3e3e3e;
 }
 span {
-  color: rgb(92, 10, 92, 80%);
+  color: mediumorchid;
   margin: 5px;
 }
 .Logo {
@@ -45,12 +45,10 @@ section {
 /* 헤더 부분 시작 */
 
 .header {
-  height: 10%;
+  height: 270px;
+  margin: 15px 250px;
   display: flex;
   flex-direction: column;
-  margin: 0 350px;
-  margin-bottom: 100px;
-  color: #3e3e3e;
   position: relative;
 }
 .head {
@@ -77,12 +75,16 @@ section {
 }
 
 .header-H1 {
-  font-size: 70px;
-  padding-left: 20px;
+  font-size: 50px;
   cursor: pointer;
+  color: black;
+  font-style: italic;
+  margin-bottom: 50px;
+  height: 160px;
 }
 .clear {
   cursor: pointer;
+  font-size: 18px;
 }
 #header-H2 {
   cursor: pointer;
@@ -94,14 +96,15 @@ section {
   align-items: center;
 }
 .header-Input {
-  width: 60%;
-  height: 40px;
-  border: 1px solid white;
-  padding-left: 20px;
+  width: 62%;
+  height: 45px;
+  padding: 20px;
   border: none;
-  background-color: rgb(92, 10, 92, 80%);
+  background-color: plum;
   border-radius: 15px;
-  color: snow;
+  font-size: 16px;
+  margin-left: 110px;
+  margin-bottom: 7px;
 }
 .header-Anchor {
   text-decoration: none;
@@ -120,11 +123,12 @@ section {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin: 0 5px;
 }
 .clear {
   border: none;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Ownglyph_noocar-Rg";
 }
 .Search-bar {
@@ -136,7 +140,8 @@ section {
 }
 .CateGory {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 70px;
   list-style-type: none;
   padding: 0;
 }
@@ -145,31 +150,31 @@ section {
 .CateG,
 .CateJ,
 .CateL {
+  color: black;
   text-decoration: none;
-  color: #3e3e3e;
   font-size: 36px;
   position: relative;
   cursor: pointer;
 }
 .CateA:hover {
-  color: rgb(92, 10, 92, 80%);
-  transition: 0.3 linear;
+  color: rgb(204, 148, 204);
+  transform: scale(1.1);
 }
 .CateD:hover {
-  color: rgb(92, 10, 92, 80%);
-  transition: 0.3 linear;
+  color: rgb(204, 148, 204);
+  transform: scale(1.1);
 }
 .CateG:hover {
-  color: rgb(92, 10, 92, 80%);
-  transition: 0.3 linear;
+  color: rgb(204, 148, 204);
+  transform: scale(1.1);
 }
 .CateJ:hover {
-  color: rgb(92, 10, 92, 80%);
-  transition: 0.3 linear;
+  color: rgb(204, 148, 204);
+  transform: scale(1.1);
 }
 .CateL:hover {
-  color: rgb(92, 10, 92, 80%);
-  transition: 0.3 linear;
+  color: rgb(204, 148, 204);
+  transform: scale(1.1);
 }
 
 .CateSA,
@@ -244,12 +249,12 @@ section {
   border-radius: 30px;
   margin-left: 60px;
   backdrop-filter: blur(20px);
-  background-color: rgb(92, 10, 92, 80%);
+  background-color: plum;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  box-shadow: 1px 1px 5px 1px gray;
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .sidebars > h1 {
@@ -353,7 +358,7 @@ section {
 }
 
 .up {
-  color: red;
+  color: purple;
 }
 .down {
   color: #3e3e3e;
@@ -373,10 +378,13 @@ section {
   justify-content: center;
   align-items: center;
   height: 135.66px;
+  margin: 80px 0 130px 0;
 }
 .middleH1 {
-  font-size: 48px;
-  letter-spacing: 20px;
+  font-size: 60px;
+  font-weight: 500;
+  /* letter-spacing: 10px; */
+  color: black;
 }
 /* 미들부분(사진) 끝*/
 /* 메인 부분 시작 */
@@ -389,8 +397,10 @@ main {
   box-shadow: 1px 1px 5px 1px gray;
 }
 .MainH1 {
-  font-size: 60px;
+  font-size: 40px;
   bottom: 0;
+  color: black;
+  margin: 0;
 }
 .Main-title {
   font-size: 36px;
@@ -427,12 +437,13 @@ main {
   transform: scale(1.05);
 }
 .Hot {
-  color: red;
+  color: purple;
 }
 .back {
   display: flex;
   width: 100%;
   gap: 20px;
+  margin: 20px 0;
 }
 .box-h1 {
   margin: 0;
@@ -450,6 +461,10 @@ main {
   top: 400px;
   font-size: 20px;
 }
+.box-h3 {
+  margin: 38px 0 12px 0;
+}
+
 .backImg {
   z-index: -1;
   width: 100%;
@@ -499,8 +514,8 @@ main {
 }
 .box-img {
   border-radius: 15px;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   box-shadow: 1px 1px 5px 1px gray;
 }
 .box-img:hover {
@@ -508,11 +523,16 @@ main {
   transition: 0.8s;
 }
 .box-point {
-  font-size: 20px;
-  padding: 0 5px;
+  align-self: flex-end;
+  font-size: 18px;
+  padding: 6px 6px 0 0;
 }
 .box-name {
-  font-size: 30px;
+  font-size: 26px;
+  color: black;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 .Promise {
   display: flex;
@@ -625,15 +645,20 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-color: rgb(92, 10, 92, 80%);
+  background-color: rgb(240, 191, 240);
 }
 .info {
-  margin-left: 50px;
+  height: fit-content;
+  margin: 0 300px;
+}
+.info p {
+  margin: 8px;
 }
 .service {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  margin: 0 300px;
 }
 .Mainchart {
   display: grid;
