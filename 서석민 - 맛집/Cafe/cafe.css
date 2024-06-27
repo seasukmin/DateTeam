@@ -27,6 +27,7 @@ body {
 span {
   color: mediumorchid;
   margin: 5px;
+  cursor: pointer;
 }
 .Logo {
   position: fixed;

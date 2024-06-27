@@ -393,7 +393,15 @@ const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
-Mainbox1.addEventListener("click", function (e) {
+Mainbox1.addEventListener("click", function (e, idx) {
+  const userId = localStorage.getItem("ID");
+  console.log(userId);
+  if (userId === null) {
+    alert("로그인이 필요합니다.");
+    location.href = "../../박근모 - 메인/HTML/mainPage.html";
+    return false;
+  } else if (userId !== null) {
+  }
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
@@ -432,10 +440,10 @@ Mainbox1.addEventListener("click", function (e) {
         `
       );
     }
-  } else if (IdText.includes("cafe")) {
+  }
+  if (IdText.includes("cafe")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
     let username = localStorage.getItem(`${IdText}`);
-
     let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
       (span) => span.textContent === username
     );
@@ -473,16 +481,6 @@ Mainbox1.addEventListener("click", function (e) {
   }
 });
 
-// planner title
-const plannertitle = document.getElementById("planner-title");
-const localId = localStorage.getItem("ID");
-const localSemiId = localStorage.getItem("semiID");
-if (localId !== null && localSemiId == null) {
-  plannertitle.innerHTML = `${localId} planner`;
-} else if (localSemiId !== null && localId == null) {
-  plannertitle.innerHTML = `${localSemiId} planner`;
-}
-
 // 페이지 로드 시 기존에 저장된 데이터 확인 및 각 상자에 추가
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
@@ -504,7 +502,8 @@ for (let i = 0; i < localStorage.length; i++) {
         `
       );
     }
-  } else if (key.includes("cafe")) {
+  }
+  if (key.includes("cafe")) {
     let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
       (span) => span.textContent === value
     );
@@ -575,6 +574,16 @@ function handleBoxClick(e, box) {
     }
   }
 }
+
+// const hi = document.querySelector(".hi");
+// for (let i = 0; i < localStorage.length; i++) {
+//   const key = localStorage.key(i);
+//   console.log(key);
+//   hi.addEventListener("click", function () {
+//     localStorage.removeItem(key);
+//     location.reload();
+//   });
+// }
 
 // 눌렀을때 값이
 // const result = await addDatas("Hotplace2", { Textinfomation });

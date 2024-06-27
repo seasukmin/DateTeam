@@ -393,7 +393,7 @@ const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
-Mainbox1.addEventListener("click", function (e) {
+Mainbox1.addEventListener("click", function (e, idx) {
   const userId = localStorage.getItem("ID");
   console.log(userId);
   if (userId === null) {
@@ -444,7 +444,6 @@ Mainbox1.addEventListener("click", function (e) {
   if (IdText.includes("cafe")) {
     localStorage.setItem(`${IdText}`, `${nameText},${addrText}`);
     let username = localStorage.getItem(`${IdText}`);
-
     let exists = Array.from(cafeBoxes.querySelectorAll("span")).some(
       (span) => span.textContent === username
     );
