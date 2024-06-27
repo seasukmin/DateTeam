@@ -98,7 +98,7 @@ const contentArr = [
   },
 ];
 contentArr.forEach((info, idx) => {
-  content.insertAdjacentHTML(
+  contents.insertAdjacentHTML(
     "beforeend",
 
     ` <div class="content">
@@ -284,7 +284,7 @@ const resturantBoxes = document.querySelector(".resturantBoxes");
 const cafeBoxes = document.querySelector(".cafeBoxes");
 const hotPlaceBoxes = document.querySelector(".hotPlaceBoxes"); // hotPlaceBoxes 변수 추가
 
-Mainbox1.addEventListener("click", function (e) {
+contents.addEventListener("click", function (e) {
   const box = e.target.closest(".box");
   if (box) {
     nameChild =
