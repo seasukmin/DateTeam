@@ -79,7 +79,7 @@ Mainbox.forEach(function (el) {
   el.addEventListener("click", function (e) {
     if (localId === null && localSemiId === null) {
       alert("로그인이 필요합니다.");
-      location.href = "../../박근모 - 메인/HTML/mainPage.html";
+      location.href = "../../Main/HTML/mainPage.html";
       return false;
     }
 

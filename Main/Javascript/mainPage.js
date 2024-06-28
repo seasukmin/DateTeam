@@ -94,16 +94,16 @@ const epiloguetag = document.getElementById("h-epilogue");
 
 JMTtag.addEventListener("click", (e) => {
   // location.href = "#hTag-JMT";
-  location.href = "../../서석민 - 맛집/JMT/JMT.html";
+  location.href = "../../Resturant, Cafe/JMT/JMT.html";
 });
 cafetag.addEventListener("click", (e) => {
-  location.href = "../../서석민 - 맛집/Cafe/Cafe.html";
+  location.href = "../../Resturant, Cafe/Cafe/Cafe.html";
 });
 hotPlacetag.addEventListener("click", (e) => {
-  location.href = "../../정유진 - 맛집/hotPlace.html";
+  location.href = "../../Hotplace/hotPlace.html";
 });
 epiloguetag.addEventListener("click", (e) => {
-  location.href = "../../정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../Hotplace/reviewPage/review.html";
 });
 
 const topLoop = document.getElementById("topI");
@@ -467,7 +467,7 @@ async function fetchAndDisplayStoreData() {
       <div class="box mySlides fade">
         <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
         <div class="boxes">
-          <img class="box-img" src="../../서석민 - 맛집/Photo/${el.src}" />
+          <img class="box-img" src="../../Resturant, Cafe/Photo/${el.src}" />
           <div class="boxes-inner">
             <div class="box-point"><span>평점:</span> ${el.point}</div>
             <div class="box-name">${el.name}</div>
@@ -516,7 +516,7 @@ async function fetchAndDisplayCafeData() {
       <div class="box mySlides fade">
         <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
         <div class="boxes">
-          <img class="box-img" src="../../서석민 - 맛집/Photo_Cafe/${
+          <img class="box-img" src="../../Resturant, Cafe/Photo_Cafe/${
             idx + 1
           }.jpg" />
           <div class="boxes-inner">
@@ -553,7 +553,7 @@ async function fetchAndDisplayHotPlaceData() {
         <div class="box mySlides fade">
           <h1 class="box-h3">TOP ${idx + 1} ${el.title}</h1>
           <div class="boxes">
-            <img class="box-img"src="../../정유진 - 맛집/img/${idx + 1}.jpg" />
+            <img class="box-img"src="../../Hotplace/img/${idx + 1}.jpg" />
             <div class="boxes-inner">
               <div class="box-point">  ${el.title}</div>
               <div class="box-name">${el.point}</div>
