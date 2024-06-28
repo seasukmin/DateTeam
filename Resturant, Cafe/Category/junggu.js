@@ -14,12 +14,12 @@ import {
 // 로고 시작
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "../../박근모 - 메인/HTML/mainPage.html";
+  location.href = "../../Main/HTML/mainPage.html";
 });
 
 const reviewBtn = document.querySelector(".reviewBtn");
 reviewBtn.addEventListener("click", function () {
-  location.href = "../../정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../Hotplace/reviewPage/review.html";
 });
 // const resturantBoxes = document.querySelector(".resturantBoxes");
 

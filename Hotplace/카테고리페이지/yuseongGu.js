@@ -269,7 +269,7 @@ festivalArr.forEach((info, idx) => {
 // 로고 홈페이지 이동
 const logo = document.querySelector(".hotPlace-logo");
 logo.addEventListener("click", () => {
-  location.href = "../../박근모 - 메인/HTML/mainPage.html";
+  location.href = "../../Main/HTML/mainPage.html";
 });
 
 // 사이드바 누르면 위치로
@@ -367,7 +367,7 @@ resetBtn.addEventListener("click", () => {
 // 로고 누르면 (홈)으로 이동
 const mainBtn = document.querySelector(".title-btn");
 mainBtn.addEventListener("click", function () {
-  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
+  location.href = "/DateTeam/Main/HTML/mainPage.html";
 });
 
 // 핫플레이스 누르면 핫플메인으로 이동

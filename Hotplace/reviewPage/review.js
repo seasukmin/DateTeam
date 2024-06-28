@@ -12,7 +12,7 @@ cancelBtn.addEventListener("click", function () {
 });
 reivewLogo.addEventListener("click", function () {
   console.log("a");
-  location.href = "../../박근모 - 메인/HTML/mainPage.html";
+  location.href = "../../Main/HTML/mainPage.html";
 });
 
 function submitReview() {
@@ -114,10 +114,10 @@ const Cafetag = document.querySelector("#Cafetag");
 const Placetag = document.querySelector("#Placetag");
 
 Tastytag.addEventListener("click", () => {
-  location.href = "/DateTeam/서석민 - 맛집/JMT/JMT.html";
+  location.href = "/DateTeam/Resturant, Cafe/JMT/JMT.html";
 });
 Cafetag.addEventListener("click", () => {
-  location.href = "/DateTeam/서석민 - 맛집/Cafe/Cafe.html";
+  location.href = "/DateTeam/Resturant, Cafe/Cafe/Cafe.html";
 });
 Placetag.addEventListener("click", () => {
   location.href = "../hotPlace.html";
@@ -131,7 +131,7 @@ const bottomLoop = document.getElementById("infoI");
 
 mainLoop.addEventListener("click", () => {
   // location.href = "#hTag-JMT";
-  location.href = "/DateTeam/박근모 - 메인/HTML/mainPage.html";
+  location.href = "/DateTeam/Main/HTML/mainPage.html";
 });
 tastyLoop.addEventListener("click", (e) => {
   // location.href = "#hTag-JMT";
@@ -151,5 +151,5 @@ bottomLoop.addEventListener("click", (e) => {
 const service = document.getElementById("service");
 
 service.addEventListener("click", () => {
-  location.href = "/DateTeam/박근모 - 메인/HTML/subPage.html";
+  location.href = "/DateTeam/Main/HTML/subPage.html";
 });

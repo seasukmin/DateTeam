@@ -16,7 +16,7 @@ import {
 
 const Logo = document.querySelector(".Logo");
 Logo.addEventListener("click", function () {
-  location.href = "../../박근모 - 메인/HTML/mainPage.html";
+  location.href = "../../Main/HTML/mainPage.html";
 });
 // 로고 끝
 
@@ -466,7 +466,7 @@ function initializeBox(box, keyCondition) {
 Mainbox.addEventListener("click", function (e) {
   if (localId === null && localSemiId === null) {
     alert("로그인이 필요합니다.");
-    location.href = "../../박근모 - 메인/HTML/mainPage.html";
+    location.href = "../../Main/HTML/mainPage.html";
     return false;
   }
 

@@ -169,7 +169,7 @@ resetBtn.addEventListener("click", () => {
 // 로고 홈페이지 이동
 const logo = document.querySelector(".hotPlace-logo");
 logo.addEventListener("click", () => {
-  location.href = "../박근모 - 메인/HTML/mainPage.html";
+  location.href = "../Main/HTML/mainPage.html";
 });
 
 // content-box 클릭 이벤트 리스너
@@ -255,7 +255,7 @@ contents.addEventListener("click", function (e, idx) {
   console.log(userId);
   if (userId === null) {
     alert("로그인이 필요합니다.");
-    location.href = "../../박근모 - 메인/HTML/mainPage.html";
+    location.href = "../../Main/HTML/mainPage.html";
     return false;
   } else if (userId !== null) {
   }
