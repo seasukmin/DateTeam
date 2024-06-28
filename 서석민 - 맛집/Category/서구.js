@@ -19,7 +19,7 @@ Logo.addEventListener("click", function () {
 
 const reviewBtn = document.querySelector(".reviewBtn");
 reviewBtn.addEventListener("click", function () {
-  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../정유진 - 맛집/reviewPage/review.html";
 });
 // const resturantBoxes = document.querySelector(".resturantBoxes");
 

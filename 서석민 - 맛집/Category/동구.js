@@ -30,7 +30,7 @@ header.addEventListener("click", function () {
 
 const reviewBtn = document.querySelector(".reviewBtn");
 reviewBtn.addEventListener("click", function () {
-  location.href = "/DateTeam/정유진 - 맛집/reviewPage/review.html";
+  location.href = "../../정유진 - 맛집/reviewPage/review.html";
 });
 // // clear(초기화) 버튼
 const clear = document.querySelector(".clear");
@@ -290,127 +290,6 @@ result.addEventListener("click", (e) => {
   console.log(box);
 });
 
-// const box = e.target.closest(".box");
-// if (box) {
-//   nameChild6 = box.firstElementChild.nextElementSibling.nextElementSibling;
-//   addrChild6 =
-//     box.firstElementChild.nextElementSibling.nextElementSibling
-//       .nextElementSibling;
-//   const nameText = nameChild6.innerHTML.trim(); // 텍스트의 앞뒤 공백 제거
-//   const addrText = addrChild6.innerHTML.substring(18, 22).trim(); // 텍스트의 앞뒤 공백 제거
-//   console.log(nameChild5);
-//   resturantBoxe6.insertAdjacentHTML(
-//     "beforeend",
-//     `<div>✔ ${nameText} : ${addrText}</div>`
-//   );
-// }
-
-// 메인 종료
-
-// 맛집별 사이트 접속
-// const Mainboxes1 = Mainbox1.firstElementChild;
-// Mainboxes1.addEventListener("click", function () {
-//   location.href = "#";
-//   alert("1");
-// });
-// const Mainboxes2 = Mainboxes1.nextElementSibling;
-// Mainboxes2.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Mainboxes3 = Mainboxes2.nextElementSibling;
-// Mainboxes3.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Mainboxes4 = Mainboxes3.nextElementSibling;
-// Mainboxes4.addEventListener("click", function () {
-//   alert("4");
-// });
-// //
-// const Nainboxes1 = Mainbox2.firstElementChild;
-// Nainboxes1.addEventListener("click", function () {
-//   alert("1");
-// });
-// const Nainboxes2 = Nainboxes1.nextElementSibling;
-// Nainboxes2.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Nainboxes3 = Nainboxes2.nextElementSibling;
-// Nainboxes3.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Nainboxes4 = Nainboxes3.nextElementSibling;
-// Nainboxes4.addEventListener("click", function () {
-//   alert("4");
-// });
-// //
-// const Qainboxes1 = Mainbox3.firstElementChild;
-// Qainboxes1.addEventListener("click", function () {
-//   alert("1");
-// });
-// const Qainboxes2 = Qainboxes1.nextElementSibling;
-// Qainboxes2.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Qainboxes3 = Qainboxes2.nextElementSibling;
-// Qainboxes3.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Qainboxes4 = Qainboxes3.nextElementSibling;
-// Qainboxes4.addEventListener("click", function () {
-//   alert("4");
-// });
-// //
-// const Wainboxes1 = Mainbox4.firstElementChild;
-// Wainboxes1.addEventListener("click", function () {
-//   alert("1");
-// });
-// const Wainboxes2 = Wainboxes1.nextElementSibling;
-// Wainboxes2.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Wainboxes3 = Wainboxes2.nextElementSibling;
-// Wainboxes3.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Wainboxes4 = Wainboxes3.nextElementSibling;
-// Wainboxes4.addEventListener("click", function () {
-//   alert("4");
-// });
-// //
-// const Eainboxes1 = Mainbox5.firstElementChild;
-// Eainboxes1.addEventListener("click", function () {
-//   alert("1");
-// });
-// const Eainboxes2 = Eainboxes1.nextElementSibling;
-// Eainboxes2.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Eainboxes3 = Eainboxes2.nextElementSibling;
-// Eainboxes3.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Eainboxes4 = Eainboxes3.nextElementSibling;
-// Eainboxes4.addEventListener("click", function () {
-//   alert("4");
-// });
-// // 맛집별 사이트 접속 종료
-
-// const Mainchart1 = document.querySelector(".Mainchart-inner1");
-// Mainchart1.lastElementChild.addEventListener("click", function () {
-//   alert("1");
-// });
-// const Mainchart2 = document.querySelector(".Mainchart-inner2");
-// Mainchart2.lastElementChild.addEventListener("click", function () {
-//   alert("2");
-// });
-// const Mainchart3 = document.querySelector(".Mainchart-inner3");
-// Mainchart3.lastElementChild.addEventListener("click", function () {
-//   alert("3");
-// });
-// const Mainchart4 = document.querySelector(".Mainchart-inner4");
-// Mainchart4.lastElementChild.addEventListener("click", function () {
-//   alert("4");
-// });
 let nameChild;
 let addrChild;
 let idChild;
