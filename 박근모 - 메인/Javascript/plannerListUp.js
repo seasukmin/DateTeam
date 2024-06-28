@@ -109,6 +109,9 @@ Mainbox.forEach(function (el) {
   initializeBox(resturantBoxes, (key) => key.includes("store"));
   initializeBox(cafeBoxes, (key) => key.includes("cafe"));
   initializeBox(hotPlaceBoxes, (key) => key.includes("hotplace"));
+  initializeBox(resturantBoxes1, (key) => key.includes("store"));
+  initializeBox(cafeBoxes1, (key) => key.includes("cafe"));
+  initializeBox(hotPlaceBoxes1, (key) => key.includes("hotplace"));
 
   resturantBoxes.addEventListener("click", (e) =>
     handleBoxClick(e, resturantBoxes)
