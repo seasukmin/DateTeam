@@ -122,6 +122,7 @@ if (localID === null && localSemiID === null) {
         document.getElementById("welcomeMessage").classList.add("hidden");
         document.getElementById("plannerBox").classList.add("hiddenBox");
         this.classList.add("hidden");
+        location.reload();
       } else if (
         aloginBox.classList.contains("hiddenALogin") !== true ||
         bloginBox.classList.contains("hiddenBLogin") == true
@@ -133,6 +134,7 @@ if (localID === null && localSemiID === null) {
         document.getElementById("welcomeMessage").classList.add("hidden");
         document.getElementById("plannerBox").classList.add("hiddenBox");
         this.classList.add("hidden");
+        location.reload();
       }
     });
 
