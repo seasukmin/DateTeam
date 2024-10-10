@@ -64,8 +64,8 @@ function displayNextCharacter() {
 
 displayNextCharacter();
 
-// console.log(infoinputArr);
 const datas = await getDatas("store1");
+console.log(datas);
 // const textinner = "분위기 있는";
 let infoinput;
 const infoinputArr = [];
