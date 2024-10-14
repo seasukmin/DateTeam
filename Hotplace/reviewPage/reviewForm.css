@@ -21,10 +21,22 @@ body {
 }
 .reviewForm-container {
   width: 600px;
+  height: 80vh;
   padding: 30px;
-  background-color: rgba(253, 242, 242, 0.801);
+  background-color: rgba(253, 242, 242);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  overflow-y: scroll;
+}
+.reviewForm-container::-webkit-scrollbar {
+  width: 10px;
+}
+.reviewForm-container::-webkit-scrollbar-thumb {
+  background-color: hotpink;
+  border-radius: 10px;
+}
+.reviewForm-container::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
 .reviewForm-container h1 {
@@ -46,6 +58,7 @@ body {
 .reviewForm-box select,
 .reviewForm-box textarea {
   width: calc(100% - 20px);
+  height: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -58,7 +71,7 @@ body {
 }
 .reviewForm-box input[type="file"] {
   padding: 6px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .reviewForm-btn {
