@@ -234,7 +234,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 330px;
-  left: 300px;
+  left: 36px;
 }
 .category-top,
 .category-center,
@@ -282,4 +282,10 @@ body {
 }
 .bxs-map:hover {
   background-color: skyblue;
+}
+
+@media (max-width: 1200px) {
+  .long-category {
+    display: none;
+  }
 }
