@@ -1,16 +1,5 @@
 // 로고 시작
-import {
-  db,
-  getDatas,
-  addDatas,
-  deleteDatas,
-  updateDatas,
-  addObjectToFieldInSpecificDocumentById,
-} from "./DLU_firebase.js";
-// const jmtTag = document.querySelector(".h-Tag1Span");
-// const cafeTag = document.querySelector(".h-Tag2Span");
-// const placeTag = document.querySelector(".h-Tag3Span");
-// const epliogueTag = document.querySelector(".h-Tag4Span");
+import { getDatas } from "./DLU_firebase.js";
 
 // 예시로 함수 호출
 // addstoreInfo();
@@ -65,16 +54,11 @@ function displayNextCharacter() {
 displayNextCharacter();
 
 const datas = await getDatas("store1");
-console.log(datas);
-// const textinner = "분위기 있는";
-let infoinput;
 const infoinputArr = [];
 datas.forEach((doc, idx) => {
   const info = doc.data();
-  // console.log(infoinput);
   infoinputArr.push(info);
 });
-console.log(infoinputArr);
 let infolistArr = infoinputArr.map(function (el) {
   return `${el.name},${el.point}`;
 });
@@ -88,7 +72,6 @@ const infolistSliceArr = infolistArrsort.slice(70, 80);
 sidebarA.forEach(function (el, idx) {
   if (idx < infolistSliceArr.length) {
     let infolistEnd = infolistSliceArr[idx].split(",")[0];
-    console.log(infolistEnd);
     el.insertAdjacentHTML(
       "afterbegin",
       `<a href="#" class="sidebarA"><span class="sideinnerN">${
@@ -106,7 +89,6 @@ let infolistArrsort1 = infolistArr1.sort(function (a, b) {
   return pointC - pointD;
 });
 const infolistSliceArr1 = infolistArrsort1.slice(70, 80);
-console.log(infolistSliceArr1);
 const Mainbox1 = document.querySelector(".Main-box1");
 infolistSliceArr1.forEach(function (el, idx) {
   Mainbox1.insertAdjacentHTML(
@@ -148,7 +130,6 @@ function inputArr(e) {
       el.point.includes(inputValue) ||
       (el.time.includes(inputValue) && e.code == "Enter")
     ) {
-      console.log(el);
       result.insertAdjacentHTML(
         "beforeend",
         `

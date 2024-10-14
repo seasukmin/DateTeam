@@ -50,8 +50,6 @@ const getWeatherContent = async () => {
       document.querySelector(".TempMax5").innerHTML = `${Math.round(
         weatherDate5.main.temp_max
       )}°`;
-      console.log(json.list);
-
       return json.list;
     });
 };

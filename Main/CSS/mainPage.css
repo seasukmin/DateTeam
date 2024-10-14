@@ -130,6 +130,8 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 36px;
 }
 .category-top,
 .category-center,
@@ -497,4 +499,9 @@ input[type="radio"]:checked + label {
   gap: 20px;
   justify-content: center;
   width: max-content;
+}
+@media (max-width: 1200px) {
+  .long-category {
+    display: none;
+  }
 }
