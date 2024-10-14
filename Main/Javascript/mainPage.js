@@ -1,10 +1,4 @@
-import {
-  db,
-  getDatas,
-  addDatas,
-  deleteDatas,
-  updateDatas,
-} from "../Javascript/DLU_firebase.js";
+import { getDatas } from "../Javascript/DLU_firebase.js";
 
 const mainPageLogo = document.querySelector(".mainPage-logo");
 mainPageLogo.addEventListener("click", () => {
@@ -14,9 +8,7 @@ mainPageLogo.addEventListener("click", () => {
 async function getcutomerInfo() {
   const datas = await getDatas("customer");
   datas.forEach((doc) => {
-    // console.log(doc.id);
     const info = doc.data();
-    // console.log(info.age);
     let { addr, age, email, gender, tel } = doc.data();
   });
 }
@@ -38,9 +30,6 @@ const aloginBox = document.querySelector(".alogin-box");
 const bloginBox = document.querySelector(".blogin-box");
 const returnBtn = document.getElementById("returnButton");
 
-// signInBtn.addEventListener("click", (e) => {
-//   location.href = "../HTML/LogInPage.html";
-// });
 signUpBtn.addEventListener("click", (e) => {
   location.href = "../HTML/join.html";
 });
@@ -72,7 +61,6 @@ const hotPlacetag = document.getElementById("h-hotPlace");
 const epiloguetag = document.getElementById("h-epilogue");
 
 JMTtag.addEventListener("click", (e) => {
-  // location.href = "#hTag-JMT";
   location.href = "../../Resturant, Cafe/JMT/JMT.html";
 });
 cafetag.addEventListener("click", (e) => {
@@ -92,15 +80,12 @@ const placeLoop = document.getElementById("placeI");
 const bottomLoop = document.getElementById("infoI");
 
 topLoop.addEventListener("click", (e) => {
-  // location.href = "#hTag-JMT";
   window.scrollTo(0, 0);
 });
 jmtLoop.addEventListener("click", (e) => {
-  // location.href = "#hTag-JMT";
   window.scrollTo(0, 300);
 });
 cafeLoop.addEventListener("click", (e) => {
-  // location.href = "#hTag-cafe";
   window.scrollTo(0, 600);
 });
 placeLoop.addEventListener("click", (e) => {
