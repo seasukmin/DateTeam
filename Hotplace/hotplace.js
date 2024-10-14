@@ -58,7 +58,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/으능정이거리.jpg",
+    img: "./img/downtown.jpg",
     name: "으능정이거리",
     time: "월-토: 09:00",
     time2: "",
@@ -66,7 +66,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/신세계백화점.jpg",
+    img: "./img/newStore.jpg",
     name: "신세계백화점",
     time: "월-토: 09:00",
     time2: "",
@@ -74,7 +74,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/옛터민속박물관.jpg",
+    img: "./img/oldTown.jpg",
     name: "옛터민속박물관",
     time: "월-토: 09:00",
     time2: "",
@@ -82,7 +82,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/식장산.jpg",
+    img: "./img/sikjang.jpg",
     name: "식장산",
     time: "월-토: 09:00",
     time2: "",
@@ -90,7 +90,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/만인산자연휴양림.jpg",
+    img: "./img/maninsan.jpg",
     name: "만인산자연휴양림",
     time: "월-토: 09:00",
     time2: "",
@@ -112,12 +112,12 @@ contentArr.forEach((info, idx) => {
 
 function chgMainImg() {
   const mainImgArr = [
-    "./img/메인1.jpg",
-    "./img/메인2.jpg",
-    "./img/메인3.jpg",
-    "./img/메인4.jpg",
-    "./img/메인5.jpg",
-    "./img/메인7.jpg",
+    "./img/main1.jpg",
+    "./img/main2.jpg",
+    "./img/main3.jpg",
+    "./img/main4.jpg",
+    "./img/main5.jpg",
+    "./img/main7.jpg",
   ];
   let mainImgIndex = 0;
   const mainImgEl = document.getElementById("mainImg");

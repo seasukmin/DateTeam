@@ -10,7 +10,7 @@ const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
     a: "https://map.naver.com/p/entry/place/413568990?lng=127.4720818&lat=36.2332871&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh",
-    img: "../img/상소동.jpg",
+    img: "../img/sangso.jpg",
     title: "상소동 산림욕장",
     text: "대전 동구 산내로 714",
     text2: "<br>일: 09:00",
@@ -19,7 +19,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/만인산.jpg",
+    img: "../img/maninsan.jpg",
     title: "만인산자연휴양림",
     text: "대전 동구 산내로 106",
     text2: "",
@@ -28,7 +28,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/식장산.jpg",
+    img: "../img/sikjang.jpg",
     title: "식장산 전망대",
     text: "	대전 동구 세천동 산 43-5",
     text2: "",
@@ -37,7 +37,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/옛터.jfif",
+    img: "../img/oldPlace.jfif",
     title: "옛터민속박물관",
     text: "대전 동구 산내로 321-35",
     text2: "<br>매일 10:00 ~ 00:30",
@@ -46,7 +46,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/대동벽화마을.jpg",
+    img: "../img/daedongArtTown.jpg",
     title: "대동하늘공원",
     text: "	대전 동구 이화로 35번길 50",
     text2: "",
@@ -55,7 +55,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/소제동.jpeg",
+    img: "../img/soje.jpeg",
     title: "소제동 거리",
     text: "대전 동구 소제동",
     text2: "",
@@ -64,7 +64,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/문글램핑.jfif",
+    img: "../img/moon.jfif",
     title: "문 글램핑",
     text: "대전 동구 산내로 237",
     text2: "<br>예약제",
@@ -96,7 +96,7 @@ const shopping = document.getElementById("shopping");
 const shoppingArr = [
   {
     a: "",
-    img: "../img/중앙시장.jpg",
+    img: "../img/6.jpg",
     title: "중앙시장",
     text: "대전 동구 중앙로 200-1",
     text2: "<br>매일 07:00 ~ 17:00 변동사항 있음",
@@ -105,7 +105,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/다이소.jpg",
+    img: "../img/daiso.jpg",
     title: "다이소 본점",
     text: "대전 동구 동서대로1695번길 8",
     text2: "<br>매일 10:00 ~ 22:00",
@@ -114,7 +114,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/머물다가게.jpg",
+    img: "../img/meomulda.jpg",
     title: "머물다가게",
     text: "대전 동구 동대전로154번길 39",
     text2: "<br>월-금: 13:00 ~ 21:00",
@@ -123,7 +123,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/트래블라운지.jpg",
+    img: "../img/travelLounge.jpg",
     title: "트래블라운지",
     text: "대전 동구 중앙로 187-1",
     text2: "<br>매일 09:00 ~ 21:00",
@@ -155,7 +155,7 @@ const inside = document.getElementById("inside");
 const insideArr = [
   {
     a: "",
-    img: "../img/복합터미널.jpg",
+    img: "../img/bokhapTerminal.jpg",
     title: "복합터미널",
     text: "대전 동구 동서대로 1689",
     text2: "<br>연중무휴",
@@ -164,7 +164,7 @@ const insideArr = [
   },
   {
     a: "",
-    img: "../img/빛나는순간.jpg",
+    img: "../img/1.jpg",
     title: "빛나는 순간",
     text: "대전 동구 새울로 98-20 201호",
     text2: "<br>수: 15:00 ~ 19:00, 목-일: 11:00 ~ 19:00",
@@ -173,7 +173,7 @@ const insideArr = [
   },
   {
     a: "",
-    img: "../img/헤레디움.jpg",
+    img: "../img/2.jpg",
     title: "헤레디움",
     text: "대전 동구 대전로 735",
     text2: "<br>수-일: 11:00 ~ 19:00",
@@ -239,7 +239,7 @@ const sports = document.getElementById("sports");
 const sportsArr = [
   {
     a: "",
-    img: "../img/동구체육관.jpg",
+    img: "../img/3.jpg",
     title: "동구국민체육센터",
     text: "대전 동구 가양로 9",
     text2: "<br>일 휴무, 종목별 운영시간 상이",
@@ -248,7 +248,7 @@ const sportsArr = [
   },
   {
     a: "",
-    img: "../img/킹스타.jfif",
+    img: "../img/kingStar.jfif",
     title: "킹스타볼링센터",
     text: "대전 동구 대전로 647 지하1층",
     text2: "<br>월-금: 13:00 ~ 02:00, 토-일: 10:00 ~ 02:00",
@@ -281,7 +281,7 @@ const festival = document.getElementById("festival");
 const festivalArr = [
   {
     a: "",
-    img: "../img/대청호벚꽃.png",
+    img: "../img/5.jpg",
     title: "대청호 벚꽃축제",
     text: "대청호 벚꽃한터",
     text2: "<br>2024.03.29 ~ 2024.03.31 3일간",
@@ -290,7 +290,7 @@ const festivalArr = [
   },
   {
     a: "",
-    img: "../img/야시장.png",
+    img: "../img/nightStore.png",
     title: "중앙시장 야시장",
     text: "2024.05.03 ~ 2024.10.26 매주 금,토",
     text2: "<br>대전 중앙시장",
@@ -299,7 +299,7 @@ const festivalArr = [
   },
   {
     a: "",
-    img: "../img/0시축제.jfif",
+    img: "../img/6.jpg",
     title: "대전 0시 축제",
     text: "2024.08.09 ~ 2024.08.17 9일간",
     text2: "<br>대전역 ~ 옛충남도청",
@@ -308,7 +308,7 @@ const festivalArr = [
   },
   {
     a: "https://map.naver.com/p/entry/place/1139336376?placePath=%252Fhome%253Fentry%253Dplt&searchType=place&lng=127.4491245&lat=36.3353339&c=15.00,0,0,0,dh",
-    img: "../img/동구동락.jfif",
+    img: "../img/8.jpg",
     title: "동구동락 축제",
     text: "2024.10.04 ~ 2024.10.06 3일간",
     text2: "<br>동광장로 및 대동천",

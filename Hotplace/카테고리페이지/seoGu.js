@@ -10,7 +10,7 @@ const picnic = document.getElementById("picnic");
 const picnicArr = [
   {
     a: "",
-    img: "../img/한밭수목원.jpg",
+    img: "../img/hanbat.jpg",
     title: "한밭수목원",
     text: "대전 서구 둔산대로 169",
     text2: "<br>구역에 따라 운영시간 상이",
@@ -19,7 +19,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/장태산2.jpg",
+    img: "../img/jangtae.jpg",
     title: "장태산 자연휴양림",
     text: "대전 서구 장안로 461",
     text2: "",
@@ -28,7 +28,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/마치광장.jpg",
+    img: "../img/machi.jpg",
     title: "마치광장",
     text: "	대전 서구 구봉로131번길",
     text2: "",
@@ -37,7 +37,7 @@ const picnicArr = [
   },
   {
     a: "",
-    img: "../img/보라매공원.jpg",
+    img: "../img/boramae.jpg",
     title: "보라매공원",
     text: "대전광역시 서구 둔산동 1544",
     text2: "",
@@ -69,7 +69,7 @@ const shopping = document.getElementById("shopping");
 const shoppingArr = [
   {
     a: "",
-    img: "../img/교보문고.jpg",
+    img: "../img/khobo.jpg",
     title: "교보문고",
     text: "대전 서구 대덕대로 226 3층",
     text2: "<br>매일 10:30 ~ 22:00",
@@ -78,7 +78,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/트레이더스.jpg",
+    img: "../img/traders.jpg",
     title: "이마트 트레이더스",
     text: "대전 서구 한밭대로 580 월평점",
     text2: "<br>매일 10:00 ~ 23:00",
@@ -87,7 +87,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/프레시하츠클럽.jfif",
+    img: "../img/freshHeart.jfif",
     title: "프레시하츠클럽",
     text: "대전 서구 갈마역로 25 2층",
     text2: "<br>화-일: 12:00 ~ 21:00",
@@ -96,7 +96,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/잠시다락.jfif",
+    img: "../img/jamsidarak.jfif",
     title: "잠시다락",
     text: "대전 서구 둔산로 32-11 2층",
     text2: "<br>매일 12:00 ~ 20:00",
@@ -105,7 +105,7 @@ const shoppingArr = [
   },
   {
     a: "",
-    img: "../img/이글스스토어.jpg",
+    img: "../img/eaglesStore.jpg",
     title: "한화 이글스스토어",
     text: "대전 서구 둔산로 32-17",
     text2: "<br>매일 24시간",
@@ -137,7 +137,7 @@ const inside = document.getElementById("inside");
 const insideArr = [
   {
     a: "",
-    img: "../img/시립미술관.jpg",
+    img: "../img/sirip.jpg",
     title: "대전시립미술관",
     text: "대전 서구 둔산대로 155 둔산대공원",
     text2: "<br>화-일: 10:00 ~ 18:00",
@@ -146,7 +146,7 @@ const insideArr = [
   },
   {
     a: "",
-    img: "../img/이응노.jpg",
+    img: "../img/eieungno.jpg",
     title: "이응노미술관",
     text: "대전 서구 둔산대로 157 이응노미술관",
     text2: "<br>화-일: 10:00 ~ 19:00",
@@ -155,7 +155,7 @@ const insideArr = [
   },
   {
     a: "",
-    img: "../img/셀프사진관.jfif",
+    img: "../img/odt.jfif",
     title: "셀프사진관 오디티모드",
     text: "대전 서구 둔산로 32-22 3층",
     text2: "<br>월-금: 13:00 ~ 21:00, 토-일: 11:00 ~ 21:00",
@@ -183,45 +183,11 @@ insideArr.forEach((info, idx) => {
   );
 });
 
-// const sports = document.getElementById("sports");
-// const sportsArr = [
-//   {
-
-//     img: "../img/동구체육관.jpg",
-//     name: "동구국민체육센터",
-//     time: "월-토: 09:00",
-//     time2: "<br>일: 09:00",
-//     event: "#수영 #배드민턴 #탁구",
-//     local: "동구",
-//   },
-//   {
-//     img: "../img/킹스타.jfif",
-//     name: "킹스타볼링센터",
-//     time: "월-토: 09:00",
-//     time2: "<br>일: 09:00",
-//     event: "#볼링",
-//     local: "동구",
-//   },
-// ];
-// sportsArr.forEach((info, idx) => {
-//   sports.insertAdjacentHTML(
-//     "beforeend",
-
-//     ` <div class="content">
-//           <img src=${info.img} />
-//           <p class="hpName">${info.name}</p>
-//         <p class="hpTime">
-//           ${info.time}${info.time2}
-//         </p>
-//         <p class="hpInfo">${info.event}</p>
-//       </div> `
-//   );
-// });
 const sports = document.getElementById("sports");
 const sportsArr = [
   {
     a: "",
-    img: "../img/남선공원.jpg",
+    img: "../img/namsun.jpg",
     title: "남선공원 종합체육관",
     text: "대전 서구 탄방동",
     text2: "<br>월-금: 06:00 ~ 21:30, 토-일: 10:00 ~ 18:30",
@@ -230,7 +196,7 @@ const sportsArr = [
   },
   {
     a: "",
-    img: "../img/올림픽체육관.jpg",
+    img: "../img/olimpic.jpg",
     title: "올림픽기념생활체육관",
     text: "대전 서구 신갈마로230번길 77",
     text2: "<br>월-금: 06:00 ~ 21:00, 토-일: 06:00 ~ 18:00",
@@ -263,7 +229,7 @@ const festival = document.getElementById("festival");
 const festivalArr = [
   {
     a: "",
-    img: "../img/서구엑스포축제.jpg",
+    img: "../img/scienceFestival.jpg",
     title: "대한민국 과학축제",
     text: "엑스포 시민광장",
     text2: "<br>2024.04.25 ~ 2024.04.28, 4일간",
@@ -272,7 +238,7 @@ const festivalArr = [
   },
   {
     a: "",
-    img: "../img/서구축제.jpg",
+    img: "../img/healingFestival.jpg",
     title: "서구힐링아트페스티벌",
     text: "샘머리, 보라매공원",
     text2: "<br>2024.10.11 ~ 2024.10.13, 3일간",
