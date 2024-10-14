@@ -3,10 +3,10 @@
 }
 .contents-center section {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   margin-top: 24px;
   position: relative;
-  padding: 36px 12px;
+  padding: 62px 36px 36px;
 }
 .content-title {
   position: absolute;
@@ -16,17 +16,21 @@
   font-weight: bold;
   width: fit-content;
   margin: 0;
+  padding: 10px;
 }
+
 .restaurant-section {
-  background-color: #ffa60033;
+  /* background-color: #ffa60033; */
+  border: 3px solid #ffa60033;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 100px; */
 }
 .cafe-section {
-  background-color: rgba(128, 0, 128, 0.3);
+  /* background-color: rgba(128, 0, 128, 0.3); */
+  border: 3px solid rgba(128, 0, 128, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: flex;
@@ -34,7 +38,8 @@
   gap: 100px;
 }
 .hotplace-section {
-  background-color: rgba(135, 207, 235, 0.3);
+  /* background-color: rgba(135, 207, 235, 0.3); */
+  border: 3px solid rgba(135, 207, 235, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: flex;
@@ -88,18 +93,18 @@
   color: white;
   padding: 4px;
   border-radius: 8px;
-  background-color: #ffa600;
+  background-color: #ffa60033;
 }
 .hashTagCafe {
   width: fit-content;
   color: white;
   padding: 4px;
   border-radius: 8px;
-  background-color: purple;
+  background-color: rgba(128, 0, 128, 0.3);
 }
 .hashTagHotPlace {
   width: fit-content;
   padding: 4px;
   border-radius: 8px;
-  background-color: skyblue;
+  background-color: rgba(135, 207, 235, 0.3);
 }

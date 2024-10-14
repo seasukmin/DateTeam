@@ -10,7 +10,7 @@ const contents = document.getElementById("content");
 const contentArr = [
   {
     a: "",
-    img: "./img/한밭수목원.jpg",
+    img: "./img/hanbat.jpg",
     name: "한밭수목원",
     time: "월-토: 09:00",
     time2: "<br>일: 09:00",
@@ -18,7 +18,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/한빛탑야간.jpg",
+    img: "./img/hanbit.jpg",
     name: "엑스포 과학공원",
     time: "월-토: 09:00",
     time2: "",
@@ -26,7 +26,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/오월드.jpg",
+    img: "./img/oWold.jpg",
     name: "대전 오월드",
     time: "월-토: 09:00",
     time2: "",
@@ -34,7 +34,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/대전시립미술관.jpg",
+    img: "./img/artMuseum.jpg",
     name: "대전시립박물관",
     time: "월-토: 09:00",
     time2: "",
@@ -42,7 +42,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/이글스파크.jpg",
+    img: "./img/eagles.jpg",
     name: "한화이글스파크",
     time: "월-토: 09:00",
     time2: "",
@@ -50,7 +50,7 @@ const contentArr = [
   },
   {
     a: "",
-    img: "./img/유성온천.jpg",
+    img: "./img/yuseong.jpg",
     name: "유성온천",
     time: "월-토: 09:00",
     time2: "",

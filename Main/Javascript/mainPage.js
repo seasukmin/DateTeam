@@ -174,10 +174,10 @@ async function fetchAndDisplayStoreData() {
       `
       <div class="box mySlides fade">
         <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
-        <ul class="rankList">
-<ul>
+        <div class="content-box">
         <div class="boxes">
           <img class="box-img" src="../../Resturant, Cafe/Photo/${el.src}" />
+          </div>
           <div class="boxes-inner">
             <div class="box-point"><span>평점: </span> ${el.point}</div>
             <div class="box-name">${el.name}</div>
@@ -187,9 +187,8 @@ async function fetchAndDisplayStoreData() {
             <div class="box-tag hashTagStore"><span>#</span> ${
               el.category
             }</div>
-          </div>
+            </div>
         </div>
-      </ul>
     `
     );
   });
@@ -242,10 +241,12 @@ async function fetchAndDisplayCafeData() {
       `
       <div class="box mySlides fade">
         <h1 class="box-h3">TOP ${idx + 1} ${el.name}</h1>
+        <div class="content-box">
         <div class="boxes">
           <img class="box-img" src="../../Resturant, Cafe/Photo_Cafe/${
             idx + 1
           }.jpg" />
+          </div>
           <div class="boxes-inner">
             <div class="box-point"><span>평점: </span> ${el.point}</div>
             <div class="box-name">${el.name}</div>
@@ -253,6 +254,7 @@ async function fetchAndDisplayCafeData() {
             <div class="box-tag"><span>On. </span>${el.time}</div>
             <div class="box-tag"><span>N. </span>${el.number}</div>
             <div class="box-tag hashTagCafe"><span>#</span> ${el.category}</div>
+          </div>
           </div>
         </div>
       </div>
@@ -279,15 +281,18 @@ async function fetchAndDisplayHotPlaceData() {
         `
         <div class="box mySlides fade">
           <h1 class="box-h3">TOP ${idx + 1} ${el.title}</h1>
+          <div class="content-box">
           <div class="boxes">
             <img class="box-img"src="../../Hotplace/img/${idx + 1}.jpg" />
+            </div>
             <div class="boxes-inner">
+            <div class="box-name">평점: ${el.point}</div>
               <div class="box-point">  ${el.title}</div>
-              <div class="box-name">${el.point}</div>
-              <div class="box-tag">${el.text}</div>
-              <div class="box-tag">${el.text2}</div>
+              <div class="box-tag">addr: ${el.text}</div>
+              <div class="box-tag">on. ${el.text2}</div>
               <div class="box-tag hashTagHotPlace">${el.event}</div>
               <div class="box-tag hidden ">${el.category}</div>
+            </div>
             </div>
           </div>
         </div>
