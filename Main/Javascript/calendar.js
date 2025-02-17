@@ -164,38 +164,3 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 });
 
 renderCalendar();
-
-// const dayTag = document.querySelectorAll(".day");
-// dayTag.forEach((e) => {
-//   e.addEventListener("click", (el) => {
-//     const daySelector = document.querySelector(".selected");
-//     const dayRanger = document.querySelectorAll(".range");
-//     const daySelectorVal = daySelector.innerHTML;
-//     dayRanger.forEach(async function (er) {
-//       const dayRangerVal = er.innerHTML;
-//       console.log(dayRangerVal);
-//       // console.log(dayRangerVal);
-//       if (daySelectorVal > dayRangerVal) {
-//         const dateInfo = {
-//           firstYear: year,
-//           firstMonth: month,
-//           firstDay: daySelectorVal,
-//           lastYear: year,
-//           lastMonth: month + 1,
-//           lastDay: dayRangerVal,
-//         };
-//         const result = await addDatas("date", dateInfo, `유지민`);
-//       } else {
-//         const dateInfo = {
-//           firstYear: year,
-//           firstMonth: month + 1,
-//           firstDay: daySelectorVal,
-//           lastYear: year,
-//           lastMonth: month + 1,
-//           lastDay: dayRangerVal,
-//         };
-//         const result = await addDatas("date", dateInfo, `유지민`);
-//       }
-//     });
-//   });
-// });
